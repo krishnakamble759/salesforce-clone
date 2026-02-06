@@ -2,10 +2,10 @@
 
 .data360-body {
     background-color: $color-f4f6f9;
-    padding-top: 65px; // Default for large screens
+    padding-top: 65px;
 
     @include desktop {
-        padding-top: 130px; // Perfectly flush with bottom of 121px header + 61px sub-nav
+        padding-top: 130px;
     }
 
     @include small-desktop {
@@ -29,13 +29,13 @@
     position: fixed;
     top: 65px;
     width: 100%;
-    z-index: 2500; // Increased to be above banner but below main header
+    z-index: 2500;
 
     @include desktop {
         position: fixed;
         width: 100%;
         left: 0;
-        top: 65px; // Aligned with the compact single-row header at 1200px
+        top: 65px;
         padding: 0 20px;
         flex-wrap: wrap;
         height: auto;
@@ -1886,10 +1886,9 @@
 
 // Integration Cards Section
 .data360-integration-section {
-    // Background: Blue gradient + Bottom Shape Image
     background: url('../assets/datacloud/Background-After-DF.png') center bottom no-repeat;
     background-size: 100% auto;
-    padding: 10px 0 250px; // Restoring padding to ensure image visibility
+    padding: 10px 0 250px;
     font-family: 'Salesforce Sans', system-ui, sans-serif;
     position: relative;
 

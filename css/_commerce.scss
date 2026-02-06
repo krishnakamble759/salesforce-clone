@@ -6,8 +6,8 @@
     padding: 15px 0;
     position: fixed;
     width: 100%;
-    top: 65px; // Adjust based on main header height
-    z-index: 999; // Increased to avoid overlaps
+    top: 65px;
+    z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
     @include mid-desktop {
@@ -94,10 +94,10 @@
                 margin-left: auto;
 
                 @include desktop {
-                    display: block; // Shown on smaller desktops and below
-                    padding: 10px; // Increased click area
+                    display: block;
+                    padding: 10px;
                     position: relative;
-                    z-index: 1001; // Ensure it's clickable
+                    z-index: 1001;
                     pointer-events: auto;
                 }
             }
@@ -120,10 +120,9 @@
                 gap: 0;
                 padding-top: 20px;
                 width: 100%;
-                // Enable scrolling within the menu container
                 max-height: calc(100vh - 140px);
                 overflow-y: auto;
-                padding-bottom: 20px; // Extra padding at bottom for better scrolling experience
+                padding-bottom: 20px;
 
                 &.active {
                     display: flex;
@@ -131,7 +130,7 @@
             }
 
             li {
-                position: relative; // For dropdown positioning
+                position: relative;
 
                 @include desktop {
                     border-bottom: 1px solid $color-e5e5e5;
@@ -151,7 +150,7 @@
                     display: flex;
                     align-items: center;
                     gap: 6px;
-                    padding: 8px 0; // consistent inner spacing
+                    padding: 8px 0;
 
                     @include desktop {
                         padding: 15px 0;
@@ -173,7 +172,6 @@
                     }
                 }
 
-                // Chevron rotation on active (mobile)
                 &.active>a i {
                     @include desktop {
                         transform: rotate(180deg);
@@ -182,7 +180,6 @@
 
                 &.has-dropdown {
 
-                    // Hover - Desktop Only (Media query applied via checking screen size or just overriding on mobile)
                     &:hover {
                         &>a {
                             @include desktop {
@@ -212,7 +209,6 @@
                                 transform: none;
                             }
 
-                            // Ensure flex layout for mega-menu if needed, but block stacking is usually better for mobile columns
                             .sub-dropdown.mega-menu {
                                 .menu-column {
                                     width: 100%;
@@ -258,7 +254,7 @@
 
                         li {
                             display: block;
-                            border-bottom: none; // Reset from parent li style
+                            border-bottom: none;
                             margin: 0;
 
                             &.divider {
@@ -277,7 +273,7 @@
                                 color: $text-color;
                                 font-size: 16px;
                                 font-weight: 700;
-                                white-space: nowrap; // Prevent wrapping
+                                white-space: nowrap;
 
                                 @include desktop {
                                     padding: 10px 0;
@@ -297,7 +293,7 @@
 
                                 &.see-all {
                                     font-weight: 700;
-                                    color: $secondary-color; // Likely different styling
+                                    color: $secondary-color;
                                     text-decoration: underline;
 
                                     @include desktop {
@@ -338,8 +334,6 @@
                                 display: none;
                             }
 
-                            // Hide generic chevron if inherited
-
                             &:hover {
                                 background-color: darken($primary-color, 10%);
                             }
@@ -350,10 +344,7 @@
 
         }
 
-        // End li
     }
-
-    // End sub-nav-menu
 
     // Mega Menu Styles & Overrides
 
@@ -377,7 +368,7 @@
     // Mobile Active State for Mega Menu
     li.has-dropdown.active .sub-dropdown.mega-menu {
         @include desktop {
-            display: block; // Stack columns on mobile
+            display: block;
         }
     }
 
@@ -435,8 +426,6 @@
     }
 }
 
-// End sub-nav-left
-
 
 .sub-nav-right {
     display: flex;
@@ -455,7 +444,7 @@
 
 
 .agentforce-banner {
-    background-color: $secondary-color; // Dark blue from screenshot
+    background-color: $secondary-color;
     color: white;
     padding: 12px 0;
     font-size: 14px;
@@ -500,7 +489,7 @@
 
     @include big-tab {
         padding: 60px 0 80px;
-        background-position: center left; // Adjust for smaller screens
+        background-position: center left;
     }
 
     @include mobile {
@@ -528,7 +517,7 @@
             align-items: center;
             gap: 12px;
             margin-bottom: 24px;
-            color: $secondary-color; // Assume dark blue from variables
+            color: $secondary-color;
             font-weight: 700;
             font-size: 14px;
 
@@ -542,7 +531,7 @@
             }
 
             span {
-                color: $sky-blue; // Branding blue often used for labels
+                color: $sky-blue;
                 font-weight: 700;
             }
         }
@@ -550,7 +539,7 @@
         .hero-title {
             font-size: 56px;
             font-weight: 800;
-            color: $secondary-color; // Dark blue
+            color: $secondary-color;
             line-height: 1.1;
             margin-bottom: 24px;
             letter-spacing: -1px;
@@ -635,13 +624,13 @@
 
         .video-card-container {
             position: relative;
-            max-width: 500px; // Wider for video look
+            max-width: 500px;
             width: 100%;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             background: $text-white;
             overflow: hidden;
-            aspect-ratio: 16 / 9; // Video aspect ratio
+            aspect-ratio: 16 / 9;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -685,7 +674,7 @@
                 .play-icon {
                     color: white;
                     font-size: 24px;
-                    margin-left: 5px; // Optical adjustment
+                    margin-left: 5px;
                 }
             }
         }
@@ -695,7 +684,7 @@
 
 
 .commerce-companies {
-    padding: 60px 0 100px; // Extra padding at bottom for curve
+    padding: 60px 0 100px;
     text-align: center;
     background: url('../assets/commerce/general-background-commerce-cloud-no-contour-1600x500-1.webp');
     background-size: cover;
@@ -735,7 +724,7 @@
         .company-card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); // Subtle drop shadow
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -743,11 +732,10 @@
             height: 110px;
             padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            // Border if needed, screenshot looks clean
             border: 1px solid $color-f4f4f4;
 
             @include mobile {
-                width: 46%; // Two per row
+                width: 46%;
                 height: 90px;
             }
 
@@ -765,14 +753,6 @@
                 max-width: 100%;
                 max-height: 100%;
                 object-fit: contain;
-                // Optional: filter grayscale until hover
-                // filter: grayscale(100%);
-                // transition: filter 0.3s;
-
-                // &:hover {
-                //    filter: grayscale(0%);
-                // }
-                // Screenshot shows colored logos (Humana green, Sonos black)
             }
         }
     }
@@ -788,7 +768,7 @@
         svg {
             display: block;
             width: 100%;
-            height: 60px; // Adjust curve height
+            height: 60px;
 
             @include mobile {
                 height: 30px;
@@ -865,7 +845,7 @@
             position: relative;
 
             &:after {
-                content: '\f061'; // FontAwesome arrow-right
+                content: '\f061';
                 font-family: "Font Awesome 6 Free";
                 font-weight: 900;
                 margin-left: 5px;
@@ -929,12 +909,10 @@
         img {
             height: 120px;
             width: auto;
-            max-width: 100%; // responsive safety
+            max-width: 100%;
         }
     }
 }
-
-// Commerce Stats Section
 .commerce-stats {
     padding: 80px 0;
     text-align: center;
@@ -943,7 +921,7 @@
     .stats-title {
         font-size: 42px;
         font-weight: 800;
-        color: $secondary-color; // Dark blue
+        color: $secondary-color;
         margin-bottom: 60px;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
 
@@ -960,11 +938,11 @@
         margin-bottom: 40px;
 
         @include desktop {
-            grid-template-columns: repeat(2, 1fr); // 2x2 on tablets/small desktops
+            grid-template-columns: repeat(2, 1fr);
         }
 
         @include mobile {
-            grid-template-columns: 1fr; // Stack on mobile
+            grid-template-columns: 1fr;
         }
 
         .stat-card {
@@ -977,23 +955,22 @@
             align-items: center;
             min-height: 350px;
             position: relative;
-            background-color: $color-f8f9fa; // Fallback
-            overflow: hidden; // Ensure image stays inside corners
+            background-color: $color-f8f9fa;
+            overflow: hidden;
             transition: transform 0.3s ease;
 
             &:hover {
                 transform: translateY(-5px);
             }
 
-            // Image as background
             .stat-bg {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: contain; // Ensure full image including rocket/butterfly is visible
-                object-position: top center; // Align image to top
+                object-fit: contain;
+                object-position: top center;
                 z-index: 0;
             }
 
@@ -1019,7 +996,7 @@
                 justify-content: center;
 
                 .percent {
-                    font-size: 32px; // Smaller percent symbol
+                    font-size: 32px;
                     margin-left: 2px;
                 }
             }
@@ -1028,7 +1005,7 @@
                 font-size: 18px;
                 font-weight: 700;
                 color: $secondary-color;
-                text-transform: lowercase; // "historic uptime"
+                text-transform: lowercase;
                 margin-bottom: 24px;
             }
 
@@ -1052,11 +1029,9 @@
     }
 }
 
-// Commerce Product Rows Section (Redesign)
 .commerce-product-rows {
     padding: 80px 0 100px;
     position: relative;
-    // Image background as requested
     background: url('../assets/commerce/general-background-commerce-cloud-no-contour-1600x500-1.webp');
     background-size: cover;
     background-position: center;
@@ -1085,7 +1060,7 @@
         text-align: center;
         font-size: 40px;
         font-weight: 800;
-        color: $secondary-color; // Dark Blue
+        color: $secondary-color;
         margin-bottom: 80px;
         line-height: 1.25;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
@@ -1116,7 +1091,7 @@
         }
 
         .row-heading {
-            flex: 0 0 250px; // Fixed width for the left heading
+            flex: 0 0 250px;
 
             h3 {
                 font-size: 28px;
@@ -1147,17 +1122,16 @@
             gap: 24px;
 
             @include small-desktop {
-                grid-template-columns: repeat(2, 1fr); // 2 columns on smaller desktops
+                grid-template-columns: repeat(2, 1fr);
             }
 
             @include mobile {
-                grid-template-columns: 1fr; // 1 column on mobile
+                grid-template-columns: 1fr;
             }
 
             .info-card {
                 background: $text-white;
                 border-radius: 8px;
-                // The specific green top border from the screenshot
                 border-top: 5px solid $color-45c48b;
                 padding: 30px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -1175,7 +1149,7 @@
                 h4 {
                     font-size: 20px;
                     font-weight: 700;
-                    color: $secondary-color; // Title color
+                    color: $secondary-color;
                     margin-bottom: 16px;
                 }
 
@@ -1190,7 +1164,7 @@
                 .card-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: $secondary-color; // Link color (dark blue/link style)
+                    color: $secondary-color;
                     text-decoration: underline;
                     text-underline-offset: 4px;
 
@@ -1229,7 +1203,7 @@
         gap: 40px;
         margin-bottom: 60px;
         border-bottom: 1px solid $color-e5e5e5;
-        overflow-x: auto; // Scroll on mobile if needed
+        overflow-x: auto;
         white-space: nowrap;
 
         @include mobile {
@@ -1259,7 +1233,7 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    bottom: -1px; // On top of the border-bottom
+                    bottom: -1px;
                     left: 0;
                     width: 100%;
                     height: 4px;
@@ -1461,7 +1435,7 @@
 .commerce-zigzag-sections {
     padding: 100px 0;
     overflow: hidden;
-    background-color: $text-white; // Assumed white background
+    background-color: $text-white;
 
     .zigzag-row {
         display: flex;
@@ -1484,12 +1458,11 @@
             margin-bottom: 0;
         }
 
-        // Reverse Layout
         &.reverse {
             flex-direction: row-reverse;
 
             @include mobile {
-                flex-direction: column; // Keep visuals first on mobile if standard
+                flex-direction: column;
             }
         }
 
@@ -1506,7 +1479,6 @@
                 color: $secondary-color;
                 line-height: 1.1;
                 margin-bottom: 24px;
-                // font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif; // Inherit or set if needed
                 letter-spacing: -0.5px;
 
                 @include small-desktop {
@@ -1564,7 +1536,6 @@
                     }
                 }
 
-                // Match existing outline generic or custom
                 .btn-outline {
                     background-color: transparent;
                     border: 1px solid $sky-blue;
@@ -1603,7 +1574,7 @@
 
     .story-card {
         display: flex;
-        flex-direction: row; // Explicitly row layout
+        flex-direction: row;
         align-items: center;
         background: $text-white;
         border-radius: 24px;
@@ -1614,20 +1585,19 @@
         border: 1px solid $color-f0f0f0;
 
         @include small-tab {
-            // Stack on tablets and below
             flex-direction: column;
             text-align: center;
             padding: 40px 20px;
         }
 
         .story-visual {
-            flex: 0 0 40%; // Fixed 40% width
+            flex: 0 0 40%;
             max-width: 50%;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $text-white; // Ensure white bg
+            background-color: $text-white;
 
             @include small-tab {
                 max-width: 100%;
@@ -1636,7 +1606,7 @@
             }
 
             img {
-                width: 100%; // Fill the container
+                width: 100%;
                 height: auto;
                 border-radius: 0;
                 object-fit: contain;
@@ -1647,7 +1617,7 @@
 
         .story-content {
             flex: 1;
-            padding: 60px 80px 60px 0; // More right padding for balance
+            padding: 60px 80px 60px 0;
 
             @include small-tab {
                 padding: 0 20px 40px;
@@ -1711,8 +1681,8 @@
 // New Trailhead Section
 .commerce-trailhead-new {
     position: relative;
-    padding: 100px 0 180px; // Extra bottom spacing for curve height
-    background-color: $color-f8f9fa; // Fallback
+    padding: 100px 0 180px;
+    background-color: $color-f8f9fa;
     overflow: hidden;
 
     .trailhead-bg-image {
@@ -1811,7 +1781,7 @@
                 color: $secondary-color;
                 margin-bottom: 16px;
                 line-height: 1.3;
-                min-height: 52px; // Align heights
+                min-height: 52px;
             }
 
             p {
@@ -1819,7 +1789,7 @@
                 color: $color-444444;
                 line-height: 1.5;
                 margin-bottom: 24px;
-                min-height: 66px; // Align heights
+                min-height: 66px;
             }
 
             .trailhead-link {
@@ -1892,7 +1862,7 @@
             background: $text-white;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); // Slight shadow
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             border: 1px solid $color-e5e5e5;
             display: flex;
             flex-direction: column;
@@ -1905,7 +1875,7 @@
 
             .resource-img {
                 width: 100%;
-                height: 180px; // Fixed height for image area
+                height: 180px;
                 overflow: hidden;
 
                 img {
@@ -1923,7 +1893,7 @@
 
                 .resource-tag {
                     display: inline-block;
-                    background-color: $color-eef4ff; // Light blue pill
+                    background-color: $color-eef4ff;
                     color: $secondary-color;
                     font-size: 11px;
                     font-weight: 700;
@@ -1940,7 +1910,7 @@
                     color: $secondary-color;
                     margin-bottom: 16px;
                     line-height: 1.4;
-                    flex-grow: 1; // Pushes link to bottom
+                    flex-grow: 1;
                 }
 
                 .resource-link {
@@ -2083,7 +2053,6 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 12px;
-                // box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             }
         }
     }
@@ -2093,7 +2062,7 @@
 .commerce-ready-start {
     position: relative;
     padding: 100px 0 160px;
-    background-color: $color-f0f8ff; // Fallback
+    background-color: $color-f0f8ff;
     overflow: hidden;
 
     .ready-bg-image {
@@ -2108,8 +2077,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center; // Reset position
-            transform: rotate(180deg); // Flip gradient to bottom
+            object-position: center;
+            transform: rotate(180deg);
         }
     }
 
@@ -2313,7 +2282,7 @@
 
             &.active {
                 .faq-answer {
-                    max-height: 500px; // Approximate max height
+                    max-height: 500px;
                     transition: max-height 0.3s ease-in;
                 }
             }

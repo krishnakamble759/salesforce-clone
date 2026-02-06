@@ -1,12 +1,10 @@
 // Agentforce & AI App Development Styles
 
-// Base View - Global properties only
 .agentforce-ai-app-view {
     font-family: 'Salesforce Sans', system-ui, sans-serif;
     color: $text-color;
 }
 
-// Sub Navigation - Unnested
 .sub-nav {
     background-color: white;
     border-bottom: 1px solid $border-color;
@@ -1847,8 +1845,6 @@
         max-width: 1200px;
         margin: 0 auto;
 
-        // ... (Footer styles remain largely same but unnested if preferred, keeping structure)
-
         .footer-top-row {
             display: flex;
             flex-wrap: wrap;
@@ -2150,17 +2146,17 @@
 
                 h3 {
                     font-size: 20px;
-                    font-weight: 700; // Bold title
+                    font-weight: 700;
                     color: $secondary-color;
                     margin-bottom: 24px;
                     line-height: 1.4;
-                    flex: 1; // Push link to bottom
+                    flex: 1;
                 }
 
                 .card-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: $sky-blue; // Blue link
+                    color: $sky-blue;
                     text-decoration: underline;
                     margin-top: auto;
 
@@ -2199,7 +2195,7 @@
 
 // Next Steps Section
 .agentforce-next-steps {
-    padding: 80px 0 250px; // Increased bottom padding to make space for the background image
+    padding: 80px 0 250px;
     background: url('../assets/Agentforce A/Platform-Background-Contact-Us-Smaller-Characters.webp') center bottom no-repeat,
         linear-gradient(180deg, $color-f4f7fe 0%, $color-eef4ff 100%);
     background-size: 100% auto, cover;
@@ -2269,7 +2265,7 @@
             .step-icon {
                 width: 56px;
                 height: 56px;
-                background-color: $color-eef4ff; // Light blue circle
+                background-color: $color-eef4ff;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -2278,7 +2274,7 @@
 
                 i {
                     font-size: 24px;
-                    color: $sky-blue; // Blue icon
+                    color: $sky-blue;
                 }
             }
 
@@ -2312,112 +2308,6 @@
         }
     }
 }
-
-// FAQ Section
-// .agentforce-faq-old {
-//     padding: 80px 0;
-//     background-color: white;
-
-//     .faq-header {
-//         text-align: center;
-//         margin-bottom: 60px;
-//         padding: 0 20px;
-
-//         h2 {
-//             font-size: 40px;
-//             font-weight: 700;
-//             color: $secondary-color;
-//             line-height: 1.2;
-
-//             @include small-tab {
-//                 font-size: 32px;
-//             }
-
-//             @include mobile {
-//                 font-size: 28px;
-//             }
-//         }
-//     }
-
-//     .faq-list {
-//         max-width: 900px;
-//         margin: 0 auto;
-//         padding: 0 20px;
-
-//         .faq-item {
-//             border-bottom: 1px solid $color-d8dde6;
-//             padding: 30px 0; // Increased padding for better touch targets
-
-//             &:first-child {
-//                 border-top: 1px solid $color-d8dde6;
-//             }
-
-//             .faq-question {
-//                 display: flex;
-//                 justify-content: space-between;
-//                 align-items: center;
-//                 cursor: pointer;
-//                 gap: 20px;
-
-//                 h3 {
-//                     font-size: 20px;
-//                     font-weight: 700;
-//                     color: $secondary-color;
-//                     margin: 0;
-//                     line-height: 1.4;
-//                     text-align: left; // Ensure left alignment
-//                 }
-
-//                 .faq-toggle {
-//                     background: $color-eef4ff; // Light blue circle
-//                     border: none;
-//                     width: 32px;
-//                     height: 32px;
-//                     border-radius: 50%;
-//                     display: flex;
-//                     align-items: center;
-//                     justify-content: center;
-//                     color: $sky-blue;
-//                     font-size: 14px;
-//                     cursor: pointer;
-//                     flex-shrink: 0;
-//                     transition: all 0.2s; // Smooth transition for background/hover
-
-//                     &:hover {
-//                         background-color: $color-d8e6ff;
-//                     }
-//                 }
-//             }
-
-//             .faq-answer {
-//                 max-height: 0; // Hidden by default
-//                 overflow: hidden;
-//                 transition: max-height 0.4s ease-out, padding 0.4s ease; // Smooth animation
-//                 padding-top: 0;
-//                 opacity: 0;
-
-//                 p {
-//                     font-size: 16px;
-//                     line-height: 1.6;
-//                     color: $text-dark;
-//                     margin: 0;
-//                     padding-bottom: 10px;
-//                 }
-//             }
-
-//             // Active State
-//             &.active {
-//                 // Icon changed by JS to minus. 
-
-//                 .faq-answer {
-//                     max-height: 500px; // Open state
-//                     padding-top: 20px;
-//                     opacity: 1;
-//                     transition: max-height 0.5s ease-in, padding 0.3s ease, opacity 0.3s ease;
-//                 }
-//             }
-//         }
-//     }
 
 // Real FAQ Section (Copied from Data Cloud)
 .Agentforce-faq-section {
@@ -2545,13 +2435,12 @@
 
                     &[aria-expanded="true"] {
                         span {
-                            color: $secondary-color; // Keep text dark blue
+                            color: $secondary-color;
                         }
 
                         i {
-                            // No rotation needed for minus
-                            background-color: rgba($primary-color, 0.1); // Keep background light
-                            color: $primary-color; // Keep icon blue
+                            background-color: rgba($primary-color, 0.1);
+                            color: $primary-color;
                         }
                     }
                 }

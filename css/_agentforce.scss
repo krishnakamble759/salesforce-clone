@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent; // Removed black screen effect
+    background: transparent;
     z-index: 9998;
     opacity: 0;
     visibility: hidden;
@@ -21,11 +21,11 @@
 
 .offcanvas-menu {
     position: fixed;
-    top: 65px; // Matches header height
+    top: 65px;
     left: -100%;
-    bottom: 0; // Added to ensure it doesn't go off screen
+    bottom: 0;
     width: 85%;
-    max-width: 1000px; // Reduced from 1400px to make it more compact
+    max-width: 1000px;
     background: white;
     z-index: 9999;
     transition: left 0.3s ease;
@@ -37,7 +37,6 @@
     }
 
     @include small-tab {
-        // Changed from small-desktop to small-tab
         width: 100%;
         left: -100%;
         top: 115px;
@@ -67,7 +66,7 @@
         }
 
         .back-to-menu-btn {
-            display: none; // Hidden on desktop (>1200px)
+            display: none;
             background: none;
             border: none;
             padding: 0;
@@ -147,11 +146,10 @@
 
     .offcanvas-content {
         display: grid;
-        grid-template-columns: 350px 1fr; // Reduced from 500px to tighten left side
+        grid-template-columns: 350px 1fr;
         pointer-events: all;
 
         @include small-tab {
-            // Changed from small-desktop to allow grid at 1024px-769px
             display: flex;
             flex-direction: column;
             grid-template-columns: none;
@@ -167,7 +165,7 @@
     .products-categories {
         display: flex;
         flex-direction: column;
-        max-height: calc(100vh - 250px); // More room for header and padding
+        max-height: calc(100vh - 250px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
 
@@ -187,7 +185,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-left: 20px; // Reduced from 80px to remove large gap
+            margin-left: 20px;
             padding: 12px 16px;
             cursor: pointer;
             border-radius: 6px;
@@ -198,7 +196,6 @@
             text-decoration: none !important;
 
             @include small-tab {
-                // Changed from mid-mobile to align with stacking
                 font-size: 14px;
                 margin-left: 14px;
             }
@@ -217,7 +214,7 @@
                 width: 24px;
                 height: 24px;
                 object-fit: contain;
-                display: block; // Ensure it behaves well in flex
+                display: block;
                 flex-shrink: 0;
             }
 
@@ -250,12 +247,11 @@
         .category-link {
             margin-top: 16px;
             padding: 14px 16px;
-            margin-left: 20px; // Reduced from 80px to remove large gap
+            margin-left: 20px;
 
             @include small-tab {
-                // Changed from small-desktop
                 margin-left: 0;
-                padding-left: 30px; // Align with items roughly
+                padding-left: 30px;
             }
 
             a {
@@ -635,7 +631,7 @@ body.agentforce-body {
     width: 100%;
     max-width: 100%;
     display: block;
-    min-height: 100vh; // Ensure it covers viewport
+    min-height: 100vh;
     background: transparent;
     color: white;
     position: relative;
@@ -645,11 +641,10 @@ body.agentforce-body {
 
     &.customer-stories-view {
         background: $color-f8f9fa;
-        /* Light grey background override for stories view */
         color: $text-dark;
 
         .agentforce-hero-section {
-            background: none; // Unset the blue background
+            background: none;
             padding: 0;
         }
     }
@@ -723,10 +718,10 @@ body.agentforce-body {
                 i {
                     transition: transform 0.3s ease;
                     font-size: 18px;
-                    display: none; // Hidden on desktop
+                    display: none;
 
                     @include desktop {
-                        display: inline-block; // Visible on tablet/mobile
+                        display: inline-block;
                     }
                 }
             }
@@ -735,7 +730,7 @@ body.agentforce-body {
 
     // Agentforce Banner
     .agentforce-banner {
-        background-color: $sky-blue; // Dark blue
+        background-color: $sky-blue;
         text-align: center;
         padding: 12px 24px;
         color: white;
@@ -846,14 +841,14 @@ body.agentforce-body {
         cursor: pointer;
         transition: all 0.2s;
         white-space: nowrap;
-        text-decoration: none; // Added for A tag support
-        display: inline-block; // Ensure it behaves like a button
+        text-decoration: none;
+        display: inline-block;
 
         @include desktop {
             width: calc(100% - 40px);
-            margin: 20px 20px 30px; // Generous spacing
+            margin: 20px 20px 30px;
             text-align: center;
-            display: block; // Ensures it breaks onto a new line
+            display: block;
         }
 
         &:hover {
@@ -874,7 +869,7 @@ body.agentforce-body {
 
         .scroll-progress-bar {
             height: 100%;
-            background: $primary-color; // Blue
+            background: $primary-color;
             width: 0%;
             transition: width 0.1s ease-out;
         }
@@ -982,7 +977,7 @@ body.agentforce-body {
                 cursor: pointer;
                 transition: all 0.2s;
                 display: inline-block;
-                text-decoration: none; // Added for A tag support
+                text-decoration: none;
 
                 &:hover {
                     background: $color-f0f0f0;
@@ -1016,7 +1011,7 @@ body.agentforce-body {
 
 // Customers / Marquee Section (Retained from _agentforce.scss)
 .agentforce-customers {
-    background-color: $color-050b40; // Slightly different blue or same deep blue
+    background-color: $color-050b40;
     background: linear-gradient(180deg, $color-131860 0%, $color-10166d 100%);
     padding: 100px 0 80px;
     position: relative;
@@ -1024,13 +1019,13 @@ body.agentforce-body {
 
     .curve-top {
         position: absolute;
-        top: -50px; // Adjust based on curvature needed
+        top: -50px;
         left: 0;
         width: 100%;
         height: 100px;
-        background: #0b043e8a; // Match hero bg to blend
-        border-radius: 0 0 50% 50%; // Simple convex curve downwards
-        transform: scaleX(1.5); // Stretch the curve
+        background: #0b043e8a;
+        border-radius: 0 0 50% 50%;
+        transform: scaleX(1.5);
         z-index: 1;
     }
 
@@ -1060,16 +1055,16 @@ body.agentforce-body {
             overflow: hidden;
             position: relative;
             margin-bottom: 60px;
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); // Fade edges
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 
             .marquee-track {
                 display: flex;
-                gap: 60px; // Spacing between logos
+                gap: 60px;
                 width: max-content;
                 animation: marquee-scroll 40s linear infinite;
 
                 &:hover {
-                    animation-play-state: paused; // Optional: pause on hover
+                    animation-play-state: paused;
                 }
 
                 .logo-card {
@@ -1096,11 +1091,11 @@ body.agentforce-body {
             margin-bottom: 100px;
 
             .read-stories-link {
-                color: $primary-color; // Light blue
+                color: $primary-color;
                 font-size: 18px;
                 font-weight: 700;
                 text-decoration: underline;
-                cursor: pointer; // Make it look clickable
+                cursor: pointer;
 
                 &:hover {
                     text-decoration: none;
@@ -1112,7 +1107,6 @@ body.agentforce-body {
         .whats-new-section {
             padding-top: 40px;
 
-            // Hide the old headline to match the screenshot which starts with buttons
             h2 {
                 display: none;
             }
@@ -1122,7 +1116,7 @@ body.agentforce-body {
                 justify-content: center;
                 gap: 24px;
                 flex-wrap: wrap;
-                margin-bottom: 60px; // Space between buttons and grid
+                margin-bottom: 60px;
 
                 .btn-blue-solid {
                     background-color: $sky-blue;
@@ -1134,7 +1128,7 @@ body.agentforce-body {
                     border-radius: 4px;
                     cursor: pointer;
                     transition: all 0.2s ease;
-                    min-width: 200px; // Ensure consistent width
+                    min-width: 200px;
 
                     &:hover {
                         background-color: $color-005fb2;
@@ -1158,9 +1152,9 @@ body.agentforce-body {
                 }
 
                 @include small-tab {
-                    grid-template-columns: 1fr; // Stack on tablet/mobile
+                    grid-template-columns: 1fr;
                     gap: 48px;
-                    max-width: 600px; // Limit width when stacked
+                    max-width: 600px;
                 }
 
                 .feature-item {
@@ -1196,7 +1190,7 @@ body.agentforce-body {
                     p {
                         font-size: 18px;
                         line-height: 1.6;
-                        color: $text-white; // Pure white text as per screenshot
+                        color: $text-white;
                         margin-bottom: 24px;
                         font-weight: 400;
                     }
@@ -1222,7 +1216,7 @@ body.agentforce-body {
 
 // Agentforce Transform Section
 .agentforce-transform-section {
-    background-color: $color-10166d; // Matches the bottom of the previous section
+    background-color: $color-10166d;
     padding: 80px 0 100px;
     color: $text-white;
     position: relative;
@@ -1272,7 +1266,7 @@ body.agentforce-body {
                     border-radius: 12px;
                     overflow: hidden;
                     margin-bottom: 24px;
-                    background: $text-white; // Optional wrapper bg
+                    background: $text-white;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
                     img {
@@ -1394,8 +1388,6 @@ body.agentforce-body {
             display: flex;
             align-items: center;
 
-            // Allow inner background to be transparent so row background shows, or semi-transparent
-
             @include small-tab {
                 padding: 20px;
                 flex-direction: column;
@@ -1511,7 +1503,7 @@ body.agentforce-body {
                     }
 
                     .badge-pill {
-                        background: $color-3661eb; // Bright blue for badges
+                        background: $color-3661eb;
                         color: $text-white;
                         padding: 8px 16px;
                         border-radius: 50px;
@@ -1529,7 +1521,7 @@ body.agentforce-body {
                         opacity: 0.7;
 
                         @include mobile {
-                            display: none; // Hide arrow on mobile
+                            display: none;
                         }
                     }
 
@@ -1621,7 +1613,7 @@ body.agentforce-body {
                         font-weight: 700;
                         margin-bottom: 16px;
                         color: $text-white;
-                        min-height: 44px; // Align titles
+                        min-height: 44px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1828,7 +1820,7 @@ body.agentforce-body {
         }
 
         .industry-card {
-            background-color: $color-f8f4ff; // Light lavender
+            background-color: $color-f8f4ff;
             border-radius: 16px;
             padding: 40px 20px;
             display: flex;
@@ -1880,7 +1872,7 @@ body.agentforce-body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: $color-15095e; // Dark blue hover state
+                background-color: $color-15095e;
                 padding: 24px;
                 display: flex;
                 align-items: center;
@@ -2133,7 +2125,7 @@ body.agentforce-body {
             background: $text-white;
             border-radius: 12px;
             padding: 32px;
-            flex: 0 0 calc(25% - 18px); // 4 cards visible
+            flex: 0 0 calc(25% - 18px);
             display: flex;
             flex-direction: column;
             color: $secondary-color;
@@ -2205,7 +2197,7 @@ body.agentforce-body {
     .bottom-curve {
         position: absolute;
         background-color: white;
-        bottom: -1px; // Ensure no gap
+        bottom: -1px;
         left: 0;
         width: 100%;
         pointer-events: none;
@@ -2298,13 +2290,13 @@ body.agentforce-body {
     .agent-exchange-card {
         background: $text-white;
         display: flex;
-        align-items: stretch; // Stretch to ensure equal height
+        align-items: stretch;
         margin: 0 auto;
         max-width: 1250px;
         border-radius: 16px;
         border: 1px solid $color-e5e5e5;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        overflow: hidden; // Clip visual background corners
+        overflow: hidden;
 
         @include small-tab {
             flex-direction: column;
@@ -2313,19 +2305,18 @@ body.agentforce-body {
         }
 
         .exchange-visual {
-            flex: 1.5; // Width ratio
+            flex: 1.5;
             padding: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $color-f8f5ff; // Light lavender background
+            background-color: $color-f8f5ff;
 
             img {
                 width: 100%;
                 height: auto;
                 max-width: 900px;
                 display: block;
-                // Shadow for the laptop itself
                 filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
             }
         }
@@ -2674,12 +2665,7 @@ body.agentforce-body {
             display: flex;
             gap: 24px;
             align-items: center;
-            padding-bottom: 20px; // Spacing relative to line?
-            // Screenshot shows tabs floating above line? Or just line below.
-            // Let's keep it simple: Line is border-bottom of wrapper. Tabs are inside.
-            // To make line go "under" active tab without cutting through, we rely on margin.
-            // But screenshot shows just a list of items.
-            // Active item is a box.
+            padding-bottom: 20px;
 
             li {
                 font-size: 16px;
@@ -2814,22 +2800,17 @@ body.agentforce-body {
 
 // SECTION 1: HERO (STORIES)
 .stories-hero {
-    background: linear-gradient(105deg, $text-white 30%, $light-blue 100%); // Light gradient approximation
-    // Option B: If there's a specific cloud image, use that. For now, matching the "light + purple tint" feel.
-    // Based on screenshot, it's white to left, purplish-blue fade on right.
+    background: linear-gradient(105deg, $text-white 30%, $light-blue 100%);
     background: $color-f4f6f9;
-
-    // Add the swoop/cloud effect if possible with a pseudo or generic image
     // &::before { content: ""; position: absolute; ... }
 
-    color: $SECONDARY-COLOR; // Dark Blue Text
-    padding: 0 0 80px; // Removed top padding to flush banner with nav
+    color: $SECONDARY-COLOR;
+    padding: 0 0 80px;
     position: relative;
     overflow: hidden;
 
     .top-banner-float {
-        position: relative; // Move it into flow or keep absolute? Screenshot shows it as a banner *above* hero content but below nav.
-        // Actually it looks like a banner. Let's make it relative block.
+        position: relative;
         background: $secondary-color;
         color: white;
         padding: 12px;
@@ -2877,7 +2858,7 @@ body.agentforce-body {
         }
 
         h1 {
-            font-size: 64px; // Big headline
+            font-size: 64px;
             line-height: 1.1;
             font-weight: 800;
             margin-bottom: 24px;
@@ -2907,8 +2888,8 @@ body.agentforce-body {
             max-width: 550px;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); // Softer shadow for light theme
-            aspect-ratio: 16/9; // Added from inline style
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            aspect-ratio: 16/9;
 
             img {
                 width: 100%;
@@ -2920,11 +2901,6 @@ body.agentforce-body {
                 width: 100%;
                 height: 100%;
             }
-
-            // Play button overlay styles
-            // &::after {
-            //     // Gradient overlay if needed
-            // }
 
             .play-btn {
                 position: absolute;
@@ -2946,9 +2922,6 @@ body.agentforce-body {
     }
 }
 
-// ==========================================
-// UTILITY CLASSES (Refactored from inline styles)
-// ==========================================
 
 .nav-icon-small {
     font-size: 12px;
@@ -3076,10 +3049,9 @@ body.agentforce-body {
             }
 
             img {
-                height: 80px; // Increased size as requested
+                height: 80px;
                 width: auto;
                 object-fit: contain;
-                // No filter needed for color logos
                 transition: transform 0.2s;
 
                 &:hover {
@@ -3113,9 +3085,9 @@ body.agentforce-body {
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); // 4 columns as per screenshots
+        grid-template-columns: repeat(4, 1fr);
         gap: 24px;
-        max-width: 1300px; // Slightly wider for 4 cols
+        max-width: 1300px;
         margin: 0 auto;
         padding: 0 24px;
 
@@ -3149,7 +3121,7 @@ body.agentforce-body {
         }
 
         .card-header {
-            height: 180px; // Increased height to match screenshots improved visual
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -3212,15 +3184,13 @@ body.agentforce-body {
             }
 
             .logo-rush {
-                height: 45px; // Increased from 30px
+                height: 45px;
                 width: auto;
-                // filter: brightness(0) invert(1);
             }
 
             .logo-ufl {
-                height: 70px; // Increased from 60px
+                height: 70px;
                 width: auto;
-                // filter: brightness(0) invert(1);
             }
 
             .person-img {
@@ -3261,7 +3231,7 @@ body.agentforce-body {
                 color: $color-444444;
                 line-height: 1.5;
                 margin-bottom: 24px;
-                flex: 1; // Push link to bottom
+                flex: 1;
             }
 
             .learn-more {
@@ -3275,7 +3245,7 @@ body.agentforce-body {
 
                 &:hover {
                     color: $sky-blue;
-                    text-decoration: none; // optional: remove on hover or keep it? usually keeps it or thickens it. Let's just keep underline or maybe make it none on hover if that's standard, but user asked for "have this underline". I'll stick to underline default.
+                    text-decoration: none;
                 }
             }
         }
@@ -3284,11 +3254,11 @@ body.agentforce-body {
 
 // Story Content Display Sections
 .story-content-display {
-    display: none; // Hidden by default
+    display: none;
     padding: 60px 0;
 
     &.active {
-        display: block !important; // Force show
+        display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
         height: auto !important;
@@ -3373,14 +3343,14 @@ body.agentforce-body {
 
 // Sticky Scroll Spy Navigation
 .sticky-section-nav {
-    position: fixed; // Fixed to viewport, not sticky
-    top: 80px; // Below the main Salesforce header
+    position: fixed;
+    top: 80px;
     left: 0;
     right: 0;
     width: 100%;
     background: white;
     border-bottom: 1px solid $border-color;
-    z-index: 998; // Below main header but above content
+    z-index: 998;
     opacity: 0;
     visibility: hidden;
     transform: translateY(0);
@@ -3395,7 +3365,7 @@ body.agentforce-body {
     }
 
     @include mobile {
-        top: 60px; // Smaller header on mobile
+        top: 60px;
     }
 
     .sticky-nav-container {
@@ -3404,14 +3374,14 @@ body.agentforce-body {
         padding: 0 24px;
         position: relative;
         display: flex;
-        justify-content: flex-start; // Align to left
+        justify-content: flex-start;
 
         @include mobile {
             padding: 0 16px;
         }
 
         .sticky-nav-toggle {
-            width: auto; // Changed from 100% to auto
+            width: auto;
             background: white;
             border: none;
             padding: 16px 0;
@@ -4080,7 +4050,7 @@ body.agentforce-body {
             font-weight: 700;
             color: $secondary-color;
             cursor: pointer;
-            padding-bottom: 16px; // Space for the bar
+            padding-bottom: 16px;
 
             i {
                 color: $secondary-color;
@@ -4093,11 +4063,11 @@ body.agentforce-body {
             left: 0;
             width: 100%;
             height: 4px;
-            background-color: transparent; // or light grey if track is needed
+            background-color: transparent;
 
             .progress-bar {
                 height: 100%;
-                background-color: $sky-blue; // Blue line
+                background-color: $sky-blue;
                 width: 0%;
                 transition: width 0.1s linear;
             }
@@ -4254,7 +4224,7 @@ body.agentforce-body {
                 &.active {
                     border-color: $color-f4f6f9;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                    border-width: 1px; // Reset to 1px if we want cleaner look, or keep 2px
+                    border-width: 1px;
 
                     .accordion-header i {
                         transform: rotate(180deg);
@@ -4270,7 +4240,7 @@ body.agentforce-body {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    font-size: 24px; // Larger font
+                    font-size: 24px;
                     font-weight: 700;
                     color: $secondary-color;
 
@@ -4290,10 +4260,10 @@ body.agentforce-body {
 
                 .accordion-body {
                     display: none;
-                    padding: 0 32px 48px; // More padding at bottom
+                    padding: 0 32px 48px;
 
                     .story-text-content {
-                        max-width: 100%; // Fill width
+                        max-width: 100%;
 
                         p {
                             font-size: 18px;
@@ -4578,9 +4548,6 @@ body.agentforce-body {
     }
 }
 
-// -----------------------------------------------------------------------------
-// USER REQUEST: Lennar / Story Detail Page Specific Styles (Nested & Responsive)
-// -----------------------------------------------------------------------------
 #view-story-lennar,
 #view-story-detail {
     background: white;
@@ -4588,12 +4555,10 @@ body.agentforce-body {
     position: relative;
     z-index: 10;
 
-    // Custom Sticky Nav
     .story-sticky-nav {
         background: white;
         border-bottom: 1px solid $color-e5e5e5;
         padding: 12px 0;
-        // display: none; 
 
         .nav-tag {
             display: flex;
@@ -4839,12 +4804,11 @@ body.agentforce-body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: white; // Ensure content doesn't show through
+    background: white;
     padding-top: 20px;
-    padding-bottom: 0px; // Adjust for progress bar
-    border-bottom: 1px solid $color-e5e5e5; // Optional separation
+    padding-bottom: 0px;
+    border-bottom: 1px solid $color-e5e5e5;
 
-    // Ensure the progress bar is positioned correctly at the bottom of the sticky header
     .scroll-progress-container {
         position: absolute;
         bottom: 0;
@@ -4866,7 +4830,7 @@ body.agentforce-body {
 
 // News Article Hero Section
 .news-article-hero {
-    padding: 20px 0 60px; // Reduced top padding significantly
+    padding: 20px 0 60px;
     background: white;
 
     .news-hero-grid {
@@ -4884,19 +4848,19 @@ body.agentforce-body {
     .news-content {
         .news-tag {
             display: inline-block;
-            background-color: $sky-blue; // Salesforce Blue
+            background-color: $sky-blue;
             color: white;
             font-weight: 700;
-            font-size: 13px; // Slightly larger for readability
-            padding: 6px 14px; // More padding
+            font-size: 13px;
+            padding: 6px 14px;
             border-radius: 4px;
             margin-bottom: 24px;
         }
 
         .news-headline {
-            font-size: 42px; // Match design large size
+            font-size: 42px;
             font-weight: 700;
-            color: $secondary-color; // Dark Blue
+            color: $secondary-color;
             line-height: 1.1;
             margin-bottom: 24px;
 
@@ -4909,7 +4873,7 @@ body.agentforce-body {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: $color-181b31; // Darker grey for better contrast
+            color: $color-181b31;
             font-size: 15px;
             margin-bottom: 32px;
             font-weight: 500;
@@ -4951,8 +4915,8 @@ body.agentforce-body {
         img {
             width: 100%;
             height: auto;
-            border-radius: 16px; // Rounded corners from screenshot
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); // Subtle shadow
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             display: block;
         }
     }
@@ -4968,12 +4932,12 @@ body.agentforce-body {
     z-index: 50;
 
     .story-detail-hero {
-        background: transparent; // Allow white to show
+        background: transparent;
     }
 }
 
 // ==========================================
-// STORY CARD CORRECTIONS (Requested by User)
+// STORY CARD CORRECTIONS
 // ==========================================
 
 .story-card {
@@ -4998,7 +4962,7 @@ body.agentforce-body {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0; // Removed padding for full fit
+        padding: 0;
         position: relative;
 
         &.gradient-blue-dark {
@@ -5009,7 +4973,6 @@ body.agentforce-body {
             background: linear-gradient(135deg, $color-eef4fc 0%, $color-d8e6fe 100%);
         }
 
-        // Direct image child (e.g. Simplyhealth) - Full Cover (Requested "Total Fit")
         >img {
             width: 100%;
             height: 100%;
@@ -5018,7 +4981,6 @@ body.agentforce-body {
             border-radius: 12px 12px 0 0;
         }
 
-        // Logo inside pill (e.g. DeVry) - Centered White Pill
         .logo-pill {
             background: white;
             border-radius: 50px;
@@ -5028,7 +4990,6 @@ body.agentforce-body {
             align-items: center;
             justify-content: center;
 
-            // Ensure pill doesn't overflow
             max-width: 100%;
             max-height: 70%;
             width: auto;
@@ -5036,7 +4997,7 @@ body.agentforce-body {
 
             img {
                 width: auto;
-                height: 32px; // Fixed reasonable height for logos
+                height: 32px;
                 object-fit: contain;
                 display: block;
             }
@@ -5081,11 +5042,10 @@ body.agentforce-body {
 // ==========================================
 .next-step-section-new {
     padding: 250px 0;
-    // Layered background: Linear gradient + Contour Image at bottom
     background:
         url('../assets/read/contact-us-background-contour-min.webp') bottom center no-repeat,
         linear-gradient(180deg, $text-white 0%, $color-f0f6fa 100%);
-    background-size: 100% auto, cover; // Image width 100%, Gradient cover
+    background-size: 100% auto, cover;
 
     .next-step-container {
         max-width: 1200px;
@@ -5117,7 +5077,7 @@ body.agentforce-body {
         border-radius: 16px;
         padding: 40px 32px;
         text-align: left;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); // Soft shadow
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         transition: transform 0.2s;
         display: flex;
         flex-direction: column;
@@ -5131,7 +5091,7 @@ body.agentforce-body {
         .icon-circle {
             width: 48px;
             height: 48px;
-            background: $color-eef4fc; // Light blue circle
+            background: $color-eef4fc;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -5140,7 +5100,7 @@ body.agentforce-body {
 
             i {
                 font-size: 20px;
-                color: $sky-blue; // Primary Blue Icon
+                color: $sky-blue;
             }
         }
 
@@ -5153,7 +5113,7 @@ body.agentforce-body {
 
         p {
             font-size: 16px;
-            color: $color-444444; // Grey text
+            color: $color-444444;
             line-height: 1.5;
             margin-bottom: 24px;
             flex-grow: 1;
@@ -5161,7 +5121,7 @@ body.agentforce-body {
 
         .next-step-link {
             font-weight: 700;
-            color: $secondary-color; // Dark Blue Link
+            color: $secondary-color;
             text-decoration: underline;
             font-size: 16px;
 
@@ -5180,9 +5140,9 @@ body.agentforce-body {
     .learn-more-btn {
         display: inline-block;
         padding: 12px 32px;
-        background: $sky-blue; // Solid Blue Fill
-        color: $text-white; // White Text
-        border: 2px solid $sky-blue; // Match background
+        background: $sky-blue;
+        color: $text-white;
+        border: 2px solid $sky-blue;
         border-radius: 4px;
         text-decoration: none;
         font-weight: 700;
@@ -5190,7 +5150,7 @@ body.agentforce-body {
         transition: all 0.2s;
 
         &:hover {
-            background: $color-014486; // Darker blue on hover
+            background: $color-014486;
             border-color: $color-014486;
             text-decoration: none;
         }
@@ -5207,13 +5167,9 @@ body.agentforce-body {
     align-items: center;
     cursor: pointer;
 
-    // Ensure link inside fills height if needed, and remove default padding if container handles it
-    // But .agentforce-nav-link already has padding. We just need it to be hoverable.
-
-    // Desktop Hover Open
     @media (min-width: 1024px) {
         &:hover .agentforce-dropdown-menu {
-            display: block; // Fallback
+            display: block;
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
@@ -5222,7 +5178,7 @@ body.agentforce-body {
 
     // Mobile/JS Active State Open
     &.active .agentforce-dropdown-menu {
-        display: block; // Fallback
+        display: block;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -5237,23 +5193,20 @@ body.agentforce-body {
 
 .agentforce-dropdown-menu {
     position: absolute;
-    top: 100%; // Directly below
+    top: 100%;
     left: -20px;
     background: white;
     width: 650px;
 
     &.wide-menu {
-        width: 900px; // Wider for 3 columns
-        left: -150px; // Center alignment adjustment
+        width: 900px;
+        left: -150px;
     }
 
     &.narrow-menu {
         width: 380px;
         left: auto;
-        right: 0; // Align to right or keep left? "Pricing" is near end, right align might be safer to prevent overflow, but screenshot shows left alignment relative to link roughly.
-        // Let's stick effectively to left: -XXX or similar.
-        // Or actually, just left: -20px is fine if it doesn't overflow.
-        // Let's try centering or simple offset.
+        right: 0;
         left: -20px;
         padding: 24px;
 
@@ -5310,7 +5263,7 @@ body.agentforce-body {
         text-decoration: none;
         margin-bottom: 24px;
         padding: 8px;
-        margin-left: -8px; // Offset padding
+        margin-left: -8px;
         border-radius: 8px;
         transition: background 0.1s;
 
@@ -5461,7 +5414,6 @@ body.agentforce-body {
         .news-nav {
             display: flex;
             gap: 62px;
-            // align-items: center;
             flex-wrap: wrap;
             margin-left: 100px;
 
@@ -5494,7 +5446,6 @@ body.agentforce-body {
                     font-size: 12px;
                 }
 
-                // Animated blue underline
                 &::after {
                     content: '';
                     position: absolute;
@@ -5727,13 +5678,13 @@ body.agentforce-body {
 
         .article-grid {
             display: grid;
-            grid-template-columns: 3fr 1fr; // Main content takes 3/4, Sidebar 1/4
+            grid-template-columns: 3fr 1fr;
             gap: 40px;
             position: relative;
-            padding-left: 190px; // Shift columns further right
+            padding-left: 190px;
 
             @include mobile {
-                grid-template-columns: 1fr; // Stack on mobile
+                grid-template-columns: 1fr;
                 gap: 40px;
             }
         }
@@ -5747,18 +5698,17 @@ body.agentforce-body {
 
             // Intro Group: Serif & Italic - MATCHING SCREENSHOT EXACTLY
             .intro-group {
-                text-align: center; // Match screenshot center alignment
+                text-align: center;
 
                 p {
-                    font-family: 'Georgia', serif; // Serif for intro
-                    font-style: italic; // Italic for intro
-                    font-size: 16px; // Reduced from 20px
+                    font-family: 'Georgia', serif;
+                    font-style: italic;
+                    font-size: 16px;
                     color: $color-1a1a1a;
                     margin-bottom: 24px;
                 }
             }
 
-            // General Paragraphs (e.g. after divider): Inherit Sans-Serif
             p {
                 margin-bottom: 24px;
             }
@@ -5787,7 +5737,7 @@ body.agentforce-body {
             }
 
             .article-subhead {
-                font-family: sans-serif; // Back to sans-serif for subheads
+                font-family: sans-serif;
                 font-weight: 700;
                 color: $secondary-color;
                 font-size: 24px;
@@ -5809,7 +5759,7 @@ body.agentforce-body {
                 }
 
                 p {
-                    font-family: inherit; // Sans-serif
+                    font-family: inherit;
                     font-size: 32px;
                     font-weight: 700;
                     color: $secondary-color;
@@ -5831,7 +5781,6 @@ body.agentforce-body {
         // Right Column: Sidebar
         .article-sidebar {
             @media (min-width: 992px) {
-                // Only sticky on desktop
                 position: sticky;
                 top: 100px;
                 height: fit-content;
@@ -5841,11 +5790,11 @@ body.agentforce-body {
                 margin-bottom: 40px;
 
                 h4 {
-                    font-size: 16px; // Larger, bolder header
+                    font-size: 16px;
                     font-weight: 800;
                     color: $secondary-color;
                     margin-bottom: 16px;
-                    text-transform: none; // Title Case
+                    text-transform: none;
                 }
             }
 
@@ -5854,17 +5803,17 @@ body.agentforce-body {
                 gap: 12px;
 
                 .share-icon {
-                    width: 40px; // Slightly larger
+                    width: 40px;
                     height: 40px;
-                    border-radius: 12px; // Rounded square/squircle
-                    background: white; // White background
+                    border-radius: 12px;
+                    background: white;
                     color: $sky-blue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     font-size: 18px;
                     transition: all 0.2s;
-                    border: 1px solid $color-e5e5e5; // Subtle border
+                    border: 1px solid $color-e5e5e5;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
                     &:hover {
@@ -5876,13 +5825,13 @@ body.agentforce-body {
 
             .sidebar-card {
                 background: white;
-                border: 1px solid $color-eef4f9; // Very subtle border
+                border: 1px solid $color-eef4f9;
                 border-radius: 16px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
                 padding: 24px;
 
                 &.just-for-you {
-                    background: $text-white; // Or keep white
+                    background: $text-white;
                 }
 
                 .card-header {
@@ -5897,7 +5846,7 @@ body.agentforce-body {
 
                 .mini-article {
                     display: flex;
-                    flex-direction: column; // Stack info below image
+                    flex-direction: column;
                     align-items: flex-start;
                     gap: 16px;
                     text-decoration: none;
@@ -5908,11 +5857,11 @@ body.agentforce-body {
                     }
 
                     .mini-article-image {
-                        width: 100%; // Fill container
+                        width: 100%;
 
                         img {
-                            width: 100%; // Full width
-                            height: 140px; // Larger fixed height
+                            width: 100%;
+                            height: 140px;
                             object-fit: cover;
                             border-radius: 12px;
                         }
@@ -5944,25 +5893,23 @@ body.agentforce-body {
                 .sidebar-footer-img {
                     margin-top: 20px;
                     position: relative;
-                    height: 90px; // Reserve vertical space
+                    height: 90px;
 
                     img {
-                        display: block; // Reset
+                        display: block;
                     }
 
-                    // Bushes (1st img)
                     img:first-child {
                         width: 100%;
-                        border-radius: 0 0 16px 16px; // Match card radius
+                        border-radius: 0 0 16px 16px;
                         position: absolute;
                         bottom: 0;
                         left: 0;
                         object-fit: cover;
                     }
 
-                    // Butterfly (2nd img)
                     img:last-child {
-                        width: 22px; // Delicate size
+                        width: 22px;
                         height: auto;
                         position: absolute;
                         bottom: 35px;
@@ -6038,7 +5985,7 @@ body.agentforce-body {
 
         .related-image {
             width: 180px;
-            height: 120px; // Fixed size
+            height: 120px;
             flex-shrink: 0;
 
             img {
@@ -6093,7 +6040,7 @@ body.agentforce-body {
         .quote-paragraph {
             font-size: 16px;
             line-height: 1.8;
-            color: $color-444444; // Slightly lighter for quote feel or keep standard
+            color: $color-444444;
             margin-bottom: 40px;
         }
 
@@ -6108,9 +6055,8 @@ body.agentforce-body {
                 margin-bottom: 12px;
             }
 
-            // Nested list for partners
             &.nested-partner-list {
-                list-style-type: circle; // Or disc if preferred
+                list-style-type: circle;
                 margin-top: 12px;
                 padding-left: 20px;
 
@@ -6125,24 +6071,21 @@ body.agentforce-body {
                 color: $color-1a1a1a;
             }
 
-            // Compact list for availability sections
             &.availability-list {
-                list-style-type: disc; // Solid bullets to match screenshot
+                list-style-type: disc;
                 margin-top: 8px;
                 padding-left: 20px;
                 line-height: 1.2;
 
                 li {
-                    margin-bottom: 10px; // Matched to user reference
+                    margin-bottom: 10px;
                 }
             }
         }
-
-        // Video Promo Styles
         .video-promo-container {
             width: 100%;
             height: 350px;
-            background: $sky-blue; // Fallback blue
+            background: $sky-blue;
             background: linear-gradient(135deg, $color-005fb2 0%, $color-0099ff 100%);
             border-radius: 16px;
             display: flex;
@@ -6153,7 +6096,6 @@ body.agentforce-body {
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(1, 118, 211, 0.2);
 
-            // ... (existing video promo content styles if any nested?) ...
         }
 
 
@@ -6202,12 +6144,10 @@ body.agentforce-body {
                 }
 
                 i {
-                    margin-left: 4px; // Center optical alignment
+                    margin-left: 4px;
                 }
             }
         }
-
-        // Optional decorative
         &::before {
             content: "";
             position: absolute;
@@ -6370,7 +6310,6 @@ body.agentforce-body {
     }
 }
 
-// Root level overrides to guarantee application
 // Learn More Section
 .learn-more-container {
     margin-top: 40px;
@@ -6386,8 +6325,7 @@ body.agentforce-body {
 .disclaimer-share-row {
     display: grid !important;
     grid-template-columns: 1fr auto !important;
-    /* Force side-by-side */
-    align-items: end !important; // Align to bottom
+    align-items: end !important;
     gap: 40px !important;
     width: 100% !important;
     margin-top: 60px;
@@ -6395,7 +6333,6 @@ body.agentforce-body {
     position: relative;
 
     .disclaimer-col {
-        /* flex properties ignored in grid */
         max-width: 100%;
     }
 
@@ -6495,8 +6432,6 @@ body.agentforce-body {
     background: url('../assets/backgrounds/sky.webp') center top no-repeat;
     background-size: cover;
     overflow: hidden;
-    // margin-top: 60px;
-    /* Separation from previous section */
 
     .related-headline {
         font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
@@ -6504,12 +6439,8 @@ body.agentforce-body {
         font-weight: 700;
         color: $secondary-color;
         text-align: center;
-        // margin-bottom: 50px;
         position: relative;
-        // z-index: 2;
     }
-
-    /* Decorative Butterflies */
     .butterfly-decor {
         position: absolute;
         z-index: 1;
@@ -6597,7 +6528,6 @@ body.agentforce-body {
                 h3 {
                     font-size: 18px;
                     font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
-                    // line-height: 1.4;
                     font-weight: 700;
                     color: $secondary-color;
                 }
@@ -6997,7 +6927,6 @@ body.agentforce-body {
                 font-size: 16px;
             }
 
-            // Make "Agentforce" text with gradient (sky-blue to pink)
             .agentforce-text {
                 font-family: sans-serif;
                 background: linear-gradient(90deg, $color-00d4ff 0%, $color-ff00ff 100%);
@@ -7355,10 +7284,9 @@ body.agentforce-body {
 .news-footer {
     background-color: $text-white;
     padding-top: 54px;
-    margin-top: 0; // Completely removed spacing
+    margin-top: 0;
     font-size: 12px;
 
-    // max-width: 100%;
     .container-fluid {
         max-width: 100%;
         padding-left: 0;
@@ -7412,10 +7340,10 @@ body.agentforce-body {
             a {
                 color: $text-dark;
                 transition: color 0.2s;
-                text-decoration: none; // Remove underline from icon links
+                text-decoration: none;
 
                 i {
-                    font-size: 28px; // FontAwesome uses font-size
+                    font-size: 28px;
                     color: $color-4b4b4b;
                     transition: color 0.2s;
                 }
@@ -7434,12 +7362,8 @@ body.agentforce-body {
             font-weight: 700;
             color: black;
             font-size: 16px;
-            text-decoration: underline; // Add underline
+            text-decoration: underline;
         }
-
-        // .footers-contact{
-
-        // }
 
         h4 {
             font-size: 15px;
@@ -7478,13 +7402,13 @@ body.agentforce-body {
     .footer-bottom {
         background-color: $navy-blue;
         color: $text-white;
-        padding: 10px 0 20px; // Reduced height
+        padding: 10px 0 20px;
         width: 100%;
         position: relative;
 
         .container {
-            max-width: 100%; // Full width
-            padding: 0 120px; // Standard site padding
+            max-width: 100%;
+            padding: 0 120px;
 
             @include desktop {
                 padding: 0 40px;
@@ -7498,8 +7422,8 @@ body.agentforce-body {
         .footer-bottom-content {
             display: flex;
             flex-direction: column;
-            gap: 8px; // Reduced gap between rows
-            line-height: 1.2; // Tighter line height
+            gap: 8px;
+            line-height: 1.2;
         }
 
         .footer-bottom-links {
@@ -7522,7 +7446,7 @@ body.agentforce-body {
                 transition: 0.2s;
 
                 img {
-                    filter: invert(90%); // Change black to bright white
+                    filter: invert(90%);
                     width: 24px;
                     height: 24px;
                 }
@@ -7603,7 +7527,7 @@ body.agentforce-body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: $color-001242; // Dark blue background matching the uploaded image
+    background: $color-001242;
     display: none;
     justify-content: center;
     align-items: center;
@@ -7691,7 +7615,7 @@ body.agentforce-body {
             .icon-wrapper {
                 width: 56px;
                 height: 56px;
-                background: $color-f2f8fd; // Light blue circle
+                background: $color-f2f8fd;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -7726,7 +7650,7 @@ body.agentforce-body {
 
             a {
                 font-weight: 700;
-                color: $secondary-color; // Dark blue link
+                color: $secondary-color;
                 text-decoration: underline;
                 font-size: 16px;
                 margin-top: auto;
@@ -7775,7 +7699,7 @@ body.agentforce-body {
             border-bottom: 1px solid $color-e5e5e5;
 
             &:first-child {
-                border-top: 1px solid $color-e5e5e5; // Add top border for first item
+                border-top: 1px solid $color-e5e5e5;
             }
 
             .faq-header {
@@ -7786,7 +7710,7 @@ body.agentforce-body {
                 padding: 24px 0;
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start; // Align top in case text wraps
+                align-items: flex-start;
                 cursor: pointer;
                 transition: background-color 0.2s;
 
@@ -7815,7 +7739,7 @@ body.agentforce-body {
                     justify-content: center;
                     color: $sky-blue;
                     font-size: 14px;
-                    margin-top: 4px; // Align with text top line
+                    margin-top: 4px;
                 }
 
                 &:hover {
@@ -7826,7 +7750,7 @@ body.agentforce-body {
             }
 
             .faq-content {
-                display: none; // Hidden by default
+                display: none;
                 padding-bottom: 32px;
                 color: $text-dark;
                 font-size: 18px;
@@ -7863,7 +7787,7 @@ body.agentforce-body {
 
             &.active {
                 .faq-content {
-                    display: block; // Visible
+                    display: block;
                     animation: fadeIn 0.3s ease-out;
                 }
             }
