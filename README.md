@@ -217,6 +217,25 @@ None at the moment.
 - [ ] Add animations library
 - [ ] Implement dark mode
 
+## 🚀 Deployment
+
+To deploy this project to GitHub Pages:
+
+1. Update `vite.config.js` with your repository name:
+   ```javascript
+   export default {
+     base: '/<your-repo-name>/',
+     // ... other config
+   }
+   ```
+
+2. Build the project:
+   ```bash
+   npm run build
+   ```
+
+3. Upload the contents of the `dist` folder to your hosting provider or use a deploy script.
+
 ## 📞 Contact
 
 For questions or support, please contact the development team.
