@@ -80,7 +80,7 @@
 
                 .mobile-toggle-arrow {
                     display: none;
-                    color: #032D60;
+                    color: $SECONDARY-COLOR;
                     font-size: 1rem;
                     transition: transform 0.3s ease;
 
@@ -299,7 +299,7 @@
 
 /* --- Banner --- */
 .tableau-banner {
-    background-color: #032D60;
+    background-color: $SECONDARY-COLOR;
     /* Dark blue background */
     color: #fff;
     padding: 1rem 0;
@@ -518,7 +518,7 @@
 
 /* --- Dreamforce Promo Section --- */
 .tableau-dreamforce-promo {
-    background-color: #032d60;
+    background-color: $secondary-color;
     /* Dark Blue */
     padding: 0;
     color: #fff;

@@ -2,7 +2,7 @@
 
 .products-page {
     .promo-banner {
-        background-color: #032d60;
+        background-color: $secondary-color;
         color: white;
         padding: 8px 0;
         text-align: center;
@@ -66,7 +66,7 @@
                 font-weight: 700;
                 line-height: 1.1;
                 margin-bottom: 24px;
-                color: #032d60;
+                color: $secondary-color;
                 animation: slideUp 0.8s ease-out;
 
                 .blue-text {
@@ -209,7 +209,7 @@
             margin: 0 auto 90px;
             font-size: 56px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             line-height: 1.1;
             letter-spacing: -1px;
 
@@ -288,7 +288,7 @@
 
                 .card-label {
                     background: #f0f7ff;
-                    color: #032d60;
+                    color: $secondary-color;
                     padding: 9px 22px;
                     border-radius: 50px;
                     font-size: 15px;
@@ -299,7 +299,7 @@
                 h3 {
                     font-size: 23px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 24px;
                     line-height: 1.25;
                 }
@@ -408,7 +408,7 @@
             h2 {
                 font-size: 52px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 28px;
                 line-height: 1.1;
 
@@ -475,7 +475,7 @@
         margin: 0 auto 30px;
         font-size: 52px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         line-height: 1.1;
 
         @include small-desktop {
@@ -635,7 +635,7 @@
                 font-family: "ITC Avant Garde", "Salesforce Sans", system-ui;
                 font-size: 41px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 28px;
                 line-height: 1.1;
 
@@ -721,7 +721,7 @@
         .section-title {
             font-size: 52px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 24px;
             line-height: 1.1;
 
@@ -814,7 +814,7 @@
         .platform-label {
             font-size: 15px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             text-align: center;
             white-space: nowrap;
 
@@ -877,7 +877,7 @@
                 font-family: "ITC Avant Garde", "Salesforce Sans", system-ui;
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 20px;
                 line-height: 1.1;
 
@@ -1041,7 +1041,7 @@
                 font-family: "ITC Avant Garde", "Salesforce Sans", system-ui;
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
                 line-height: 1.1;
 
@@ -1181,13 +1181,13 @@
 
         span {
             font-size: 14px;
-            color: #032d60;
+            color: $secondary-color;
             font-weight: 500;
         }
 
         &:hover {
             box-shadow: 0 2px 8px rgba(1, 118, 211, 0.2);
-            border-color: #00A1E0;
+            border-color: $PRIMARY-COLOR;
         }
     }
 }
@@ -1207,7 +1207,7 @@
         font-family: "ITC Avant Garde", "Salesforce Sans", system-ui;
         font-size: 48px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 70px;
 
         @include small-tab {
@@ -1246,7 +1246,7 @@
                 span {
                     font-size: 24px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     line-height: 1.2;
                     max-width: 85%;
                     transition: color 0.2s;
@@ -1295,7 +1295,7 @@
                     padding-bottom: 20px;
 
                     span {
-                        color: #032d60; // Keep it dark as per image or change to blue if active
+                        color: $secondary-color; // Keep it dark as per image or change to blue if active
                     }
 
                     i {

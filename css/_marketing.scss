@@ -61,7 +61,7 @@
                     align-items: center;
                     gap: 8px;
                     text-decoration: none;
-                    color: #032d60;
+                    color: $secondary-color;
 
                     .mini-logo {
                         width: 52px;
@@ -78,7 +78,7 @@
                 .mobile-toggle-arrow {
                     display: none;
                     font-size: 18px;
-                    color: #032d60;
+                    color: $secondary-color;
                     cursor: pointer;
                     transition: transform 0.3s;
 
@@ -225,7 +225,7 @@
                                         a {
                                             font-size: 16px;
                                             font-weight: 700;
-                                            color: #032d60;
+                                            color: $secondary-color;
                                             padding: 0;
                                             display: inline-block;
                                             line-height: 1.4;
@@ -305,7 +305,7 @@
                     }
 
                     a {
-                        color: #032d60;
+                        color: $secondary-color;
                         text-decoration: none;
                         font-size: 16px;
                         font-weight: 600;
@@ -528,7 +528,7 @@
                     text-align: center;
 
                     .video-title {
-                        color: #032d60;
+                        color: $secondary-color;
                         font-size: 32px;
                         font-weight: 800;
                         margin-bottom: 20px;
@@ -680,7 +680,7 @@
             .brands-title {
                 font-size: 40px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 text-align: center;
                 margin-bottom: 60px;
                 line-height: 1.3;
@@ -916,7 +916,7 @@
             .what-is-title {
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 30px;
                 line-height: 1.2;
 
@@ -1028,7 +1028,7 @@
             .how-can-help-title {
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 text-align: center;
                 margin-bottom: 60px;
                 line-height: 1.2;
@@ -1134,7 +1134,7 @@
 
                     i {
                         font-size: 20px;
-                        color: #032d60;
+                        color: $secondary-color;
 
                         @include desktop {
                             font-size: 19px;
@@ -1371,7 +1371,7 @@
                                 .video-card-title {
                                     font-size: 22px;
                                     font-weight: 700;
-                                    color: #032d60;
+                                    color: $secondary-color;
                                     margin-bottom: 12px;
                                     line-height: 1.3;
 
@@ -1548,7 +1548,7 @@
         .section-title {
             font-size: 38px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 40px;
             max-width: 900px;
             margin-left: auto;
@@ -1677,7 +1677,7 @@
                     .story-heading {
                         font-size: 34px;
                         font-weight: 700;
-                        color: #032d60;
+                        color: $secondary-color;
                         margin-bottom: 25px;
                         line-height: 1.2;
 
@@ -1904,7 +1904,7 @@
                     .story-quote {
                         font-size: 32px;
                         line-height: 1.35;
-                        color: #032d60;
+                        color: $secondary-color;
                         font-weight: 700;
                         margin-bottom: 35px;
                         letter-spacing: -0.5px;
@@ -1934,7 +1934,7 @@
                         .author-name {
                             font-size: 22px;
                             font-weight: 700;
-                            color: #032d60;
+                            color: $secondary-color;
                             margin-bottom: 6px;
 
                             @include mobile {
@@ -1998,7 +1998,7 @@
         .section-title {
             font-size: 38px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 40px;
             line-height: 1.2;
 
@@ -2169,7 +2169,7 @@
                             h3 {
                                 font-size: 24px;
                                 font-weight: 700;
-                                color: #032d60;
+                                color: $secondary-color;
                                 margin-bottom: 20px;
                                 line-height: 1.3;
 
@@ -2235,7 +2235,7 @@
                 font-size: 42px;
                 line-height: 1.2;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 60px;
                 max-width: 800px;
                 margin-left: auto;
@@ -2291,7 +2291,7 @@
                     h3 {
                         font-size: 20px;
                         font-weight: 700;
-                        color: #032d60;
+                        color: $secondary-color;
                         margin-bottom: 20px;
                         line-height: 1.3;
                     }
@@ -2417,7 +2417,7 @@
             .stats-title {
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 60px;
                 line-height: 1.2;
 
@@ -2524,7 +2524,7 @@
                         .stat-number {
                             font-size: 82px;
                             font-weight: 800;
-                            color: #032d60;
+                            color: $secondary-color;
                             margin-bottom: 12px;
                             line-height: 1;
                             letter-spacing: -2px;
@@ -2556,7 +2556,7 @@
                         .stat-text {
                             font-size: 18px;
                             font-weight: 700;
-                            color: #032d60;
+                            color: $secondary-color;
                             line-height: 1.4;
                             margin: 0;
 
@@ -2626,7 +2626,7 @@
             .section-title {
                 font-size: 46px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 25px;
                 line-height: 1.2;
 
@@ -2766,7 +2766,7 @@
         .section-title {
             font-size: 42px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 60px;
             max-width: 900px;
             margin-left: auto;
@@ -2848,7 +2848,7 @@
                 h3 {
                     font-size: 24px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 20px;
                     line-height: 1.3;
                     min-height: 60px;
@@ -2915,7 +2915,7 @@
             text-align: center;
             font-size: 36px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 50px;
         }
 
@@ -2943,7 +2943,7 @@
                 text-align: left;
                 font-size: 20px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 transition: all 0.3s ease;
 
                 span {
@@ -3021,7 +3021,7 @@
         .section-title {
             font-size: 42px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 60px;
             line-height: 1.2;
 
@@ -3089,7 +3089,7 @@
             h3 {
                 font-size: 28px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 20px;
                 line-height: 1.3;
 

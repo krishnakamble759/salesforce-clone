@@ -159,8 +159,8 @@
                 gap: 0;
                 padding: 0;
                 margin-top: 10px;
-                background: #fff;
-                border-top: 1px solid #eee;
+                background: $text-white;
+                border-top: 1px solid $text-white;
             }
 
             li {
@@ -173,7 +173,7 @@
                     width: 100%;
                     padding: 0;
                     margin: 0;
-                    border-bottom: 1px solid #f5f5f5;
+                    border-bottom: 1px solid $text-white;
 
                     &:last-child {
                         border-bottom: none;
@@ -194,7 +194,7 @@
                     @include desktop {
                         padding: 15px 24px;
                         font-size: 15px;
-                        color: #032d60;
+                        color: $secondary-color;
 
                         &:hover {
                             color: $primary-color;
@@ -410,7 +410,7 @@
                 flex-wrap: wrap;
 
                 .btn-blue-solid {
-                    background-color: #0176D3;
+                    background-color: $SKY-BLUE;
                     color: white;
                     padding: 14px 28px;
                     border-radius: 4px;
@@ -426,8 +426,8 @@
 
                 .btn-blue-outline {
                     background-color: transparent;
-                    color: #0176D3;
-                    border: 2px solid #0176D3;
+                    color: $SKY-BLUE;
+                    border: 2px solid $SKY-BLUE;
                     padding: 12px 28px;
                     border-radius: 4px;
                     font-weight: 700;
@@ -470,7 +470,7 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background-color: #0176D3;
+    background-color: $SKY-BLUE;
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -760,7 +760,7 @@
 
                         &:hover:not(:disabled) {
                             transform: translateY(-50%) scale(1.1);
-                            border-color: #0176d3;
+                            border-color: $sky-blue;
                         }
                     }
                 }
@@ -800,7 +800,7 @@
                             transition: background-color 0.2s, left 0.3s ease;
 
                             &:hover {
-                                background-color: #0176d3;
+                                background-color: $sky-blue;
                             }
 
                             &:active {
@@ -921,7 +921,7 @@
                 .learn-more {
                     font-size: 16px;
                     font-weight: 700;
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: underline;
                     display: inline-flex;
                     align-items: center;
@@ -978,8 +978,8 @@
                         font-size: 18px;
 
                         &:hover:not(:disabled) {
-                            border-color: #0176d3;
-                            color: #0176d3;
+                            border-color: $sky-blue;
+                            color: $sky-blue;
                             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                             transform: scale(1.05);
                         }
@@ -1146,7 +1146,7 @@
                     &.error {
                         select {
                             border: 1px solid #c23934;
-                            background-color: #fff;
+                            background-color: $text-white;
                         }
 
                         .error-msg {
@@ -1185,7 +1185,7 @@
                     margin: 20px 0;
 
                     a {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: underline;
                     }
                 }
@@ -1239,7 +1239,7 @@
         }
 
         .ask-agentforce-btn-inline {
-            background-color: #0176D3;
+            background-color: $SKY-BLUE;
             color: white;
             padding: 12px 24px;
             border-radius: 8px;
@@ -1265,7 +1265,7 @@
 }
 
 .guide-dark-footer {
-    background-color: #001639;
+    background-color: $DARK-BLUE;
     color: white;
     padding: 40px 0;
 
@@ -1324,7 +1324,7 @@
                         gap: 8px;
 
                         i {
-                            color: #0176d3;
+                            color: $sky-blue;
                             background: white;
                             border-radius: 4px;
                             font-size: 14px;
@@ -1435,7 +1435,7 @@
                     font-size: 36px;
                     font-weight: 700;
                     margin-bottom: 10px;
-                    color: #032d60;
+                    color: $secondary-color;
 
                     @media (max-width: 768px) {
                         font-size: 28px;
@@ -1493,7 +1493,7 @@
                     font-size: 24px;
                     font-weight: 700;
                     margin-bottom: 5px;
-                    color: #032d60;
+                    color: $secondary-color;
                 }
 
                 .form-subtitle {
@@ -1532,14 +1532,14 @@
                         color: #3e3e3c;
 
                         a {
-                            color: #0176d3;
+                            color: $sky-blue;
                             text-decoration: underline;
                         }
                     }
 
                     .btn-submit {
                         width: 100%;
-                        background: #0176d3;
+                        background: $sky-blue;
                         color: white;
                         border: none;
                         padding: 14px;
@@ -1600,7 +1600,7 @@
     }
 
     .g2-card {
-        background: #ffffff;
+        background: $text-white;
         border-radius: 24px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         display: flex;
@@ -1651,7 +1651,7 @@
 
             .btn-read-reviews {
                 display: inline-block;
-                background-color: #0176D3;
+                background-color: $SKY-BLUE;
                 color: white !important;
                 padding: 14px 28px;
                 border-radius: 4px;
@@ -1812,7 +1812,7 @@
                     text-decoration: underline;
 
                     &:hover {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -1839,7 +1839,7 @@
 }
 
 .webinar-dark-footer {
-    background: #032d60;
+    background: $secondary-color;
     color: white;
     padding: 30px 15px;
 
@@ -1890,7 +1890,7 @@
 
                     &.privacy-choices i {
                         margin-right: 5px;
-                        color: #00a1e0;
+                        color: $primary-color;
                     }
                 }
             }
@@ -2002,8 +2002,8 @@
             .btn-signup {
                 display: inline-block;
                 background: white;
-                color: #0176d3;
-                border: 1px solid #0176d3;
+                color: $sky-blue;
+                border: 1px solid $sky-blue;
                 padding: 12px 28px;
                 border-radius: 4px;
                 font-weight: 700;
@@ -2134,17 +2134,17 @@
 
                     &.guide {
                         background-color: #eef4ff;
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     &.video {
                         background-color: #eef4ff;
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     &.demo {
                         background-color: #eef4ff;
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
                 }
 
@@ -2160,7 +2160,7 @@
                 .card-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: #0176d3; // Blue link
+                    color: $sky-blue; // Blue link
                     text-decoration: underline;
                     margin-top: auto;
 
@@ -2179,8 +2179,8 @@
         .btn-see-all {
             display: inline-block;
             background: white;
-            color: #0176d3;
-            border: 1px solid #0176d3;
+            color: $sky-blue;
+            border: 1px solid $sky-blue;
             padding: 12px 28px;
             font-weight: 700;
             font-size: 16px;
@@ -2278,7 +2278,7 @@
 
                 i {
                     font-size: 24px;
-                    color: #0176d3; // Blue icon
+                    color: $sky-blue; // Blue icon
                 }
             }
 
@@ -2301,7 +2301,7 @@
             .step-link {
                 font-size: 16px;
                 font-weight: 700;
-                color: #0176d3;
+                color: $sky-blue;
                 text-decoration: underline;
 
                 &:hover {
@@ -2377,7 +2377,7 @@
 //                     display: flex;
 //                     align-items: center;
 //                     justify-content: center;
-//                     color: #0176d3;
+//                     color: $sky-blue;
 //                     font-size: 14px;
 //                     cursor: pointer;
 //                     flex-shrink: 0;
@@ -2421,7 +2421,7 @@
 
 // Real FAQ Section (Copied from Data Cloud)
 .Agentforce-faq-section {
-    background-color: $background-color;
+    background-color: $text-white;
     padding: 80px 0;
     font-family: 'Salesforce Sans', system-ui, sans-serif;
 

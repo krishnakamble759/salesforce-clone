@@ -455,7 +455,7 @@
 
 
 .agentforce-banner {
-    background-color: #032d60; // Dark blue from screenshot
+    background-color: $secondary-color; // Dark blue from screenshot
     color: white;
     padding: 12px 0;
     font-size: 14px;
@@ -550,7 +550,7 @@
         .hero-title {
             font-size: 56px;
             font-weight: 800;
-            color: #032d60; // Dark blue
+            color: $secondary-color; // Dark blue
             line-height: 1.1;
             margin-bottom: 24px;
             letter-spacing: -1px;
@@ -706,7 +706,7 @@
     .companies-title {
         font-size: 32px;
         font-weight: 800;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 50px;
         line-height: 1.3;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
@@ -943,7 +943,7 @@
     .stats-title {
         font-size: 42px;
         font-weight: 800;
-        color: #032d60; // Dark blue
+        color: $secondary-color; // Dark blue
         margin-bottom: 60px;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
 
@@ -1011,7 +1011,7 @@
             .stat-value {
                 font-size: 56px;
                 font-weight: 800;
-                color: #032d60;
+                color: $secondary-color;
                 line-height: 1;
                 margin-bottom: 8px;
                 display: flex;
@@ -1027,7 +1027,7 @@
             .stat-label {
                 font-size: 18px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 text-transform: lowercase; // "historic uptime"
                 margin-bottom: 24px;
             }
@@ -1085,7 +1085,7 @@
         text-align: center;
         font-size: 40px;
         font-weight: 800;
-        color: #032d60; // Dark Blue
+        color: $secondary-color; // Dark Blue
         margin-bottom: 80px;
         line-height: 1.25;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
@@ -1121,7 +1121,7 @@
             h3 {
                 font-size: 28px;
                 font-weight: 800;
-                color: #032d60;
+                color: $secondary-color;
                 line-height: 1.3;
             }
 
@@ -1175,7 +1175,7 @@
                 h4 {
                     font-size: 20px;
                     font-weight: 700;
-                    color: #032d60; // Title color
+                    color: $secondary-color; // Title color
                     margin-bottom: 16px;
                 }
 
@@ -1190,7 +1190,7 @@
                 .card-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: #032d60; // Link color (dark blue/link style)
+                    color: $secondary-color; // Link color (dark blue/link style)
                     text-decoration: underline;
                     text-underline-offset: 4px;
 
@@ -1213,7 +1213,7 @@
         text-align: center;
         font-size: 40px;
         font-weight: 800;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 60px;
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
 
@@ -1356,7 +1356,7 @@
                 h3 {
                     font-size: 20px;
                     font-weight: 800;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 16px;
                     line-height: 1.4;
                 }
@@ -1372,7 +1372,7 @@
                 .analyst-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     text-decoration: underline;
                     text-underline-offset: 4px;
 
@@ -1423,7 +1423,7 @@
                 h3 {
                     font-size: 32px;
                     font-weight: 800;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 24px;
                     line-height: 1.2;
 

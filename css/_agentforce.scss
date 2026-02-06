@@ -71,7 +71,7 @@
             background: none;
             border: none;
             padding: 0;
-            color: #032d60;
+            color: $secondary-color;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -105,7 +105,7 @@
             }
 
             font-weight: 600;
-            color: #032d60;
+            color: $secondary-color;
             margin: 0;
         }
 
@@ -204,12 +204,12 @@
             }
 
             &.active-category {
-                color: #0176d3 !important;
+                color: $sky-blue !important;
                 background-color: #eef4ff !important;
                 font-weight: 700;
 
                 i {
-                    color: #0176d3 !important;
+                    color: $sky-blue !important;
                 }
             }
 
@@ -281,7 +281,7 @@
         gap: 0;
 
         .featured-product {
-            background: #E8F4F8;
+            background: $light-blue;
             padding: 340px 32px 0;
             border-radius: 12px;
             text-align: center;
@@ -303,7 +303,7 @@
             h3 {
                 font-size: 28px;
                 font-weight: 600;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 16px;
             }
 
@@ -380,7 +380,7 @@
                 z-index: 2;
 
                 .smb-category-label {
-                    color: #0176d3;
+                    color: $sky-blue;
                     font-size: 16px;
                     font-weight: 700;
                     margin-bottom: 12px;
@@ -390,7 +390,7 @@
                 .smb-title {
                     font-size: 36px;
                     line-height: 1.2;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 24px;
                     font-weight: 700;
                 }
@@ -413,7 +413,7 @@
 
                     .btn-watch-demo {
                         display: inline-block;
-                        background: #0176d3;
+                        background: $sky-blue;
                         color: white !important;
                         padding: 14px 32px;
                         border-radius: 4px;
@@ -430,7 +430,7 @@
                     }
 
                     .link-all-products {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: underline;
                         font-weight: 700;
                         font-size: 16px;
@@ -490,7 +490,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            color: #032d60;
+                            color: $secondary-color;
                             font-size: 28px;
                             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -551,7 +551,7 @@
                 .ai-title {
                     font-size: 36px;
                     line-height: 1.2;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 24px;
                     font-weight: 700;
                 }
@@ -713,7 +713,7 @@ body.agentforce-body {
             h2 {
                 font-size: 28px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin: 0;
                 display: flex;
                 align-items: center;
@@ -808,7 +808,7 @@ body.agentforce-body {
         }
 
         .agentforce-nav-link {
-            color: #032d60;
+            color: $secondary-color;
             text-decoration: none;
             font-size: 15px;
             font-weight: 600;
@@ -1125,7 +1125,7 @@ body.agentforce-body {
                 margin-bottom: 60px; // Space between buttons and grid
 
                 .btn-blue-solid {
-                    background-color: #0176D3;
+                    background-color: $sky-blue;
                     color: #fff;
                     padding: 14px 32px;
                     font-size: 16px;
@@ -1410,7 +1410,7 @@ body.agentforce-body {
 
                 .pill {
                     background: #f0f4f8;
-                    color: #032d60;
+                    color: $secondary-color;
                     padding: 10px 24px;
                     border-radius: 50px;
                     font-weight: 700;
@@ -1917,7 +1917,7 @@ body.agentforce-body {
 
         .btn-white-solid {
             background: #fff;
-            color: #0176D3;
+            color: $sky-blue;
             padding: 14px 32px;
             border-radius: 4px;
             font-weight: 700;
@@ -2136,7 +2136,7 @@ body.agentforce-body {
             flex: 0 0 calc(25% - 18px); // 4 cards visible
             display: flex;
             flex-direction: column;
-            color: #032d60;
+            color: $secondary-color;
             position: relative;
             overflow: hidden;
             min-height: 380px;
@@ -2156,7 +2156,7 @@ body.agentforce-body {
                 margin-top: 10px;
                 margin-bottom: 16px;
                 line-height: 1.3;
-                color: #032d60;
+                color: $secondary-color;
             }
 
             p {
@@ -2169,7 +2169,7 @@ body.agentforce-body {
 
             .learn-more {
                 font-weight: 700;
-                color: #0176D3;
+                color: $sky-blue;
                 text-decoration: underline;
                 font-size: 16px;
 
@@ -2253,7 +2253,7 @@ body.agentforce-body {
         h2 {
             font-size: 48px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 24px;
             line-height: 1.2;
 
@@ -2266,7 +2266,7 @@ body.agentforce-body {
         p {
             font-size: 19px;
             line-height: 1.6;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 32px;
             font-weight: 400;
         }
@@ -2276,9 +2276,9 @@ body.agentforce-body {
             align-items: center;
             gap: 10px;
             padding: 12px 24px;
-            border: 1px solid #032d60;
+            border: 1px solid $secondary-color;
             border-radius: 4px;
-            color: #032d60;
+            color: $secondary-color;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.2s;
@@ -2351,7 +2351,7 @@ body.agentforce-body {
             .pill-badge {
                 display: inline-block;
                 background-color: #E6F0F8;
-                color: #0176D3;
+                color: $sky-blue;
                 font-size: 13px;
                 font-weight: 700;
                 padding: 6px 14px;
@@ -2364,7 +2364,7 @@ body.agentforce-body {
             h3 {
                 font-size: 40px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 16px;
                 line-height: 1.15;
 
@@ -2390,9 +2390,9 @@ body.agentforce-body {
                 align-items: center;
                 gap: 8px;
                 padding: 12px 28px;
-                border: 1px solid #0176D3;
+                border: 1px solid $sky-blue;
                 border-radius: 4px;
-                color: #0176D3;
+                color: $sky-blue;
                 font-weight: 700;
                 text-decoration: none;
                 transition: all 0.2s;
@@ -2441,7 +2441,7 @@ body.agentforce-body {
             h3 {
                 font-size: 40px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
                 line-height: 1.15;
 
@@ -2486,9 +2486,9 @@ body.agentforce-body {
                 }
 
                 .btn-blue-solid {
-                    background-color: #0176D3;
+                    background-color: $sky-blue;
                     color: white;
-                    border: 1px solid #0176D3;
+                    border: 1px solid $sky-blue;
 
                     &:hover {
                         background-color: #005fb2;
@@ -2498,8 +2498,8 @@ body.agentforce-body {
 
                 .btn-blue-outline {
                     background-color: transparent;
-                    color: #0176D3;
-                    border: 1px solid #0176D3;
+                    color: $sky-blue;
+                    border: 1px solid $sky-blue;
 
                     &:hover {
                         background-color: #f1f8fc;
@@ -2564,7 +2564,7 @@ body.agentforce-body {
             h3 {
                 font-size: 40px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
                 line-height: 1.15;
 
@@ -2609,9 +2609,9 @@ body.agentforce-body {
                 }
 
                 .btn-blue-solid {
-                    background-color: #0176D3;
+                    background-color: $sky-blue;
                     color: white;
-                    border: 1px solid #0176D3;
+                    border: 1px solid $sky-blue;
 
                     &:hover {
                         background-color: #005fb2;
@@ -2651,7 +2651,7 @@ body.agentforce-body {
     .section-title {
         font-size: 48px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 60px;
         text-align: center;
 
@@ -2684,7 +2684,7 @@ body.agentforce-body {
             li {
                 font-size: 16px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 padding: 10px 24px;
                 cursor: pointer;
                 border: 2px solid transparent;
@@ -2692,12 +2692,12 @@ body.agentforce-body {
                 transition: all 0.2s;
 
                 &.active {
-                    color: #0176D3;
-                    border: 2px solid #0176D3;
+                    color: $sky-blue;
+                    border: 2px solid $sky-blue;
                 }
 
                 &:hover {
-                    color: #0176D3;
+                    color: $sky-blue;
                     background-color: #f8fbfe;
                 }
             }
@@ -2755,7 +2755,7 @@ body.agentforce-body {
                 .badge {
                     display: inline-block;
                     background-color: #E6F0F8;
-                    color: #032d60;
+                    color: $secondary-color;
                     font-size: 13px;
                     font-weight: 700;
                     padding: 6px 12px;
@@ -2774,21 +2774,21 @@ body.agentforce-body {
                 h3 {
                     font-size: 20px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 12px;
                     line-height: 1.4;
                     flex-grow: 1;
                 }
 
                 .card-link {
-                    color: #032d60;
+                    color: $secondary-color;
                     text-decoration: underline;
                     font-weight: 700;
                     font-size: 16px;
                     transition: color 0.2s;
 
                     &:hover {
-                        color: #0176D3;
+                        color: $sky-blue;
                         text-decoration: none;
                     }
                 }
@@ -2814,7 +2814,7 @@ body.agentforce-body {
 
 // SECTION 1: HERO (STORIES)
 .stories-hero {
-    background: linear-gradient(105deg, #FFFFFF 30%, #E8F4F8 100%); // Light gradient approximation
+    background: linear-gradient(105deg, #FFFFFF 30%, $light-blue 100%); // Light gradient approximation
     // Option B: If there's a specific cloud image, use that. For now, matching the "light + purple tint" feel.
     // Based on screenshot, it's white to left, purplish-blue fade on right.
     background: #F4F6F9;
@@ -2822,7 +2822,7 @@ body.agentforce-body {
     // Add the swoop/cloud effect if possible with a pseudo or generic image
     // &::before { content: ""; position: absolute; ... }
 
-    color: #032D60; // Dark Blue Text
+    color: $SECONDARY-COLOR; // Dark Blue Text
     padding: 0 0 80px; // Removed top padding to flush banner with nav
     position: relative;
     overflow: hidden;
@@ -2830,7 +2830,7 @@ body.agentforce-body {
     .top-banner-float {
         position: relative; // Move it into flow or keep absolute? Screenshot shows it as a banner *above* hero content but below nav.
         // Actually it looks like a banner. Let's make it relative block.
-        background: #032d60;
+        background: $secondary-color;
         color: white;
         padding: 12px;
         text-align: center;
@@ -2881,7 +2881,7 @@ body.agentforce-body {
             line-height: 1.1;
             font-weight: 800;
             margin-bottom: 24px;
-            color: #032D60;
+            color: $SECONDARY-COLOR;
 
             @include mobile {
                 font-size: 40px;
@@ -3032,15 +3032,15 @@ body.agentforce-body {
 
         h4 {
             font-size: 18px;
-            color: #032D60;
+            color: $SECONDARY-COLOR;
             margin-bottom: 0;
             font-weight: 800;
         }
 
         .marquee-pause-btn {
             background: none;
-            border: 2px solid #032D60;
-            color: #032D60;
+            border: 2px solid $SECONDARY-COLOR;
+            color: $SECONDARY-COLOR;
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -3052,7 +3052,7 @@ body.agentforce-body {
             font-size: 14px;
 
             &:hover {
-                background: #032D60;
+                background: $SECONDARY-COLOR;
                 color: white;
             }
         }
@@ -3098,7 +3098,7 @@ body.agentforce-body {
 
     h2 {
         font-size: 36px;
-        color: #032d60;
+        color: $secondary-color;
         font-weight: 700;
         max-width: 800px;
         margin: 0 auto;
@@ -3239,7 +3239,7 @@ body.agentforce-body {
             .tag-chip {
                 display: inline-block;
                 background: #eef4ff;
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 11px;
                 font-weight: 700;
                 padding: 4px 12px;
@@ -3252,7 +3252,7 @@ body.agentforce-body {
                 font-size: 18px;
                 line-height: 1.4;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 12px;
             }
 
@@ -3274,7 +3274,7 @@ body.agentforce-body {
                 gap: 6px;
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: none; // optional: remove on hover or keep it? usually keeps it or thickens it. Let's just keep underline or maybe make it none on hover if that's standard, but user asked for "have this underline". I'll stick to underline default.
                 }
             }
@@ -3313,7 +3313,7 @@ body.agentforce-body {
         .section-title {
             font-size: 32px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 24px;
             line-height: 1.2;
 
@@ -3329,7 +3329,7 @@ body.agentforce-body {
         .subsection-title {
             font-size: 24px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin: 32px 0 16px;
             line-height: 1.3;
 
@@ -3420,7 +3420,7 @@ body.agentforce-body {
             gap: 12px;
             font-size: 16px;
             font-weight: 600;
-            color: #032d60;
+            color: $secondary-color;
             cursor: pointer;
             transition: all 0.2s ease;
 
@@ -3431,7 +3431,7 @@ body.agentforce-body {
 
             i {
                 font-size: 18px;
-                color: #032d60;
+                color: $secondary-color;
                 transition: transform 0.3s ease;
 
                 @include mobile {
@@ -3494,7 +3494,7 @@ body.agentforce-body {
             .sticky-nav-item {
                 display: block;
                 padding: 16px 20px;
-                color: #032d60;
+                color: $secondary-color;
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: 500;
@@ -3521,7 +3521,7 @@ body.agentforce-body {
                 }
 
                 &.active {
-                    background: #e8f4f8;
+                    background: $light-blue;
                     color: $primary-color;
                     font-weight: 700;
                     border-left: 4px solid $primary-color;
@@ -3556,7 +3556,7 @@ body.agentforce-body {
         .next-step-title {
             font-size: 48px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             text-align: center;
             margin-bottom: 60px;
             line-height: 1.2;
@@ -3619,7 +3619,7 @@ body.agentforce-body {
                     width: 56px;
                     height: 56px;
                     border-radius: 50%;
-                    background: #e8f4f8;
+                    background: $light-blue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -3646,7 +3646,7 @@ body.agentforce-body {
                 .card-title {
                     font-size: 24px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 16px;
                     line-height: 1.3;
 
@@ -3714,7 +3714,7 @@ body.agentforce-body {
         .customer-stories-title {
             font-size: 48px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             text-align: center;
             margin-bottom: 60px;
             line-height: 1.2;
@@ -3767,7 +3767,7 @@ body.agentforce-body {
                 }
 
                 .story-logo-container {
-                    background: linear-gradient(135deg, #032d60 0%, #6b21a8 100%);
+                    background: linear-gradient(135deg, $secondary-color 0%, #6b21a8 100%);
                     padding: 60px 40px;
                     display: flex;
                     align-items: center;
@@ -3806,7 +3806,7 @@ body.agentforce-body {
                     .story-label {
                         font-size: 14px;
                         font-weight: 600;
-                        color: #032d60;
+                        color: $secondary-color;
                         text-transform: uppercase;
                         letter-spacing: 0.5px;
                         margin-bottom: 16px;
@@ -3821,7 +3821,7 @@ body.agentforce-body {
                     .story-card-title {
                         font-size: 24px;
                         font-weight: 700;
-                        color: #032d60;
+                        color: $secondary-color;
                         margin-bottom: 16px;
                         line-height: 1.3;
 
@@ -3941,7 +3941,7 @@ body.agentforce-body {
             .story-logo {
                 font-size: 24px;
                 font-weight: 800;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
                 letter-spacing: -0.5px;
             }
@@ -3950,7 +3950,7 @@ body.agentforce-body {
                 font-size: 64px;
                 line-height: 1.1;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
 
                 @include mobile {
@@ -4033,7 +4033,7 @@ body.agentforce-body {
 
         .share-label {
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             font-size: 14px;
         }
 
@@ -4049,13 +4049,13 @@ body.agentforce-body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #032d60;
+                color: $secondary-color;
                 transition: all 0.2s;
 
                 &:hover {
                     background: #f4f6f9;
-                    color: #0176D3;
-                    border-color: #0176D3;
+                    color: $sky-blue;
+                    border-color: $sky-blue;
                 }
             }
         }
@@ -4078,12 +4078,12 @@ body.agentforce-body {
             gap: 8px;
             font-size: 14px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             cursor: pointer;
             padding-bottom: 16px; // Space for the bar
 
             i {
-                color: #032d60;
+                color: $secondary-color;
             }
         }
 
@@ -4097,7 +4097,7 @@ body.agentforce-body {
 
             .progress-bar {
                 height: 100%;
-                background-color: #0176D3; // Blue line
+                background-color: $sky-blue; // Blue line
                 width: 0%;
                 transition: width 0.1s linear;
             }
@@ -4119,7 +4119,7 @@ body.agentforce-body {
             .section-title {
                 font-size: 40px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 32px;
 
                 @include mobile {
@@ -4130,7 +4130,7 @@ body.agentforce-body {
             .subsection-title {
                 font-size: 20px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 16px;
                 margin-top: 40px;
 
@@ -4151,7 +4151,7 @@ body.agentforce-body {
             }
 
             .content-link {
-                color: #0176D3;
+                color: $sky-blue;
                 text-decoration: underline;
 
                 &:hover {
@@ -4168,7 +4168,7 @@ body.agentforce-body {
             text-align: center;
             font-size: 48px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 60px;
         }
 
@@ -4204,7 +4204,7 @@ body.agentforce-body {
                 .stat-value {
                     font-size: 64px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     line-height: 1;
                     margin-bottom: 16px;
 
@@ -4227,7 +4227,7 @@ body.agentforce-body {
                 .stat-label {
                     font-size: 18px;
                     font-weight: 600;
-                    color: #032d60;
+                    color: $secondary-color;
                     line-height: 1.4;
                 }
             }
@@ -4247,7 +4247,7 @@ body.agentforce-body {
                 transition: all 0.2s;
 
                 &:hover {
-                    border-color: #0176D3;
+                    border-color: $sky-blue;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
                 }
 
@@ -4272,12 +4272,12 @@ body.agentforce-body {
                     justify-content: space-between;
                     font-size: 24px; // Larger font
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
 
                     i {
                         transition: transform 0.3s;
                         font-size: 20px;
-                        color: #0176D3;
+                        color: $sky-blue;
                         background: #f4f6f9;
                         width: 48px;
                         height: 48px;
@@ -4302,7 +4302,7 @@ body.agentforce-body {
                             margin-bottom: 24px;
 
                             a {
-                                color: #0176D3;
+                                color: $sky-blue;
                                 text-decoration: underline;
 
                                 &:hover {
@@ -4342,7 +4342,7 @@ body.agentforce-body {
 
                 .info-col {
                     .info-label {
-                        color: #032d60;
+                        color: $secondary-color;
                         font-size: 14px;
                         font-weight: 700;
                         margin-bottom: 16px;
@@ -4354,7 +4354,7 @@ body.agentforce-body {
                         font-size: 28px;
                         font-weight: 700;
                         line-height: 1.3;
-                        color: #032d60;
+                        color: $secondary-color;
                     }
 
                     .about-block {
@@ -4385,7 +4385,7 @@ body.agentforce-body {
                                 transition: all 0.2s;
 
                                 &:hover {
-                                    border-color: #0176D3;
+                                    border-color: $sky-blue;
                                     transform: translateY(-2px);
                                 }
 
@@ -4398,7 +4398,7 @@ body.agentforce-body {
                                 span {
                                     font-size: 14px;
                                     font-weight: 600;
-                                    color: #032d60;
+                                    color: $secondary-color;
                                 }
                             }
                         }
@@ -4447,7 +4447,7 @@ body.agentforce-body {
                     font-size: 28px;
                     line-height: 1.4;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 32px;
 
                     @include small-tab {
@@ -4472,7 +4472,7 @@ body.agentforce-body {
                             font-style: normal;
                             font-weight: 700;
                             font-size: 16px;
-                            color: #032d60;
+                            color: $secondary-color;
                         }
 
                         .quote-title {
@@ -4510,7 +4510,7 @@ body.agentforce-body {
             .section-title {
                 font-size: 48px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 32px;
                 line-height: 1.2;
 
@@ -4528,7 +4528,7 @@ body.agentforce-body {
             .subsection-title {
                 font-size: 24px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin: 40px 0 20px;
                 line-height: 1.3;
 
@@ -4599,7 +4599,7 @@ body.agentforce-body {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #032d60;
+            color: $secondary-color;
             font-weight: 700;
             font-size: 14px;
 
@@ -4649,7 +4649,7 @@ body.agentforce-body {
                 font-size: 56px;
                 line-height: 1.1;
                 font-weight: 800;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 24px;
                 text-align: left;
 
@@ -4708,7 +4708,7 @@ body.agentforce-body {
         .share-label {
             font-size: 14px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
         }
 
         .social-buttons {
@@ -4723,7 +4723,7 @@ body.agentforce-body {
                 height: 40px;
                 border: 1px solid #e5e5e5;
                 border-radius: 8px;
-                color: #032d60;
+                color: $secondary-color;
                 background: white;
                 transition: all 0.2s;
                 font-size: 16px;
@@ -4731,8 +4731,8 @@ body.agentforce-body {
 
                 &:hover {
                     background: #f4f6f9;
-                    color: #0176d3;
-                    border-color: #0176d3;
+                    color: $sky-blue;
+                    border-color: $sky-blue;
                 }
             }
         }
@@ -4775,7 +4775,7 @@ body.agentforce-body {
                     font-size: 11px;
                     letter-spacing: 1px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 24px;
                     display: block;
                     opacity: 0.8;
@@ -4785,7 +4785,7 @@ body.agentforce-body {
                     font-size: 28px;
                     font-weight: 400;
                     line-height: 1.4;
-                    color: #032d60;
+                    color: $secondary-color;
 
                     @include big-tab {
                         font-size: 24px;
@@ -4819,7 +4819,7 @@ body.agentforce-body {
                             border-radius: 50px;
                             font-size: 14px;
                             font-weight: 700;
-                            color: #032d60;
+                            color: $secondary-color;
 
                             img {
                                 height: 20px;
@@ -4884,7 +4884,7 @@ body.agentforce-body {
     .news-content {
         .news-tag {
             display: inline-block;
-            background-color: #0176D3; // Salesforce Blue
+            background-color: $sky-blue; // Salesforce Blue
             color: white;
             font-weight: 700;
             font-size: 13px; // Slightly larger for readability
@@ -4896,7 +4896,7 @@ body.agentforce-body {
         .news-headline {
             font-size: 42px; // Match design large size
             font-weight: 700;
-            color: #032d60; // Dark Blue
+            color: $secondary-color; // Dark Blue
             line-height: 1.1;
             margin-bottom: 24px;
 
@@ -4925,8 +4925,8 @@ body.agentforce-body {
             align-items: center;
             gap: 8px;
             padding: 12px 24px;
-            border: 1px solid #0176D3;
-            color: #0176D3;
+            border: 1px solid $sky-blue;
+            color: $sky-blue;
             background: white;
             font-weight: 700;
             font-size: 13px;
@@ -5002,7 +5002,7 @@ body.agentforce-body {
         position: relative;
 
         &.gradient-blue-dark {
-            background: linear-gradient(135deg, #01142e 0%, #032d60 100%);
+            background: linear-gradient(135deg, #01142e 0%, $secondary-color 100%);
         }
 
         &.gradient-blue-light {
@@ -5053,7 +5053,7 @@ body.agentforce-body {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 12px;
-            color: #032d60;
+            color: $secondary-color;
         }
 
         p {
@@ -5065,7 +5065,7 @@ body.agentforce-body {
 
         .learn-more {
             font-weight: 600;
-            color: #0176D3;
+            color: $sky-blue;
             text-decoration: none;
 
             &:hover {
@@ -5097,7 +5097,7 @@ body.agentforce-body {
     .next-step-title {
         font-size: 48px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 60px;
         line-height: 1.2;
     }
@@ -5140,14 +5140,14 @@ body.agentforce-body {
 
             i {
                 font-size: 20px;
-                color: #0176D3; // Primary Blue Icon
+                color: $sky-blue; // Primary Blue Icon
             }
         }
 
         h3 {
             font-size: 24px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 12px;
         }
 
@@ -5161,12 +5161,12 @@ body.agentforce-body {
 
         .next-step-link {
             font-weight: 700;
-            color: #032d60; // Dark Blue Link
+            color: $secondary-color; // Dark Blue Link
             text-decoration: underline;
             font-size: 16px;
 
             &:hover {
-                color: #0176D3;
+                color: $sky-blue;
             }
         }
     }
@@ -5180,9 +5180,9 @@ body.agentforce-body {
     .learn-more-btn {
         display: inline-block;
         padding: 12px 32px;
-        background: #0176D3; // Solid Blue Fill
+        background: $sky-blue; // Solid Blue Fill
         color: #fff; // White Text
-        border: 2px solid #0176D3; // Match background
+        border: 2px solid $sky-blue; // Match background
         border-radius: 4px;
         text-decoration: none;
         font-weight: 700;
@@ -5322,7 +5322,7 @@ body.agentforce-body {
             background: #f4f6f9;
 
             .item-title {
-                color: #0176D3;
+                color: $sky-blue;
                 text-decoration: underline;
             }
         }
@@ -5331,7 +5331,7 @@ body.agentforce-body {
             display: block;
             font-size: 16px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 6px;
         }
 
@@ -5353,13 +5353,13 @@ body.agentforce-body {
     .dropdown-item-simple {
         font-size: 15px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         text-decoration: none;
         transition: color 0.2s;
         display: block;
 
         &:hover {
-            color: #0176D3;
+            color: $sky-blue;
             text-decoration: underline;
         }
     }
@@ -5448,7 +5448,7 @@ body.agentforce-body {
         .news-title {
             font-size: 28px;
             font-weight: 500;
-            color: #032d60;
+            color: $secondary-color;
             margin: 0;
             line-height: 1.3;
             white-space: nowrap;
@@ -5502,12 +5502,12 @@ body.agentforce-body {
                     left: 0;
                     width: 0;
                     height: 3px;
-                    background: #0176D3;
+                    background: $sky-blue;
                     transition: width 0.3s ease;
                 }
 
                 &.active {
-                    color: #0176D3;
+                    color: $sky-blue;
 
                     &::after {
                         width: 100%;
@@ -5515,7 +5515,7 @@ body.agentforce-body {
                 }
 
                 &:hover {
-                    color: #0176D3;
+                    color: $sky-blue;
 
                     &::after {
                         width: 100%;
@@ -5565,7 +5565,7 @@ body.agentforce-body {
                     padding: 10px 24px;
                     font-size: 15px;
                     font-weight: 500;
-                    color: #032d60;
+                    color: $secondary-color;
                     text-decoration: none;
                     transition: all 0.2s ease;
 
@@ -5576,7 +5576,7 @@ body.agentforce-body {
 
                     &:hover {
                         background: #f4f6f9;
-                        color: #0176D3;
+                        color: $sky-blue;
                     }
 
                     @include mobile {
@@ -5619,7 +5619,7 @@ body.agentforce-body {
         .news-content {
             .news-tag {
                 display: inline-block;
-                background: #0176D3;
+                background: $sky-blue;
                 color: #ffffff;
                 font-size: 13px;
                 font-weight: 600;
@@ -5638,7 +5638,7 @@ body.agentforce-body {
             .news-headline {
                 font-size: 42px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 line-height: 1.15;
                 margin: 0 0 24px 0;
 
@@ -5680,9 +5680,9 @@ body.agentforce-body {
                 gap: 8px;
                 padding: 10px 20px;
                 background: transparent;
-                border: 2px solid #0176D3;
+                border: 2px solid $sky-blue;
                 border-radius: 4px;
-                color: #0176D3;
+                color: $sky-blue;
                 font-size: 14px;
                 font-weight: 600;
                 text-decoration: none;
@@ -5694,7 +5694,7 @@ body.agentforce-body {
                 }
 
                 &:hover {
-                    background: #0176D3;
+                    background: $sky-blue;
                     color: #ffffff;
                 }
 
@@ -5789,7 +5789,7 @@ body.agentforce-body {
             .article-subhead {
                 font-family: sans-serif; // Back to sans-serif for subheads
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 font-size: 24px;
                 margin-top: 40px;
                 margin-bottom: 16px;
@@ -5812,7 +5812,7 @@ body.agentforce-body {
                     font-family: inherit; // Sans-serif
                     font-size: 32px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     line-height: 1.4;
                     margin-bottom: 16px;
                 }
@@ -5822,7 +5822,7 @@ body.agentforce-body {
                     font-family: sans-serif;
                     font-size: 18px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     display: block;
                 }
             }
@@ -5843,7 +5843,7 @@ body.agentforce-body {
                 h4 {
                     font-size: 16px; // Larger, bolder header
                     font-weight: 800;
-                    color: #032d60;
+                    color: $secondary-color;
                     margin-bottom: 16px;
                     text-transform: none; // Title Case
                 }
@@ -5858,7 +5858,7 @@ body.agentforce-body {
                     height: 40px;
                     border-radius: 12px; // Rounded square/squircle
                     background: white; // White background
-                    color: #0176D3;
+                    color: $sky-blue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -5869,7 +5869,7 @@ body.agentforce-body {
 
                     &:hover {
                         background: #f4f6fe;
-                        border-color: #0176D3;
+                        border-color: $sky-blue;
                     }
                 }
             }
@@ -5891,7 +5891,7 @@ body.agentforce-body {
                     h3 {
                         font-size: 18px;
                         font-weight: 700;
-                        color: #032d60;
+                        color: $secondary-color;
                     }
                 }
 
@@ -5922,7 +5922,7 @@ body.agentforce-body {
                         h4 {
                             font-size: 14px;
                             font-weight: 600;
-                            color: #032d60;
+                            color: $secondary-color;
                             line-height: 1.4;
                             margin-bottom: 8px;
                             transition: color 0.2s;
@@ -6006,7 +6006,7 @@ body.agentforce-body {
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
         font-size: 32px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         text-align: center;
         margin-bottom: 40px;
     }
@@ -6054,7 +6054,7 @@ body.agentforce-body {
                 font-family: "ITC Avant Garde", sans-serif;
                 font-size: 18px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 8px;
                 line-height: 1.4;
             }
@@ -6081,7 +6081,7 @@ body.agentforce-body {
 
         .content-paragraph {
             a {
-                color: #0176D3;
+                color: $sky-blue;
                 text-decoration: underline;
 
                 &:hover {
@@ -6142,7 +6142,7 @@ body.agentforce-body {
         .video-promo-container {
             width: 100%;
             height: 350px;
-            background: #0176D3; // Fallback blue
+            background: $sky-blue; // Fallback blue
             background: linear-gradient(135deg, #005fb2 0%, #0099ff 100%);
             border-radius: 16px;
             display: flex;
@@ -6196,7 +6196,7 @@ body.agentforce-body {
 
                 &:hover {
                     background: white;
-                    color: #0176D3;
+                    color: $sky-blue;
                     transform: scale(1.1);
                     border-color: white;
                 }
@@ -6291,7 +6291,7 @@ body.agentforce-body {
             .share-label {
                 font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 font-size: 16px;
             }
 
@@ -6309,7 +6309,7 @@ body.agentforce-body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: #032d60;
+                    color: $secondary-color;
                     text-decoration: none;
                     transition: all 0.2s ease;
                     font-size: 18px;
@@ -6317,7 +6317,7 @@ body.agentforce-body {
                     &:hover {
                         transform: translateY(-2px);
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                        color: #0176D3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -6335,7 +6335,7 @@ body.agentforce-body {
             font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
             font-size: 24px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 30px;
         }
 
@@ -6352,7 +6352,7 @@ body.agentforce-body {
                 /* Light blue border */
                 border-radius: 50px;
                 background-color: #fff;
-                color: #0176D3;
+                color: $sky-blue;
                 font-weight: 700;
                 font-size: 13px;
                 letter-spacing: 0.5px;
@@ -6362,8 +6362,8 @@ body.agentforce-body {
 
                 &:hover {
                     background-color: #f4f9fd;
-                    border-color: #0176D3;
-                    color: #032d60;
+                    border-color: $sky-blue;
+                    color: $secondary-color;
                 }
             }
         }
@@ -6378,7 +6378,7 @@ body.agentforce-body {
     h3 {
         font-family: 'ITC Avant Garde', sans-serif;
         font-size: 24px;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 20px;
     }
 }
@@ -6424,7 +6424,7 @@ body.agentforce-body {
         .share-label {
             font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             font-size: 16px;
         }
 
@@ -6441,7 +6441,7 @@ body.agentforce-body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #032d60;
+                color: $secondary-color;
                 text-decoration: none;
                 transition: all 0.2s ease;
                 font-size: 18px;
@@ -6449,7 +6449,7 @@ body.agentforce-body {
                 &:hover {
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                    color: #0176D3;
+                    color: $sky-blue;
                 }
             }
         }
@@ -6473,7 +6473,7 @@ body.agentforce-body {
         text-align: left;
 
         h3 {
-            color: #032d60;
+            color: $secondary-color;
             font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
             font-weight: 800;
             margin-bottom: 20px;
@@ -6502,7 +6502,7 @@ body.agentforce-body {
         font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
         font-size: 40px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         text-align: center;
         // margin-bottom: 50px;
         position: relative;
@@ -6599,7 +6599,7 @@ body.agentforce-body {
                     font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
                     // line-height: 1.4;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                 }
 
                 .read-time {
@@ -6648,7 +6648,7 @@ body.agentforce-body {
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
         font-size: 24px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 30px;
     }
 
@@ -6664,7 +6664,7 @@ body.agentforce-body {
             border: 2px solid #e5eff9;
             border-radius: 50px;
             background-color: #fff;
-            color: #0176D3;
+            color: $sky-blue;
             font-weight: 700;
             font-size: 13px;
             letter-spacing: 0.5px;
@@ -6674,8 +6674,8 @@ body.agentforce-body {
 
             &:hover {
                 background-color: #f4f9fd;
-                border-color: #0176D3;
-                color: #032d60;
+                border-color: $sky-blue;
+                color: $secondary-color;
             }
         }
     }
@@ -6871,7 +6871,7 @@ body.agentforce-body {
                     .event-dropdown-item {
                         display: block;
                         padding: 12px 16px;
-                        color: #032d60;
+                        color: $secondary-color;
                         text-decoration: none;
                         font-size: 15px;
                         font-weight: 500;
@@ -7649,7 +7649,7 @@ body.agentforce-body {
 
     .section-title {
         font-size: 40px;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 60px;
         font-weight: 700;
 
@@ -7700,14 +7700,14 @@ body.agentforce-body {
 
                 i {
                     font-size: 24px;
-                    color: #0176D3;
+                    color: $sky-blue;
                 }
             }
 
             h3 {
                 font-size: 24px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 margin-bottom: 16px;
                 line-height: 1.25;
 
@@ -7726,13 +7726,13 @@ body.agentforce-body {
 
             a {
                 font-weight: 700;
-                color: #032d60; // Dark blue link
+                color: $secondary-color; // Dark blue link
                 text-decoration: underline;
                 font-size: 16px;
                 margin-top: auto;
 
                 &:hover {
-                    color: #0176D3;
+                    color: $sky-blue;
                     text-decoration: none;
                 }
             }
@@ -7753,7 +7753,7 @@ body.agentforce-body {
         font-family: 'ITC Avant Garde', system-ui, -apple-system, sans-serif;
         font-size: 40px;
         font-weight: 700;
-        color: #032d60;
+        color: $secondary-color;
         margin-bottom: 60px;
         line-height: 1.2;
 
@@ -7794,7 +7794,7 @@ body.agentforce-body {
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-size: 24px;
                     font-weight: 700;
-                    color: #032d60;
+                    color: $secondary-color;
                     padding-right: 20px;
                     line-height: 1.4;
                     flex: 1;
@@ -7813,14 +7813,14 @@ body.agentforce-body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: #0176D3;
+                    color: $sky-blue;
                     font-size: 14px;
                     margin-top: 4px; // Align with text top line
                 }
 
                 &:hover {
                     span {
-                        color: #0176D3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -7841,7 +7841,7 @@ body.agentforce-body {
                 }
 
                 a {
-                    color: #0176D3;
+                    color: $sky-blue;
                     text-decoration: underline;
 
                     &:hover {
@@ -7893,13 +7893,13 @@ body.agentforce-body {
             font-family: "ITC Avant Garde", sans-serif;
             font-size: 32px;
             font-weight: 700;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 12px;
         }
 
         p {
             font-size: 16px;
-            color: #032d60;
+            color: $secondary-color;
             margin-bottom: 30px;
         }
 
@@ -7962,15 +7962,15 @@ body.agentforce-body {
                     transition: border-color 0.2s;
 
                     &:focus {
-                        border-color: #0176D3;
-                        box-shadow: 0 0 0 1px #0176D3;
+                        border-color: $sky-blue;
+                        box-shadow: 0 0 0 1px $sky-blue;
                     }
                 }
             }
 
             .btn-signup {
                 padding: 12px 24px;
-                background-color: #0176D3;
+                background-color: $sky-blue;
                 color: white;
                 border: none;
                 border-radius: 4px;
@@ -8077,7 +8077,7 @@ body.agentforce-body {
 
                 a {
                     text-decoration: none;
-                    color: #0176D3;
+                    color: $sky-blue;
                     font-size: 18px;
                     font-weight: 400;
 
@@ -8117,7 +8117,7 @@ body.agentforce-body {
             .follow-us-text {
                 font-size: 16px;
                 font-weight: 700;
-                color: #032d60;
+                color: $secondary-color;
                 line-height: 0.6;
             }
 
@@ -8133,7 +8133,7 @@ body.agentforce-body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: #032d60;
+                    color: $secondary-color;
                     text-decoration: none;
                     font-size: 18px;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -8142,7 +8142,7 @@ body.agentforce-body {
                     &:hover {
                         transform: translateY(-2px);
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                        color: #0176D3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -8151,7 +8151,7 @@ body.agentforce-body {
 
     // Footer Bottom (Legal)
     .footer-bottom {
-        background-color: #032d60;
+        background-color: $secondary-color;
         padding: 30px 0;
         color: white;
 
