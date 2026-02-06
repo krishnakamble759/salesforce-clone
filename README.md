@@ -243,3 +243,4 @@ For questions or support, please contact the development team.
 ---
 
 **Built with ❤️ using Vite + SCSS + JavaScript**
+
