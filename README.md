@@ -219,32 +219,21 @@ None at the moment.
 
 ## 🚀 Deployment
 
+
 To deploy this project to GitHub Pages:
 
-1. Update `vite.config.js` with your repository name:
-   ```javascript
-   export default {
-     base: '/salesforce-clone4/',
-     // ... other config
-   }
-   ```
+1. **Update `vite.config.js`:**
+   The `base` URL has been configured to `'/salesforce-clone/'` for optimal GitHub Pages compatibility.
 
-2. Build the project:
+2. **Build the project:**
    ```bash
    npm run build
    ```
 
-3. Git Push:
-   ```bash
-   git add .
-   git commit -m "Prepare for deployment"
-   git push -u origin main
-   ```
-
-4. Enable GitHub Pages:
-   - Go to Settings > Pages
-   - Select `main` branch (or `gh-pages` if you set that up) / `dist` folder if deploying manually, OR easier:
-   - Use a deploy action.
+3. **Deploy:**
+   You can deploy automatically by pushing the `dist` folder contents to a `gh-pages` branch, or use the settings in your GitHub repository to deploy from the main branch / docs folder if properly configured.
+   
+   **Recommended:** Use a GitHub Action for automatic deployment.
 
 
 ## 📞 Contact

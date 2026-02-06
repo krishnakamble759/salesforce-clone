@@ -4,7 +4,7 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
     // Base public path
-    base: '/salesforce-clone4/',
+    base: '/salesforce-clone/',
 
     // Server configuration
     server: {
