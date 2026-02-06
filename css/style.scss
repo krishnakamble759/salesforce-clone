@@ -1,4 +1,4 @@
-﻿@use 'sass:color';
+@use 'sass:color';
 @use './variable.scss' as *;
 @import '_register.scss';
 @import '_sales.scss';
@@ -418,7 +418,7 @@ body {
                 .login-section-label {
                     padding: 15px 28px 10px;
                     font-size: 14px;
-                    color: #666;
+                    color: $text-light;
                     font-weight: 400;
                     text-transform: none;
                     border-bottom: none !important;
@@ -690,7 +690,7 @@ body {
                     }
 
                     &:hover {
-                        background-color: #f3f3f3;
+                        background-color: $background-light;
                         color: $primary-color;
                     }
                 }
@@ -722,7 +722,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: $background-light;
     border-radius: 8px;
     padding: 6px 12px;
     border: 1px solid #d8dde6;
@@ -960,14 +960,14 @@ body {
     .search-close {
         background: none;
         border: none;
-        color: #666;
+        color: $text-light;
         font-size: 18px;
         cursor: pointer;
         padding: 0 4px;
         margin-left: 8px;
 
         &:hover {
-            color: #333;
+            color: $text-color;
         }
     }
 
@@ -985,7 +985,7 @@ body {
         transform: translateY(-10px);
         transition: all 0.3s ease;
         z-index: 1000;
-        border: 1px solid #e0e0e0;
+        border: 1px solid $border-color;
 
         &.show {
             opacity: 1;
@@ -1440,7 +1440,7 @@ body {
             }
 
             &:hover {
-                background-color: #f3f3f3;
+                background-color: $background-light;
             }
         }
     }
@@ -1609,7 +1609,7 @@ body {
 
             .video-wrapper {
                 position: relative;
-                background: linear-gradient(180deg, #555 0%, #333 100%);
+                background: linear-gradient(180deg, #555 0%, $text-color 100%);
                 border-radius: 8px;
                 overflow: hidden;
                 aspect-ratio: 16 / 9;
@@ -1754,7 +1754,7 @@ body {
                             height: 0;
                             border-style: solid;
                             border-width: 12px 0 12px 20px;
-                            border-color: transparent transparent transparent #ffffff;
+                            border-color: transparent transparent transparent $text-white;
                             margin-left: 4px;
                         }
                     }
@@ -1809,7 +1809,7 @@ body {
 
 .products-headline {
     padding: 60px 0 40px;
-    background-color: #fff;
+    background-color: $text-white;
 
     h2 {
         font-size: 38px;
@@ -1826,7 +1826,7 @@ body {
 // Products Grid Section
 .products-section {
     padding: 0 0 80px;
-    background-color: #fff;
+    background-color: $text-white;
 
     .products-grid {
         display: grid;
@@ -1857,7 +1857,7 @@ body {
         }
 
         .product-card {
-            background-color: #fff;
+            background-color: $text-white;
             border: 1px solid #e5e5e5;
             border-radius: 16px;
             text-align: left;
@@ -1911,7 +1911,7 @@ body {
 
                 p {
                     font-size: 16px;
-                    color: #181818;
+                    color: $text-dark;
                     line-height: 1.5;
                 }
 
@@ -1945,7 +1945,7 @@ body {
 
         .btn-primary {
             background-color: $dark-blue;
-            color: #fff;
+            color: $text-white;
             border: none;
 
             &:hover {
@@ -1975,7 +1975,7 @@ body {
 
 // Industries Section
 .industries-section {
-    background-color: #fff;
+    background-color: $text-white;
 
     // Use wider container as requested to reduce side gaps
     .sf-container {
@@ -2037,7 +2037,7 @@ body {
             flex-direction: column;
             justify-content: space-between;
             transition: all 0.3s;
-            background: #fff;
+            background: $text-white;
             min-height: 340px;
             position: relative; // Needed for absolute positioning of visual
 
@@ -2129,7 +2129,7 @@ body {
                     right: 25px;
                     width: 64px; // Increased size
                     height: 64px; // Increased size
-                    background: #fff;
+                    background: $text-white;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -2152,7 +2152,7 @@ body {
 .crm-section {
     position: relative;
     padding: 0 0 100px;
-    background: #fff;
+    background: $text-white;
 
     .relative-z {
         position: relative;
@@ -2208,7 +2208,7 @@ body {
             }
 
             &.btn-outline {
-                background: #fff;
+                background: $text-white;
                 color: $dark-blue;
                 border: 1px solid $dark-blue;
 
@@ -2301,7 +2301,7 @@ body {
 
 // Trailhead Section
 .trailhead-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding-top: 60px;
 
     .section-header {
@@ -2472,7 +2472,7 @@ body {
         max-width: 100%;
 
         .customer-box {
-            background: #fff;
+            background: $text-white;
             padding: 24px 40px;
             border-radius: 8px;
             border: 1px solid #e5e5e5;
@@ -2517,7 +2517,7 @@ body {
 
 // Grow Business Section
 .grow-business-section {
-    background-color: #fff;
+    background-color: $text-white;
     max-width: 100%;
 
     .sf-container {
@@ -2643,7 +2643,7 @@ body {
     }
 
     .free-trial-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 24px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         display: flex;
@@ -2949,7 +2949,7 @@ body {
 .values-section {
     // background-image: url('../assets/backgrounds/pb-hp-products-bg-2.webp') no-repeat center/cover; 
     // Image is now explicit in HTML
-    background-color: #fff;
+    background-color: $text-white;
     padding-bottom: 0;
     height: 100%;
     position: relative; // Context for image if needed
@@ -2998,7 +2998,7 @@ body {
             max-width: 100%;
 
             .value-card {
-                background: #fff;
+                background: $text-white;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); // Soft shadow
                 border-radius: 16px;
                 width: 280px;
@@ -3209,7 +3209,7 @@ body {
 
 // Main Footer
 .main-footer {
-    background-color: #fff;
+    background-color: $text-white;
     padding-top: 54px;
     margin-top: 0;
 
@@ -3774,7 +3774,7 @@ body {
                         p {
                             margin: 0;
                             font-size: 14px;
-                            color: #333;
+                            color: $text-color;
                             line-height: 1.5;
                         }
                     }
@@ -3815,7 +3815,7 @@ body {
         .chatbot-input-area {
             padding: 16px;
             background: white;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid $border-color;
             display: flex;
             gap: 12px;
 
@@ -3961,7 +3961,7 @@ body {
     }
 
     .contact-card {
-        background-color: #ffffff;
+        background-color: $text-white;
         border-radius: 8px;
         padding: 40px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -4030,7 +4030,7 @@ body {
             border: 1px solid #d8dde6;
             border-radius: 4px;
             height: 50px;
-            background-color: #fff;
+            background-color: $text-white;
 
             &:focus {
                 border-color: $primary-color;

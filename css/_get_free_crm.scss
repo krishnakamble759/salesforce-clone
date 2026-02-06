@@ -2,7 +2,7 @@
 
 .get-free-crm-page {
     font-family: "ITC Avant Garde", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif !important;
-    background: #fff;
+    background: $text-white;
     min-height: 100vh;
     position: relative;
 
@@ -116,7 +116,7 @@
 
                     li {
                         font-size: 16px;
-                        color: #333;
+                        color: $text-color;
                         margin-bottom: 12px;
                         display: flex;
                         align-items: flex-start;
@@ -141,7 +141,7 @@
                     line-height: 1.6;
 
                     a {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: none;
 
                         &:hover {
@@ -194,11 +194,11 @@
                     border-radius: 4px;
                     padding: 10px 14px;
                     font-size: 14px;
-                    color: #333;
-                    background: #fff;
+                    color: $text-color;
+                    background: $text-white;
 
                     &:focus {
-                        border-color: #0176d3;
+                        border-color: $sky-blue;
                         box-shadow: 0 0 0 3px rgba(1, 118, 211, 0.1);
                         outline: none;
                     }
@@ -212,12 +212,12 @@
                 .form-privacy {
                     p {
                         font-size: 12px;
-                        color: #666;
+                        color: $text-light;
                         margin: 0;
                         line-height: 1.5;
 
                         a {
-                            color: #0176d3;
+                            color: $sky-blue;
                             text-decoration: none;
 
                             &:hover {
@@ -235,8 +235,8 @@
                         margin-top: 2px;
 
                         &:checked {
-                            background-color: #0176d3;
-                            border-color: #0176d3;
+                            background-color: $sky-blue;
+                            border-color: $sky-blue;
                         }
 
                         &:focus {
@@ -246,11 +246,11 @@
 
                     .form-check-label {
                         font-size: 12px;
-                        color: #333;
+                        color: $text-color;
                         margin-left: 8px;
 
                         a {
-                            color: #0176d3;
+                            color: $sky-blue;
                             text-decoration: none;
 
                             &:hover {
@@ -262,8 +262,8 @@
 
                 .btn-signup {
                     width: 100%;
-                    background: #0176d3;
-                    color: #fff;
+                    background: $sky-blue;
+                    color: $text-white;
                     border: none;
                     padding: 12px 24px;
                     border-radius: 4px;
@@ -288,7 +288,7 @@
             height: 1400px;
             top: -600px;
             left: -150px;
-            background: #fff;
+            background: $text-white;
             border-radius: 50%;
             z-index: 1;
             pointer-events: none;
@@ -311,7 +311,7 @@
 
     // White curved section with disclaimer
     .disclaimer-section {
-        background: #fff;
+        background: $text-white;
         padding: 20px 0;
         position: relative;
         border-bottom: 1px solid #e5e5e5;
@@ -326,7 +326,7 @@
 
         .disclaimer {
             font-size: 13px;
-            color: #333;
+            color: $text-color;
             margin: 0;
         }
 
@@ -340,7 +340,7 @@
 
     .free-crm-footer {
         background: $secondary-color;
-        color: #fff;
+        color: $text-white;
         padding: 30px 0;
 
         .footer-bottom {
@@ -358,8 +358,8 @@
             .footer-left {
                 .btn-worldwide {
                     background: transparent;
-                    border: 1px solid #fff;
-                    color: #fff;
+                    border: 1px solid $text-white;
+                    color: $text-white;
                     padding: 12px 24px;
                     border-radius: 4px;
                     font-size: 18px;
@@ -389,11 +389,11 @@
             .footer-center {
                 .copyright {
                     font-size: 12px;
-                    color: #fff;
+                    color: $text-white;
                     margin: 0 0 12px 0;
 
                     a {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: underline;
 
                         &:hover {
@@ -419,14 +419,14 @@
                     }
 
                     a {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: none;
                         transition: color 0.3s;
                         display: inline-flex;
                         align-items: center;
 
                         &:hover {
-                            color: #fff;
+                            color: $text-white;
                             text-decoration: underline;
                         }
 
@@ -442,8 +442,8 @@
 
             .footer-right {
                 .btn-ask-agentforce-footer {
-                    background: #0176d3;
-                    color: #fff;
+                    background: $sky-blue;
+                    color: $text-white;
                     border: none;
                     padding: 10px 20px;
                     border-radius: 50px;
@@ -491,7 +491,7 @@
             height: 60px;
             border-radius: 50%;
             border: none;
-            background: #fff;
+            background: $text-white;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             display: flex;

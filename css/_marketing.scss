@@ -2,7 +2,7 @@
 
 .marketing-page {
     .marketing-sub-nav {
-        background: #fff;
+        background: $text-white;
         border-bottom: 1px solid #e5e5e5;
         position: fixed;
         top: 60px;
@@ -135,8 +135,8 @@
                         }
 
                         .btn-watch-demo {
-                            background: #0176d3;
-                            color: #fff;
+                            background: $sky-blue;
+                            color: $text-white;
                             padding: 12px 28px;
                             border-radius: 4px;
                             font-weight: 700;
@@ -169,7 +169,7 @@
 
                             &:hover,
                             &.active {
-                                color: #0176d3;
+                                color: $sky-blue;
                             }
                         }
 
@@ -178,7 +178,7 @@
                             position: absolute;
                             top: 100%;
                             left: -50px;
-                            background: #fff;
+                            background: $text-white;
                             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
                             border-radius: 12px;
                             padding: 40px;
@@ -197,7 +197,7 @@
                                 left: 130px;
                                 width: 20px;
                                 height: 20px;
-                                background: #fff;
+                                background: $text-white;
                                 transform: rotate(45deg);
                                 box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.03);
                             }
@@ -231,12 +231,12 @@
                                             line-height: 1.4;
 
                                             &:hover {
-                                                color: #0176d3;
+                                                color: $sky-blue;
                                                 text-decoration: underline;
                                             }
 
                                             &.see-all {
-                                                color: #0176d3;
+                                                color: $sky-blue;
                                                 margin-top: 5px;
                                                 border-top: none;
                                                 padding-top: 0;
@@ -285,7 +285,7 @@
                         // Active state logic
                         &.is-active {
                             a {
-                                color: #0176d3;
+                                color: $sky-blue;
 
                                 i {
                                     transform: rotate(180deg);
@@ -318,7 +318,7 @@
 
                         &:hover,
                         &.active {
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
                     }
                 }
@@ -331,8 +331,8 @@
             }
 
             .btn-watch-demo {
-                background: #0176d3;
-                color: #fff;
+                background: $sky-blue;
+                color: $text-white;
                 padding: 12px 28px;
                 border-radius: 4px;
                 font-weight: 700;
@@ -482,7 +482,7 @@
             .hero-actions {
                 .btn-know-more {
                     display: inline-block;
-                    background: #0176d3;
+                    background: $sky-blue;
                     color: white;
                     padding: 14px 40px;
                     border-radius: 4px;
@@ -541,7 +541,7 @@
                         }
 
                         span {
-                            color: #0176d3;
+                            color: $sky-blue;
                             display: block;
                         }
                     }
@@ -593,7 +593,7 @@
     // Brands Showcase Section
     .marketing-brands-section {
         position: relative;
-        background: linear-gradient(180deg, #fef5f0 0%, #fff9f5 50%, #ffffff 100%);
+        background: linear-gradient(180deg, #fef5f0 0%, #fff9f5 50%, $text-white 100%);
         padding: 80px 20px 120px;
         overflow: hidden;
 
@@ -751,7 +751,7 @@
                 }
 
                 .brand-card {
-                    background: #ffffff;
+                    background: $text-white;
                     border-radius: 12px;
                     padding: 30px 20px;
                     display: flex;
@@ -865,7 +865,7 @@
                 height: 100%;
 
                 path {
-                    fill: #ffffff;
+                    fill: $text-white;
                 }
             }
         }
@@ -873,7 +873,7 @@
 
     // What is Marketing Cloud Section
     .marketing-what-is-section {
-        background: #ffffff;
+        background: $text-white;
         padding: 80px 20px;
 
         @include desktop {
@@ -953,7 +953,7 @@
             .what-is-description {
                 font-size: 18px;
                 line-height: 1.7;
-                color: #181818;
+                color: $text-dark;
                 margin: 0;
 
                 @include desktop {
@@ -1098,8 +1098,8 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
-                    background: #ffffff;
-                    border: 2px solid #e0e0e0;
+                    background: $text-white;
+                    border: 2px solid $border-color;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1158,12 +1158,12 @@
                     }
 
                     &:hover:not(:disabled) {
-                        background: #0176d3;
-                        border-color: #0176d3;
+                        background: $sky-blue;
+                        border-color: $sky-blue;
                         transform: scale(1.1);
 
                         i {
-                            color: #ffffff;
+                            color: $text-white;
                         }
                     }
 
@@ -1206,7 +1206,7 @@
 
                         .video-card {
                             flex: 0 0 calc((100% - 60px) / 3);
-                            background: #ffffff;
+                            background: $text-white;
                             border-radius: 16px;
                             overflow: hidden;
                             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -1313,7 +1313,7 @@
 
                                         i {
                                             font-size: 28px;
-                                            color: #0176d3;
+                                            color: $sky-blue;
                                             margin-left: 4px;
 
                                             @include desktop {
@@ -1338,7 +1338,7 @@
                                         }
 
                                         &:hover {
-                                            background: #ffffff;
+                                            background: $text-white;
                                             transform: scale(1.1);
                                         }
                                     }
@@ -1403,7 +1403,7 @@
                                 .video-card-description {
                                     font-size: 15px;
                                     line-height: 1.6;
-                                    color: #181818;
+                                    color: $text-dark;
                                     margin-bottom: 16px;
 
                                     @include desktop {
@@ -1434,7 +1434,7 @@
                                 .video-card-link {
                                     font-size: 16px;
                                     font-weight: 600;
-                                    color: #0176d3;
+                                    color: $sky-blue;
                                     text-decoration: none;
                                     display: inline-block;
                                     transition: all 0.2s ease;
@@ -1499,7 +1499,7 @@
 
                 .carousel-scrollbar-track {
                     height: 6px;
-                    background: #e0e0e0;
+                    background: $border-color;
                     border-radius: 3px;
                     position: relative;
                     cursor: pointer;
@@ -1514,7 +1514,7 @@
 
                     .carousel-scrollbar-thumb {
                         height: 100%;
-                        background: #0176d3;
+                        background: $sky-blue;
                         border-radius: 3px;
                         width: 60%;
                         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1538,7 +1538,7 @@
     // Success Stories Tabs Section
     .marketing-success-tabs-section {
         padding: 80px 0;
-        background: #ffffff;
+        background: $text-white;
         text-align: center;
 
         @include small-tab {
@@ -1568,7 +1568,7 @@
         .tabs-nav {
             display: flex;
             justify-content: center;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
             margin-bottom: 60px;
             max-width: 1000px;
             margin-left: auto;
@@ -1584,7 +1584,7 @@
                 padding: 15px 30px;
                 font-size: 16px;
                 font-weight: 700;
-                color: #181818;
+                color: $text-dark;
                 cursor: pointer;
                 position: relative;
                 transition: color 0.3s ease;
@@ -1596,13 +1596,13 @@
                     left: 0;
                     width: 100%;
                     height: 4px;
-                    background: #0176d3;
+                    background: $sky-blue;
                     transform: scaleX(0);
                     transition: transform 0.3s ease;
                 }
 
                 &.active {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     &::after {
                         transform: scaleX(1);
@@ -1610,7 +1610,7 @@
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
             }
         }
@@ -1693,7 +1693,7 @@
                     .story-desc {
                         font-size: 18px;
                         line-height: 1.6;
-                        color: #181818;
+                        color: $text-dark;
                         margin-bottom: 40px;
 
                         @include big-tab {
@@ -1705,8 +1705,8 @@
                     .read-story-btn {
                         display: inline-block;
                         padding: 12px 30px;
-                        background: #0176d3;
-                        color: #ffffff;
+                        background: $sky-blue;
+                        color: $text-white;
                         font-weight: 700;
                         text-decoration: none;
                         border-radius: 4px;
@@ -1755,9 +1755,9 @@
                             height: 80px;
                             background: rgba(255, 255, 255, 0.2);
                             backdrop-filter: blur(10px);
-                            border: 2px solid #ffffff;
+                            border: 2px solid $text-white;
                             border-radius: 50%;
-                            color: #ffffff;
+                            color: $text-white;
                             font-size: 24px;
                             cursor: pointer;
                             display: flex;
@@ -1776,8 +1776,8 @@
                             }
 
                             &:hover {
-                                background: #ffffff;
-                                color: #0176d3;
+                                background: $text-white;
+                                color: $sky-blue;
                                 scale: 1.1;
                             }
                         }
@@ -1827,7 +1827,7 @@
             padding: 0 20px;
 
             .customer-story-card {
-                background: #ffffff;
+                background: $text-white;
                 border-radius: 12px;
                 box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
                 display: flex;
@@ -1893,7 +1893,7 @@
 
                         i {
                             font-size: 52px;
-                            color: #0176d3;
+                            color: $sky-blue;
 
                             @include mobile {
                                 font-size: 38px;
@@ -1944,7 +1944,7 @@
 
                         .author-title {
                             font-size: 18px;
-                            color: #181818;
+                            color: $text-dark;
                             margin: 0;
                             line-height: 1.4;
 
@@ -1958,8 +1958,8 @@
                         .know-more-btn {
                             display: inline-block;
                             padding: 14px 34px;
-                            border: 2px solid #0176d3;
-                            color: #0176d3;
+                            border: 2px solid $sky-blue;
+                            color: $sky-blue;
                             border-radius: 4px;
                             font-weight: 700;
                             text-decoration: none;
@@ -1967,8 +1967,8 @@
                             font-size: 16px;
 
                             &:hover {
-                                background: #0176d3;
-                                color: #ffffff;
+                                background: $sky-blue;
+                                color: $text-white;
                                 transform: translateY(-2px);
                             }
 
@@ -1988,7 +1988,7 @@
     // Discover what's new in Marketing Section
     .marketing-discover-section {
         padding: 80px 0;
-        background: #ffffff;
+        background: $text-white;
         text-align: center;
 
         @include small-tab {
@@ -2015,7 +2015,7 @@
         .discover-tabs-nav {
             display: flex;
             justify-content: center;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
             margin-bottom: 50px;
             max-width: 1000px;
             margin-left: auto;
@@ -2035,7 +2035,7 @@
                 padding: 20px 25px;
                 font-size: 16px;
                 font-weight: 700;
-                color: #181818;
+                color: $text-dark;
                 cursor: pointer;
                 position: relative;
                 transition: all 0.3s ease;
@@ -2048,13 +2048,13 @@
                     left: 0;
                     width: 100%;
                     height: 4px;
-                    background: #0176d3;
+                    background: $sky-blue;
                     transform: scaleX(0);
                     transition: transform 0.3s ease;
                 }
 
                 &.active {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     &::after {
                         transform: scaleX(1);
@@ -2062,7 +2062,7 @@
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
 
                 @include mobile {
@@ -2114,7 +2114,7 @@
                     }
 
                     .discover-card {
-                        background: #ffffff;
+                        background: $text-white;
                         border-radius: 16px;
                         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
                         overflow: hidden;
@@ -2162,7 +2162,7 @@
 
                                 &.bg-blue-light {
                                     background: #eaf5fe;
-                                    color: #0176d3;
+                                    color: $sky-blue;
                                 }
                             }
 
@@ -2181,7 +2181,7 @@
                             p {
                                 font-size: 16px;
                                 line-height: 1.6;
-                                color: #181818;
+                                color: $text-dark;
                                 margin-bottom: 30px;
                                 flex-grow: 1;
                             }
@@ -2189,7 +2189,7 @@
                             .card-link {
                                 font-size: 16px;
                                 font-weight: 700;
-                                color: #0176d3;
+                                color: $sky-blue;
                                 text-decoration: none;
                                 transition: all 0.3s ease;
                                 display: inline-block;
@@ -2197,7 +2197,7 @@
                                 border-bottom: 2px solid transparent;
 
                                 &:hover {
-                                    border-bottom-color: #0176d3;
+                                    border-bottom-color: $sky-blue;
                                 }
 
                                 i {
@@ -2215,7 +2215,7 @@
     // Marketing Products Grid Section
     .marketing-products-grid-section {
         padding: 80px 0 180px;
-        background: #ffffff;
+        background: $text-white;
         position: relative;
         overflow: hidden;
 
@@ -2258,7 +2258,7 @@
 
                 // Default 4-3-2 layout for desktop
                 .product-card {
-                    background: #ffffff;
+                    background: $text-white;
                     border-radius: 12px;
                     padding: 40px 30px;
                     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
@@ -2299,7 +2299,7 @@
                     p {
                         font-size: 16px;
                         line-height: 1.6;
-                        color: #181818;
+                        color: $text-dark;
                         margin-bottom: 30px;
                         flex-grow: 1;
                     }
@@ -2307,7 +2307,7 @@
                     .card-link {
                         font-size: 16px;
                         font-weight: 700;
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: none;
                         display: inline-block;
 
@@ -2360,8 +2360,8 @@
                     display: inline-block;
                     padding: 14px 34px;
                     background: transparent;
-                    border: 2px solid #0176d3;
-                    color: #0176d3;
+                    border: 2px solid $sky-blue;
+                    color: $sky-blue;
                     border-radius: 4px;
                     font-size: 16px;
                     font-weight: 700;
@@ -2369,8 +2369,8 @@
                     transition: all 0.3s ease;
 
                     &:hover {
-                        background: #0176d3;
-                        color: #ffffff;
+                        background: $sky-blue;
+                        color: $text-white;
                     }
 
                     @include mobile {
@@ -2399,7 +2399,7 @@
     // Stats Section
     .marketing-stats-section {
         padding: 100px 20px;
-        background: #ffffff;
+        background: $text-white;
         text-align: center;
 
         @include small-tab {
@@ -2456,7 +2456,7 @@
 
                 .stat-card {
                     position: relative;
-                    background: #ffffff;
+                    background: $text-white;
                     border-radius: 20px;
                     overflow: hidden;
                     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -2480,19 +2480,19 @@
                     }
 
                     &.stat-card-blue-right .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-1.webp'), linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+                        background-image: url('../assets/marketing/stat-bg-1.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
                         background-position: right top, center;
                         background-size: contain, cover;
                     }
 
                     &.stat-card-purple-left .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-2.webp'), linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+                        background-image: url('../assets/marketing/stat-bg-2.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
                         background-position: left top, center;
                         background-size: contain, cover;
                     }
 
                     &.stat-card-orange-right .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-3.webp'), linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+                        background-image: url('../assets/marketing/stat-bg-3.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
                         background-position: right top, center;
                         background-size: contain, cover;
                     }
@@ -2505,7 +2505,7 @@
                         height: 100%;
                         z-index: 0;
                         background-repeat: no-repeat;
-                        background-color: #ffffff;
+                        background-color: $text-white;
 
                         img {
                             display: none;
@@ -2646,7 +2646,7 @@
             .section-desc {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #181818;
+                color: $text-dark;
                 margin-bottom: 40px;
 
                 @include big-tab {
@@ -2675,8 +2675,8 @@
                     font-size: 16px;
 
                     &.btn-primary {
-                        background: #0176d3;
-                        color: #ffffff;
+                        background: $sky-blue;
+                        color: $text-white;
 
                         &:hover {
                             background: #014486;
@@ -2685,12 +2685,12 @@
                     }
 
                     &.btn-outline {
-                        border: 2px solid #0176d3;
-                        color: #0176d3;
+                        border: 2px solid $sky-blue;
+                        color: $sky-blue;
 
                         &:hover {
-                            background: #0176d3;
-                            color: #ffffff;
+                            background: $sky-blue;
+                            color: $text-white;
                             transform: translateY(-2px);
                         }
                     }
@@ -2713,7 +2713,7 @@
 
     // Specific Tweaks for Sections
     .marketing-dreamforce-section {
-        background: #ffffff;
+        background: $text-white;
     }
 
     .marketing-community-section {
@@ -2726,14 +2726,14 @@
             img {
                 border-radius: 50%;
                 border: 8px solid #f8991c;
-                background: #ffffff;
+                background: $text-white;
                 padding: 0;
             }
         }
     }
 
     .marketing-cto-section {
-        background: #ffffff;
+        background: $text-white;
 
         .cto-image {
             max-width: 600px;
@@ -2748,7 +2748,7 @@
     // Trailhead Section
     .marketing-trailhead-section {
         padding: 100px 0 0;
-        background: #ffffff;
+        background: $text-white;
         text-align: center;
         position: relative;
         display: flex;
@@ -2805,7 +2805,7 @@
             }
 
             .trailhead-card {
-                background: #ffffff;
+                background: $text-white;
                 border-radius: 20px;
                 padding: 40px 30px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -2837,7 +2837,7 @@
 
                 .badge-label {
                     background: #eef7ff;
-                    color: #0176d3;
+                    color: $sky-blue;
                     padding: 4px 14px;
                     border-radius: 20px;
                     font-size: 13px;
@@ -2865,7 +2865,7 @@
                 p {
                     font-size: 16px;
                     line-height: 1.6;
-                    color: #181818;
+                    color: $text-dark;
                     margin-bottom: 30px;
                     flex-grow: 1;
                 }
@@ -2873,7 +2873,7 @@
                 .start-learning {
                     font-size: 16px;
                     font-weight: 700;
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: underline;
                     text-underline-offset: 4px;
                     transition: all 0.3s;
@@ -2907,7 +2907,7 @@
     // FAQ Section
     .marketing-faq-section {
         padding: 100px 0;
-        background: #ffffff;
+        background: $text-white;
         position: relative;
         z-index: 2;
 
@@ -2952,12 +2952,12 @@
 
                 i {
                     font-size: 18px;
-                    color: #0176d3;
+                    color: $sky-blue;
                     transition: transform 0.3s ease;
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
             }
 
@@ -2973,7 +2973,7 @@
                     p {
                         font-size: 16px;
                         line-height: 1.6;
-                        color: #181818;
+                        color: $text-dark;
                         margin-bottom: 20px;
 
                         &:last-child {
@@ -2981,7 +2981,7 @@
                         }
 
                         a {
-                            color: #0176d3;
+                            color: $sky-blue;
                             text-decoration: underline;
                         }
                     }
@@ -2990,7 +2990,7 @@
 
             &.active {
                 .faq-question {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     i {
                         transform: rotate(180deg); // Handled by icon switch
@@ -3008,7 +3008,7 @@
     // Next Step Section
     .marketing-next-step-section {
         padding: 50px 0 0;
-        background: #ffffff;
+        background: $text-white;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -3053,7 +3053,7 @@
         }
 
         .next-step-card {
-            background: #ffffff;
+            background: $text-white;
             border-radius: 16px;
             padding: 50px 40px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
@@ -3081,7 +3081,7 @@
                 margin-bottom: 30px;
 
                 i {
-                    color: #0176d3;
+                    color: $sky-blue;
                     font-size: 18px;
                 }
             }
@@ -3101,7 +3101,7 @@
             p {
                 font-size: 16px;
                 line-height: 1.6;
-                color: #181818;
+                color: $text-dark;
                 margin-bottom: 30px;
                 flex-grow: 1;
             }
@@ -3109,7 +3109,7 @@
             .next-step-link {
                 font-size: 16px;
                 font-weight: 700;
-                color: #0176d3;
+                color: $sky-blue;
                 text-decoration: underline;
                 transition: color 0.3s;
                 text-underline-offset: 4px;

@@ -164,7 +164,7 @@
 
 // Video Components
 .sales-video-card {
-    background-color: #fff;
+    background-color: $text-white;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -270,7 +270,7 @@
 /* Sub Nav Specifics */
 .sb-sub-nav {
     background-color: white;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $border-color;
     padding: 12px 0;
     position: fixed;
     width: 100%;
@@ -431,7 +431,7 @@
 
                     &:hover,
                     &.active {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     i {
@@ -464,7 +464,7 @@
                         top: 100%;
                         left: 50%;
                         transform: translateX(-50%) translateY(10px);
-                        background: #fff;
+                        background: $text-white;
                         min-width: 500px;
                         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                         border-radius: 15px;
@@ -497,7 +497,7 @@
                             height: 0;
                             border-left: 10px solid transparent;
                             border-right: 10px solid transparent;
-                            border-bottom: 10px solid #fff;
+                            border-bottom: 10px solid $text-white;
 
                             @include desktop {
                                 display: none;
@@ -543,7 +543,7 @@
                                         color: $secondary-color;
 
                                         &:hover {
-                                            color: #0176d3;
+                                            color: $sky-blue;
                                             text-decoration: underline;
                                         }
                                     }
@@ -563,9 +563,9 @@
                     .btn-join-community {
                         display: block;
                         background-color: transparent;
-                        color: #0176d3 !important;
+                        color: $sky-blue !important;
                         padding: 12px 20px;
-                        border: 1px solid #0176d3;
+                        border: 1px solid $sky-blue;
                         border-radius: 4px;
                         font-weight: 700;
                         text-decoration: none;
@@ -604,9 +604,9 @@
 
         .btn-join-community {
             background-color: transparent;
-            color: #0176d3 !important;
+            color: $sky-blue !important;
             padding: 10px 24px;
-            border: 1px solid #0176d3;
+            border: 1px solid $sky-blue;
             border-radius: 4px;
             font-weight: 700;
             text-decoration: none;
@@ -617,7 +617,7 @@
 
             &:hover {
                 background-color: #f0f7ff;
-                color: #0176d3 !important;
+                color: $sky-blue !important;
             }
         }
 
@@ -737,7 +737,7 @@
 
 /* Sales Success Stories Styles */
 .sales-success-stories {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 80px 0;
 
     @include mobile {
@@ -919,7 +919,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            background: #fff;
+            background: $text-white;
             border-radius: 12px;
             padding: 24px;
             min-width: 240px;
@@ -934,7 +934,7 @@
                 left: 20px;
                 width: 16px;
                 height: 16px;
-                background: #fff;
+                background: $text-white;
                 transform: rotate(45deg);
             }
 
@@ -973,7 +973,7 @@
 
 /* Sales CTA Section */
 .sales-cta-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding-bottom: 100px;
 
     @include mobile {
@@ -987,7 +987,7 @@
     }
 
     .cta-card {
-        background: #fff;
+        background: $text-white;
         border: 1px solid #e5e5e5;
 
         // Ensure proper column spacing on mobile
@@ -1063,7 +1063,7 @@
             padding: 12px 32px;
             font-weight: 700;
             border-radius: 4px;
-            color: #fff;
+            color: $text-white;
 
             @include mobile {
                 padding: 10px 24px;
@@ -1073,7 +1073,7 @@
             &:hover {
                 background-color: $sky-blue;
                 border-color: $sky-blue;
-                color: #fff;
+                color: $text-white;
             }
         }
 
@@ -1101,7 +1101,7 @@
 
 /* Sales Intro Pillars */
 .sales-intro-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 80px 0;
 
     .intro-heading {
@@ -1163,7 +1163,7 @@
 
 /* Sales Scale Section */
 .sales-scale-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 80px 0;
 
     @include mobile {
@@ -1177,7 +1177,7 @@
     }
 
     .scale-card {
-        background: #fff;
+        background: $text-white;
         border: 1px solid #e5e5e5;
 
         // Ensure proper column spacing on mobile
@@ -1254,7 +1254,7 @@
             padding: 12px 32px;
             font-weight: 700;
             border-radius: 4px;
-            color: #fff;
+            color: $text-white;
 
             @include mobile {
                 padding: 10px 24px;
@@ -1264,7 +1264,7 @@
             &:hover {
                 background-color: $sky-blue;
                 border-color: $sky-blue;
-                color: #fff;
+                color: $text-white;
             }
         }
 
@@ -1292,7 +1292,7 @@
 
 /* Extend Sales Cloud Section */
 .extend-sales-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 100px 60px;
 
     @include big-tab {
@@ -1349,7 +1349,7 @@
         }
 
         .card-inner {
-            background: #fff;
+            background: $text-white;
             border-radius: 12px;
             padding: 40px 30px;
             height: 100%;
@@ -1399,7 +1399,7 @@
         transform: translateY(-50%);
         width: 48px;
         height: 48px;
-        background: #fff;
+        background: $text-white;
         border: 1px solid #e5e5e5;
         border-radius: 50%;
         display: flex;
@@ -1460,10 +1460,10 @@
 
 /* Sales Scale Section */
 .sales-scale-section {
-    background-color: #fff;
+    background-color: $text-white;
 
     .scale-card {
-        background: #fff;
+        background: $text-white;
         border: 1px solid #e5e5e5;
 
         .zebra-img {
@@ -1499,12 +1499,12 @@
             padding: 12px 32px;
             font-weight: 700;
             border-radius: 4px;
-            color: #fff;
+            color: $text-white;
 
             &:hover {
                 background-color: $sky-blue;
                 border-color: $sky-blue;
-                color: #fff;
+                color: $text-white;
             }
         }
 
@@ -1544,7 +1544,7 @@
     height: 800px; // Explicit height as requested
     display: flex;
     align-items: flex-start;
-    background-color: #fff;
+    background-color: $text-white;
 
     // Background Image via HTML Tag
     .growth-bg {
@@ -1605,7 +1605,7 @@
     }
 
     .growth-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 12px;
         border-top: 6px solid #00f0d1;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1665,7 +1665,7 @@
 
 /* Discover What's New Section */
 .discover-new-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 100px 0;
 
     .discover-heading {
@@ -1736,7 +1736,7 @@
     }
 
     .discover-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1845,7 +1845,7 @@
 
 /* Accelerate Revenue Section */
 .accelerate-revenue-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 100px 0;
 
     @include small-tab {
@@ -1867,7 +1867,7 @@
     }
 
     .accelerate-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1946,7 +1946,7 @@
 
 /* Free CRM Section */
 .free-crm-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 60px 0;
 
     @include small-tab {
@@ -1954,7 +1954,7 @@
     }
 
     .free-crm-card {
-        background: #fff;
+        background: $text-white;
         border: 1px solid #e5e5e5;
 
         .free-crm-image {
@@ -1998,12 +1998,12 @@
             padding: 12px 32px;
             font-weight: 700;
             border-radius: 4px;
-            color: #fff;
+            color: $text-white;
 
             &:hover {
                 background-color: $sky-blue;
                 border-color: $sky-blue;
-                color: #fff;
+                color: $text-white;
             }
         }
 
@@ -2026,7 +2026,7 @@
 
 /* Salesblazer Community Section */
 .salesblazer-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 80px 0;
 
     @include small-tab {
@@ -2128,7 +2128,7 @@
                 }
 
                 &:hover {
-                    background: #fff;
+                    background: $text-white;
                 }
             }
         }
@@ -2137,7 +2137,7 @@
 
 /* Trailhead Learning Section */
 .trailhead-learning-section {
-    background-color: #fff;
+    background-color: $text-white;
     overflow: hidden;
     padding: 100px 0 0; // Top padding only
     position: relative;
@@ -2175,7 +2175,7 @@
     }
 
     .trailhead-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2196,7 +2196,7 @@
 
         .module-label {
             background-color: #e8f5ff;
-            color: #0176d3;
+            color: $sky-blue;
             padding: 4px 12px;
             border-radius: 100px;
             font-size: 12px;
@@ -2216,7 +2216,7 @@
         }
 
         .start-learning-link {
-            color: #0176d3;
+            color: $sky-blue;
             text-decoration: underline;
             font-size: 14px;
             transition: color 0.2s ease;
@@ -2265,7 +2265,7 @@
     }
 
     .trend-card {
-        border: 1px solid #e0e0e0;
+        border: 1px solid $border-color;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
@@ -2291,7 +2291,7 @@
                 padding: 6px 16px;
                 border-radius: 100px;
                 background-color: #eef7ff !important;
-                color: #0176d3 !important;
+                color: $sky-blue !important;
             }
 
             .trend-card-title {
@@ -2302,7 +2302,7 @@
             }
 
             .trend-card-link {
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 15px;
 
                 &:hover {
@@ -2313,23 +2313,23 @@
     }
 
     .see-all-resources-btn {
-        border: 1px solid #0176d3;
-        color: #0176d3;
+        border: 1px solid $sky-blue;
+        color: $sky-blue;
         padding: 12px 32px;
         font-weight: 700;
         border-radius: 4px;
         transition: all 0.3s ease;
 
         &:hover {
-            background-color: #0176d3;
-            color: #fff;
+            background-color: $sky-blue;
+            color: $text-white;
         }
     }
 }
 
 /* Ready to take the next step Section */
 .next-step-section {
-    background-color: #fff;
+    background-color: $text-white;
     min-height: 1000px !important; // Increased height significantly
     display: flex;
     align-items: flex-start;
@@ -2351,7 +2351,7 @@
     }
 
     .next-step-card {
-        background: #fff;
+        background: $text-white;
         border: 1px solid #f0f0f0 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2368,7 +2368,7 @@
             margin-bottom: 24px;
 
             i {
-                color: #0176d3 !important;
+                color: $sky-blue !important;
                 font-size: 1.2rem;
             }
         }
@@ -2386,7 +2386,7 @@
         }
 
         .next-step-link {
-            color: #0176d3;
+            color: $sky-blue;
             font-size: 16px;
             text-decoration: underline;
             transition: color 0.2s ease;
@@ -2441,7 +2441,7 @@
 
 /* Sales Cloud FAQs Section */
 .sales-faqs-section {
-    background-color: #fff;
+    background-color: $text-white;
     padding: 80px 0;
 
     .faqs-heading {
@@ -2469,7 +2469,7 @@
     .faq-tabs-container {
 
         .nav-tabs {
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
 
             .nav-link {
                 border: none;
@@ -2533,7 +2533,7 @@
             }
 
             .dropdown-menu {
-                border: 1px solid #e0e0e0;
+                border: 1px solid $border-color;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 padding: 8px 0;
@@ -2567,7 +2567,7 @@
 
     .faq-accordion {
         .faq-item {
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
 
             .faq-question {
                 width: 100%;
@@ -2647,7 +2647,7 @@
 
                     i {
                         background: $primary-color;
-                        color: #fff;
+                        color: $text-white;
                     }
                 }
             }
@@ -2669,7 +2669,7 @@
                     padding-bottom: 24px;
                     font-size: 16px;
                     line-height: 1.6;
-                    color: #333;
+                    color: $text-color;
 
                     @include small-tab {
                         font-size: 17px;

@@ -3,8 +3,8 @@
 
 .watch-demos-page {
     font-family: 'Salesforce Sans', 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #fff;
-    color: #181818;
+    background-color: $text-white;
+    color: $text-dark;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -12,7 +12,7 @@
 
     // Background Graphic (Purple curve at bottom)
     position: relative;
-    background-color: #ffffff;
+    background-color: $text-white;
 
     // Use pseudo-element for reliable fixed background positioning
     &::before {
@@ -22,7 +22,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: radial-gradient(ellipse 80% 60% at 0% 100%, #B0C0FF 0%, #dce4fd 45%, #ffffff 75%);
+        background: radial-gradient(ellipse 80% 60% at 0% 100%, #B0C0FF 0%, #dce4fd 45%, $text-white 75%);
         z-index: 0;
         pointer-events: none;
     }
@@ -73,7 +73,7 @@
 
                 .intro-text {
                     font-size: 18px;
-                    color: #181818;
+                    color: $text-dark;
                     margin-bottom: 24px;
                 }
 
@@ -88,7 +88,7 @@
                         gap: 12px;
                         margin-bottom: 16px;
                         font-size: 16px;
-                        color: #181818;
+                        color: $text-dark;
                         line-height: 1.5;
 
                         &::before {
@@ -129,13 +129,13 @@
 
             // Right Column (Form)
             .right-col {
-                background: #fff;
+                background: $text-white;
                 padding: 10px; // Visual padding mainly
 
                 h2 {
                     font-size: 18px;
                     font-weight: 700;
-                    color: #181818;
+                    color: $text-dark;
                     margin-bottom: 24px;
                 }
 
@@ -162,8 +162,8 @@
                             border: 1px solid #949494;
                             border-radius: 4px;
                             font-size: 16px;
-                            color: #181818;
-                            background: #fff;
+                            color: $text-dark;
+                            background: $text-white;
 
                             &::placeholder {
                                 color: #757575;
@@ -315,7 +315,7 @@
                         font-weight: 700;
                         text-transform: uppercase;
                         letter-spacing: 0.5px;
-                        color: #fff;
+                        color: $text-white;
                     }
 
                     img {
@@ -326,11 +326,11 @@
 
                     .fa-angle-down {
                         font-size: 12px;
-                        color: #fff;
+                        color: $text-white;
                     }
 
                     &:hover {
-                        border-color: #fff;
+                        border-color: $text-white;
                         background: rgba(255, 255, 255, 0.1);
                     }
                 }
@@ -346,7 +346,7 @@
                     li a {
                         font-size: 12px;
                         text-decoration: none;
-                        color: #fff;
+                        color: $text-white;
                         opacity: 0.8;
 
                         &:hover {
@@ -369,7 +369,7 @@
 
                     p {
                         font-size: 11px;
-                        color: #fff;
+                        color: $text-white;
                         opacity: 0.7;
                         margin: 0;
                     }

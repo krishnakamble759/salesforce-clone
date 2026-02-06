@@ -11,7 +11,7 @@
     // Sub Navigation
     .ai-sub-nav {
         background-color: white;
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid $border-color;
         padding: 12px 0;
         position: fixed;
         width: 100%;
@@ -172,7 +172,7 @@
 
                         &:hover,
                         &.active {
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
 
                         i {
@@ -205,7 +205,7 @@
                             top: 100%;
                             left: 50%;
                             transform: translateX(-50%) translateY(10px);
-                            background: #fff;
+                            background: $text-white;
                             min-width: 500px;
                             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                             border-radius: 15px;
@@ -238,7 +238,7 @@
                                 height: 0;
                                 border-left: 10px solid transparent;
                                 border-right: 10px solid transparent;
-                                border-bottom: 10px solid #fff;
+                                border-bottom: 10px solid $text-white;
 
                                 @include desktop {
                                     display: none;
@@ -284,7 +284,7 @@
                                             color: $secondary-color;
 
                                             &:hover {
-                                                color: #0176d3;
+                                                color: $sky-blue;
                                                 text-decoration: underline;
                                             }
                                         }
@@ -312,8 +312,8 @@
         }
 
         .btn-talk-expert {
-            background-color: #0176d3;
-            color: #fff;
+            background-color: $sky-blue;
+            color: $text-white;
             padding: 10px 24px;
             border-radius: 4px;
             font-weight: 700;
@@ -421,7 +421,7 @@
             }
 
             .btn-watch-demos {
-                background-color: #0176d3;
+                background-color: $sky-blue;
                 color: white;
                 padding: 16px 40px;
                 border-radius: 4px;
@@ -439,7 +439,7 @@
 
             .btn-talk-expert-outline {
                 background-color: white;
-                color: #0176d3;
+                color: $sky-blue;
                 border: 2px solid white;
                 padding: 14px 40px;
                 border-radius: 4px;
@@ -613,7 +613,7 @@
 
 // SMB Promotional Section
 .ai-smb-promo {
-    background-color: #f3f3f3;
+    background-color: $background-light;
     padding: 80px 0;
 
     @include small-tab {
@@ -692,7 +692,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: #0176d3;
+            background-color: $sky-blue;
             color: white;
             padding: 12px 28px;
             border-radius: 4px;
@@ -775,7 +775,7 @@
             margin-bottom: 32px;
 
             a {
-                color: #0176d3;
+                color: $sky-blue;
                 text-decoration: underline;
                 font-weight: 600;
                 transition: color 0.2s;
@@ -794,7 +794,7 @@
 
         .btn-explore-agentforce {
             display: inline-block;
-            background-color: #0176d3;
+            background-color: $sky-blue;
             color: white;
             padding: 14px 32px;
             border-radius: 4px;
@@ -895,7 +895,7 @@
             margin-bottom: 40px;
 
             a {
-                color: #0176d3;
+                color: $sky-blue;
                 text-decoration: underline;
                 font-weight: 600;
                 transition: color 0.2s;
@@ -913,7 +913,7 @@
         }
 
         .ai-solution-item {
-            border-left: 2px solid #e0e0e0;
+            border-left: 2px solid $border-color;
             padding: 20px 0 20px 30px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -938,7 +938,7 @@
                 display: none;
 
                 a {
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: underline;
                     font-weight: 600;
                     transition: color 0.2s;
@@ -950,7 +950,7 @@
             }
 
             .solution-link {
-                color: #0176d3;
+                color: $sky-blue;
                 text-decoration: underline;
                 font-weight: 700;
                 font-size: 16px;
@@ -963,12 +963,12 @@
             }
 
             &.active {
-                border-left: px solid #0176d3;
+                border-left: px solid $sky-blue;
                 padding-left: 20px;
                 background-color: #f9f9f9;
 
                 .solution-title {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
 
                 .solution-desc,
@@ -979,7 +979,7 @@
 
             &:hover:not(.active) {
                 .solution-title {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
             }
         }
@@ -1059,7 +1059,7 @@
                 margin-bottom: 30px;
 
                 a {
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: underline;
                     font-weight: 600;
                     transition: color 0.2s;
@@ -1072,7 +1072,7 @@
 
             .btn-learn-more {
                 display: inline-block;
-                background-color: #0176d3;
+                background-color: $sky-blue;
                 color: white;
                 padding: 14px 32px;
                 border-radius: 4px;
@@ -1093,7 +1093,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0;
-                border-left: 2px solid #e0e0e0;
+                border-left: 2px solid $border-color;
             }
 
             .builder-item {
@@ -1121,7 +1121,7 @@
 
                 &.active {
                     .builder-item-title {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     .builder-item-desc {
@@ -1136,13 +1136,13 @@
                         top: 0;
                         bottom: 0;
                         width: 4px;
-                        background-color: #0176d3;
+                        background-color: $sky-blue;
                     }
                 }
 
                 &:hover:not(.active) {
                     .builder-item-title {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -1222,7 +1222,7 @@
                 margin-bottom: 30px;
 
                 a {
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: underline;
                     font-weight: 600;
                     transition: color 0.2s;
@@ -1235,7 +1235,7 @@
 
             .btn-trust-layer {
                 display: inline-block;
-                background-color: #0176d3;
+                background-color: $sky-blue;
                 color: white;
                 padding: 14px 32px;
                 border-radius: 4px;
@@ -1256,7 +1256,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0;
-                border-left: 1px solid #e0e0e0; // Base line
+                border-left: 1px solid $border-color; // Base line
             }
 
             .trust-item {
@@ -1286,7 +1286,7 @@
                     background-color: transparent; // Or light bg if needed
 
                     .trust-item-title {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     .trust-item-desc {
@@ -1310,14 +1310,14 @@
                         top: -10px; // EXTEND UP
                         bottom: -10px; // EXTEND DOWN
                         width: 4px;
-                        background-color: #0176d3;
+                        background-color: $sky-blue;
                         z-index: 1;
                     }
                 }
 
                 &:hover:not(.active) {
                     .trust-item-title {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
                 }
             }
@@ -1448,8 +1448,8 @@
             .btn-card-outline {
                 display: inline-block;
                 width: fit-content;
-                color: #0176d3;
-                border: 1px solid #0176d3;
+                color: $sky-blue;
+                border: 1px solid $sky-blue;
                 padding: 12px 24px;
                 border-radius: 4px;
                 font-weight: 700;
@@ -1548,8 +1548,8 @@
 
             .btn-learn-more-outline {
                 display: inline-block;
-                color: #0176d3;
-                border: 1px solid #0176d3;
+                color: $sky-blue;
+                border: 1px solid $sky-blue;
                 padding: 14px 32px;
                 border-radius: 4px;
                 font-weight: 700;
@@ -1626,7 +1626,7 @@
 
         .success-content {
             .quote-icon {
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 40px;
                 margin-bottom: 24px;
 
@@ -1673,8 +1673,8 @@
 
             .btn-read-story {
                 display: inline-block;
-                color: #0176d3;
-                border: 1px solid #0176d3;
+                color: $sky-blue;
+                border: 1px solid $sky-blue;
                 padding: 14px 32px;
                 border-radius: 4px;
                 font-weight: 700;
@@ -1843,7 +1843,7 @@
             transition: color 0.2s;
 
             &:hover {
-                color: #0176d3;
+                color: $sky-blue;
             }
         }
     }
@@ -1962,7 +1962,7 @@
 
             .trend-badge {
                 background-color: #eef4ff;
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 13px;
                 font-weight: 700;
                 padding: 4px 12px;
@@ -1996,7 +1996,7 @@
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
             }
         }
@@ -2008,8 +2008,8 @@
 
         .btn-see-all-resources {
             display: inline-block;
-            color: #0176d3;
-            border: 1px solid #0176d3;
+            color: $sky-blue;
+            border: 1px solid $sky-blue;
             padding: 14px 32px;
             border-radius: 4px;
             font-weight: 700;
@@ -2027,7 +2027,7 @@
 
 // Next Step Section
 .ai-next-step {
-    background: linear-gradient(180deg, #ffffff 0%, #e3dcfc 100%); // Approximate purple gradient
+    background: linear-gradient(180deg, $text-white 0%, #e3dcfc 100%); // Approximate purple gradient
     padding: 100px 0 250px; // Lots of bottom padding for the image overlap
     position: relative;
     overflow: hidden; // Assuming we want to contain the decoration or clip it if needed
@@ -2111,7 +2111,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 24px;
-            color: #0176d3;
+            color: $sky-blue;
             font-size: 20px;
         }
 
@@ -2143,7 +2143,7 @@
             }
 
             &:hover {
-                color: #0176d3;
+                color: $sky-blue;
             }
         }
     }
@@ -2234,7 +2234,7 @@
         }
 
         &:hover {
-            color: #0176d3;
+            color: $sky-blue;
         }
 
         .faq-icon {
@@ -2245,7 +2245,7 @@
             height: 32px;
             border-radius: 50%;
             background-color: #eef4ff;
-            color: #0176d3;
+            color: $sky-blue;
             margin-left: 20px;
             flex-shrink: 0;
             transition: all 0.3s ease;
@@ -2309,7 +2309,7 @@
     }
 
     button {
-        background: linear-gradient(135deg, #0176d3 0%, #005fb2 100%);
+        background: linear-gradient(135deg, $sky-blue 0%, #005fb2 100%);
         color: white;
         border: none;
         border-radius: 50px;

@@ -18,7 +18,7 @@
 }
 
 .data360-nav {
-    background-color: #ffffff;
+    background-color: $text-white;
     height: auto;
     min-height: 60px;
     display: flex;
@@ -188,7 +188,7 @@
             margin-left: 0;
             display: none; // Hidden by default
             flex: none; // Don't use flex-grow in column mode
-            background: #fff;
+            background: $text-white;
             padding: 0;
 
             // Show when parent nav is active
@@ -281,7 +281,7 @@
             // Mobile/Tablet Active State
             &.active {
                 .data360-nav-link {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     .nav-icon-small {
                         transform: rotate(180deg);
@@ -325,7 +325,7 @@
             }
 
             &.active {
-                color: #0176d3;
+                color: $sky-blue;
             }
 
             i {
@@ -394,7 +394,7 @@
                 display: none;
                 background: none;
                 border: none;
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 16px;
                 font-weight: 700;
                 padding: 10px 0;
@@ -487,7 +487,7 @@
                     }
 
                     &:hover {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: none !important;
                     }
                 }
@@ -631,47 +631,47 @@
 
                             // Blue link color on mobile
                             @include desktop {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include small-desktop {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include big-tab {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include small-tab {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include mobile {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include mid-mobile {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include small-mobile {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include mid-small-mobile {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
 
                             @include too-small-mobile {
-                                color: #0176d3;
+                                color: $sky-blue;
                                 margin-bottom: 0;
                             }
                         }
@@ -730,7 +730,7 @@
 
     .btn-talk-expert {
         margin-left: auto;
-        background-color: #0176d3;
+        background-color: $sky-blue;
         color: white;
         padding: 10px 24px;
         border-radius: 4px;
@@ -1108,7 +1108,7 @@
 
         .btn-see-stories {
             background: white;
-            color: #0176d3;
+            color: $sky-blue;
             padding: 12px 30px;
             border-radius: 4px;
             text-decoration: none;
@@ -1281,7 +1281,7 @@
     z-index: 1050;
 
     button {
-        background-color: #0176d3;
+        background-color: $sky-blue;
         color: white;
         border: none;
         padding: 12px 24px;
@@ -1496,11 +1496,11 @@
 
                         &.pill-blue {
                             background-color: #eef4ff;
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
 
                         &.pill-light {
-                            background-color: #f3f3f3;
+                            background-color: $background-light;
                             color: $secondary-color;
                         }
                     }
@@ -1528,7 +1528,7 @@
                         font-size: 16px;
 
                         &:hover {
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
                     }
                 }
@@ -1549,7 +1549,7 @@
                 cursor: pointer;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 z-index: 10;
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 18px;
                 transition: all 0.2s;
 
@@ -1587,7 +1587,7 @@
             .discover-scrollbar-track {
                 width: 100%;
                 height: 4px;
-                background-color: #e0e0e0;
+                background-color: $border-color;
                 border-radius: 2px;
                 position: relative;
                 cursor: pointer;
@@ -1605,7 +1605,7 @@
                 transition: left 0.3s ease, width 0.3s ease, background-color 0.2s;
 
                 &:hover {
-                    background-color: #0176d3;
+                    background-color: $sky-blue;
                 }
             }
         }
@@ -1737,13 +1737,13 @@
                 h3 {
                     font-size: 20px;
                     font-weight: 700;
-                    color: #181818;
+                    color: $text-dark;
                 }
 
                 .form-floating {
                     label {
                         font-size: 14px;
-                        color: #666;
+                        color: $text-light;
                     }
 
                     .form-control,
@@ -1752,8 +1752,8 @@
                         border: 1px solid #ccc;
 
                         &:focus {
-                            border-color: #0176d3;
-                            box-shadow: 0 0 0 1px #0176d3;
+                            border-color: $sky-blue;
+                            box-shadow: 0 0 0 1px $sky-blue;
                         }
                     }
 
@@ -1767,7 +1767,7 @@
                     color: #444;
 
                     a {
-                        color: #0176d3;
+                        color: $sky-blue;
                         text-decoration: none;
 
                         &:hover {
@@ -2085,7 +2085,7 @@
                         gap: 6px;
                         font-size: 12px;
                         font-weight: 700;
-                        color: #0176d3;
+                        color: $sky-blue;
                         background: #eef4ff;
                         padding: 6px 12px;
                         border-radius: 20px;
@@ -2159,7 +2159,7 @@
                         }
 
                         &:hover {
-                            color: #0176d3;
+                            color: $sky-blue;
                             text-decoration: underline;
                         }
                     }
@@ -2171,7 +2171,7 @@
 
 // Data 360 Activate Section
 .data360-activate-section {
-    background-color: #ffffff;
+    background-color: $text-white;
     padding: 80px 0;
     font-family: 'Salesforce Sans', system-ui, sans-serif;
 
@@ -2381,7 +2381,7 @@
                     }
 
                     .btn-activate-primary {
-                        background-color: #0176d3;
+                        background-color: $sky-blue;
                         color: white;
                         padding: 14px 32px;
                         border-radius: 6px;
@@ -2412,10 +2412,10 @@
 
                     .btn-activate-secondary {
                         background-color: transparent;
-                        color: #0176d3;
+                        color: $sky-blue;
                         padding: 14px 32px;
                         border-radius: 6px;
-                        border: 2px solid #0176d3;
+                        border: 2px solid $sky-blue;
                         font-weight: 700;
                         font-size: 16px;
                         text-decoration: none;
@@ -2434,7 +2434,7 @@
                         }
 
                         &:hover {
-                            background-color: #0176d3;
+                            background-color: $sky-blue;
                             color: white;
                             transform: translateY(-2px);
                         }
@@ -2600,7 +2600,7 @@
                     border-radius: 8px;
                     padding: 30px;
                     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-                    border-top: 5px solid #0176d3;
+                    border-top: 5px solid $sky-blue;
                     transition: transform 0.2s, box-shadow 0.2s;
                     display: flex;
                     flex-direction: column;
@@ -2633,7 +2633,7 @@
 
                     p {
                         font-size: 16px;
-                        color: #181818;
+                        color: $text-dark;
                         line-height: 1.6;
                         margin: 0;
                         flex-grow: 1;
@@ -2764,7 +2764,7 @@
 
                 p {
                     font-size: 19px;
-                    color: #181818;
+                    color: $text-dark;
                     margin: 0 0 32px;
                     line-height: 1.5;
 
@@ -2779,7 +2779,7 @@
                 }
 
                 .btn-gartner {
-                    background-color: #0176d3;
+                    background-color: $sky-blue;
                     color: white;
                     padding: 12px 30px;
                     border-radius: 4px;
@@ -2879,7 +2879,7 @@
 
                 p {
                     font-size: 18px;
-                    color: #181818;
+                    color: $text-dark;
                     margin: 0 0 32px;
                     line-height: 1.6;
 
@@ -3082,7 +3082,7 @@
                     .resource-tag {
                         display: inline-block;
                         background-color: #eef4ff;
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-size: 11px;
                         font-weight: 700;
                         text-transform: uppercase;
@@ -3111,7 +3111,7 @@
                     }
 
                     .card-link {
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-weight: 700;
                         font-size: 16px;
                         text-decoration: underline;
@@ -3240,7 +3240,7 @@
                     }
 
                     i {
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-size: 24px;
 
                         @include mobile {
@@ -3267,7 +3267,7 @@
 
                 p {
                     font-size: 16px;
-                    color: #181818;
+                    color: $text-dark;
                     margin: 0 0 24px;
                     line-height: 1.5;
                     flex-grow: 1;
@@ -3279,7 +3279,7 @@
                 }
 
                 a {
-                    color: #0176d3;
+                    color: $sky-blue;
                     font-weight: 700;
                     font-size: 16px;
                     text-decoration: underline;

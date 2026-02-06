@@ -7,7 +7,7 @@
         position: fixed;
         top: 65px; // Matches main header top
         z-index: 990;
-        background-color: #fff;
+        background-color: $text-white;
         border-bottom: 1px solid #e5e5e5;
         padding: 0;
         width: 100%;
@@ -412,7 +412,7 @@
     // Company Logos Section
     .slack-companies {
         padding: 80px 0 200px;
-        background-color: #fff;
+        background-color: $text-white;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -472,7 +472,7 @@
             margin: 0 auto;
 
             .logo-card {
-                background: #FFFFFF;
+                background: $text-white;
                 border-radius: 8px;
                 width: 240px;
                 height: 120px;
@@ -789,7 +789,7 @@
     .slack-connect-ecosystem {
         padding: 100px 0 80px;
         text-align: center;
-        background-color: #fff;
+        background-color: $text-white;
 
         .connect-content {
             max-width: 1000px;
@@ -882,7 +882,7 @@
     .slack-transform-section {
         padding: 100px 0 200px;
         position: relative;
-        background-color: #fff;
+        background-color: $text-white;
         overflow: hidden;
 
         @include mobile {
@@ -1032,7 +1032,7 @@
     // IDC MarketScape Section
     .slack-idc-section {
         padding: 50px 0 100px;
-        background-color: #fff;
+        background-color: $text-white;
 
         .idc-card {
             background: white;
@@ -1125,7 +1125,7 @@
         padding: 80px 0 200px;
         position: relative;
         background-color: #f8f9fa; // Light background for contrast if needed, or white if seamless
-        background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F9 100%);
+        background: linear-gradient(180deg, $text-white 0%, #F4F6F9 100%);
         overflow: hidden;
 
         @include mobile {
@@ -1280,7 +1280,7 @@
     .slack-trailhead-section {
         padding: 80px 0 350px;
         position: relative;
-        background-color: #fff;
+        background-color: $text-white;
         overflow: hidden;
 
         @include mobile {
@@ -1424,7 +1424,7 @@
     // Trends Section
     .slack-trends-section {
         padding: 80px 0;
-        background-color: #fff;
+        background-color: $text-white;
 
         .section-title {
             text-align: center;
@@ -1491,7 +1491,7 @@
 
                 .trend-tag {
                     background-color: #EBF8FE;
-                    color: $sky-blue; // #0176D3
+                    color: $sky-blue; // $sky-blue
                     font-size: 11px;
                     font-weight: 700;
                     text-transform: uppercase;
@@ -1532,7 +1532,7 @@
     // Next Step Section
     .slack-next-step-section {
         padding: 60px 0 100px;
-        background-color: #fff;
+        background-color: $text-white;
 
         .section-title {
             text-align: center;
@@ -1659,10 +1659,10 @@
 
         .faq-accordion {
             .faq-item {
-                border-bottom: 1px solid #e0e0e0;
+                border-bottom: 1px solid $border-color;
 
                 &:first-child {
-                    border-top: 1px solid #e0e0e0;
+                    border-top: 1px solid $border-color;
                 }
 
                 &.active {
@@ -1710,7 +1710,7 @@
                 }
 
                 .icon-toggle {
-                    color: $sky-blue; // #0176D3
+                    color: $sky-blue; // $sky-blue
                     font-size: 18px;
 
                     .fa-minus {

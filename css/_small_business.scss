@@ -5,14 +5,14 @@
 
     .promo-banner {
         background: $primary-color;
-        color: #fff;
+        color: $text-white;
         text-align: center;
         padding: 10px 0;
         font-size: 18px;
         margin-top: 60px; // Push down to account for fixed sub-nav
 
         a {
-            color: #fff;
+            color: $text-white;
             text-decoration: underline;
             font-weight: 600;
         }
@@ -22,8 +22,8 @@
         position: fixed;
         width: 100%; // Fix right side gap
         left: 0;
-        background: #fff;
-        border-bottom: 1px solid #e0e0e0;
+        background: $text-white;
+        border-bottom: 1px solid $border-color;
         padding: 12px 0;
         top: 65px; // Default desktop offset
 
@@ -188,7 +188,7 @@
 
                         &:hover,
                         &.active {
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
 
                         i {
@@ -218,7 +218,7 @@
                             top: 100%;
                             left: 50%;
                             transform: translateX(-50%) translateY(10px);
-                            background: #fff;
+                            background: $text-white;
                             min-width: 500px;
                             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                             border-radius: 15px;
@@ -250,7 +250,7 @@
                                 height: 0;
                                 border-left: 10px solid transparent;
                                 border-right: 10px solid transparent;
-                                border-bottom: 10px solid #fff;
+                                border-bottom: 10px solid $text-white;
 
                                 @include desktop {
                                     display: none;
@@ -304,7 +304,7 @@
                                             }
 
                                             &:hover {
-                                                color: #0176d3;
+                                                color: $sky-blue;
                                                 text-decoration: underline;
                                             }
                                         }
@@ -324,8 +324,8 @@
         }
 
         .btn-start-free {
-            background: #0176d3;
-            color: #fff;
+            background: $sky-blue;
+            color: $text-white;
             border: none;
             padding: 10px 24px;
             border-radius: 4px;
@@ -391,7 +391,7 @@
                 display: inline-block;
                 padding: 6px 14px;
                 background: rgba(255, 255, 255, 0.15);
-                color: #fff;
+                color: $text-white;
                 border-radius: 4px;
                 font-size: 14px;
                 font-weight: 600;
@@ -401,7 +401,7 @@
             h1 {
                 font-size: 56px;
                 line-height: 1.15;
-                color: #fff;
+                color: $text-white;
                 margin-bottom: 28px;
                 font-weight: 700;
 
@@ -424,7 +424,7 @@
 
             .hero-desc {
                 font-size: 18px;
-                color: #fff;
+                color: $text-white;
                 margin-bottom: 32px;
                 line-height: 1.6;
                 opacity: 0.95;
@@ -447,7 +447,7 @@
                 }
 
                 .btn-get-free {
-                    background: #fff;
+                    background: $text-white;
                     color: $secondary-color;
                     padding: 14px 28px;
                     border-radius: 4px;
@@ -465,8 +465,8 @@
                 }
 
                 .btn-learn-more {
-                    border: 2px solid #fff;
-                    color: #fff;
+                    border: 2px solid $text-white;
+                    color: $text-white;
                     padding: 14px 28px;
                     border-radius: 4px;
                     text-decoration: none;
@@ -483,8 +483,8 @@
 
                 // Keep old button styles for backward compatibility
                 .btn-primary {
-                    background: #0176d3;
-                    color: #fff;
+                    background: $sky-blue;
+                    color: $text-white;
                     padding: 12px 24px;
                     border-radius: 4px;
                     text-decoration: none;
@@ -497,8 +497,8 @@
                 }
 
                 .btn-outline {
-                    border: 1px solid #0176d3;
-                    color: #0176d3;
+                    border: 1px solid $sky-blue;
+                    color: $sky-blue;
                     padding: 12px 24px;
                     border-radius: 4px;
                     text-decoration: none;
@@ -541,7 +541,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    color: #fff;
+                    color: $text-white;
                     transition: all 0.3s;
                     z-index: 3;
                     padding: 40px;
@@ -584,7 +584,7 @@
                     .play-btn-circle {
                         width: 70px;
                         height: 70px;
-                        background: #fff;
+                        background: $text-white;
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
@@ -632,8 +632,8 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #0176d3;
-            color: #fff;
+            background: $sky-blue;
+            color: $text-white;
             border: none;
             padding: 14px 24px;
             border-radius: 50px;
@@ -769,7 +769,7 @@
         .logo-slide {
             width: 250px;
             height: 110px;
-            background: #fff;
+            background: $text-white;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -811,7 +811,7 @@
 
     .sb-tabs-section {
         padding: 80px 0;
-        background-color: #fff;
+        background-color: $text-white;
         text-align: center;
 
         .section-title {
@@ -843,7 +843,7 @@
         }
 
         .tabs-nav-wrapper {
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
             margin-bottom: 60px;
             display: flex;
             justify-content: center;
@@ -894,14 +894,14 @@
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
 
                 &.active {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     &::after {
-                        background-color: #0176d3;
+                        background-color: $sky-blue;
                     }
                 }
             }
@@ -979,14 +979,14 @@
                 flex-wrap: wrap;
 
                 .btn-primary {
-                    background-color: #0176d3;
-                    color: #fff;
+                    background-color: $sky-blue;
+                    color: $text-white;
                     padding: 12px 28px;
                     border-radius: 4px;
                     text-decoration: none;
                     font-weight: 600;
                     transition: all 0.3s;
-                    border: 1px solid #0176d3;
+                    border: 1px solid $sky-blue;
 
                     &:hover {
                         background-color: #015ba1;
@@ -996,12 +996,12 @@
 
                 .btn-outline {
                     background-color: transparent;
-                    color: #0176d3;
+                    color: $sky-blue;
                     text-decoration: none;
                     padding: 12px 28px;
                     border-radius: 4px;
                     font-weight: 600;
-                    border: 1px solid #0176d3;
+                    border: 1px solid $sky-blue;
                     transition: all 0.3s;
 
                     &:hover {
@@ -1021,7 +1021,7 @@
 
     .sb-suites-section {
         padding: 100px 0;
-        background-color: #fff;
+        background-color: $text-white;
 
         .suites-header {
             margin-bottom: 60px;
@@ -1073,8 +1073,8 @@
 
             .btn-pricing {
                 display: inline-block;
-                background-color: #0176d3;
-                color: #fff;
+                background-color: $sky-blue;
+                color: $text-white;
                 padding: 14px 32px;
                 border-radius: 4px;
                 font-weight: 600;
@@ -1090,7 +1090,7 @@
 
         .suites-grid {
             .suite-card {
-                background: #fff;
+                background: $text-white;
                 border-radius: 16px;
                 overflow: hidden;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
@@ -1135,7 +1135,7 @@
                     }
 
                     .learn-more {
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-weight: 700;
                         text-decoration: underline;
                         font-size: 16px;
@@ -1202,7 +1202,7 @@
 
         .stories-grid {
             .story-card {
-                background: #fff;
+                background: $text-white;
                 border-radius: 16px;
                 overflow: hidden;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
@@ -1258,7 +1258,7 @@
                     }
 
                     &.bg-blue-grad {
-                        background: linear-gradient(135deg, $secondary-color 0%, #0176d3 100%);
+                        background: linear-gradient(135deg, $secondary-color 0%, $sky-blue 100%);
 
                         &::before {
                             content: "";
@@ -1273,7 +1273,7 @@
                     }
 
                     .logo-pill {
-                        background: #fff;
+                        background: $text-white;
                         padding: 15px 30px;
                         border-radius: 50px;
                         display: flex;
@@ -1300,7 +1300,7 @@
 
                     .story-badge {
                         background: #f1f8ff;
-                        color: #0176d3;
+                        color: $sky-blue;
                         padding: 4px 12px;
                         border-radius: 20px;
                         font-size: 14px;
@@ -1326,7 +1326,7 @@
                     }
 
                     .see-story {
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-weight: 700;
                         text-decoration: underline;
                         font-size: 16px;
@@ -1374,7 +1374,7 @@
             .suggestion-btn {
                 background: rgba(255, 255, 255, 0.1);
                 border: 1px solid rgba(255, 255, 255, 0.2);
-                color: #fff;
+                color: $text-white;
                 padding: 10px 18px;
                 border-radius: 30px;
                 font-size: 14px;
@@ -1408,7 +1408,7 @@
 
                     &:focus {
                         outline: none;
-                        background: #fff;
+                        background: $text-white;
                     }
                 }
 
@@ -1419,7 +1419,7 @@
                     transform: translateY(-50%);
                     background: none;
                     border: none;
-                    color: #0176d3;
+                    color: $sky-blue;
                     cursor: pointer;
                     font-size: 16px;
                 }
@@ -1429,7 +1429,7 @@
 
     .sb-g2-awards {
         padding: 60px 0;
-        background-color: #fff;
+        background-color: $text-white;
 
         .section-title {
             font-size: 36px;
@@ -1462,7 +1462,7 @@
 
     .sb-tailored-resources {
         padding: 60px 0 100px;
-        background-color: #fff;
+        background-color: $text-white;
 
         .resources-header {
             margin-bottom: 60px;
@@ -1513,7 +1513,7 @@
 
         .resources-grid {
             .resource-card {
-                background: #fff;
+                background: $text-white;
                 border-radius: 12px;
                 overflow: hidden;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1544,7 +1544,7 @@
                     }
 
                     &.trailhead-bg {
-                        background: radial-gradient(circle at center, #ffffff 0%, #e0f2ff 100%);
+                        background: radial-gradient(circle at center, $text-white 0%, #e0f2ff 100%);
 
                         img {
                             object-fit: contain;
@@ -1580,7 +1580,7 @@
                     }
 
                     .resource-link {
-                        color: #0176d3;
+                        color: $sky-blue;
                         font-weight: 700;
                         text-decoration: underline;
                         font-size: 15px;
@@ -1598,7 +1598,7 @@
 
     .sb-trends-insights {
         padding: 100px 0;
-        background-color: #fff;
+        background-color: $text-white;
 
         .section-header {
             margin-bottom: 60px;
@@ -1618,7 +1618,7 @@
 
         .trends-grid {
             .trend-card {
-                background: #fff;
+                background: $text-white;
                 border-radius: 20px;
                 overflow: hidden;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
@@ -1705,7 +1705,7 @@
                         transition: color 0.3s ease;
 
                         &:hover {
-                            color: #0176d3;
+                            color: $sky-blue;
                         }
 
                         i {
@@ -1719,8 +1719,8 @@
 
         .btn-see-all {
             display: inline-block;
-            border: 1px solid #0176d3;
-            color: #0176d3;
+            border: 1px solid $sky-blue;
+            color: $sky-blue;
             padding: 12px 36px;
             border-radius: 4px;
             font-weight: 600;
@@ -1729,8 +1729,8 @@
             transition: all 0.3s;
 
             &:hover {
-                background-color: #0176d3;
-                color: #fff;
+                background-color: $sky-blue;
+                color: $text-white;
             }
         }
     }
@@ -1739,7 +1739,7 @@
         padding: 100px 0 0;
         position: relative;
         overflow: hidden;
-        background-color: #fff;
+        background-color: $text-white;
 
         .section-header {
             margin-bottom: 60px;
@@ -1769,7 +1769,7 @@
         }
 
         .step-card {
-            background: #fff;
+            background: $text-white;
             padding: 40px 30px;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
@@ -1792,7 +1792,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 30px;
-                color: #0176d3;
+                color: $sky-blue;
                 font-size: 18px;
             }
 
@@ -1820,7 +1820,7 @@
                 display: inline-block;
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
             }
         }
@@ -1850,7 +1850,7 @@
 
     .sb-faq-section {
         padding: 100px 0;
-        background-color: #fff;
+        background-color: $text-white;
 
         .faq-title {
             font-size: 42px;
@@ -1873,7 +1873,7 @@
             display: flex;
             justify-content: center;
             gap: 40px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid $border-color;
             margin-bottom: 50px;
             max-width: 900px;
             margin-left: auto;
@@ -1910,16 +1910,16 @@
                     left: 0;
                     width: 0;
                     height: 3px;
-                    background-color: #0176d3;
+                    background-color: $sky-blue;
                     transition: width 0.3s;
                 }
 
                 &:hover {
-                    color: #0176d3;
+                    color: $sky-blue;
                 }
 
                 &.active {
-                    color: #0176d3;
+                    color: $sky-blue;
 
                     &::after {
                         width: 100%;
@@ -1943,7 +1943,7 @@
 
         .faq-accordion {
             .faq-item {
-                border-bottom: 1px solid #e0e0e0;
+                border-bottom: 1px solid $border-color;
                 padding: 10px 0;
 
                 .faq-question {
@@ -1967,7 +1967,7 @@
                     }
 
                     &:hover {
-                        color: #0176d3;
+                        color: $sky-blue;
                     }
 
                     span {
@@ -1977,7 +1977,7 @@
 
                     i {
                         font-size: 18px;
-                        color: #0176d3;
+                        color: $sky-blue;
                         transition: transform 0.3s ease;
                     }
                 }

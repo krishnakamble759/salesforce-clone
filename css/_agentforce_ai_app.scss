@@ -1214,7 +1214,7 @@
 .guide-footer-bar {
     background: white;
     padding: 20px 40px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid $border-color;
     margin-top: -60px;
     position: relative;
     z-index: 10;
@@ -1485,7 +1485,7 @@
             flex: 0.8;
 
             .form-card {
-                background: #f3f3f3;
+                background: $background-light;
                 padding: 40px;
                 border-radius: 4px;
 
@@ -1952,7 +1952,7 @@
             transition: background-color 0.2s;
 
             &:hover {
-                background-color: #333;
+                background-color: $text-color;
             }
 
             i {

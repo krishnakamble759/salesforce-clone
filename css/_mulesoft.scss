@@ -5,7 +5,7 @@
     position: fixed;
     top: 60px;
     z-index: 990;
-    background-color: #fff;
+    background-color: $text-white;
     border-bottom: 1px solid #e5e5e5;
     padding: 0;
     width: 100%;
@@ -222,7 +222,7 @@
                         position: absolute;
                         top: 100%;
                         left: -20%;
-                        background: #fff;
+                        background: $text-white;
                         min-width: 250px;
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                         border-radius: 8px;
@@ -316,8 +316,8 @@
             }
 
             .talk-expert-btn {
-                border-color: #0176D3;
-                color: #0176D3;
+                border-color: $sky-blue;
+                color: $sky-blue;
 
                 &:hover {
                     background: #f4f6f9;
@@ -468,7 +468,7 @@
                     transition: transform 0.3s;
 
                     i {
-                        color: #fff;
+                        color: $text-white;
                         font-size: 30px;
                         margin-left: 5px; // Balance play triangle
                     }
@@ -663,7 +663,7 @@
                 .stat-description {
                     font-size: 1rem;
                     line-height: 1.6;
-                    color: #666;
+                    color: $text-light;
                     margin: 0;
 
                     @include mobile {
@@ -841,7 +841,7 @@
 
 /* --- MuleSoft Agentforce Integration Platform Section --- */
 .mulesoft-agentforce {
-    background-color: #ffffff;
+    background-color: $text-white;
     padding: 80px 0;
     position: relative;
 
@@ -882,7 +882,7 @@
         .agentforce-description {
             font-size: 23px;
             line-height: 1.7;
-            color: #333;
+            color: $text-color;
             margin-bottom: 1.5rem;
             text-align: center;
 
@@ -945,7 +945,7 @@
 
 /* --- MuleSoft Features Section --- */
 .mulesoft-features {
-    background-color: #ffffff;
+    background-color: $text-white;
     padding: 80px 0;
 
     @include desktop {
@@ -1022,7 +1022,7 @@
             .feature-description {
                 font-size: 20px;
                 line-height: 1.7;
-                color: #333;
+                color: $text-color;
                 margin-bottom: 32px;
 
                 @include mobile {
@@ -1068,7 +1068,7 @@
 
                     &:hover {
                         background-color: $primary-color;
-                        color: #ffffff;
+                        color: $text-white;
                     }
                 }
             }
@@ -1139,7 +1139,7 @@
                     .feature-item-text {
                         font-size: 18px;
                         line-height: 1.7;
-                        color: #333;
+                        color: $text-color;
                         margin: 0;
 
                         @include mobile {
@@ -1267,7 +1267,7 @@
         }
 
         .product-card {
-            background-color: #ffffff;
+            background-color: $text-white;
             border-radius: 8px;
             padding: 64px 64px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -1302,7 +1302,7 @@
             .product-card-description {
                 font-size: 14px;
                 line-height: 1.6;
-                color: #333;
+                color: $text-color;
                 margin-bottom: 24px;
                 flex-grow: 1;
 
@@ -1347,7 +1347,7 @@
             padding: 12px 32px;
             font-size: 16px;
             font-weight: 700;
-            background-color: #ffffff;
+            background-color: $text-white;
             border: 1.5px solid $primary-color;
             color: $primary-color;
             border-radius: 4px;
@@ -1359,7 +1359,7 @@
 
             &:hover {
                 background-color: $primary-color;
-                color: #ffffff;
+                color: $text-white;
             }
         }
     }
@@ -1370,7 +1370,7 @@
     padding: 80px 0 150px 0;
     position: relative;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: $text-white;
 
     @include desktop {
         padding: 60px 0 80px 0;
@@ -1423,7 +1423,7 @@
     }
 
     .story-card {
-        background-color: #ffffff;
+        background-color: $text-white;
         border-radius: 12px;
         padding: 80px;
         box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
@@ -1515,7 +1515,7 @@
 
                 .author-title {
                     font-size: 16px;
-                    color: #333;
+                    color: $text-color;
                     line-height: 1.4;
                 }
             }
@@ -1525,7 +1525,7 @@
                     padding: 12px 32px;
                     font-size: 16px;
                     font-weight: 700;
-                    background-color: #ffffff;
+                    background-color: $text-white;
                     border: 1.5px solid $primary-color;
                     color: $primary-color;
                     border-radius: 4px;
@@ -1547,7 +1547,7 @@
 
                     &:hover {
                         background-color: $primary-color;
-                        color: #ffffff;
+                        color: $text-white;
                     }
                 }
             }
@@ -1558,7 +1558,7 @@
 /* --- MuleSoft Trailhead Section --- */
 .mulesoft-trailhead {
     padding: 80px 0 100px 0;
-    background-color: #ffffff;
+    background-color: $text-white;
     position: relative;
 
     @include desktop {
@@ -1613,7 +1613,7 @@
     }
 
     .trailhead-card {
-        background-color: #ffffff;
+        background-color: $text-white;
         border-radius: 12px;
         padding: 56px 80px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -1675,7 +1675,7 @@
 
         .card-text {
             font-size: 20px;
-            color: #333;
+            color: $text-color;
             line-height: 1.6;
             margin-bottom: 32px;
             flex-grow: 1;
@@ -1726,7 +1726,7 @@
             padding: 12px 48px;
             font-size: 16px;
             font-weight: 700;
-            background-color: #ffffff;
+            background-color: $text-white;
             border: 1.5px solid $primary-color;
             color: $primary-color;
             border-radius: 4px;
@@ -1739,7 +1739,7 @@
 
             &:hover {
                 background-color: $primary-color;
-                color: #ffffff;
+                color: $text-white;
             }
         }
     }
@@ -1748,7 +1748,7 @@
 /* --- MuleSoft Resources Section --- */
 .mulesoft-resources {
     padding: 100px 0;
-    background-color: #ffffff;
+    background-color: $text-white;
 
     @include desktop {
         padding: 80px 0;
@@ -1798,7 +1798,7 @@
     }
 
     .resource-card {
-        background-color: #ffffff;
+        background-color: $text-white;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1870,7 +1870,7 @@
 
         .card-text {
             font-size: 16px;
-            color: #333333;
+            color: $text-color;
             line-height: 1.6;
             margin-bottom: 24px;
             flex-grow: 1;
@@ -1903,7 +1903,7 @@
             padding: 12px 32px;
             font-size: 16px;
             font-weight: 700;
-            background-color: #ffffff;
+            background-color: $text-white;
             border: 1.5px solid $primary-color;
             color: $primary-color;
             border-radius: 4px;
@@ -1919,7 +1919,7 @@
 
             &:hover {
                 background-color: $primary-color;
-                color: #ffffff;
+                color: $text-white;
             }
         }
     }
@@ -1928,7 +1928,7 @@
 /* --- MuleSoft Innovation Journey Section --- */
 .mulesoft-innovation-journey {
     padding: 100px 0 450px 0;
-    background-color: #ffffff;
+    background-color: $text-white;
     position: relative;
     overflow: hidden;
 
@@ -1981,7 +1981,7 @@
     }
 
     .journey-card {
-        background-color: #ffffff;
+        background-color: $text-white;
         border-radius: 16px;
         padding: 48px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
@@ -2025,7 +2025,7 @@
 
         .card-text {
             font-size: 16px;
-            color: #333333;
+            color: $text-color;
             line-height: 1.6;
             margin-bottom: 32px;
             flex-grow: 1;
@@ -2075,7 +2075,7 @@
 /* --- MuleSoft FAQ Section --- */
 .mulesoft-faq {
     padding: 100px 0 350px 0;
-    background-color: #ffffff;
+    background-color: $text-white;
     position: relative;
     overflow: hidden;
 
@@ -2116,7 +2116,7 @@
 
                 i {
                     background-color: $primary-color;
-                    color: #ffffff;
+                    color: $text-white;
                     border-color: $primary-color;
                 }
             }
@@ -2183,7 +2183,7 @@
         opacity: 0;
 
         p {
-            color: #333333;
+            color: $text-color;
             font-size: 18px;
             line-height: 1.6;
             margin: 0;

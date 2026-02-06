@@ -5,7 +5,7 @@
     position: fixed;
     top: 60px;
     z-index: 990;
-    background-color: #fff;
+    background-color: $text-white;
     border-bottom: 1px solid #e5e5e5;
     padding: 0;
     width: 100%;
@@ -194,7 +194,7 @@
                         position: absolute;
                         top: 100%;
                         left: 0;
-                        background: #fff;
+                        background: $text-white;
                         min-width: 250px;
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                         border-radius: 8px;
@@ -301,7 +301,7 @@
 .tableau-banner {
     background-color: $SECONDARY-COLOR;
     /* Dark blue background */
-    color: #fff;
+    color: $text-white;
     padding: 1rem 0;
     font-size: 0.9rem;
     margin-top: 50px;
@@ -314,7 +314,7 @@
         margin: 0;
 
         a {
-            color: #fff;
+            color: $text-white;
             text-decoration: underline;
             margin-left: 0.5rem;
 
@@ -448,7 +448,7 @@
                     border-radius: 16px;
                     overflow: hidden;
                     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-                    background: #fff;
+                    background: $text-white;
 
                     .hero-img {
                         width: 100%;
@@ -478,7 +478,7 @@
                         }
 
                         .play-icon {
-                            color: #fff;
+                            color: $text-white;
                             font-size: 2.5rem;
                             padding-left: 5px;
                         }
@@ -490,7 +490,7 @@
                     bottom: 40px;
                     right: -20px;
                     background: transparent;
-                    color: #fff;
+                    color: $text-white;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -504,7 +504,7 @@
                         font-size: 1.5rem;
                         line-height: 1.2;
                         font-weight: 700;
-                        color: #fff;
+                        color: $text-white;
                         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     }
 
@@ -521,7 +521,7 @@
     background-color: $secondary-color;
     /* Dark Blue */
     padding: 0;
-    color: #fff;
+    color: $text-white;
     width: 100%;
 
     .dreamforce-grid {
@@ -566,7 +566,7 @@
                 font-weight: 700;
                 line-height: 1.2;
                 margin-bottom: 1.5rem;
-                color: #fff;
+                color: $text-white;
 
                 @include mobile {
                     font-size: 1.75rem;
@@ -585,20 +585,20 @@
             }
 
             .btn-light-custom {
-                background-color: #fff;
-                color: #0176d3;
+                background-color: $text-white;
+                color: $sky-blue;
                 /* Salesforce Blue */
                 padding: 12px 24px;
                 font-weight: 600;
                 border-radius: 4px;
                 text-decoration: none;
                 display: inline-block;
-                border: 2px solid #fff;
+                border: 2px solid $text-white;
                 transition: all 0.3s ease;
 
                 &:hover {
                     background-color: transparent;
-                    color: #fff;
+                    color: $text-white;
                 }
             }
         }
@@ -608,7 +608,7 @@
 /* --- Analytics Stats Section --- */
 .tableau-stats {
     padding: 5rem 0;
-    background-color: #fff;
+    background-color: $text-white;
 
     .stats-header {
         margin-bottom: 4rem;
@@ -745,7 +745,7 @@
     padding: 6rem 0 12rem;
     /* Extra padding at bottom for background image visibility */
     position: relative;
-    background-color: #fff;
+    background-color: $text-white;
     overflow: hidden;
     /* Prevent horizontal scroll if background image is wide */
 
@@ -818,7 +818,7 @@
     }
 
     .solution-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         padding: 2rem;
@@ -962,7 +962,7 @@
 
         &:hover {
             background-color: $secondary-color;
-            color: #fff;
+            color: $text-white;
         }
     }
 
@@ -973,7 +973,7 @@
         padding: 10px 24px;
         background-color: $secondary-color;
         border: 1px solid $secondary-color;
-        color: #fff;
+        color: $text-white;
         font-weight: 700;
         border-radius: 4px;
         text-decoration: none;
@@ -987,7 +987,7 @@
 
 /* --- Gartner Section --- */
 .tableau-gartner {
-    background-color: #fff;
+    background-color: $text-white;
 }
 
 /* --- Customer Story Section --- */
@@ -1046,15 +1046,15 @@
 
 /* --- CTO Section --- */
 .tableau-cto {
-    background-color: #fff;
+    background-color: $text-white;
 }
 
 /* --- Data Culture Playbook Section --- */
 .tableau-playbook {
-    background-color: #fff;
+    background-color: $text-white;
 
     .playbook-card {
-        background-color: #fff;
+        background-color: $text-white;
         border-radius: 16px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         padding: 0 4rem;
@@ -1120,7 +1120,7 @@
     }
 
     .trailhead-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 16px;
         padding: 2.5rem;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -1215,7 +1215,7 @@
 
 /* --- Tableau Resources Section --- */
 .tableau-resources {
-    background-color: #fff;
+    background-color: $text-white;
 
     .resources-grid {
         display: grid;
@@ -1230,7 +1230,7 @@
     }
 
     .resource-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         /* Soft shadow */
@@ -1305,7 +1305,7 @@
 
 /* --- Tableau Next Step Section --- */
 .tableau-next-step {
-    background-color: #fff;
+    background-color: $text-white;
     padding-bottom: 250px;
     /* Space for the bottom image */
     position: relative;
@@ -1330,7 +1330,7 @@
     }
 
     .step-card {
-        background: #fff;
+        background: $text-white;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         padding: 3rem 2rem;
@@ -1420,7 +1420,7 @@
 
 /* --- Tableau FAQ Section --- */
 .tableau-faq {
-    background-color: #fff;
+    background-color: $text-white;
 
     .faq-accordion {
         max-width: 800px;
@@ -1440,7 +1440,7 @@
             background-color: $secondary-color;
 
             i {
-                color: #fff;
+                color: $text-white;
             }
         }
     }
