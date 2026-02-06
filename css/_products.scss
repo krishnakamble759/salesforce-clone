@@ -101,7 +101,7 @@
 
             .hero-desc {
                 font-size: 21px;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 40px;
                 line-height: 1.6;
 
@@ -137,7 +137,7 @@
                     transition: background 0.2s;
 
                     &:hover {
-                        background-color: #005fb2;
+                        background-color: $color-005fb2;
                     }
                 }
 
@@ -157,7 +157,7 @@
                     }
 
                     &:hover {
-                        background-color: #f0f7ff;
+                        background-color: $color-f0f7ff;
                     }
                 }
             }
@@ -182,7 +182,7 @@
                     height: 0;
                     overflow: hidden;
                     border-radius: 8px;
-                    background: #000;
+                    background: $color-000000;
 
                     iframe {
                         position: absolute;
@@ -287,7 +287,7 @@
                 }
 
                 .card-label {
-                    background: #f0f7ff;
+                    background: $color-f0f7ff;
                     color: $secondary-color;
                     padding: 9px 22px;
                     border-radius: 50px;
@@ -306,7 +306,7 @@
 
                 p {
                     font-size: 15px;
-                    color: #444;
+                    color: $color-444444;
                     line-height: 1.6;
                     margin-bottom: 45px;
                     flex: 1;
@@ -423,7 +423,7 @@
 
             p {
                 font-size: 19px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
                 margin-bottom: 45px;
 
@@ -448,7 +448,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                     box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                     transform: translateY(-2px);
                 }
@@ -464,7 +464,7 @@
 
 .products-customer-stories {
     padding: 120px 0 220px;
-    background: linear-gradient(180deg, #d8e4f5 0%, #f1f8ff 100%);
+    background: linear-gradient(180deg, $color-d8e4f5 0%, $color-f1f8ff 100%);
     position: relative;
     overflow: hidden;
     clip-path: ellipse(100% 100% at 50% 0%);
@@ -650,7 +650,7 @@
 
             p {
                 font-size: 19px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
                 margin-bottom: 40px;
 
@@ -675,7 +675,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                     box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                     transform: translateY(-2px);
                 }
@@ -704,7 +704,7 @@
 
 .products-integrated-platform {
     padding: 80px 0 180px;
-    background-color: #f1f8ff;
+    background-color: $color-f1f8ff;
     position: relative;
     overflow: hidden;
     clip-path: ellipse(150% 125% at 50% -25%);
@@ -915,7 +915,7 @@
                 transition: all 0.2s;
 
                 &:hover {
-                    background-color: #014486;
+                    background-color: $color-014486;
                 }
 
                 i {
@@ -991,7 +991,7 @@
                 }
 
                 .stars {
-                    color: #fcc003;
+                    color: $color-fcc003;
                     display: flex;
                     gap: 2px;
 
@@ -1079,7 +1079,7 @@
                 transition: all 0.2s;
 
                 &:hover {
-                    background-color: #014486;
+                    background-color: $color-014486;
                 }
 
                 i {
@@ -1266,7 +1266,7 @@
                     min-width: 32px;
                     width: 32px;
                     height: 32px;
-                    background: #f0f7ff;
+                    background: $color-f0f7ff;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1286,7 +1286,7 @@
                     }
 
                     i {
-                        background: #e0f0ff;
+                        background: $color-e0f0ff;
                         transform: scale(1.1);
                     }
                 }
@@ -1345,7 +1345,7 @@
                         transition: color 0.2s;
 
                         &:hover {
-                            color: #014486;
+                            color: $color-014486;
                         }
                     }
                 }
@@ -1364,7 +1364,7 @@
                     }
 
                     &:hover {
-                        color: #014486;
+                        color: $color-014486;
                     }
                 }
             }

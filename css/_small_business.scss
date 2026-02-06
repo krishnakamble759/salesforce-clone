@@ -171,7 +171,7 @@
 
                     @include desktop {
                         width: 100%;
-                        border-bottom: 1px solid #f0f0f0;
+                        border-bottom: 1px solid $color-f0f0f0;
                         padding: 12px 0;
 
                         &:last-child {
@@ -273,7 +273,7 @@
                                     display: block;
                                     font-size: 13px;
                                     text-transform: capitalize;
-                                    color: #706e6b;
+                                    color: $color-706e6b;
                                     margin-bottom: 15px;
                                     font-weight: 500;
 
@@ -338,7 +338,7 @@
             transition: background 0.3s;
 
             &:hover {
-                background: #015ba1;
+                background: $color-015ba1;
             }
         }
 
@@ -363,7 +363,7 @@
     }
 
     .sb-hero {
-        background: linear-gradient(135deg, $secondary-color 0%, #0b4f8a 100%);
+        background: linear-gradient(135deg, $secondary-color 0%, $color-0b4f8a 100%);
         padding: 80px 0 120px;
         position: relative;
         overflow: visible;
@@ -418,7 +418,7 @@
                 }
 
                 .text-light-blue {
-                    color: #57c5f7;
+                    color: $color-57c5f7;
                 }
             }
 
@@ -458,7 +458,7 @@
                     display: inline-block;
 
                     &:hover {
-                        background: #f0f0f0;
+                        background: $color-f0f0f0;
                         transform: translateY(-2px);
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                     }
@@ -492,7 +492,7 @@
                     transition: background 0.3s;
 
                     &:hover {
-                        background: #015ba1;
+                        background: $color-015ba1;
                     }
                 }
 
@@ -506,7 +506,7 @@
                     transition: all 0.3s;
 
                     &:hover {
-                        background: #f0f7ff;
+                        background: $color-f0f7ff;
                     }
                 }
             }
@@ -517,7 +517,7 @@
             z-index: 2;
 
             .sb-video-card {
-                background: linear-gradient(135deg, #4a9fd8 0%, #2b7bb9 100%);
+                background: linear-gradient(135deg, $color-4a9fd8 0%, $color-2b7bb9 100%);
                 border-radius: 16px;
                 box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
                 overflow: hidden;
@@ -672,7 +672,7 @@
             }
 
             &:hover {
-                background: #015ba1;
+                background: $color-015ba1;
                 transform: translateY(-2px);
                 box-shadow: 0 6px 24px rgba(1, 118, 211, 0.5);
             }
@@ -681,7 +681,7 @@
 
     .customer-logo-slider {
         padding: 100px 0 160px;
-        background-color: #cbe0ee; // Changed to white
+        background-color: $color-cbe0ee; // Changed to white
         position: relative;
         overflow: hidden;
         text-align: center;
@@ -735,13 +735,13 @@
             &::before {
                 left: 0;
                 top: 0;
-                background: linear-gradient(to right, #cbe0ee 0%, rgba(203, 224, 238, 0) 100%);
+                background: linear-gradient(to right, $color-cbe0ee 0%, rgba(203, 224, 238, 0) 100%);
             }
 
             &::after {
                 right: 0;
                 top: 0;
-                background: linear-gradient(to left, #cbe0ee 0%, rgba(203, 224, 238, 0) 100%);
+                background: linear-gradient(to left, $color-cbe0ee 0%, rgba(203, 224, 238, 0) 100%);
             }
         }
 
@@ -876,7 +876,7 @@
                 padding: 15px 0;
                 font-size: 18px;
                 font-weight: 600;
-                color: #444;
+                color: $color-444444;
                 cursor: pointer;
                 position: relative;
                 white-space: nowrap;
@@ -968,7 +968,7 @@
 
             p {
                 font-size: 18px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
                 margin-bottom: 32px;
             }
@@ -989,8 +989,8 @@
                     border: 1px solid $sky-blue;
 
                     &:hover {
-                        background-color: #015ba1;
-                        border-color: #015ba1;
+                        background-color: $color-015ba1;
+                        border-color: $color-015ba1;
                     }
                 }
 
@@ -1055,7 +1055,7 @@
                 justify-content: space-between;
                 margin-left: 50px;
                 margin-right: 50px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
                 margin-bottom: 32px;
 
@@ -1083,7 +1083,7 @@
                 text-decoration: none;
 
                 &:hover {
-                    background-color: #015ba1;
+                    background-color: $color-015ba1;
                 }
             }
         }
@@ -1098,7 +1098,7 @@
                 display: flex;
                 flex-direction: column;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border: 1px solid #f0f0f0;
+                border: 1px solid $color-f0f0f0;
 
                 &:hover {
                     transform: translateY(-10px);
@@ -1128,7 +1128,7 @@
 
                     p {
                         font-size: 16px;
-                        color: #444;
+                        color: $color-444444;
                         line-height: 1.5;
                         margin-bottom: 24px;
                         flex-grow: 1;
@@ -1141,7 +1141,7 @@
                         font-size: 16px;
 
                         &:hover {
-                            color: #015ba1;
+                            color: $color-015ba1;
                         }
                     }
                 }
@@ -1151,7 +1151,7 @@
 
     .sb-success-stories {
         padding: 100px 0;
-        background-color: #f8fbfe; // Very light blue/gray background
+        background-color: $color-f8fbfe; // Very light blue/gray background
 
         .stories-header {
             margin-bottom: 60px;
@@ -1184,7 +1184,7 @@
                 font-size: 18px;
                 margin-left: 100px;
                 margin-right: 100px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
 
                 @include small-tab {
@@ -1210,7 +1210,7 @@
                 display: flex;
                 flex-direction: column;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border: 1px solid #f0f0f0;
+                border: 1px solid $color-f0f0f0;
 
                 &:hover {
                     transform: translateY(-10px);
@@ -1227,7 +1227,7 @@
                     overflow: hidden;
 
                     &.bg-teal {
-                        background: linear-gradient(135deg, $primary-color 0%, #00d58d 100%);
+                        background: linear-gradient(135deg, $primary-color 0%, $color-00d58d 100%);
 
                         // Adding a subtle circle pattern
                         &::before {
@@ -1243,7 +1243,7 @@
                     }
 
                     &.bg-orange {
-                        background: linear-gradient(135deg, #f29c11 0%, #ff5c39 100%);
+                        background: linear-gradient(135deg, $color-f29c11 0%, $color-ff5c39 100%);
 
                         &::before {
                             content: "";
@@ -1299,7 +1299,7 @@
                     flex-direction: column;
 
                     .story-badge {
-                        background: #f1f8ff;
+                        background: $color-f1f8ff;
                         color: $sky-blue;
                         padding: 4px 12px;
                         border-radius: 20px;
@@ -1319,7 +1319,7 @@
 
                     p {
                         font-size: 16px;
-                        color: #444;
+                        color: $color-444444;
                         line-height: 1.6;
                         margin-bottom: 24px;
                         flex-grow: 1;
@@ -1333,7 +1333,7 @@
                         transition: color 0.3s;
 
                         &:hover {
-                            color: #015ba1;
+                            color: $color-015ba1;
                         }
                     }
                 }
@@ -1544,7 +1544,7 @@
                     }
 
                     &.trailhead-bg {
-                        background: radial-gradient(circle at center, $text-white 0%, #e0f2ff 100%);
+                        background: radial-gradient(circle at center, $text-white 0%, $color-e0f2ff 100%);
 
                         img {
                             object-fit: contain;
@@ -1560,7 +1560,7 @@
                     flex-direction: column;
 
                     .resource-tag {
-                        background: #e1f0fe;
+                        background: $color-e1f0fe;
                         color: $primary-color;
                         padding: 4px 12px;
                         border-radius: 12px;
@@ -1588,7 +1588,7 @@
                         transition: color 0.3s ease;
 
                         &:hover {
-                            color: #015ba1;
+                            color: $color-015ba1;
                         }
                     }
                 }
@@ -1653,11 +1653,11 @@
                     }
 
                     &.bg-light-blue {
-                        background-color: #f1f8ff;
+                        background-color: $color-f1f8ff;
                     }
 
                     &.bg-purple {
-                        background-color: #d896ff; // Matching the screenshot purple
+                        background-color: $color-d896ff; // Matching the screenshot purple
                     }
                 }
 
@@ -1668,7 +1668,7 @@
                     flex-direction: column;
 
                     .trend-tag {
-                        background: #f1f8ff;
+                        background: $color-f1f8ff;
                         color: $secondary-color;
                         padding: 6px 16px;
                         border-radius: 20px;
@@ -1786,7 +1786,7 @@
             .step-icon {
                 width: 48px;
                 height: 48px;
-                background-color: #f1f8ff;
+                background-color: $color-f1f8ff;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -1805,7 +1805,7 @@
 
             p {
                 font-size: 16px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.5;
                 margin-bottom: 30px;
                 flex-grow: 1;
@@ -1990,7 +1990,7 @@
 
                     p {
                         font-size: 17px;
-                        color: #444;
+                        color: $color-444444;
                         line-height: 1.6;
                         margin-bottom: 20px;
                     }
@@ -2002,7 +2002,7 @@
 
                         li {
                             font-size: 16px;
-                            color: #444;
+                            color: $color-444444;
                             line-height: 1.6;
                             margin-bottom: 12px;
                         }
@@ -2025,7 +2025,7 @@
         .faq-disclaimer {
             margin-top: 80px;
             font-size: 12px;
-            color: #777;
+            color: $color-777777;
             font-style: italic;
             max-width: 1000px;
             margin-left: auto;

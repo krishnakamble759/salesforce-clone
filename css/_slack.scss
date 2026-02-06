@@ -8,7 +8,7 @@
         top: 65px; // Matches main header top
         z-index: 990;
         background-color: $text-white;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
         padding: 0;
         width: 100%;
         transition: top 0.3s ease;
@@ -102,7 +102,7 @@
                     flex-direction: column;
                     width: 100%;
                     gap: 0;
-                    border-top: 1px solid #eee;
+                    border-top: 1px solid $color-eeeeee;
 
                     &.active {
                         display: flex;
@@ -118,7 +118,7 @@
                     @include desktop {
                         width: 100%;
                         height: auto;
-                        border-bottom: 1px solid #f2f2f2;
+                        border-bottom: 1px solid $color-f2f2f2;
                         flex-direction: column;
                         align-items: flex-start;
                     }
@@ -695,11 +695,11 @@
     // Spotlight Section (The wide card)
     .slack-spotlight-section {
         padding: 60px 0 100px;
-        // background-color: #f9f9f9;
+        // background-color: $color-f9f9f9;
 
         .spotlight-card {
             background: white;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
             border-radius: 20px;
             padding: 80px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
@@ -924,7 +924,7 @@
 
         .transform-card {
             background: white;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -1043,7 +1043,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 60px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid $color-f0f0f0;
 
             @include desktop {
                 padding: 60px;
@@ -1124,8 +1124,8 @@
     .slack-customer-section {
         padding: 80px 0 200px;
         position: relative;
-        background-color: #f8f9fa; // Light background for contrast if needed, or white if seamless
-        background: linear-gradient(180deg, $text-white 0%, #F4F6F9 100%);
+        background-color: $color-f8f9fa; // Light background for contrast if needed, or white if seamless
+        background: linear-gradient(180deg, $text-white 0%, $color-f4f6f9 100%);
         overflow: hidden;
 
         @include mobile {
@@ -1145,7 +1145,7 @@
             display: flex;
             align-items: center;
             gap: 80px;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
 
             @include desktop {
                 gap: 50px;
@@ -1329,7 +1329,7 @@
             padding: 40px;
             width: 350px;
             max-width: 100%;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -1353,7 +1353,7 @@
                 align-items: flex-start;
 
                 .badge-pill {
-                    background-color: #EBF8FE;
+                    background-color: $color-ebf8fe;
                     color: $sky-blue;
                     font-size: 12px;
                     font-weight: 700;
@@ -1459,7 +1459,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1490,7 +1490,7 @@
                 align-items: flex-start;
 
                 .trend-tag {
-                    background-color: #EBF8FE;
+                    background-color: $color-ebf8fe;
                     color: $sky-blue; // $sky-blue
                     font-size: 11px;
                     font-weight: 700;
@@ -1570,7 +1570,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             padding: 40px 30px;
-            border: 1px solid #eee;
+            border: 1px solid $color-eeeeee;
             display: flex;
             flex-direction: column;
             align-items: flex-start; // Screenshot shows left align content inside card? 
@@ -1586,7 +1586,7 @@
             .icon-circle {
                 width: 48px;
                 height: 48px;
-                background-color: #EBF8FE;
+                background-color: $color-ebf8fe;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -1631,7 +1631,7 @@
     .slack-faq-section {
         padding: 80px 0 350px; // Padding bottom to accommodate the landscape image
         position: relative;
-        background-color: #fcfcfc; // Slightly off-white or white, screenshot looks very clean.
+        background-color: $color-fcfcfc; // Slightly off-white or white, screenshot looks very clean.
 
         @include mobile {
             padding: 60px 0 200px;

@@ -2,7 +2,7 @@
 .sales-page-hero {
     padding-top: 60px;
     padding-bottom: 240px; // Larger bottom padding for the curve
-    background-color: #f8fcfe; // Fallback
+    background-color: $color-f8fcfe; // Fallback
     position: relative;
     overflow: hidden;
 
@@ -73,7 +73,7 @@
             }
 
             .hero-title-highlight {
-                color: #00a180; // The Teal color from screenshot
+                color: $color-00a180; // The Teal color from screenshot
             }
 
             .hero-title-main {
@@ -83,7 +83,7 @@
 
         p {
             font-size: 1.125rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.6;
             margin-bottom: 24px;
             max-width: 540px;
@@ -107,7 +107,7 @@
         overflow: hidden;
         box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
         aspect-ratio: 16 / 9;
-        background: #000;
+        background: $color-000000;
         transition: transform 0.3s ease;
 
         &:hover {
@@ -175,7 +175,7 @@
         display: block;
         height: auto;
         min-height: 320px;
-        background: #ddd;
+        background: $color-dddddd;
         object-fit: cover;
     }
 
@@ -414,7 +414,7 @@
 
                 @include desktop {
                     width: 100%;
-                    border-bottom: 1px solid #f0f0f0;
+                    border-bottom: 1px solid $color-f0f0f0;
                     padding: 12px 0;
 
                     &:last-child {
@@ -521,7 +521,7 @@
                                 display: block;
                                 font-size: 12px;
                                 text-transform: uppercase;
-                                color: #444;
+                                color: $color-444444;
                                 font-weight: 700;
                                 margin-bottom: 15px;
                                 letter-spacing: 1px;
@@ -573,7 +573,7 @@
                         margin: 10px 0;
 
                         &:hover {
-                            background-color: #f0f7ff;
+                            background-color: $color-f0f7ff;
                         }
                     }
 
@@ -616,7 +616,7 @@
             margin-right: 42px;
 
             &:hover {
-                background-color: #f0f7ff;
+                background-color: $color-f0f7ff;
                 color: $sky-blue !important;
             }
         }
@@ -822,10 +822,10 @@
             overflow: hidden;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            background: #000;
+            background: $color-000000;
 
             &.orange-border {
-                border: 8px solid #f88a24;
+                border: 8px solid $color-f88a24;
             }
 
             iframe {
@@ -893,7 +893,7 @@
 
         .story-description {
             font-size: 1.25rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.5;
             margin-bottom: 24px;
 
@@ -948,7 +948,7 @@
                     font-weight: 700;
                     color: $secondary-color;
                     padding: 8px 0;
-                    border-bottom: 1px solid #f2f2f2;
+                    border-bottom: 1px solid $color-f2f2f2;
 
                     &:last-child {
                         border-bottom: none;
@@ -988,7 +988,7 @@
 
     .cta-card {
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
 
         // Ensure proper column spacing on mobile
         .col-lg-6,
@@ -1043,7 +1043,7 @@
 
         .cta-description {
             font-size: 1.15rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.6;
             max-width: 500px;
 
@@ -1091,7 +1091,7 @@
             }
 
             &:hover {
-                background-color: #f4f6f9;
+                background-color: $color-f4f6f9;
                 color: $sky-blue;
                 border-color: $sky-blue;
             }
@@ -1118,7 +1118,7 @@
 
     .intro-description {
         font-size: 1.15rem;
-        color: #181b1f;
+        color: $color-181b1f;
         line-height: 1.6;
         max-width: 900px;
     }
@@ -1155,7 +1155,7 @@
 
         .pillar-text {
             font-size: 1.05rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.6;
         }
     }
@@ -1178,7 +1178,7 @@
 
     .scale-card {
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
 
         // Ensure proper column spacing on mobile
         .col-lg-5,
@@ -1236,7 +1236,7 @@
 
         .scale-description {
             font-size: 1.15rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.6;
 
             @include mobile {
@@ -1282,7 +1282,7 @@
             }
 
             &:hover {
-                background-color: #f4f6f9;
+                background-color: $color-f4f6f9;
                 color: $sky-blue;
                 border-color: $sky-blue;
             }
@@ -1354,7 +1354,7 @@
             padding: 40px 30px;
             height: 100%;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border-top: 6px solid #00f0d1; // Teal top border
+            border-top: 6px solid $color-00f0d1; // Teal top border
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1374,7 +1374,7 @@
 
             .card-text {
                 font-size: 1rem;
-                color: #181b1f;
+                color: $color-181b1f;
                 line-height: 1.6;
                 margin-bottom: 24px;
                 flex-grow: 1;
@@ -1400,7 +1400,7 @@
         width: 48px;
         height: 48px;
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -1411,7 +1411,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-            background: #f4f6f9;
+            background: $color-f4f6f9;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
@@ -1439,7 +1439,7 @@
     .slider-progress-container {
         width: 100%;
         height: 4px;
-        background: #e5e5e5;
+        background: $color-e5e5e5;
         border-radius: 2px;
         position: relative;
         overflow: hidden;
@@ -1449,7 +1449,7 @@
             top: 0;
             left: 0;
             height: 100%;
-            background: #adadad;
+            background: $color-adadad;
             width: 25%; // Matches 1/4 cards if showing 3 at a time? 
             // Actually, we'll animate this with JS
             border-radius: 2px;
@@ -1464,7 +1464,7 @@
 
     .scale-card {
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
 
         .zebra-img {
             max-width: 450px;
@@ -1488,7 +1488,7 @@
 
         .scale-description {
             font-size: 1.15rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.6;
             max-width: 550px;
         }
@@ -1517,7 +1517,7 @@
             background: transparent;
 
             &:hover {
-                background-color: #f4f6f9;
+                background-color: $color-f4f6f9;
                 color: $sky-blue;
                 border-color: $sky-blue;
             }
@@ -1607,7 +1607,7 @@
     .growth-card {
         background: $text-white;
         border-radius: 12px;
-        border-top: 6px solid #00f0d1;
+        border-top: 6px solid $color-00f0d1;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: flex;
         flex-direction: column;
@@ -1642,7 +1642,7 @@
 
             .card-text {
                 font-size: 1rem;
-                color: #181b1f;
+                color: $color-181b1f;
                 line-height: 1.6;
                 margin-bottom: 30px;
                 flex-grow: 1;
@@ -1690,7 +1690,7 @@
         justify-content: center;
         gap: 0;
         margin-bottom: 60px;
-        border-bottom: 2px solid #e5e5e5;
+        border-bottom: 2px solid $color-e5e5e5;
 
         .discover-tab {
             background: transparent;
@@ -1755,7 +1755,7 @@
             width: 100%;
             height: 240px;
             overflow: hidden;
-            background: #f4f6f9;
+            background: $color-f4f6f9;
 
             img {
                 width: 100%;
@@ -1781,7 +1781,7 @@
                 font-size: 0.75rem;
                 font-weight: 600;
                 color: $secondary-color;
-                background-color: #e8f3fc;
+                background-color: $color-e8f3fc;
                 padding: 6px 8px;
                 border-radius: 10px;
                 text-transform: uppercase;
@@ -1809,7 +1809,7 @@
 
             .discover-card-text {
                 font-size: 1rem;
-                color: #181b1f;
+                color: $color-181b1f;
                 line-height: 1.6;
                 margin-bottom: 20px;
                 flex-grow: 1;
@@ -1889,7 +1889,7 @@
             width: 100%;
             height: 260px;
             overflow: hidden;
-            background: linear-gradient(135deg, #e0f7fa 0%, #f0f4ff 100%);
+            background: linear-gradient(135deg, $color-e0f7fa 0%, $color-f0f4ff 100%);
 
             img {
                 width: 100%;
@@ -1922,7 +1922,7 @@
 
             .accelerate-card-text {
                 font-size: 1rem;
-                color: #181b1f;
+                color: $color-181b1f;
                 line-height: 1.6;
                 margin-bottom: 20px;
                 flex-grow: 1;
@@ -1955,7 +1955,7 @@
 
     .free-crm-card {
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
 
         .free-crm-image {
             display: flex;
@@ -1988,7 +1988,7 @@
 
         .free-crm-description {
             font-size: 1.05rem;
-            color: #181b1f;
+            color: $color-181b1f;
             line-height: 1.5;
         }
 
@@ -2016,7 +2016,7 @@
             background: transparent;
 
             &:hover {
-                background-color: #f4f6f9;
+                background-color: $color-f4f6f9;
                 color: $sky-blue;
                 border-color: $sky-blue;
             }
@@ -2047,7 +2047,7 @@
 
     .salesblazer-description {
         font-size: 1.11rem;
-        color: #181b1f;
+        color: $color-181b1f;
         line-height: 1.6;
     }
 
@@ -2063,7 +2063,7 @@
         text-decoration: none;
 
         &:hover {
-            background-color: #f4f6f9;
+            background-color: $color-f4f6f9;
             color: $sky-blue;
             border-color: $sky-blue;
         }
@@ -2179,7 +2179,7 @@
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #f0f0f0;
+        border: 1px solid $color-f0f0f0;
 
         &:hover {
             transform: translateY(-10px);
@@ -2195,7 +2195,7 @@
         }
 
         .module-label {
-            background-color: #e8f5ff;
+            background-color: $color-e8f5ff;
             color: $sky-blue;
             padding: 4px 12px;
             border-radius: 100px;
@@ -2212,7 +2212,7 @@
         .card-text {
             font-size: 14px;
             line-height: 1.5;
-            color: #444;
+            color: $color-444444;
         }
 
         .start-learning-link {
@@ -2222,7 +2222,7 @@
             transition: color 0.2s ease;
 
             &:hover {
-                color: #014486;
+                color: $color-014486;
             }
         }
     }
@@ -2251,7 +2251,7 @@
 
 /* Latest Trends & Insights Section */
 .latest-trends-section {
-    background-color: #f8fbff;
+    background-color: $color-f8fbff;
     padding: 80px 0;
 
     .latest-trends-heading {
@@ -2290,7 +2290,7 @@
                 font-weight: 700;
                 padding: 6px 16px;
                 border-radius: 100px;
-                background-color: #eef7ff !important;
+                background-color: $color-eef7ff !important;
                 color: $sky-blue !important;
             }
 
@@ -2306,7 +2306,7 @@
                 font-size: 15px;
 
                 &:hover {
-                    color: #014486;
+                    color: $color-014486;
                 }
             }
         }
@@ -2352,13 +2352,13 @@
 
     .next-step-card {
         background: $text-white;
-        border: 1px solid #f0f0f0 !important;
+        border: 1px solid $color-f0f0f0 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         z-index: 3;
 
         .next-step-icon {
-            background-color: #e8f5ff !important;
+            background-color: $color-e8f5ff !important;
             width: 48px;
             height: 48px;
             display: flex;
@@ -2380,7 +2380,7 @@
         }
 
         .next-step-text {
-            color: #444;
+            color: $color-444444;
             font-size: 16px;
             line-height: 1.5;
         }
@@ -2392,7 +2392,7 @@
             transition: color 0.2s ease;
 
             &:hover {
-                color: #014486 !important;
+                color: $color-014486 !important;
             }
         }
 
@@ -2552,12 +2552,12 @@
                     font-size: 15px;
 
                     &:hover {
-                        background-color: #f0f7ff;
+                        background-color: $color-f0f7ff;
                         color: $primary-color;
                     }
 
                     &.active {
-                        background-color: #f0f7ff;
+                        background-color: $color-f0f7ff;
                         color: $primary-color;
                     }
                 }
@@ -2613,7 +2613,7 @@
                     min-width: 32px;
                     width: 32px;
                     height: 32px;
-                    background: #f0f7ff;
+                    background: $color-f0f7ff;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -2633,7 +2633,7 @@
                     }
 
                     i {
-                        background: #e0f0ff;
+                        background: $color-e0f0ff;
                         transform: scale(1.1);
                     }
                 }

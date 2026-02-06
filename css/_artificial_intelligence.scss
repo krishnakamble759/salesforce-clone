@@ -155,7 +155,7 @@
 
                     @include desktop {
                         width: 100%;
-                        border-bottom: 1px solid #f0f0f0;
+                        border-bottom: 1px solid $color-f0f0f0;
                         padding: 12px 0;
 
                         &:last-child {
@@ -262,7 +262,7 @@
                                     display: block;
                                     font-size: 12px;
                                     text-transform: uppercase;
-                                    color: #444;
+                                    color: $color-444444;
                                     font-weight: 700;
                                     margin-bottom: 15px;
                                     letter-spacing: 1px;
@@ -322,7 +322,7 @@
             display: inline-block;
 
             &:hover {
-                background-color: #014486;
+                background-color: $color-014486;
             }
 
             @include desktop {
@@ -431,7 +431,7 @@
                 transition: all 0.2s;
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 }
@@ -679,7 +679,7 @@
         .smb-promo-text {
             font-size: 16px;
             line-height: 1.6;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             margin-bottom: 16px;
 
             strong {
@@ -707,7 +707,7 @@
             }
 
             &:hover {
-                background-color: #005fb2;
+                background-color: $color-005fb2;
                 transform: translateY(-2px);
                 box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
             }
@@ -771,7 +771,7 @@
         .ai-business-desc {
             font-size: 18px;
             line-height: 1.6;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             margin-bottom: 32px;
 
             a {
@@ -786,7 +786,7 @@
                 }
 
                 &:hover {
-                    color: #005fb2;
+                    color: $color-005fb2;
                     text-decoration: underline;
                 }
             }
@@ -804,7 +804,7 @@
             transition: all 0.2s ease;
 
             &:hover {
-                background-color: #005fb2;
+                background-color: $color-005fb2;
                 transform: translateY(-2px);
                 box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
             }
@@ -891,7 +891,7 @@
         .trusted-content-desc {
             font-size: 16px;
             line-height: 1.6;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             margin-bottom: 40px;
 
             a {
@@ -901,7 +901,7 @@
                 transition: color 0.2s;
 
                 &:hover {
-                    color: #005fb2;
+                    color: $color-005fb2;
                 }
             }
         }
@@ -933,7 +933,7 @@
             .solution-desc {
                 font-size: 16px;
                 line-height: 1.5;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 margin: 16px 0;
                 display: none;
 
@@ -944,7 +944,7 @@
                     transition: color 0.2s;
 
                     &:hover {
-                        color: #005fb2;
+                        color: $color-005fb2;
                     }
                 }
             }
@@ -958,14 +958,14 @@
                 transition: color 0.2s;
 
                 &:hover {
-                    color: #005fb2;
+                    color: $color-005fb2;
                 }
             }
 
             &.active {
                 border-left: px solid $sky-blue;
                 padding-left: 20px;
-                background-color: #f9f9f9;
+                background-color: $color-f9f9f9;
 
                 .solution-title {
                     color: $sky-blue;
@@ -1055,7 +1055,7 @@
             .builder-desc {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 margin-bottom: 30px;
 
                 a {
@@ -1065,7 +1065,7 @@
                     transition: color 0.2s;
 
                     &:hover {
-                        color: #005fb2;
+                        color: $color-005fb2;
                     }
                 }
             }
@@ -1083,7 +1083,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                 }
@@ -1114,7 +1114,7 @@
                 .builder-item-desc {
                     font-size: 16px;
                     line-height: 1.6;
-                    color: #3e3e3c;
+                    color: $color-3e3e3c;
                     margin-top: 12px;
                     display: none;
                 }
@@ -1218,7 +1218,7 @@
             .trust-deploy-desc {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 margin-bottom: 30px;
 
                 a {
@@ -1228,7 +1228,7 @@
                     transition: color 0.2s;
 
                     &:hover {
-                        color: #005fb2;
+                        color: $color-005fb2;
                     }
                 }
             }
@@ -1246,7 +1246,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                 }
@@ -1277,7 +1277,7 @@
                 .trust-item-desc {
                     font-size: 16px;
                     line-height: 1.6;
-                    color: #3e3e3c;
+                    color: $color-3e3e3c;
                     margin-top: 12px;
                     display: none;
                 }
@@ -1397,7 +1397,7 @@
         flex-direction: column;
         height: 100%;
         min-height: 700px; // Increased minimum height
-        border: 1px solid #e5e5e5; // Added subtle border for better definition
+        border: 1px solid $color-e5e5e5; // Added subtle border for better definition
 
         &:hover {
             transform: translateY(-5px);
@@ -1406,7 +1406,7 @@
 
         .card-image {
             width: 100%;
-            background-color: #f4f6fe; // Fallback or matching background
+            background-color: $color-f4f6fe; // Fallback or matching background
 
             img {
                 width: 100%;
@@ -1440,7 +1440,7 @@
             .card-desc {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 margin-bottom: 32px;
                 flex: 1;
             }
@@ -1462,7 +1462,7 @@
                 }
 
                 &:hover {
-                    background-color: #f4f6fe;
+                    background-color: $color-f4f6fe;
                     text-decoration: none;
                 }
             }
@@ -1506,7 +1506,7 @@
         align-items: center;
         max-width: 1400px;
         margin: 0 auto;
-        border: 2px solid #e5e5e5;
+        border: 2px solid $color-e5e5e5;
 
         @include big-tab {
             grid-template-columns: 1fr;
@@ -1542,7 +1542,7 @@
             .roi-text {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 margin-bottom: 32px;
             }
 
@@ -1558,7 +1558,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #f4f6fe;
+                    background-color: $color-f4f6fe;
                     text-decoration: none;
                 }
             }
@@ -1603,7 +1603,7 @@
         align-items: center;
         max-width: 1400px;
         margin: 0 auto 60px; // Margin mainly for bottom decoration space
-        border: 2px solid #e5e5e5;
+        border: 2px solid $color-e5e5e5;
 
         @include big-tab {
             grid-template-columns: 1fr;
@@ -1655,7 +1655,7 @@
             .success-author {
                 margin-bottom: 32px;
                 font-size: 16px;
-                color: #3e3e3c;
+                color: $color-3e3e3c;
                 line-height: 1.5;
 
                 strong {
@@ -1683,7 +1683,7 @@
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #f4f6fe;
+                    background-color: $color-f4f6fe;
                     text-decoration: none;
                 }
             }
@@ -1771,7 +1771,7 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         transition: all 0.3s ease;
         height: 100%;
 
@@ -1807,8 +1807,8 @@
         }
 
         .module-badge {
-            background-color: #d8edff; // Light blue
-            color: #005e8e; // Darker blue text
+            background-color: $color-d8edff; // Light blue
+            color: $color-005e8e; // Darker blue text
             font-size: 13px; // Small text
             font-weight: 700;
             padding: 4px 12px;
@@ -1830,7 +1830,7 @@
         .card-desc {
             font-size: 16px;
             line-height: 1.5;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             margin-bottom: 24px;
             flex-grow: 1;
         }
@@ -1929,7 +1929,7 @@
         flex-direction: column;
         transition: all 0.3s ease;
         height: 100%;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
 
         &:hover {
             transform: translateY(-5px);
@@ -1961,7 +1961,7 @@
             align-items: flex-start;
 
             .trend-badge {
-                background-color: #eef4ff;
+                background-color: $color-eef4ff;
                 color: $sky-blue;
                 font-size: 13px;
                 font-weight: 700;
@@ -2018,7 +2018,7 @@
             transition: all 0.2s ease;
 
             &:hover {
-                background-color: #f4f6fe;
+                background-color: $color-f4f6fe;
                 text-decoration: none;
             }
         }
@@ -2027,7 +2027,7 @@
 
 // Next Step Section
 .ai-next-step {
-    background: linear-gradient(180deg, $text-white 0%, #e3dcfc 100%); // Approximate purple gradient
+    background: linear-gradient(180deg, $text-white 0%, $color-e3dcfc 100%); // Approximate purple gradient
     padding: 100px 0 250px; // Lots of bottom padding for the image overlap
     position: relative;
     overflow: hidden; // Assuming we want to contain the decoration or clip it if needed
@@ -2105,7 +2105,7 @@
         .card-icon {
             width: 50px;
             height: 50px;
-            background-color: #eef4ff;
+            background-color: $color-eef4ff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2125,7 +2125,7 @@
         .card-desc {
             font-size: 16px;
             line-height: 1.5;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             margin-bottom: 32px;
             flex-grow: 1;
         }
@@ -2206,10 +2206,10 @@
     }
 
     .faq-item {
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
 
         &:first-child {
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid $color-e5e5e5;
         }
     }
 
@@ -2244,7 +2244,7 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background-color: #eef4ff;
+            background-color: $color-eef4ff;
             color: $sky-blue;
             margin-left: 20px;
             flex-shrink: 0;
@@ -2273,7 +2273,7 @@
         p {
             font-size: 18px;
             line-height: 1.6;
-            color: #3e3e3c;
+            color: $color-3e3e3c;
             padding: 0 0 24px;
             margin: 0;
         }
@@ -2289,7 +2289,7 @@
 
     .einstein-rights {
         font-size: 12px;
-        color: #3e3e3c;
+        color: $color-3e3e3c;
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
@@ -2309,7 +2309,7 @@
     }
 
     button {
-        background: linear-gradient(135deg, $sky-blue 0%, #005fb2 100%);
+        background: linear-gradient(135deg, $sky-blue 0%, $color-005fb2 100%);
         color: white;
         border: none;
         border-radius: 50px;
@@ -2339,7 +2339,7 @@
         &:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 28px rgba(1, 118, 211, 0.5);
-            background: linear-gradient(135deg, #005fb2 0%, #014a8f 100%);
+            background: linear-gradient(135deg, $color-005fb2 0%, $color-014a8f 100%);
         }
 
         &:active {

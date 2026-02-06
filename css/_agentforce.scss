@@ -130,7 +130,7 @@
             }
 
             &:hover {
-                background: #f5f5f5;
+                background: $color-f5f5f5;
                 color: $text-color;
             }
         }
@@ -192,7 +192,7 @@
             cursor: pointer;
             border-radius: 6px;
             transition: all 0.2s;
-            color: #537297;
+            color: $color-537297;
             font-size: 20px;
             font-weight: 500;
             text-decoration: none !important;
@@ -205,7 +205,7 @@
 
             &.active-category {
                 color: $sky-blue !important;
-                background-color: #eef4ff !important;
+                background-color: $color-eef4ff !important;
                 font-weight: 700;
 
                 i {
@@ -238,7 +238,7 @@
             }
 
             &:hover {
-                background: #f5f7fa;
+                background: $color-f5f7fa;
                 color: $primary-color;
 
                 i {
@@ -267,7 +267,7 @@
 
                 &:hover {
                     text-decoration: underline;
-                    color: #0051a3;
+                    color: $color-0051a3;
                 }
             }
         }
@@ -309,7 +309,7 @@
 
             p {
                 font-size: 16px;
-                color: #555;
+                color: $color-555555;
                 line-height: 1.6;
                 margin-bottom: 24px;
                 max-width: 400px;
@@ -327,7 +327,7 @@
                 transition: all 0.2s;
 
                 &:hover {
-                    background: #0051a3;
+                    background: $color-0051a3;
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                 }
@@ -397,7 +397,7 @@
 
                 .smb-description {
                     p {
-                        color: #444;
+                        color: $color-444444;
                         font-size: 16px;
                         line-height: 1.6;
                         margin-bottom: 20px;
@@ -425,7 +425,7 @@
                         transition: background-color 0.2s;
 
                         &:hover {
-                            background: #005fb2;
+                            background: $color-005fb2;
                         }
                     }
 
@@ -524,7 +524,7 @@
 
         // AI Featured Styles
         .ai-featured {
-            background: #f0f7ff;
+            background: $color-f0f7ff;
             padding: 40px;
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -541,7 +541,7 @@
                 z-index: 2;
 
                 .ai-category-label {
-                    color: #6B36C8;
+                    color: $color-6b36c8;
                     font-size: 16px;
                     font-weight: 700;
                     margin-bottom: 12px;
@@ -558,7 +558,7 @@
 
                 .ai-description {
                     p {
-                        color: #444;
+                        color: $color-444444;
                         font-size: 16px;
                         line-height: 1.6;
                         margin-bottom: 20px;
@@ -574,7 +574,7 @@
 
                     .btn-watch-demo {
                         display: inline-block;
-                        background: #6B36C8;
+                        background: $color-6b36c8;
                         color: white !important;
                         padding: 14px 32px;
                         border-radius: 4px;
@@ -586,12 +586,12 @@
                         transition: background-color 0.2s;
 
                         &:hover {
-                            background: #5a2da1;
+                            background: $color-5a2da1;
                         }
                     }
 
                     .link-all-products {
-                        color: #6B36C8;
+                        color: $color-6b36c8;
                         text-decoration: underline;
                         font-weight: 700;
                         font-size: 16px;
@@ -627,7 +627,7 @@
 
 // Agentforce Detail Page Styles
 body.agentforce-body {
-    background: radial-gradient(circle at 50% 50%, #0742b8 0%, #001242 100%);
+    background: radial-gradient(circle at 50% 50%, $color-0742b8 0%, $color-001242 100%);
     min-height: 100vh;
 }
 
@@ -644,7 +644,7 @@ body.agentforce-body {
     overflow-x: hidden;
 
     &.customer-stories-view {
-        background: #f8f9fa;
+        background: $color-f8f9fa;
         /* Light grey background override for stories view */
         color: $text-dark;
 
@@ -707,7 +707,7 @@ body.agentforce-body {
                 padding: 15px 20px;
                 justify-content: space-between;
                 width: 100%;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid $color-eeeeee;
             }
 
             h2 {
@@ -770,7 +770,7 @@ body.agentforce-body {
 
             &:hover {
                 text-decoration: none;
-                color: #eaeaea;
+                color: $color-eaeaea;
             }
         }
     }
@@ -795,14 +795,14 @@ body.agentforce-body {
 
             .agentforce-nav-link {
                 padding: 15px 24px;
-                border-bottom: 1px solid #f5f5f5;
+                border-bottom: 1px solid $color-f5f5f5;
                 width: 100%;
                 justify-content: space-between;
 
                 &.active {
                     border-left: 4px solid $primary-color;
-                    border-bottom-color: #f5f5f5;
-                    background: #fcfcfc;
+                    border-bottom-color: $color-f5f5f5;
+                    background: $color-fcfcfc;
                 }
             }
         }
@@ -893,7 +893,7 @@ body.agentforce-body {
     // Background: Swoop image layered over the radial gradient
     background:
         url('../assets/Agentforce/marquee-agentforce-mobile-swoop-6-20.webp') no-repeat bottom center / 100% auto,
-        radial-gradient(circle at 50% 50%, #052055 0%, #001242 100%);
+        radial-gradient(circle at 50% 50%, $color-052055 0%, $color-001242 100%);
 
     @include desktop {
         padding: 70px 100px 140px;
@@ -936,7 +936,7 @@ body.agentforce-body {
                 font-weight: 700;
                 margin-bottom: 24px;
                 line-height: 1.1;
-                color: #92e0ff;
+                color: $color-92e0ff;
 
                 @include desktop {
                     font-size: 64px;
@@ -962,7 +962,7 @@ body.agentforce-body {
             p {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #d8e6fe;
+                color: $color-d8e6fe;
                 margin-bottom: 32px;
                 max-width: 550px;
 
@@ -973,7 +973,7 @@ body.agentforce-body {
 
             .btn-watch-demos {
                 background: white;
-                color: #0d1f42;
+                color: $color-0d1f42;
                 border: none;
                 padding: 16px 32px;
                 font-size: 16px;
@@ -985,7 +985,7 @@ body.agentforce-body {
                 text-decoration: none; // Added for A tag support
 
                 &:hover {
-                    background: #f0f0f0;
+                    background: $color-f0f0f0;
                     transform: translateY(-2px);
                 }
             }
@@ -1016,8 +1016,8 @@ body.agentforce-body {
 
 // Customers / Marquee Section (Retained from _agentforce.scss)
 .agentforce-customers {
-    background-color: #050b40; // Slightly different blue or same deep blue
-    background: linear-gradient(180deg, #131860 0%, #10166d 100%);
+    background-color: $color-050b40; // Slightly different blue or same deep blue
+    background: linear-gradient(180deg, $color-131860 0%, $color-10166d 100%);
     padding: 100px 0 80px;
     position: relative;
     overflow: hidden;
@@ -1137,7 +1137,7 @@ body.agentforce-body {
                     min-width: 200px; // Ensure consistent width
 
                     &:hover {
-                        background-color: #005fb2;
+                        background-color: $color-005fb2;
                         transform: translateY(-2px);
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                     }
@@ -1222,7 +1222,7 @@ body.agentforce-body {
 
 // Agentforce Transform Section
 .agentforce-transform-section {
-    background-color: #10166d; // Matches the bottom of the previous section
+    background-color: $color-10166d; // Matches the bottom of the previous section
     padding: 80px 0 100px;
     color: $text-white;
     position: relative;
@@ -1318,7 +1318,7 @@ body.agentforce-body {
 
 // Trusted Agentforce Architecture Section
 .agentforce-architecture-section {
-    background-color: #10166d;
+    background-color: $color-10166d;
     padding: 0 0 100px;
     color: $text-white;
 
@@ -1409,7 +1409,7 @@ body.agentforce-body {
                 justify-content: flex-start;
 
                 .pill {
-                    background: #f0f4f8;
+                    background: $color-f0f4f8;
                     color: $secondary-color;
                     padding: 10px 24px;
                     border-radius: 50px;
@@ -1511,7 +1511,7 @@ body.agentforce-body {
                     }
 
                     .badge-pill {
-                        background: #3661eb; // Bright blue for badges
+                        background: $color-3661eb; // Bright blue for badges
                         color: $text-white;
                         padding: 8px 16px;
                         border-radius: 50px;
@@ -1536,7 +1536,7 @@ body.agentforce-body {
                     .text {
                         font-size: 15px;
                         line-height: 1.4;
-                        color: #f0f0f0;
+                        color: $color-f0f0f0;
                     }
                 }
             }
@@ -1651,19 +1651,19 @@ body.agentforce-body {
                             }
 
                             &.red {
-                                color: #d93025;
+                                color: $color-d93025;
                             }
 
                             &.blue {
-                                color: #1a73e8;
+                                color: $color-1a73e8;
                             }
 
                             &.green {
-                                color: #1e8e3e;
+                                color: $color-1e8e3e;
                             }
 
                             &.purple {
-                                color: #9334e6;
+                                color: $color-9334e6;
                             }
 
                             img {
@@ -1680,7 +1680,7 @@ body.agentforce-body {
 
 // Agentforce Powers Any Use Case Section
 .agentforce-powers-section {
-    background-color: #10166d;
+    background-color: $color-10166d;
     padding: 60px 0 80px;
     color: $text-white;
     text-align: center;
@@ -1784,7 +1784,7 @@ body.agentforce-body {
 
 // Agentforce Industries Section
 .agentforce-industries-section {
-    background-color: #10166d;
+    background-color: $color-10166d;
     padding: 0 0 100px;
     color: $text-white;
     text-align: center;
@@ -1828,7 +1828,7 @@ body.agentforce-body {
         }
 
         .industry-card {
-            background-color: #F8F4FF; // Light lavender
+            background-color: $color-f8f4ff; // Light lavender
             border-radius: 16px;
             padding: 40px 20px;
             display: flex;
@@ -1852,22 +1852,22 @@ body.agentforce-body {
                 .icon-circle {
                     width: 56px;
                     height: 56px;
-                    background-color: #e5ccff;
+                    background-color: $color-e5ccff;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 20px;
-                    background-color: #d1b1f1;
+                    background-color: $color-d1b1f1;
 
                     i {
-                        color: #4a008e;
+                        color: $color-4a008e;
                         font-size: 20px;
                     }
                 }
 
                 h3 {
-                    color: #000;
+                    color: $color-000000;
                     font-size: 17px;
                     font-weight: 700;
                     margin: 0;
@@ -1880,7 +1880,7 @@ body.agentforce-body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: #15095e; // Dark blue hover state
+                background-color: $color-15095e; // Dark blue hover state
                 padding: 24px;
                 display: flex;
                 align-items: center;
@@ -1927,7 +1927,7 @@ body.agentforce-body {
             min-width: 200px;
 
             &:hover {
-                background: #f0f0f0;
+                background: $color-f0f0f0;
                 transform: translateY(-2px);
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             }
@@ -1937,7 +1937,7 @@ body.agentforce-body {
 
 // Trusted AI Section
 .agentforce-trusted-ai-section {
-    background-color: #5d28cf;
+    background-color: $color-5d28cf;
     padding: 100px 0;
     color: $text-white;
     position: relative;
@@ -2028,7 +2028,7 @@ body.agentforce-body {
                         display: none;
                         font-size: 16px;
                         line-height: 1.6;
-                        color: #ddd;
+                        color: $color-dddddd;
                         max-width: 500px;
                     }
                 }
@@ -2053,7 +2053,7 @@ body.agentforce-body {
 
 // Explore More Section
 .agentforce-explore-section {
-    background-color: #5d28cf;
+    background-color: $color-5d28cf;
     padding: 100px 0 160px;
     color: $text-white;
     position: relative;
@@ -2085,7 +2085,7 @@ body.agentforce-body {
 
         .nav-arrow {
             background: $text-white;
-            color: #5323BD;
+            color: $color-5323bd;
             border: none;
             width: 48px;
             height: 48px;
@@ -2147,7 +2147,7 @@ body.agentforce-body {
                 left: 0;
                 width: 100%;
                 height: 8px;
-                background: #C4A7E7;
+                background: $color-c4a7e7;
             }
 
             h3 {
@@ -2162,7 +2162,7 @@ body.agentforce-body {
             p {
                 font-size: 16px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 24px;
                 flex-grow: 1;
             }
@@ -2289,7 +2289,7 @@ body.agentforce-body {
             }
 
             &:hover {
-                background-color: #eef4f9;
+                background-color: $color-eef4f9;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
         }
@@ -2302,7 +2302,7 @@ body.agentforce-body {
         margin: 0 auto;
         max-width: 1250px;
         border-radius: 16px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         overflow: hidden; // Clip visual background corners
 
@@ -2318,7 +2318,7 @@ body.agentforce-body {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #F8F5FF; // Light lavender background
+            background-color: $color-f8f5ff; // Light lavender background
 
             img {
                 width: 100%;
@@ -2350,7 +2350,7 @@ body.agentforce-body {
 
             .pill-badge {
                 display: inline-block;
-                background-color: #E6F0F8;
+                background-color: $color-e6f0f8;
                 color: $sky-blue;
                 font-size: 13px;
                 font-weight: 700;
@@ -2376,7 +2376,7 @@ body.agentforce-body {
             p {
                 font-size: 18px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 32px;
                 max-width: 480px;
 
@@ -2399,7 +2399,7 @@ body.agentforce-body {
                 font-size: 16px;
 
                 &:hover {
-                    background-color: #f1f8fc;
+                    background-color: $color-f1f8fc;
                     box-shadow: 0 4px 8px rgba(1, 118, 211, 0.15);
                 }
             }
@@ -2413,7 +2413,7 @@ body.agentforce-body {
         margin: 40px auto 0;
         max-width: 1250px;
         border-radius: 16px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         overflow: hidden;
 
@@ -2453,7 +2453,7 @@ body.agentforce-body {
             p {
                 font-size: 18px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 32px;
                 max-width: 550px;
 
@@ -2491,8 +2491,8 @@ body.agentforce-body {
                     border: 1px solid $sky-blue;
 
                     &:hover {
-                        background-color: #005fb2;
-                        border-color: #005fb2;
+                        background-color: $color-005fb2;
+                        border-color: $color-005fb2;
                     }
                 }
 
@@ -2502,7 +2502,7 @@ body.agentforce-body {
                     border: 1px solid $sky-blue;
 
                     &:hover {
-                        background-color: #f1f8fc;
+                        background-color: $color-f1f8fc;
                     }
                 }
             }
@@ -2536,7 +2536,7 @@ body.agentforce-body {
         margin: 40px auto 0;
         max-width: 1250px;
         border-radius: 16px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         overflow: hidden;
 
@@ -2576,7 +2576,7 @@ body.agentforce-body {
             p {
                 font-size: 18px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 32px;
                 max-width: 550px;
 
@@ -2614,8 +2614,8 @@ body.agentforce-body {
                     border: 1px solid $sky-blue;
 
                     &:hover {
-                        background-color: #005fb2;
-                        border-color: #005fb2;
+                        background-color: $color-005fb2;
+                        border-color: $color-005fb2;
                     }
                 }
             }
@@ -2665,7 +2665,7 @@ body.agentforce-body {
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
 
         .unlock-tabs {
             list-style: none;
@@ -2698,7 +2698,7 @@ body.agentforce-body {
 
                 &:hover {
                     color: $sky-blue;
-                    background-color: #f8fbfe;
+                    background-color: $color-f8fbfe;
                 }
             }
         }
@@ -2719,7 +2719,7 @@ body.agentforce-body {
 
         .unlock-card {
             background: $text-white;
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
             border-radius: 16px;
             overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -2735,7 +2735,7 @@ body.agentforce-body {
                 width: 100%;
                 aspect-ratio: 16/9;
                 overflow: hidden;
-                border-bottom: 1px solid #f0f0f0;
+                border-bottom: 1px solid $color-f0f0f0;
 
                 img {
                     width: 100%;
@@ -2754,7 +2754,7 @@ body.agentforce-body {
 
                 .badge {
                     display: inline-block;
-                    background-color: #E6F0F8;
+                    background-color: $color-e6f0f8;
                     color: $secondary-color;
                     font-size: 13px;
                     font-weight: 700;
@@ -2766,7 +2766,7 @@ body.agentforce-body {
 
                 .event-meta {
                     font-size: 14px;
-                    color: #444;
+                    color: $color-444444;
                     margin-bottom: 24px;
                     font-weight: 500;
                 }
@@ -2817,7 +2817,7 @@ body.agentforce-body {
     background: linear-gradient(105deg, $text-white 30%, $light-blue 100%); // Light gradient approximation
     // Option B: If there's a specific cloud image, use that. For now, matching the "light + purple tint" feel.
     // Based on screenshot, it's white to left, purplish-blue fade on right.
-    background: #F4F6F9;
+    background: $color-f4f6f9;
 
     // Add the swoop/cloud effect if possible with a pseudo or generic image
     // &::before { content: ""; position: absolute; ... }
@@ -2984,11 +2984,11 @@ body.agentforce-body {
 
 // Card Gradients
 .gradient-blue-dark {
-    background: linear-gradient(135deg, #0b153c 0%, #1e2f78 100%);
+    background: linear-gradient(135deg, $color-0b153c 0%, $color-1e2f78 100%);
 }
 
 .gradient-blue-light {
-    background: linear-gradient(135deg, #0052d4 0%, #4364f7 100%);
+    background: linear-gradient(135deg, $color-0052d4 0%, $color-4364f7 100%);
 }
 
 .read-stories-footer {
@@ -2997,7 +2997,7 @@ body.agentforce-body {
 
     .small-text-grey {
         font-size: 13px;
-        color: #555;
+        color: $color-555555;
     }
 
     .btn-primary {
@@ -3135,7 +3135,7 @@ body.agentforce-body {
 
     .story-card {
         background: $text-white;
-        border: 1px solid #e5e5e5;
+        border: 1px solid $color-e5e5e5;
         border-radius: 16px;
         overflow: hidden;
         display: flex;
@@ -3157,7 +3157,7 @@ body.agentforce-body {
             padding: 24px;
 
             // Default gradient
-            background: linear-gradient(135deg, #0b153c 0%, #1e2f78 100%);
+            background: linear-gradient(135deg, $color-0b153c 0%, $color-1e2f78 100%);
 
             &.full-image {
                 padding: 0;
@@ -3174,32 +3174,32 @@ body.agentforce-body {
             }
 
             &.gradient-1 {
-                background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+                background: linear-gradient(135deg, $color-4a00e0 0%, $color-8e2de2 100%);
             }
 
             // Asymbl
             &.gradient-2 {
-                background: linear-gradient(135deg, #ff0099 0%, #493240 100%);
+                background: linear-gradient(135deg, $color-ff0099 0%, $color-493240 100%);
             }
 
             // Lennar
             &.gradient-3 {
-                background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
+                background: linear-gradient(135deg, $color-1f4037 0%, $color-99f2c8 100%);
             }
 
             // reMarkable
             &.gradient-4 {
-                background: linear-gradient(135deg, #0052d4 0%, #4364f7 100%);
+                background: linear-gradient(135deg, $color-0052d4 0%, $color-4364f7 100%);
             }
 
             // CaixaBank
             &.gradient-5 {
-                background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+                background: linear-gradient(135deg, $color-83a4d4 0%, $color-b6fbff 100%);
             }
 
             // Simplyhealth
             &.gradient-6 {
-                background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+                background: linear-gradient(135deg, $color-000428 0%, $color-004e92 100%);
             }
 
             .logo-img {
@@ -3238,7 +3238,7 @@ body.agentforce-body {
 
             .tag-chip {
                 display: inline-block;
-                background: #eef4ff;
+                background: $color-eef4ff;
                 color: $sky-blue;
                 font-size: 11px;
                 font-weight: 700;
@@ -3258,14 +3258,14 @@ body.agentforce-body {
 
             p {
                 font-size: 14px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.5;
                 margin-bottom: 24px;
                 flex: 1; // Push link to bottom
             }
 
             .learn-more {
-                color: #012169;
+                color: $color-012169;
                 font-weight: 700;
                 text-decoration: underline;
                 font-size: 14px;
@@ -3498,7 +3498,7 @@ body.agentforce-body {
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: 500;
-                border-bottom: 1px solid #f0f0f0;
+                border-bottom: 1px solid $color-f0f0f0;
                 transition: all 0.2s ease;
 
                 @include mobile {
@@ -3511,7 +3511,7 @@ body.agentforce-body {
                 }
 
                 &:hover {
-                    background: #f8f9fa;
+                    background: $color-f8f9fa;
                     color: $primary-color;
                     padding-left: 28px;
 
@@ -3533,7 +3533,7 @@ body.agentforce-body {
 
 // Take the Next Step Section
 .next-step-section {
-    background: #f3f8fc;
+    background: $color-f3f8fc;
     padding: 80px 0;
 
     @include big-tab {
@@ -3611,7 +3611,7 @@ body.agentforce-body {
                     }
 
                     .card-link {
-                        color: #0051a3;
+                        color: $color-0051a3;
                     }
                 }
 
@@ -3659,7 +3659,7 @@ body.agentforce-body {
                 .card-description {
                     font-size: 16px;
                     line-height: 1.6;
-                    color: #444;
+                    color: $color-444444;
                     margin-bottom: 24px;
                     flex-grow: 1;
 
@@ -3761,13 +3761,13 @@ body.agentforce-body {
                     transform: translateY(-4px);
 
                     .story-card-link {
-                        color: #0051a3;
+                        color: $color-0051a3;
                         text-decoration: none;
                     }
                 }
 
                 .story-logo-container {
-                    background: linear-gradient(135deg, $secondary-color 0%, #6b21a8 100%);
+                    background: linear-gradient(135deg, $secondary-color 0%, $color-6b21a8 100%);
                     padding: 60px 40px;
                     display: flex;
                     align-items: center;
@@ -3834,7 +3834,7 @@ body.agentforce-body {
                     .story-card-description {
                         font-size: 16px;
                         line-height: 1.6;
-                        color: #444;
+                        color: $color-444444;
                         margin-bottom: 24px;
                         flex-grow: 1;
 
@@ -3894,7 +3894,7 @@ body.agentforce-body {
                 }
 
                 &:hover {
-                    background: #0051a3;
+                    background: $color-0051a3;
                     box-shadow: 0 4px 16px rgba(1, 118, 211, 0.4);
                     transform: translateY(-2px);
                 }
@@ -3958,7 +3958,7 @@ body.agentforce-body {
                 }
 
                 .highlight {
-                    background-color: #d8e6fe;
+                    background-color: $color-d8e6fe;
                     padding: 0 4px;
                     display: inline;
                     box-decoration-break: clone;
@@ -3969,7 +3969,7 @@ body.agentforce-body {
             .story-intro {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #444;
+                color: $color-444444;
                 max-width: 90%;
             }
         }
@@ -4044,7 +4044,7 @@ body.agentforce-body {
             a {
                 width: 40px;
                 height: 40px;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 8px;
                 display: flex;
                 align-items: center;
@@ -4053,7 +4053,7 @@ body.agentforce-body {
                 transition: all 0.2s;
 
                 &:hover {
-                    background: #f4f6f9;
+                    background: $color-f4f6f9;
                     color: $sky-blue;
                     border-color: $sky-blue;
                 }
@@ -4143,7 +4143,7 @@ body.agentforce-body {
                 margin-bottom: 24px;
                 font-size: 18px;
                 line-height: 1.6;
-                color: #181b31;
+                color: $color-181b31;
 
                 @include mobile {
                     font-size: 16px;
@@ -4240,7 +4240,7 @@ body.agentforce-body {
 
             .accordion-item {
                 background: white;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 12px;
                 overflow: hidden;
                 cursor: pointer;
@@ -4252,7 +4252,7 @@ body.agentforce-body {
                 }
 
                 &.active {
-                    border-color: #f4f6f9;
+                    border-color: $color-f4f6f9;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
                     border-width: 1px; // Reset to 1px if we want cleaner look, or keep 2px
 
@@ -4278,7 +4278,7 @@ body.agentforce-body {
                         transition: transform 0.3s;
                         font-size: 20px;
                         color: $sky-blue;
-                        background: #f4f6f9;
+                        background: $color-f4f6f9;
                         width: 48px;
                         height: 48px;
                         border-radius: 50%;
@@ -4298,7 +4298,7 @@ body.agentforce-body {
                         p {
                             font-size: 18px;
                             line-height: 1.6;
-                            color: #181b31;
+                            color: $color-181b31;
                             margin-bottom: 24px;
 
                             a {
@@ -4322,7 +4322,7 @@ body.agentforce-body {
 
     .story-info-box-section {
         .story-info-box {
-            background-color: #F2F8FD;
+            background-color: $color-f2f8fd;
             border-radius: 24px;
             padding: 80px;
 
@@ -4363,7 +4363,7 @@ body.agentforce-body {
                         .about-text {
                             font-size: 16px;
                             line-height: 1.6;
-                            color: #444;
+                            color: $color-444444;
                         }
                     }
 
@@ -4477,7 +4477,7 @@ body.agentforce-body {
 
                         .quote-title {
                             font-size: 14px;
-                            color: #444;
+                            color: $color-444444;
                             margin: 0;
                         }
                     }
@@ -4569,7 +4569,7 @@ body.agentforce-body {
                     transition: color 0.2s ease;
 
                     &:hover {
-                        color: #0051a3;
+                        color: $color-0051a3;
                         text-decoration: none;
                     }
                 }
@@ -4591,7 +4591,7 @@ body.agentforce-body {
     // Custom Sticky Nav
     .story-sticky-nav {
         background: white;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
         padding: 12px 0;
         // display: none; 
 
@@ -4665,7 +4665,7 @@ body.agentforce-body {
             .story-intro {
                 font-size: 20px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 text-align: left;
                 max-width: 90%;
 
@@ -4703,7 +4703,7 @@ body.agentforce-body {
         justify-content: flex-end;
         gap: 16px;
         padding: 20px 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid $color-f0f0f0;
 
         .share-label {
             font-size: 14px;
@@ -4721,7 +4721,7 @@ body.agentforce-body {
                 justify-content: center;
                 width: 40px;
                 height: 40px;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 8px;
                 color: $secondary-color;
                 background: white;
@@ -4730,7 +4730,7 @@ body.agentforce-body {
                 text-decoration: none;
 
                 &:hover {
-                    background: #f4f6f9;
+                    background: $color-f4f6f9;
                     color: $sky-blue;
                     border-color: $sky-blue;
                 }
@@ -4743,7 +4743,7 @@ body.agentforce-body {
         background: white;
 
         .story-info-box {
-            background: #f2f8fd;
+            background: $color-f2f8fd;
             border-radius: 24px;
             padding: 60px;
 
@@ -4814,7 +4814,7 @@ body.agentforce-body {
                             align-items: center;
                             gap: 8px;
                             background: white;
-                            border: 1px solid #c9c9c9;
+                            border: 1px solid $color-c9c9c9;
                             padding: 8px 16px;
                             border-radius: 50px;
                             font-size: 14px;
@@ -4842,7 +4842,7 @@ body.agentforce-body {
     background: white; // Ensure content doesn't show through
     padding-top: 20px;
     padding-bottom: 0px; // Adjust for progress bar
-    border-bottom: 1px solid #e5e5e5; // Optional separation
+    border-bottom: 1px solid $color-e5e5e5; // Optional separation
 
     // Ensure the progress bar is positioned correctly at the bottom of the sticky header
     .scroll-progress-container {
@@ -4909,14 +4909,14 @@ body.agentforce-body {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #181b31; // Darker grey for better contrast
+            color: $color-181b31; // Darker grey for better contrast
             font-size: 15px;
             margin-bottom: 32px;
             font-weight: 500;
 
             .meta-separator {
                 font-size: 12px;
-                color: #777;
+                color: $color-777777;
             }
         }
 
@@ -4937,7 +4937,7 @@ body.agentforce-body {
             transition: all 0.2s;
 
             &:hover {
-                background: #f4f6f9;
+                background: $color-f4f6f9;
                 text-decoration: none;
             }
 
@@ -4994,7 +4994,7 @@ body.agentforce-body {
     .card-header.full-image {
         width: 100%;
         height: 200px;
-        background: #f4f6f9;
+        background: $color-f4f6f9;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -5002,11 +5002,11 @@ body.agentforce-body {
         position: relative;
 
         &.gradient-blue-dark {
-            background: linear-gradient(135deg, #01142e 0%, $secondary-color 100%);
+            background: linear-gradient(135deg, $color-01142e 0%, $secondary-color 100%);
         }
 
         &.gradient-blue-light {
-            background: linear-gradient(135deg, #eef4fc 0%, #d8e6fe 100%);
+            background: linear-gradient(135deg, $color-eef4fc 0%, $color-d8e6fe 100%);
         }
 
         // Direct image child (e.g. Simplyhealth) - Full Cover (Requested "Total Fit")
@@ -5058,7 +5058,7 @@ body.agentforce-body {
 
         p {
             font-size: 14px;
-            color: #444;
+            color: $color-444444;
             margin-bottom: 16px;
             flex-grow: 1;
         }
@@ -5084,7 +5084,7 @@ body.agentforce-body {
     // Layered background: Linear gradient + Contour Image at bottom
     background:
         url('../assets/read/contact-us-background-contour-min.webp') bottom center no-repeat,
-        linear-gradient(180deg, $text-white 0%, #f0f6fa 100%);
+        linear-gradient(180deg, $text-white 0%, $color-f0f6fa 100%);
     background-size: 100% auto, cover; // Image width 100%, Gradient cover
 
     .next-step-container {
@@ -5131,7 +5131,7 @@ body.agentforce-body {
         .icon-circle {
             width: 48px;
             height: 48px;
-            background: #eef4fc; // Light blue circle
+            background: $color-eef4fc; // Light blue circle
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -5153,7 +5153,7 @@ body.agentforce-body {
 
         p {
             font-size: 16px;
-            color: #444; // Grey text
+            color: $color-444444; // Grey text
             line-height: 1.5;
             margin-bottom: 24px;
             flex-grow: 1;
@@ -5190,8 +5190,8 @@ body.agentforce-body {
         transition: all 0.2s;
 
         &:hover {
-            background: #014486; // Darker blue on hover
-            border-color: #014486;
+            background: $color-014486; // Darker blue on hover
+            border-color: $color-014486;
             text-decoration: none;
         }
     }
@@ -5284,7 +5284,7 @@ body.agentforce-body {
 
         &.left-col {
             flex: 1.2;
-            border-right: 1px solid #eaeaea;
+            border-right: 1px solid $color-eaeaea;
             padding-right: 30px;
         }
 
@@ -5297,7 +5297,7 @@ body.agentforce-body {
     .dropdown-header {
         font-size: 13px;
         text-transform: uppercase;
-        color: #706e6b;
+        color: $color-706e6b;
         font-weight: 700;
         margin-bottom: 20px;
         display: block;
@@ -5319,7 +5319,7 @@ body.agentforce-body {
         }
 
         &:hover {
-            background: #f4f6f9;
+            background: $color-f4f6f9;
 
             .item-title {
                 color: $sky-blue;
@@ -5338,7 +5338,7 @@ body.agentforce-body {
         .item-desc {
             display: block;
             font-size: 14px;
-            color: #444;
+            color: $color-444444;
             line-height: 1.4;
         }
     }
@@ -5367,7 +5367,7 @@ body.agentforce-body {
     .dropdown-footer {
         margin-top: 24px;
         padding-top: 16px;
-        border-top: 1px solid #eaeaea;
+        border-top: 1px solid $color-eaeaea;
     }
 }
 
@@ -5575,7 +5575,7 @@ body.agentforce-body {
                     }
 
                     &:hover {
-                        background: #f4f6f9;
+                        background: $color-f4f6f9;
                         color: $sky-blue;
                     }
 
@@ -5665,7 +5665,7 @@ body.agentforce-body {
                 }
 
                 .meta-separator {
-                    color: #ccc;
+                    color: $color-cccccc;
                 }
 
                 span {
@@ -5741,7 +5741,7 @@ body.agentforce-body {
         // Left Column: Main Content
         .article-main {
             font-family: "ITC Avant Garde", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; // Default to Sans-Serif
-            color: #1a1a1a;
+            color: $color-1a1a1a;
             line-height: 1.8;
             font-size: 16px;
 
@@ -5753,7 +5753,7 @@ body.agentforce-body {
                     font-family: 'Georgia', serif; // Serif for intro
                     font-style: italic; // Italic for intro
                     font-size: 16px; // Reduced from 20px
-                    color: #1a1a1a;
+                    color: $color-1a1a1a;
                     margin-bottom: 24px;
                 }
             }
@@ -5776,13 +5776,13 @@ body.agentforce-body {
                 font-style: italic;
                 font-family: inherit;
                 font-size: 14px;
-                color: #1a1a1a;
+                color: $color-1a1a1a;
                 margin-bottom: 32px;
             }
 
             .article-divider {
                 border: 0;
-                border-top: 1px solid #e5e5e5;
+                border-top: 1px solid $color-e5e5e5;
                 margin: 40px 0;
             }
 
@@ -5864,11 +5864,11 @@ body.agentforce-body {
                     justify-content: center;
                     font-size: 18px;
                     transition: all 0.2s;
-                    border: 1px solid #e5e5e5; // Subtle border
+                    border: 1px solid $color-e5e5e5; // Subtle border
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
                     &:hover {
-                        background: #f4f6fe;
+                        background: $color-f4f6fe;
                         border-color: $sky-blue;
                     }
                 }
@@ -5876,7 +5876,7 @@ body.agentforce-body {
 
             .sidebar-card {
                 background: white;
-                border: 1px solid #eef4f9; // Very subtle border
+                border: 1px solid $color-eef4f9; // Very subtle border
                 border-radius: 16px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
                 padding: 24px;
@@ -5930,7 +5930,7 @@ body.agentforce-body {
 
                         .read-time {
                             font-size: 12px;
-                            color: #555;
+                            color: $color-555555;
                         }
                     }
 
@@ -5994,7 +5994,7 @@ body.agentforce-body {
 .related-section {
     padding: 60px 0;
     background-color: $text-white;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $color-e5e5e5;
 
     .container {
         max-width: 1200px;
@@ -6061,7 +6061,7 @@ body.agentforce-body {
 
             .read-time {
                 font-size: 14px;
-                color: #555;
+                color: $color-555555;
             }
         }
     }
@@ -6076,7 +6076,7 @@ body.agentforce-body {
             margin-bottom: 24px;
             font-size: 16px;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: $color-1a1a1a;
         }
 
         .content-paragraph {
@@ -6093,7 +6093,7 @@ body.agentforce-body {
         .quote-paragraph {
             font-size: 16px;
             line-height: 1.8;
-            color: #444; // Slightly lighter for quote feel or keep standard
+            color: $color-444444; // Slightly lighter for quote feel or keep standard
             margin-bottom: 40px;
         }
 
@@ -6101,7 +6101,7 @@ body.agentforce-body {
             padding-left: 40px;
             font-size: 16px;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: $color-1a1a1a;
             margin-bottom: 40px;
 
             li {
@@ -6122,7 +6122,7 @@ body.agentforce-body {
             .availability-headline {
                 font-weight: 700;
                 margin-bottom: 12px;
-                color: #1a1a1a;
+                color: $color-1a1a1a;
             }
 
             // Compact list for availability sections
@@ -6143,7 +6143,7 @@ body.agentforce-body {
             width: 100%;
             height: 350px;
             background: $sky-blue; // Fallback blue
-            background: linear-gradient(135deg, #005fb2 0%, #0099ff 100%);
+            background: linear-gradient(135deg, $color-005fb2 0%, $color-0099ff 100%);
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -6262,7 +6262,7 @@ body.agentforce-body {
             font-style: italic;
             font-weight: 500;
             font-size: 16px;
-            color: #1a1a1a;
+            color: $color-1a1a1a;
             line-height: 1.5;
             margin: 0;
         }
@@ -6329,7 +6329,7 @@ body.agentforce-body {
         text-align: center;
         margin-top: 60px;
         padding-top: 40px;
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid $color-e5e5e5;
 
         h3 {
             font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
@@ -6348,7 +6348,7 @@ body.agentforce-body {
             .topic-pill {
                 display: inline-block;
                 padding: 12px 24px;
-                border: 2px solid #e5eff9;
+                border: 2px solid $color-e5eff9;
                 /* Light blue border */
                 border-radius: 50px;
                 background-color: $text-white;
@@ -6361,7 +6361,7 @@ body.agentforce-body {
                 transition: all 0.2s ease;
 
                 &:hover {
-                    background-color: #f4f9fd;
+                    background-color: $color-f4f9fd;
                     border-color: $sky-blue;
                     color: $secondary-color;
                 }
@@ -6403,7 +6403,7 @@ body.agentforce-body {
         font-style: italic;
         font-weight: 500;
         font-size: 16px;
-        color: #1a1a1a;
+        color: $color-1a1a1a;
         line-height: 1.5;
         margin: 0;
     }
@@ -6481,7 +6481,7 @@ body.agentforce-body {
         }
 
         p {
-            color: #1a1a1a;
+            color: $color-1a1a1a;
             line-height: 1.6;
             font-size: 17px;
             margin: 0;
@@ -6604,7 +6604,7 @@ body.agentforce-body {
 
                 .read-time {
                     font-size: 14px;
-                    color: #555;
+                    color: $color-555555;
                     font-weight: 500;
                     margin-top: auto;
                 }
@@ -6641,7 +6641,7 @@ body.agentforce-body {
     text-align: center;
     margin-top: 60px;
     padding-top: 40px;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $color-e5e5e5;
     width: 100%;
 
     h3 {
@@ -6661,7 +6661,7 @@ body.agentforce-body {
         .topic-pill {
             display: inline-block;
             padding: 12px 24px;
-            border: 2px solid #e5eff9;
+            border: 2px solid $color-e5eff9;
             border-radius: 50px;
             background-color: $text-white;
             color: $sky-blue;
@@ -6673,7 +6673,7 @@ body.agentforce-body {
             transition: all 0.2s ease;
 
             &:hover {
-                background-color: #f4f9fd;
+                background-color: $color-f4f9fd;
                 border-color: $sky-blue;
                 color: $secondary-color;
             }
@@ -6688,13 +6688,13 @@ body.agentforce-body {
 .event-page {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(180deg, #001242 0%, #032055 100%);
+    background: linear-gradient(180deg, $color-001242 0%, $color-032055 100%);
     color: white;
     position: relative;
 
     // Salesforce+ Header
     .salesforce-plus-header {
-        background: #001242;
+        background: $color-001242;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 16px 0;
         position: sticky;
@@ -6794,7 +6794,7 @@ body.agentforce-body {
                 }
 
                 &:hover {
-                    color: #92e0ff;
+                    color: $color-92e0ff;
 
                     i {
                         transform: translateY(2px);
@@ -6807,7 +6807,7 @@ body.agentforce-body {
 
                 &:hover {
                     .event-nav-link {
-                        color: #92e0ff;
+                        color: $color-92e0ff;
                     }
 
                     .event-dropdown-menu {
@@ -6879,7 +6879,7 @@ body.agentforce-body {
                         transition: all 0.2s;
 
                         &:hover {
-                            background: #f3f8fc;
+                            background: $color-f3f8fc;
                             color: $primary-color;
                             padding-left: 20px;
                         }
@@ -6911,7 +6911,7 @@ body.agentforce-body {
             }
 
             &:hover {
-                background: #005fb2;
+                background: $color-005fb2;
                 transform: translateY(-1px);
             }
         }
@@ -7000,7 +7000,7 @@ body.agentforce-body {
             // Make "Agentforce" text with gradient (sky-blue to pink)
             .agentforce-text {
                 font-family: sans-serif;
-                background: linear-gradient(90deg, #00d4ff 0%, #ff00ff 100%);
+                background: linear-gradient(90deg, $color-00d4ff 0%, $color-ff00ff 100%);
                 font-size: 22px;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -7069,7 +7069,7 @@ body.agentforce-body {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: #0a60f3;
+            background: $color-0a60f3;
             color: white;
             border: none;
             padding: 10px 22px;
@@ -7089,7 +7089,7 @@ body.agentforce-body {
             }
 
             &:hover {
-                background: #005fb2;
+                background: $color-005fb2;
                 transform: translateY(-2px);
                 box-shadow: 0 8px 20px rgba(1, 118, 211, 0.3);
             }
@@ -7201,7 +7201,7 @@ body.agentforce-body {
         }
 
         &:hover {
-            background: #005fb2;
+            background: $color-005fb2;
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(1, 118, 211, 0.5);
         }
@@ -7209,7 +7209,7 @@ body.agentforce-body {
 
     // Event FAQ Section
     .event-faq-section {
-        background: linear-gradient(180deg, #001f5c 0%, #000d2e 100%);
+        background: linear-gradient(180deg, $color-001f5c 0%, $color-000d2e 100%);
         padding: 80px 40px 100px;
         position: relative;
 
@@ -7303,7 +7303,7 @@ body.agentforce-body {
                         }
 
                         &:hover {
-                            color: #92e0ff;
+                            color: $color-92e0ff;
                         }
                     }
 
@@ -7416,7 +7416,7 @@ body.agentforce-body {
 
                 i {
                     font-size: 28px; // FontAwesome uses font-size
-                    color: #4b4b4b;
+                    color: $color-4b4b4b;
                     transition: color 0.2s;
                 }
 
@@ -7603,7 +7603,7 @@ body.agentforce-body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #001242; // Dark blue background matching the uploaded image
+    background: $color-001242; // Dark blue background matching the uploaded image
     display: none;
     justify-content: center;
     align-items: center;
@@ -7685,13 +7685,13 @@ body.agentforce-body {
             &:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-                border-color: #e5e5e5;
+                border-color: $color-e5e5e5;
             }
 
             .icon-wrapper {
                 width: 56px;
                 height: 56px;
-                background: #f2f8fd; // Light blue circle
+                background: $color-f2f8fd; // Light blue circle
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -7719,7 +7719,7 @@ body.agentforce-body {
             p {
                 font-size: 16px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 24px;
                 flex-grow: 1;
             }
@@ -7772,10 +7772,10 @@ body.agentforce-body {
         margin: 0 auto;
 
         .faq-item {
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid $color-e5e5e5;
 
             &:first-child {
-                border-top: 1px solid #e5e5e5; // Add top border for first item
+                border-top: 1px solid $color-e5e5e5; // Add top border for first item
             }
 
             .faq-header {
@@ -7808,7 +7808,7 @@ body.agentforce-body {
                     flex-shrink: 0;
                     width: 32px;
                     height: 32px;
-                    background-color: #eef4ff;
+                    background-color: $color-eef4ff;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -7884,10 +7884,10 @@ body.agentforce-body {
 
     // Newsletter Section
     .newsletter-section {
-        background-color: #F8F9FA;
+        background-color: $color-f8f9fa;
         padding: 260px 0;
         text-align: center;
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid $color-e5e5e5;
 
         h2 {
             font-family: "ITC Avant Garde", sans-serif;
@@ -7944,7 +7944,7 @@ body.agentforce-body {
 
                 label {
                     font-size: 13px;
-                    color: #6361f2;
+                    color: $color-6361f2;
                     margin-bottom: 4px;
                     font-weight: 400;
                 }
@@ -7952,10 +7952,10 @@ body.agentforce-body {
                 input {
                     width: 100%;
                     padding: 2px 16px;
-                    border-top: 2px solid #1a1a1a;
-                    border-right: 2px solid #d9d9d9;
-                    border-bottom: 2px solid #d9d9d9;
-                    border-left: 2px solid #1a1a1a;
+                    border-top: 2px solid $color-1a1a1a;
+                    border-right: 2px solid $color-d9d9d9;
+                    border-bottom: 2px solid $color-d9d9d9;
+                    border-left: 2px solid $color-1a1a1a;
                     border-radius: 0;
                     font-size: 16px;
                     outline: none;
@@ -7982,7 +7982,7 @@ body.agentforce-body {
                 transform: translateY(16px);
 
                 &:hover {
-                    background-color: #005fb2;
+                    background-color: $color-005fb2;
                 }
             }
         }
@@ -7990,9 +7990,9 @@ body.agentforce-body {
 
     // Middle Navigation
     .footer-middle {
-        background-color: #F8F9FA;
+        background-color: $color-f8f9fa;
         padding: 60px 0;
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid $color-e5e5e5;
 
         .container {
             display: flex;

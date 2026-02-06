@@ -25,7 +25,7 @@
     }
 
     .free-crm-main {
-        background: #88b2f3;
+        background: $color-88b2f3;
         padding: 60px 0 0;
         position: relative;
         overflow: visible;
@@ -90,7 +90,7 @@
 
             .subtitle {
                 font-size: 20px;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 32px;
                 line-height: 1.4;
 
@@ -137,7 +137,7 @@
 
                 p {
                     font-size: 14px;
-                    color: #444;
+                    color: $color-444444;
                     line-height: 1.6;
 
                     a {
@@ -166,7 +166,7 @@
         }
 
         .signup-form-wrapper {
-            background: #f4f6f9;
+            background: $color-f4f6f9;
             border-radius: 8px;
             padding: 32px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -190,7 +190,7 @@
 
                 .form-control,
                 .form-select {
-                    border: 1px solid #c9c9c9;
+                    border: 1px solid $color-c9c9c9;
                     border-radius: 4px;
                     padding: 10px 14px;
                     font-size: 14px;
@@ -204,7 +204,7 @@
                     }
 
                     &::placeholder {
-                        color: #999;
+                        color: $color-999999;
                     }
                 }
 
@@ -231,7 +231,7 @@
                     .form-check-input {
                         width: 16px;
                         height: 16px;
-                        border: 1px solid #c9c9c9;
+                        border: 1px solid $color-c9c9c9;
                         margin-top: 2px;
 
                         &:checked {
@@ -273,7 +273,7 @@
                     transition: all 0.3s;
 
                     &:hover {
-                        background: #015ba1;
+                        background: $color-015ba1;
                         transform: translateY(-1px);
                         box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                     }
@@ -314,7 +314,7 @@
         background: $text-white;
         padding: 20px 0;
         position: relative;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
 
         .d-flex {
             @include mobile {
@@ -465,7 +465,7 @@
                     }
 
                     &:hover {
-                        background: #015ba1;
+                        background: $color-015ba1;
                         transform: translateY(-2px);
                         box-shadow: 0 6px 16px rgba(1, 118, 211, 0.5);
                     }

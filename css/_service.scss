@@ -211,7 +211,7 @@
                             border: 1px solid $sky-blue !important;
 
                             &:hover {
-                                background-color: #f0f7ff;
+                                background-color: $color-f0f7ff;
                             }
                         }
 
@@ -221,7 +221,7 @@
                             border: 1px solid $sky-blue !important;
 
                             &:hover {
-                                background-color: #014486;
+                                background-color: $color-014486;
                             }
                         }
                     }
@@ -342,7 +342,7 @@
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: #f0f7ff;
+                    background-color: $color-f0f7ff;
                 }
             }
 
@@ -356,7 +356,7 @@
                 transition: background 0.3s;
 
                 &:hover {
-                    background-color: #014486;
+                    background-color: $color-014486;
                 }
             }
         }
@@ -466,7 +466,7 @@
             p {
                 font-size: 1.25rem;
                 line-height: 1.6;
-                color: #181b1f;
+                color: $color-181b1f;
                 margin-bottom: 32px;
 
                 @include mobile {
@@ -496,7 +496,7 @@
                     transition: background 0.3s;
 
                     &:hover {
-                        background-color: #014486;
+                        background-color: $color-014486;
                     }
                 }
 
@@ -511,7 +511,7 @@
                     transition: background 0.3s;
 
                     &:hover {
-                        background-color: #f0f7ff;
+                        background-color: $color-f0f7ff;
                     }
                 }
             }
@@ -674,7 +674,7 @@
                 align-items: center;
                 justify-content: center;
                 padding: 25px;
-                border: 1px solid #f0f0f0;
+                border: 1px solid $color-f0f0f0;
                 flex-shrink: 0;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -770,7 +770,7 @@
         }
 
         .about-desc {
-            color: #1a1b1e;
+            color: $color-1a1b1e;
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 40px;
@@ -818,8 +818,8 @@
                 border: 2px solid $sky-blue;
 
                 &:hover {
-                    background-color: #005fb8;
-                    border-color: #005fb8;
+                    background-color: $color-005fb8;
+                    border-color: $color-005fb8;
                 }
             }
 
@@ -829,7 +829,7 @@
                 border: 1px solid $sky-blue;
 
                 &:hover {
-                    background-color: #f4f6f9;
+                    background-color: $color-f4f6f9;
                 }
             }
         }
@@ -952,7 +952,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 16px;
                     line-height: 1.5;
                     margin-bottom: 24px;
@@ -1044,7 +1044,7 @@
                 gap: 20px;
                 width: 100%;
                 justify-content: center;
-                border-bottom: 2px solid #f2f2f2;
+                border-bottom: 2px solid $color-f2f2f2;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); // Subtle shadow when sticky
 
                 // CRITICAL: Overflow must be visible so the 'More' dropdown isn't cut off (backside issue)
@@ -1067,7 +1067,7 @@
                 border: none;
                 font-size: 16px;
                 font-weight: 700;
-                color: #1a1b1e;
+                color: $color-1a1b1e;
                 padding-bottom: 16px;
                 cursor: pointer;
                 display: flex;
@@ -1121,7 +1121,7 @@
                     background: none;
 
                     &.active {
-                        background-color: #f8f9fb;
+                        background-color: $color-f8f9fb;
                         color: $sky-blue;
 
                         &::after {
@@ -1130,7 +1130,7 @@
                     }
 
                     &:hover {
-                        background-color: #f1f3f5;
+                        background-color: $color-f1f3f5;
                     }
                 }
             }
@@ -1140,7 +1140,7 @@
                 border: none;
                 font-size: 16px;
                 font-weight: 700;
-                color: #1a1b1e;
+                color: $color-1a1b1e;
                 padding-bottom: 16px;
                 cursor: pointer;
                 position: relative;
@@ -1188,7 +1188,7 @@
 
             .news-card {
                 background: white;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 16px;
                 overflow: hidden;
                 display: flex;
@@ -1224,7 +1224,7 @@
 
                     .card-badge {
                         display: inline-block;
-                        background-color: #eef4ff;
+                        background-color: $color-eef4ff;
                         color: $sky-blue;
                         font-size: 11px;
                         font-weight: 700;
@@ -1247,12 +1247,12 @@
                     .card-date {
                         font-size: 16px;
                         font-weight: 700;
-                        color: #1a1b1e;
+                        color: $color-1a1b1e;
                         margin-bottom: 16px;
                     }
 
                     p {
-                        color: #1a1b1e;
+                        color: $color-1a1b1e;
                         font-size: 16px;
                         line-height: 1.5;
                         margin-bottom: 24px;
@@ -1287,7 +1287,7 @@
                         }
 
                         &:hover {
-                            color: #005fb8;
+                            color: $color-005fb8;
                             text-decoration: none;
                         }
 
@@ -1335,7 +1335,7 @@
 
             .content-card {
                 background: white;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 16px;
                 overflow: hidden;
                 display: flex;
@@ -1536,7 +1536,7 @@
                     }
 
                     &:hover:not(:disabled) {
-                        background: #f8f9fb;
+                        background: $color-f8f9fb;
                         color: $sky-blue;
                         transform: translateY(-50%) scale(1.05);
                     }
@@ -1548,7 +1548,7 @@
 
                 .slider-progress-container {
                     height: 8px;
-                    background: #f2f2f2;
+                    background: $color-f2f2f2;
                     border-radius: 10px;
                     margin-top: 32px;
                     width: 100%;
@@ -1560,7 +1560,7 @@
                     }
 
                     &:hover .slider-progress-bar {
-                        background: #a0a0a0;
+                        background: $color-a0a0a0;
                     }
                 }
 
@@ -1569,7 +1569,7 @@
                     top: 0;
                     left: 0;
                     height: 100%;
-                    background: #c9c9c9;
+                    background: $color-c9c9c9;
                     border-radius: 10px;
                     transition: transform 0.5s ease;
                     width: 33.333%;
@@ -1623,7 +1623,7 @@
 
             .card-accent {
                 height: 6px;
-                background-color: #f75d81; // Using the pink/coral accent from the screen
+                background-color: $color-f75d81; // Using the pink/coral accent from the screen
                 width: 100%;
             }
 
@@ -1642,7 +1642,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 16px;
                     line-height: 1.6;
                     margin-bottom: 30px;
@@ -1797,7 +1797,7 @@
                 position: relative;
                 width: 100%;
                 padding-top: 56.25%; // 16:9 Aspect Ratio
-                background-color: #fce4ec; // Soft pink background
+                background-color: $color-fce4ec; // Soft pink background
                 overflow: hidden;
 
                 img {
@@ -1836,7 +1836,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 16px;
                     line-height: 1.6;
                     margin-bottom: 32px;
@@ -1933,7 +1933,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 18px;
                     line-height: 1.6;
                     margin-bottom: 32px;
@@ -1978,7 +1978,7 @@
                         }
 
                         &:hover {
-                            background-color: #014a8d;
+                            background-color: $color-014a8d;
                             transform: translateY(-2px);
                             box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                         }
@@ -2041,7 +2041,7 @@
     // Starter CRM Section
     .starter-crm {
         padding: 80px 0;
-        background-color: #f8f9fb;
+        background-color: $color-f8f9fb;
 
         @include small-tab {
             padding: 60px 0;
@@ -2107,7 +2107,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 18px;
                     line-height: 1.6;
                     margin-bottom: 32px;
@@ -2152,7 +2152,7 @@
                         }
 
                         &:hover {
-                            background-color: #014a8d;
+                            background-color: $color-014a8d;
                             transform: translateY(-2px);
                             box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                         }
@@ -2288,7 +2288,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 18px;
                     line-height: 1.6;
                     margin-bottom: 32px;
@@ -2324,7 +2324,7 @@
                         }
 
                         &:hover {
-                            background-color: #014a8d;
+                            background-color: $color-014a8d;
                             transform: translateY(-2px);
                             box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                         }
@@ -2341,7 +2341,7 @@
     // Serviceblazer Community Section
     .serviceblazer-community {
         padding: 80px 0;
-        background-color: #f8f9fb;
+        background-color: $color-f8f9fb;
 
         @include small-tab {
             padding: 60px 0;
@@ -2407,7 +2407,7 @@
                 }
 
                 p {
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     font-size: 18px;
                     line-height: 1.6;
                     margin-bottom: 32px;
@@ -2443,7 +2443,7 @@
                         }
 
                         &:hover {
-                            background-color: #014a8d;
+                            background-color: $color-014a8d;
                             transform: translateY(-2px);
                             box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                         }
@@ -2572,7 +2572,7 @@
 
             .testimonial-card {
                 background: $text-white;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 12px;
                 padding: 50px;
                 display: flex;
@@ -2594,7 +2594,7 @@
                 &:hover {
                     transform: translateY(-4px);
                     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-color: #d0d0d0;
+                    border-color: $color-d0d0d0;
                 }
 
                 .card-logo {
@@ -2704,7 +2704,7 @@
                     }
 
                     .author-title {
-                        color: #1a1b1e;
+                        color: $color-1a1b1e;
                         font-size: 18px;
                         line-height: 1.5;
                         margin: 0;
@@ -2897,8 +2897,8 @@
                     width: 100%;
 
                     .module-tag {
-                        background-color: #e3f0fa; // Light blue background
-                        color: #014486; // Dark blue text
+                        background-color: $color-e3f0fa; // Light blue background
+                        color: $color-014486; // Dark blue text
                         font-size: 12px;
                         font-weight: 700;
                         text-transform: uppercase;
@@ -2920,7 +2920,7 @@
                     }
 
                     p {
-                        color: #1a1b1e;
+                        color: $color-1a1b1e;
                         font-size: 16px;
                         line-height: 1.5;
                         margin: 0;
@@ -2945,7 +2945,7 @@
                         }
 
                         &:hover {
-                            color: #014486;
+                            color: $color-014486;
                             text-decoration: none;
                         }
                     }
@@ -3018,7 +3018,7 @@
 
         .trend-card {
             background: $text-white;
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
             border-radius: 16px;
             overflow: hidden;
             display: flex;
@@ -3029,7 +3029,7 @@
             &:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-                border-color: #d8d8d8;
+                border-color: $color-d8d8d8;
             }
 
             .card-image {
@@ -3067,8 +3067,8 @@
                     &.report,
                     &.guide,
                     &.news {
-                        background-color: #e3f0fa;
-                        color: #014486;
+                        background-color: $color-e3f0fa;
+                        color: $color-014486;
                     }
                 }
 
@@ -3093,7 +3093,7 @@
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: #014486;
+                        color: $color-014486;
                         text-decoration: none;
                     }
                 }
@@ -3117,7 +3117,7 @@
             transition: all 0.3s ease;
 
             &:hover {
-                background-color: #f4f6f9;
+                background-color: $color-f4f6f9;
             }
         }
     }
@@ -3234,7 +3234,7 @@
             .card-icon {
                 width: 64px;
                 height: 64px;
-                background-color: #eef4ff;
+                background-color: $color-eef4ff;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -3259,7 +3259,7 @@
             }
 
             p {
-                color: #1a1b1e;
+                color: $color-1a1b1e;
                 font-size: 16px;
                 line-height: 1.5;
                 margin: 0 0 24px;
@@ -3278,7 +3278,7 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: #014486;
+                    color: $color-014486;
                     text-decoration: none;
                 }
             }
@@ -3354,7 +3354,7 @@
             padding: 0 0 16px;
             font-size: 18px;
             font-weight: 700;
-            color: #444;
+            color: $color-444444;
             cursor: pointer;
             position: relative;
             white-space: nowrap;
@@ -3392,7 +3392,7 @@
         }
 
         .faq-item {
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid $color-e5e5e5;
 
             &:last-child {
                 border-bottom: none;
@@ -3426,7 +3426,7 @@
                     flex-shrink: 0;
                     width: 32px;
                     height: 32px;
-                    background-color: #f2f7fc;
+                    background-color: $color-f2f7fc;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -3441,7 +3441,7 @@
                 }
 
                 &:hover .faq-toggle {
-                    background-color: #e3f0fa;
+                    background-color: $color-e3f0fa;
                 }
             }
 
@@ -3460,7 +3460,7 @@
                     }
 
                     p {
-                        color: #1a1b1e;
+                        color: $color-1a1b1e;
                         font-size: 16px;
                         line-height: 1.6;
                         margin-bottom: 16px;
@@ -3479,7 +3479,7 @@
 
                             &:hover {
                                 text-decoration: none;
-                                color: #014486;
+                                color: $color-014486;
                             }
                         }
                     }
@@ -3489,7 +3489,7 @@
             // Active State
             &.active {
                 .faq-toggle {
-                    background-color: #e3f0fa;
+                    background-color: $color-e3f0fa;
                 }
 
                 .faq-answer {

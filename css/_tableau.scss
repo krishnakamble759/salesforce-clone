@@ -6,7 +6,7 @@
     top: 60px;
     z-index: 990;
     background-color: $text-white;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $color-e5e5e5;
     padding: 0;
     width: 100%;
     transition: top 0.3s ease;
@@ -108,7 +108,7 @@
                     width: 100%;
                     gap: 0;
                     height: auto;
-                    border-top: 1px solid #eee;
+                    border-top: 1px solid $color-eeeeee;
                     padding-bottom: 1rem;
                     max-height: calc(100vh - 130px);
                     overflow-y: auto;
@@ -126,7 +126,7 @@
                     @include desktop {
                         width: 100%;
                         height: auto;
-                        border-bottom: 1px solid #f2f2f2;
+                        border-bottom: 1px solid $color-f2f2f2;
                         flex-direction: column;
                         align-items: stretch;
                     }
@@ -282,13 +282,13 @@
                     display: block;
                     width: 100%;
                     text-align: center;
-                    background-color: #0070d2;
+                    background-color: $color-0070d2;
                     color: white;
                     padding: 0.75rem;
                     border-radius: 4px;
 
                     &:hover {
-                        background-color: #005fb2;
+                        background-color: $color-005fb2;
                         text-decoration: none;
                     }
                 }
@@ -661,7 +661,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
-            background-color: #fcece6;
+            background-color: $color-fcece6;
 
             /* Fallback color matching gradient */
             &.stat-card-1 {
@@ -733,7 +733,7 @@
 
         p {
             font-size: 0.75rem;
-            color: #444;
+            color: $color-444444;
             margin: 0;
             opacity: 0.9;
         }
@@ -822,7 +822,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         padding: 2rem;
-        border-top: 6px solid #ff774a;
+        border-top: 6px solid $color-ff774a;
         /* Orange border */
         height: 100%;
         display: flex;
@@ -993,7 +993,7 @@
 /* --- Customer Story Section --- */
 .tableau-customer-story {
     .story-card {
-        background-color: #fff1ed;
+        background-color: $color-fff1ed;
         /* Light peach/reddish */
         border-radius: 16px;
         padding: 4rem;
@@ -1085,7 +1085,7 @@
     position: relative;
     padding: 6rem 0 12rem;
     /* Extra bottom padding for background */
-    background-color: #f8faff;
+    background-color: $color-f8faff;
     /* Very light blue/white */
     overflow: hidden;
 
@@ -1151,7 +1151,7 @@
         }
 
         .badge-pill {
-            background-color: #eef4ff;
+            background-color: $color-eef4ff;
             color: $secondary-color;
             font-size: 0.75rem;
             font-weight: 700;
@@ -1269,7 +1269,7 @@
             flex-grow: 1;
 
             .badge-pill {
-                background-color: #eef4ff;
+                background-color: $color-eef4ff;
                 color: $secondary-color;
                 font-size: 12px;
                 font-weight: 700;
@@ -1348,7 +1348,7 @@
         .icon-wrapper {
             width: 60px;
             height: 60px;
-            background-color: #eef4ff;
+            background-color: $color-eef4ff;
             /* Light blue circle */
             border-radius: 50%;
             display: flex;
@@ -1429,10 +1429,10 @@
 }
 
 .faq-item {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $color-e5e5e5;
 
     &:last-child {
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
     }
 
     &.active {
@@ -1471,7 +1471,7 @@
         width: 32px;
         height: 32px;
         min-width: 32px;
-        background-color: #eef4ff;
+        background-color: $color-eef4ff;
         border-radius: 50%;
         display: flex;
         align-items: center;

@@ -1,7 +1,7 @@
 @import 'variable';
 
 .data360-body {
-    background-color: #f4f6f9;
+    background-color: $color-f4f6f9;
     padding-top: 65px; // Default for large screens
 
     @include desktop {
@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0 40px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $color-e5e5e5;
     position: fixed;
     top: 65px;
     width: 100%;
@@ -362,8 +362,8 @@
                 box-shadow: none;
                 padding: 15px 20px;
                 border-radius: 0;
-                background: #fcfcfc;
-                border-bottom: 1px solid #eee;
+                background: $color-fcfcfc;
+                border-bottom: 1px solid $color-eeeeee;
 
                 &:before {
                     display: none;
@@ -404,7 +404,7 @@
                 gap: 8px;
                 width: 100%;
                 text-align: left;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid $color-eeeeee;
 
                 @include desktop {
                     display: flex;
@@ -499,7 +499,7 @@
                     gap: 16px;
 
                     &.divider {
-                        border-left: 1px solid #f0f0f0;
+                        border-left: 1px solid $color-f0f0f0;
                         padding-left: 40px;
 
                         @include desktop {
@@ -559,7 +559,7 @@
 
                     .column-label {
                         font-size: 13px;
-                        color: #706e6b;
+                        color: $color-706e6b;
                         font-weight: 500;
                         margin-bottom: 4px;
                         text-transform: none;
@@ -572,55 +572,55 @@
                         @include desktop {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include small-desktop {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include big-tab {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include small-tab {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include mobile {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include mid-mobile {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include small-mobile {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include mid-small-mobile {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         @include too-small-mobile {
                             margin-bottom: 0;
                             padding-bottom: 24px;
-                            border-bottom: 1px solid #e5e5e5;
+                            border-bottom: 1px solid $color-e5e5e5;
                         }
 
                         h3 {
@@ -678,7 +678,7 @@
 
                         p {
                             font-size: 14px;
-                            color: #444;
+                            color: $color-444444;
                             margin: 0;
                             line-height: 1.4;
                             font-weight: 400;
@@ -761,14 +761,14 @@
         }
 
         &:hover {
-            background-color: #015ba1;
+            background-color: $color-015ba1;
         }
     }
 }
 
 
 .data360-banner-dark {
-    background-color: #051c37;
+    background-color: $color-051c37;
     color: white;
     text-align: center;
     font-weight: 700;
@@ -803,7 +803,7 @@
             }
 
             &:hover {
-                color: #c9c9c9;
+                color: $color-c9c9c9;
                 text-decoration: none;
             }
         }
@@ -822,7 +822,7 @@
             }
 
             &:hover {
-                color: #c9c9c9;
+                color: $color-c9c9c9;
                 text-decoration: none;
             }
         }
@@ -830,7 +830,7 @@
 }
 
 .data360-banner-secondary {
-    background-color: #051c37;
+    background-color: $color-051c37;
     color: white;
     text-align: center;
     padding: 12px 24px;
@@ -860,7 +860,7 @@
             }
 
             &:hover {
-                color: #c9c9c9;
+                color: $color-c9c9c9;
                 text-decoration: none !important;
             }
         }
@@ -868,7 +868,7 @@
 }
 
 .data360-hero-section {
-    background: radial-gradient(circle at 50% 0%, #1a3aff 0%, #0b1ba1 60%);
+    background: radial-gradient(circle at 50% 0%, $color-1a3aff 0%, $color-0b1ba1 60%);
     color: white;
     padding: 60px 0 0;
     text-align: center;
@@ -1009,20 +1009,20 @@
             }
 
             .btn-hero-primary {
-                background-color: #3b6bef;
+                background-color: $color-3b6bef;
                 color: white;
 
                 &:hover {
-                    background-color: #2a56d1;
+                    background-color: $color-2a56d1;
                 }
             }
 
             .btn-hero-secondary {
                 background-color: white;
-                color: #0b1ba1;
+                color: $color-0b1ba1;
 
                 &:hover {
-                    background-color: #f0f0f0;
+                    background-color: $color-f0f0f0;
                 }
             }
         }
@@ -1052,7 +1052,7 @@
 }
 
 .data360-stories-section {
-    background: radial-gradient(circle at 50% 0%, #1a3aff 0%, #0b1ba1 60%);
+    background: radial-gradient(circle at 50% 0%, $color-1a3aff 0%, $color-0b1ba1 60%);
     color: white;
     text-align: center;
     position: relative;
@@ -1124,7 +1124,7 @@
             }
 
             &:hover {
-                background: #1e0d31;
+                background: $color-1e0d31;
                 color: white;
             }
         }
@@ -1162,12 +1162,12 @@
 
             &::before {
                 left: 0;
-                background: linear-gradient(90deg, #0b1ba1 0%, transparent 100%);
+                background: linear-gradient(90deg, $color-0b1ba1 0%, transparent 100%);
             }
 
             &::after {
                 right: 0;
-                background: linear-gradient(-90deg, #0b1ba1 0%, transparent 100%);
+                background: linear-gradient(-90deg, $color-0b1ba1 0%, transparent 100%);
             }
 
             .marquee-pause-btn {
@@ -1369,7 +1369,7 @@
 
             p {
                 font-size: 18px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.5;
 
                 @include small-tab {
@@ -1426,7 +1426,7 @@
                     border-radius: 16px 16px 0 0;
                     overflow: hidden;
                     aspect-ratio: 16/9;
-                    background-color: #f0f0f0;
+                    background-color: $color-f0f0f0;
 
                     img {
                         width: 100%;
@@ -1436,7 +1436,7 @@
                     }
 
                     &.fedex-bg {
-                        background-color: #d1e0ff;
+                        background-color: $color-d1e0ff;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1476,7 +1476,7 @@
 
                 .card-content {
                     background: white;
-                    border: 1px solid #e5e5e5;
+                    border: 1px solid $color-e5e5e5;
                     border-top: none;
                     border-radius: 0 0 16px 16px;
                     padding: 24px;
@@ -1495,7 +1495,7 @@
                         display: inline-block;
 
                         &.pill-blue {
-                            background-color: #eef4ff;
+                            background-color: $color-eef4ff;
                             color: $sky-blue;
                         }
 
@@ -1515,7 +1515,7 @@
 
                     p {
                         font-size: 17px;
-                        color: #444;
+                        color: $color-444444;
                         margin: 0 0 24px;
                         line-height: 1.5;
                         flex-grow: 1;
@@ -1541,7 +1541,7 @@
                 width: 48px;
                 height: 48px;
                 background: white;
-                border: 1px solid #e5e5e5;
+                border: 1px solid $color-e5e5e5;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
@@ -1614,7 +1614,7 @@
 
 // Contact Us Section
 .data360-contact-section {
-    background-color: #d1e0ff; // darker periwinkle
+    background-color: $color-d1e0ff; // darker periwinkle
     padding: 60px 0 100px;
     font-family: 'Salesforce Sans', system-ui, sans-serif;
     position: relative;
@@ -1694,7 +1694,7 @@
                     gap: 12px;
 
                     i {
-                        color: #1b9d48; // Green check
+                        color: $color-1b9d48; // Green check
                         font-size: 20px;
                     }
                 }
@@ -1749,7 +1749,7 @@
                     .form-control,
                     .form-select {
                         border-radius: 4px;
-                        border: 1px solid #ccc;
+                        border: 1px solid $color-cccccc;
 
                         &:focus {
                             border-color: $sky-blue;
@@ -1764,7 +1764,7 @@
 
                 .privacy-text {
                     font-size: 12px;
-                    color: #444;
+                    color: $color-444444;
 
                     a {
                         color: $sky-blue;
@@ -1777,8 +1777,8 @@
                 }
 
                 .btn-primary {
-                    background-color: #0b5cab;
-                    border-color: #0b5cab;
+                    background-color: $color-0b5cab;
+                    border-color: $color-0b5cab;
                     font-size: 16px;
                     transition: background 0.2s;
 
@@ -1967,7 +1967,7 @@
 
             p {
                 font-size: 18px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.6;
                 margin: 0;
 
@@ -2027,7 +2027,7 @@
                 }
 
                 .card-header {
-                    background: linear-gradient(135deg, #e8f4ff 0%, #d1e0ff 100%);
+                    background: linear-gradient(135deg, $color-e8f4ff 0%, $color-d1e0ff 100%);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -2086,7 +2086,7 @@
                         font-size: 12px;
                         font-weight: 700;
                         color: $sky-blue;
-                        background: #eef4ff;
+                        background: $color-eef4ff;
                         padding: 6px 12px;
                         border-radius: 20px;
                         margin-bottom: 16px;
@@ -2235,7 +2235,7 @@
         }
 
         &:nth-child(even) {
-            background-color: #f9fafb;
+            background-color: $color-f9fafb;
         }
 
         .activate-container {
@@ -2271,7 +2271,7 @@
                 }
 
                 .activate-image-box {
-                    background: linear-gradient(135deg, #1a3aff 0%, #0b1ba1 100%);
+                    background: linear-gradient(135deg, $color-1a3aff 0%, $color-0b1ba1 100%);
                     border-radius: 24px;
                     padding: 40px;
                     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -2354,7 +2354,7 @@
 
                 p {
                     font-size: 18px;
-                    color: #444;
+                    color: $color-444444;
                     line-height: 1.6;
                     margin: 0 0 32px;
 
@@ -2404,7 +2404,7 @@
                         }
 
                         &:hover {
-                            background-color: #015ba1;
+                            background-color: $color-015ba1;
                             box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
                             transform: translateY(-2px);
                         }
@@ -2686,7 +2686,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
 
             @include small-tab {
                 flex-direction: column;
@@ -2709,7 +2709,7 @@
                     max-width: 100%;
                     width: 100%;
                     padding: 30px;
-                    border-bottom: 1px solid #f0f0f0;
+                    border-bottom: 1px solid $color-f0f0f0;
                 }
 
                 @include mobile {
@@ -2749,7 +2749,7 @@
                 h2 {
                     font-size: 38px;
                     font-weight: 750;
-                    color: #1d32ec;
+                    color: $color-1d32ec;
                     line-height: 1.2;
                     margin: 0 0 24px;
 
@@ -2797,7 +2797,7 @@
                     }
 
                     &:hover {
-                        background-color: #015ba1;
+                        background-color: $color-015ba1;
                     }
                 }
             }
@@ -2863,7 +2863,7 @@
                 h2 {
                     font-size: 40px;
                     font-weight: 700;
-                    color: #2719ee;
+                    color: $color-2719ee;
                     margin: 0 0 24px;
                     line-height: 1.2;
 
@@ -2894,7 +2894,7 @@
                 }
 
                 .btn-community {
-                    background-color: #3b6bef;
+                    background-color: $color-3b6bef;
                     color: white;
                     padding: 12px 30px;
                     border-radius: 4px;
@@ -2913,7 +2913,7 @@
                     }
 
                     &:hover {
-                        background-color: #2a56d1;
+                        background-color: $color-2a56d1;
                     }
                 }
             }
@@ -2979,7 +2979,7 @@
             }
 
             h2 {
-                color: #2719ee;
+                color: $color-2719ee;
                 font-size: 38px;
                 font-weight: 700;
                 line-height: 1.2;
@@ -2996,7 +2996,7 @@
 
             .btn-explore-resources {
                 display: inline-block;
-                background-color: #3b6bef;
+                background-color: $color-3b6bef;
                 color: white;
                 font-weight: 700;
                 font-size: 16px;
@@ -3011,7 +3011,7 @@
                 }
 
                 &:hover {
-                    background-color: #2a56d1;
+                    background-color: $color-2a56d1;
                 }
             }
         }
@@ -3040,7 +3040,7 @@
                 display: flex;
                 flex-direction: column;
                 height: 100%;
-                border: 1px solid #f0f0f0;
+                border: 1px solid $color-f0f0f0;
 
                 @include mobile {
                     border-radius: 12px;
@@ -3054,7 +3054,7 @@
                 .card-image {
                     width: 100%;
                     aspect-ratio: 16 / 9;
-                    background-color: #f4f4f4;
+                    background-color: $color-f4f4f4;
                     overflow: hidden;
 
                     img {
@@ -3081,7 +3081,7 @@
 
                     .resource-tag {
                         display: inline-block;
-                        background-color: #eef4ff;
+                        background-color: $color-eef4ff;
                         color: $sky-blue;
                         font-size: 11px;
                         font-weight: 700;
@@ -3122,7 +3122,7 @@
                         }
 
                         &:hover {
-                            color: #015ba1;
+                            color: $color-015ba1;
                         }
                     }
                 }
@@ -3168,7 +3168,7 @@
 
         h2 {
             text-align: center;
-            color: #2719ee;
+            color: $color-2719ee;
             font-size: 38px;
             font-weight: 700;
             line-height: 1.2;
@@ -3227,7 +3227,7 @@
                     width: 60px;
                     height: 60px;
                     border-radius: 50%;
-                    background-color: #eef4ff;
+                    background-color: $color-eef4ff;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -3290,7 +3290,7 @@
                     }
 
                     &:hover {
-                        color: #015ba1;
+                        color: $color-015ba1;
                     }
                 }
             }

@@ -3,7 +3,7 @@
 .marketing-page {
     .marketing-sub-nav {
         background: $text-white;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
         position: fixed;
         top: 60px;
         width: 100%;
@@ -117,7 +117,7 @@
                     position: relative;
 
                     @include small-desktop {
-                        border-bottom: 1px solid #e5e5e5;
+                        border-bottom: 1px solid $color-e5e5e5;
 
                         &:last-child {
                             border-bottom: none;
@@ -148,7 +148,7 @@
                             width: 100%;
 
                             &:hover {
-                                background: #014486;
+                                background: $color-014486;
                             }
                         }
                     }
@@ -256,7 +256,7 @@
                                 visibility: visible;
                                 transform: none;
                                 margin-top: 0;
-                                background: #f9f9f9;
+                                background: $color-f9f9f9;
 
                                 .dropdown-columns {
                                     grid-template-columns: 1fr;
@@ -342,14 +342,14 @@
                 display: inline-block;
 
                 &:hover {
-                    background: #014486;
+                    background: $color-014486;
                 }
             }
         }
     }
 
     .marketing-promo-banner {
-        background-color: #031e3d;
+        background-color: $color-031e3d;
         color: white;
         text-align: center;
         padding: 12px 20px;
@@ -465,7 +465,7 @@
                 p {
                     font-size: 20px;
                     line-height: 1.5;
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     margin-bottom: 24px;
                     max-width: 600px;
 
@@ -492,7 +492,7 @@
                     transition: background 0.3s;
 
                     &:hover {
-                        background: #014486;
+                        background: $color-014486;
                     }
                 }
             }
@@ -593,7 +593,7 @@
     // Brands Showcase Section
     .marketing-brands-section {
         position: relative;
-        background: linear-gradient(180deg, #fef5f0 0%, #fff9f5 50%, $text-white 100%);
+        background: linear-gradient(180deg, $color-fef5f0 0%, $color-fff9f5 50%, $text-white 100%);
         padding: 80px 20px 120px;
         overflow: hidden;
 
@@ -986,7 +986,7 @@
 
     // How Can Marketing Cloud Help Section
     .marketing-how-can-help-section {
-        background: #f9f9f9;
+        background: $color-f9f9f9;
         padding: 80px 20px;
 
         @include desktop {
@@ -1461,7 +1461,7 @@
 
                                     &:hover {
                                         text-decoration: underline;
-                                        color: #014486;
+                                        color: $color-014486;
                                     }
                                 }
                             }
@@ -1660,7 +1660,7 @@
                         &.logo-siriusxm {
                             font-size: 28px;
                             font-weight: 900;
-                            color: #0049f5;
+                            color: $color-0049f5;
                             letter-spacing: -1px;
                             font-family: sans-serif;
                         }
@@ -1713,7 +1713,7 @@
                         transition: all 0.3s ease;
 
                         &:hover {
-                            background: #014486;
+                            background: $color-014486;
                         }
 
                         @include mobile {
@@ -1803,7 +1803,7 @@
     .marketing-customer-story-section {
         position: relative;
         padding: 50px 0 250px;
-        background-color: #f0f7fd; // Matches the top sky color of the asset for seamless blend
+        background-color: $color-f0f7fd; // Matches the top sky color of the asset for seamless blend
         background-image: url('../assets/marketing/n-up-sales-cloud-background-customer.webp');
         background-repeat: no-repeat;
         background-position: bottom center;
@@ -2132,7 +2132,7 @@
 
                         .card-image {
                             height: 200px;
-                            background: #f8f8f8;
+                            background: $color-f8f8f8;
 
                             img {
                                 width: 100%;
@@ -2161,7 +2161,7 @@
                                 width: fit-content;
 
                                 &.bg-blue-light {
-                                    background: #eaf5fe;
+                                    background: $color-eaf5fe;
                                     color: $sky-blue;
                                 }
                             }
@@ -2284,7 +2284,7 @@
                         left: 0;
                         width: 100%;
                         height: 6px;
-                        background: #f8991c;
+                        background: $color-f8991c;
                         border-radius: 12px 12px 0 0;
                     }
 
@@ -2480,19 +2480,19 @@
                     }
 
                     &.stat-card-blue-right .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-1.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
+                        background-image: url('../assets/marketing/stat-bg-1.webp'), linear-gradient(135deg, $color-fff5eb 0%, $text-white 100%);
                         background-position: right top, center;
                         background-size: contain, cover;
                     }
 
                     &.stat-card-purple-left .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-2.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
+                        background-image: url('../assets/marketing/stat-bg-2.webp'), linear-gradient(135deg, $color-fff5eb 0%, $text-white 100%);
                         background-position: left top, center;
                         background-size: contain, cover;
                     }
 
                     &.stat-card-orange-right .stat-card-bg {
-                        background-image: url('../assets/marketing/stat-bg-3.webp'), linear-gradient(135deg, #fff5eb 0%, $text-white 100%);
+                        background-image: url('../assets/marketing/stat-bg-3.webp'), linear-gradient(135deg, $color-fff5eb 0%, $text-white 100%);
                         background-position: right top, center;
                         background-size: contain, cover;
                     }
@@ -2574,7 +2574,7 @@
 
             .stats-disclaimer {
                 font-size: 14px;
-                color: #6a6a6a;
+                color: $color-6a6a6a;
                 margin: 0;
                 font-style: italic;
 
@@ -2679,7 +2679,7 @@
                         color: $text-white;
 
                         &:hover {
-                            background: #014486;
+                            background: $color-014486;
                             transform: translateY(-2px);
                         }
                     }
@@ -2717,7 +2717,7 @@
     }
 
     .marketing-community-section {
-        background: #f8f8f8;
+        background: $color-f8f8f8;
 
         .community-image {
             position: relative;
@@ -2725,7 +2725,7 @@
 
             img {
                 border-radius: 50%;
-                border: 8px solid #f8991c;
+                border: 8px solid $color-f8991c;
                 background: $text-white;
                 padding: 0;
             }
@@ -2836,7 +2836,7 @@
                 }
 
                 .badge-label {
-                    background: #eef7ff;
+                    background: $color-eef7ff;
                     color: $sky-blue;
                     padding: 4px 14px;
                     border-radius: 20px;
@@ -2879,7 +2879,7 @@
                     transition: all 0.3s;
 
                     &:hover {
-                        color: #014486;
+                        color: $color-014486;
                     }
                 }
             }
@@ -2925,10 +2925,10 @@
         }
 
         .faq-item {
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid $color-e5e5e5;
 
             &:first-child {
-                border-top: 1px solid #e5e5e5;
+                border-top: 1px solid $color-e5e5e5;
             }
 
             .faq-question {
@@ -3073,7 +3073,7 @@
             .card-icon {
                 width: 48px;
                 height: 48px;
-                background: #eef7ff;
+                background: $color-eef7ff;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -3115,7 +3115,7 @@
                 text-underline-offset: 4px;
 
                 &:hover {
-                    color: #014486;
+                    color: $color-014486;
                 }
             }
         }

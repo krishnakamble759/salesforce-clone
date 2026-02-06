@@ -134,7 +134,7 @@
                 position: relative; // For dropdown positioning
 
                 @include desktop {
-                    border-bottom: 1px solid #e5e5e5;
+                    border-bottom: 1px solid $color-e5e5e5;
                     width: 100%;
 
                     &:last-child {
@@ -204,7 +204,7 @@
                                 position: static;
                                 box-shadow: none;
                                 border: none;
-                                background: #f9f9f9;
+                                background: $color-f9f9f9;
                                 width: 100%;
                                 padding: 10px 0 10px 20px;
                                 opacity: 1;
@@ -263,7 +263,7 @@
 
                             &.divider {
                                 height: 1px;
-                                background-color: #eee;
+                                background-color: $color-eeeeee;
                                 margin: 8px 0;
 
                                 @include desktop {
@@ -287,7 +287,7 @@
                                 }
 
                                 &:hover {
-                                    background-color: #f7f7f7;
+                                    background-color: $color-f7f7f7;
                                     color: $primary-color;
 
                                     @include desktop {
@@ -406,7 +406,7 @@
 
             .menu-label {
                 text-transform: uppercase;
-                color: #706e6b;
+                color: $color-706e6b;
                 font-size: 12px;
                 font-weight: 700;
                 letter-spacing: 0.5px;
@@ -566,7 +566,7 @@
 
         .hero-desc {
             font-size: 18px;
-            color: #1a1b1e;
+            color: $color-1a1b1e;
             line-height: 1.6;
             margin-bottom: 32px;
             max-width: 90%;
@@ -611,8 +611,8 @@
                 color: white;
 
                 &:hover {
-                    background-color: #014486;
-                    border-color: #014486;
+                    background-color: $color-014486;
+                    border-color: $color-014486;
                 }
             }
 
@@ -622,7 +622,7 @@
                 color: $sky-blue;
 
                 &:hover {
-                    background-color: #f4f6f9;
+                    background-color: $color-f4f6f9;
                 }
             }
         }
@@ -744,7 +744,7 @@
             padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             // Border if needed, screenshot looks clean
-            border: 1px solid #f4f4f4;
+            border: 1px solid $color-f4f4f4;
 
             @include mobile {
                 width: 46%; // Two per row
@@ -799,7 +799,7 @@
 
 .commerce-products {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: $color-f8f9fa;
 
     .products-title {
         font-size: 32px;
@@ -977,7 +977,7 @@
             align-items: center;
             min-height: 350px;
             position: relative;
-            background-color: #f8f9fa; // Fallback
+            background-color: $color-f8f9fa; // Fallback
             overflow: hidden; // Ensure image stays inside corners
             transition: transform 0.3s ease;
 
@@ -1034,7 +1034,7 @@
 
             .stat-desc {
                 font-size: 15px;
-                color: #1a1b1e;
+                color: $color-1a1b1e;
                 line-height: 1.5;
             }
         }
@@ -1042,7 +1042,7 @@
 
     .stats-footer {
         font-size: 11px;
-        color: #706e6b;
+        color: $color-706e6b;
         margin-top: 40px;
         text-align: center;
         max-width: 800px;
@@ -1158,7 +1158,7 @@
                 background: $text-white;
                 border-radius: 8px;
                 // The specific green top border from the screenshot
-                border-top: 5px solid #45c48b;
+                border-top: 5px solid $color-45c48b;
                 padding: 30px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
                 display: flex;
@@ -1181,7 +1181,7 @@
 
                 p {
                     font-size: 15px;
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     line-height: 1.6;
                     margin-bottom: 24px;
                     flex-grow: 1;
@@ -1228,7 +1228,7 @@
         justify-content: center;
         gap: 40px;
         margin-bottom: 60px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $color-e5e5e5;
         overflow-x: auto; // Scroll on mobile if needed
         white-space: nowrap;
 
@@ -1244,7 +1244,7 @@
             padding: 0 0 20px 0;
             font-size: 18px;
             font-weight: 700;
-            color: #444;
+            color: $color-444444;
             cursor: pointer;
             position: relative;
             transition: color 0.3s ease;
@@ -1323,7 +1323,7 @@
         .analyst-card {
             background: $text-white;
             border-radius: 16px;
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1363,7 +1363,7 @@
 
                 p {
                     font-size: 15px;
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     line-height: 1.6;
                     margin-bottom: 24px;
                     flex-grow: 1;
@@ -1391,7 +1391,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             max-width: 1000px;
             margin: 0 auto;
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
 
             @include mobile {
                 flex-direction: column;
@@ -1434,7 +1434,7 @@
 
                 p {
                     font-size: 18px;
-                    color: #1a1b1e;
+                    color: $color-1a1b1e;
                     line-height: 1.6;
                     margin-bottom: 32px;
                 }
@@ -1449,7 +1449,7 @@
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: #005fb8;
+                        background-color: $color-005fb8;
                     }
                 }
             }
@@ -1521,7 +1521,7 @@
             p {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #1a1b1e;
+                color: $color-1a1b1e;
                 margin-bottom: 32px;
                 max-width: 90%;
 
@@ -1559,8 +1559,8 @@
                     color: white;
 
                     &:hover {
-                        background-color: #005fb8;
-                        border-color: #005fb8;
+                        background-color: $color-005fb8;
+                        border-color: $color-005fb8;
                     }
                 }
 
@@ -1571,7 +1571,7 @@
                     color: $sky-blue;
 
                     &:hover {
-                        background-color: #f4f6f9;
+                        background-color: $color-f4f6f9;
                     }
                 }
             }
@@ -1611,7 +1611,7 @@
         overflow: hidden;
         max-width: 1100px;
         margin: 0 auto;
-        border: 1px solid #f0f0f0;
+        border: 1px solid $color-f0f0f0;
 
         @include small-tab {
             // Stack on tablets and below
@@ -1686,7 +1686,7 @@
 
                 span {
                     font-size: 18px;
-                    color: #5a5a5a;
+                    color: $color-5a5a5a;
                 }
             }
 
@@ -1701,7 +1701,7 @@
                 transition: all 0.3s;
 
                 &:hover {
-                    background: #f4f6f9;
+                    background: $color-f4f6f9;
                 }
             }
         }
@@ -1712,7 +1712,7 @@
 .commerce-trailhead-new {
     position: relative;
     padding: 100px 0 180px; // Extra bottom spacing for curve height
-    background-color: #f8f9fa; // Fallback
+    background-color: $color-f8f9fa; // Fallback
     overflow: hidden;
 
     .trailhead-bg-image {
@@ -1795,7 +1795,7 @@
 
             .badge-pill {
                 display: inline-block;
-                background-color: #eef4ff;
+                background-color: $color-eef4ff;
                 color: $sky-blue;
                 font-size: 12px;
                 font-weight: 700;
@@ -1816,7 +1816,7 @@
 
             p {
                 font-size: 17px;
-                color: #444;
+                color: $color-444444;
                 line-height: 1.5;
                 margin-bottom: 24px;
                 min-height: 66px; // Align heights
@@ -1893,7 +1893,7 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); // Slight shadow
-            border: 1px solid #e5e5e5;
+            border: 1px solid $color-e5e5e5;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1923,7 +1923,7 @@
 
                 .resource-tag {
                     display: inline-block;
-                    background-color: #eef4ff; // Light blue pill
+                    background-color: $color-eef4ff; // Light blue pill
                     color: $secondary-color;
                     font-size: 11px;
                     font-weight: 700;
@@ -1973,7 +1973,7 @@
             transition: all 0.3s;
 
             &:hover {
-                background: #f4f6f9;
+                background: $color-f4f6f9;
             }
         }
     }
@@ -1990,7 +1990,7 @@
         background: $text-white;
         border-radius: 24px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f0f0f0;
+        border: 1px solid $color-f0f0f0;
         overflow: hidden;
         max-width: 1200px;
         margin: 0 auto;
@@ -2024,7 +2024,7 @@
             p {
                 font-size: 18px;
                 line-height: 1.6;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 32px;
 
                 @include small-tab {
@@ -2056,8 +2056,8 @@
                     color: $text-white;
 
                     &:hover {
-                        background-color: #005fb8;
-                        border-color: #005fb8;
+                        background-color: $color-005fb8;
+                        border-color: $color-005fb8;
                     }
                 }
 
@@ -2067,7 +2067,7 @@
                     color: $sky-blue;
 
                     &:hover {
-                        background-color: #f4f6f9;
+                        background-color: $color-f4f6f9;
                     }
                 }
             }
@@ -2093,7 +2093,7 @@
 .commerce-ready-start {
     position: relative;
     padding: 100px 0 160px;
-    background-color: #f0f8ff; // Fallback
+    background-color: $color-f0f8ff; // Fallback
     overflow: hidden;
 
     .ready-bg-image {
@@ -2153,7 +2153,7 @@
             .card-icon {
                 width: 50px;
                 height: 50px;
-                background-color: #eef4ff;
+                background-color: $color-eef4ff;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -2176,7 +2176,7 @@
             p {
                 font-size: 20px;
                 line-height: 1.5;
-                color: #444;
+                color: $color-444444;
                 margin-bottom: 24px;
             }
 
@@ -2238,10 +2238,10 @@
         margin: 0 auto;
 
         .faq-item {
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid $color-e5e5e5;
 
             &:first-child {
-                border-top: 1px solid #e5e5e5;
+                border-top: 1px solid $color-e5e5e5;
             }
 
             .faq-question {
@@ -2267,7 +2267,7 @@
                     flex-shrink: 0;
                     width: 24px;
                     height: 24px;
-                    background-color: #eef4ff;
+                    background-color: $color-eef4ff;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -2288,7 +2288,7 @@
 
                 .faq-content {
                     padding-bottom: 24px;
-                    color: #444;
+                    color: $color-444444;
                     font-size: 16px;
                     line-height: 1.6;
 
