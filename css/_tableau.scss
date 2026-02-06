@@ -1,0 +1,1530 @@
+@import 'variable';
+
+/* --- Sub Navigation --- */
+.tableau-sub-nav {
+    position: fixed;
+    top: 60px;
+    z-index: 990;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0;
+    width: 100%;
+    transition: top 0.3s ease;
+
+    @include small-desktop {
+        top: 130px;
+    }
+
+    @include mid-small-mobile {
+        top: 125px;
+    }
+
+    @include too-small-mobile {
+        top: 125px;
+    }
+
+    .sub-nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include desktop {
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
+            min-height: 60px;
+            justify-content: flex-start;
+        }
+
+        .sub-nav-left {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+
+            @include desktop {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                width: 100%;
+            }
+
+            .product-name {
+                font-size: 26px;
+                font-weight: 700;
+                margin-left: -150px;
+                height: 65px;
+                color: $secondary-color;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include desktop {
+                    width: 100%;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    margin-left: 0;
+                }
+
+                .tableau-title-link {
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .mobile-toggle-arrow {
+                    display: none;
+                    color: #032D60;
+                    font-size: 1rem;
+                    transition: transform 0.3s ease;
+
+                    @include desktop {
+                        display: block;
+                    }
+                }
+
+                &.active .mobile-toggle-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .sub-nav-menu {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 1.5rem;
+                height: 100%;
+
+                @include desktop {
+                    display: none;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 0;
+                    height: auto;
+                    border-top: 1px solid #eee;
+                    padding-bottom: 1rem;
+                    max-height: calc(100vh - 130px);
+                    overflow-y: auto;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+
+                li {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    @include desktop {
+                        width: 100%;
+                        height: auto;
+                        border-bottom: 1px solid #f2f2f2;
+                        flex-direction: column;
+                        align-items: stretch;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $secondary-color;
+                        font-size: 16px;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.25rem;
+                        padding: 0; // Padding handled by parent or different generic style
+                        height: 100%;
+                        border-bottom: 2px solid transparent;
+                        /* Desktop active state */
+
+                        @include desktop {
+                            width: 100%;
+                            padding: 1rem 0;
+                            border-bottom: none;
+                            justify-content: space-between;
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $primary-color;
+                            border-bottom-color: $primary-color;
+
+                            @include desktop {
+                                border-bottom-color: transparent;
+                            }
+                        }
+
+                        i {
+                            font-size: 0.75rem;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+
+                    // Dropdown Styling
+                    &.has-dropdown {
+                        position: relative;
+
+                        &.active {
+                            >a {
+                                color: $primary-color;
+
+                                i {
+                                    transform: rotate(180deg);
+                                }
+                            }
+
+                            .sub-nav-dropdown {
+                                display: block;
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+
+                    .sub-nav-dropdown {
+                        display: none; // Hidden by default, toggled via JS class 'active' on parent
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background: #fff;
+                        min-width: 250px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                        border-radius: 8px;
+                        padding: 1rem 0;
+                        z-index: 1000;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(10px);
+                        transition: all 0.3s ease;
+
+                        @include desktop {
+                            position: static;
+                            box-shadow: none;
+                            padding: 0 0 0 1rem;
+                            border-radius: 0;
+                            min-width: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                            transform: none;
+                        }
+
+                        a {
+                            display: block;
+                            padding: 0.75rem 1.5rem;
+                            color: $secondary-color;
+                            font-size: 18px;
+                            font-weight: 600;
+                            border: none;
+                            height: auto;
+
+                            @include desktop {
+                                padding: 0.75rem 0;
+                            }
+
+                            &:hover {
+                                background-color: $background-light;
+                                color: $secondary-color; // Keep text color on hover
+
+                                @include desktop {
+                                    background-color: transparent;
+                                    color: $primary-color;
+                                }
+                            }
+
+                            &.view-all-link {
+                                text-decoration: underline;
+                                color: $secondary-color;
+                                margin-top: 8px;
+                                font-weight: 500;
+
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .sub-nav-right {
+            display: flex;
+            align-items: center;
+            margin-right: -145px;
+
+            @include desktop {
+                display: none; // Hidden initially on mobile
+                width: 100%;
+                padding: 1rem 0 1.5rem 0;
+                margin-right: 0;
+
+                // Show when menu is active (controlled by JS sibling check or adding class to wrapper)
+            }
+
+            &.active {
+                display: block; // Or flex
+            }
+
+            .try-free-btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+                font-weight: 600;
+
+                @include desktop {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    background-color: #0070d2;
+                    color: white;
+                    padding: 0.75rem;
+                    border-radius: 4px;
+
+                    &:hover {
+                        background-color: #005fb2;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --- Banner --- */
+.tableau-banner {
+    background-color: #032D60;
+    /* Dark blue background */
+    color: #fff;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 50px;
+
+    @include mid-mobile {
+        margin-top: 80px;
+    }
+
+    p {
+        margin: 0;
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 0.5rem;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* --- Hero Section --- */
+.tableau-hero {
+    position: relative;
+    padding: 4rem 0 6rem;
+    overflow: hidden;
+    background-image: url('../assets/Tableau/sfdc-analytics-overview-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .hero-bg-gradient {
+        display: none;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            z-index: 1;
+
+            .hero-eyebrow {
+                display: block;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $text-color;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+                line-height: 1.1;
+                font-weight: 800;
+                color: $secondary-color;
+                margin-bottom: 1.5rem;
+                font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+
+                @include desktop {
+                    font-size: 3rem;
+                }
+
+                @include mobile {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .hero-desc {
+                font-size: 1.125rem;
+                line-height: 1.6;
+                color: $text-color;
+                margin-bottom: 2rem;
+                max-width: 500px;
+
+                @include mobile {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            .hero-actions {
+                display: flex;
+                gap: 1rem;
+
+                @include mobile {
+                    justify-content: center;
+                }
+
+                .btn {
+                    padding: 0.75rem 1.75rem;
+                    font-size: 1rem;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+
+                .btn-primary {
+                    background-color: $primary-color;
+                    border: 1px solid $primary-color;
+                    color: white;
+
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                        border-color: darken($primary-color, 10%);
+                        text-decoration: none;
+                    }
+                }
+
+                .btn-outline {
+                    background-color: transparent;
+                    border: 1px solid $primary-color;
+                    color: $primary-color;
+
+                    &:hover {
+                        background-color: $light-blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+
+            .hero-image-wrapper {
+                position: relative;
+
+                .video-preview-card {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                    background: #fff;
+
+                    .hero-img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+
+                    .play-button-wrapper {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 100px;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: transform 0.3s ease, background 0.3s ease;
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+
+                        &:hover {
+                            transform: translate(-50%, -50%) scale(1.05);
+                            background: rgba(0, 0, 0, 0.7);
+                        }
+
+                        .play-icon {
+                            color: #fff;
+                            font-size: 2.5rem;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+
+                .floating-badge {
+                    position: absolute;
+                    bottom: 40px;
+                    right: -20px;
+                    background: transparent;
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    @include mobile {
+                        right: 0;
+                        bottom: 0px;
+                    }
+
+                    .badge-text {
+                        font-size: 1.5rem;
+                        line-height: 1.2;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* Creating the starburst/sparkle effect if possible with CSS or SVG background, 
+                       for now just text placement as per screenshot roughly */
+                }
+            }
+        }
+    }
+}
+
+/* --- Dreamforce Promo Section --- */
+.tableau-dreamforce-promo {
+    background-color: #032d60;
+    /* Dark Blue */
+    padding: 0;
+    color: #fff;
+    width: 100%;
+
+    .dreamforce-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+        gap: 4rem;
+
+        @include small-tab {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .promo-image {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+
+                @include small-tab {
+                    max-width: 600px;
+                    /* Limit image width on tablet */
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .promo-content {
+            padding: 3rem 0;
+            padding-right: 2rem;
+
+            @include small-tab {
+                padding: 0 1rem;
+            }
+
+            .promo-title {
+                font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+                font-size: 2.25rem;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+                color: #fff;
+
+                @include mobile {
+                    font-size: 1.75rem;
+                }
+            }
+
+            .promo-desc {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                max-width: 90%;
+
+                @include small-tab {
+                    max-width: 100%;
+                }
+            }
+
+            .btn-light-custom {
+                background-color: #fff;
+                color: #0176d3;
+                /* Salesforce Blue */
+                padding: 12px 24px;
+                font-weight: 600;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-block;
+                border: 2px solid #fff;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/* --- Analytics Stats Section --- */
+.tableau-stats {
+    padding: 5rem 0;
+    background-color: #fff;
+
+    .stats-header {
+        margin-bottom: 4rem;
+
+        .stats-icon {
+            margin-bottom: 24px;
+
+            /* If using SVG image directly */
+            img {
+                display: inline-block;
+            }
+        }
+
+        .section-title {
+            font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $secondary-color;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @include small-tab {
+            grid-template-columns: 1fr;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            height: 300px;
+            /* Fixed height for cards */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            background-color: #fcece6;
+
+            /* Fallback color matching gradient */
+            &.stat-card-1 {
+                background-image: url('../assets/Tableau/Stat_top_1.webp');
+            }
+
+            &.stat-card-2 {
+                background-image: url('../assets/Tableau/Stat_top_2.webp');
+            }
+
+            &.stat-card-3 {
+                background-image: url('../assets/Tableau/Stat_top_3.webp');
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+
+            .stat-content {
+                .stat-number {
+                    display: block;
+                    font-size: 4rem;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    /* Dark Blue */
+                    line-height: 1;
+                    margin-bottom: 1rem;
+                }
+
+                .stat-text {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: $secondary-color;
+                    line-height: 1.3;
+                    max-width: 200px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+/* --- Ask Agentforce Floating Button --- */
+.ask-agentforce-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    .btn-primary {
+        border-radius: 30px;
+        padding: 0.75rem 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 112, 210, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+
+        i {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.tableau-stats {
+    .source-text {
+        margin-top: 3rem;
+
+        p {
+            font-size: 0.75rem;
+            color: #444;
+            margin: 0;
+            opacity: 0.9;
+        }
+    }
+}
+
+/* --- Tableau Solutions Section --- */
+.tableau-solutions {
+    padding: 6rem 0 12rem;
+    /* Extra padding at bottom for background image visibility */
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    /* Prevent horizontal scroll if background image is wide */
+
+    .section-title {
+        font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $secondary-color;
+        margin-bottom: 5rem;
+
+        @include mobile {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .solutions-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 2;
+        /* Above background */
+
+        @include small-tab {
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+
+        .row-header {
+            width: 25%;
+            padding-right: 2rem;
+
+            @include small-tab {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            h3 {
+                font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: $secondary-color;
+                /* Dark Blue */
+                line-height: 1.2;
+
+                @include mobile {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .cards-wrapper {
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            @include small-tab {
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .solution-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        border-top: 6px solid #ff774a;
+        /* Orange border */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 280px;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $secondary-color;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: $text-color;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+            /* Pushes button down */
+        }
+
+        .card-link {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $secondary-color;
+            text-decoration: underline;
+
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .solutions-bg-layer {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        /* Adjust height as needed */
+        background-image: url('../assets/Tableau/product-portfolio-analytics-category-alt-background_09227b.webp');
+        background-size: 100% 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+
+        @include mobile {
+            height: 30%;
+            /* Smaller on mobile */
+            background-size: 200%;
+            /* Zoom in if needed */
+        }
+    }
+}
+
+/* --- Common Utilities for New Sections --- */
+.section-padding {
+    padding: 6rem 0;
+
+    @include mobile {
+        padding: 4rem 0;
+    }
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @include small-tab {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.reverse-mobile {
+        @include small-tab {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .col-image {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .section-heading {
+        font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: $secondary-color;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+
+        @include mobile {
+            font-size: 1.75rem;
+        }
+    }
+
+    .section-desc {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: $text-color;
+        margin-bottom: 2rem;
+    }
+
+    .btn-outline-custom {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 10px 24px;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+        font-weight: 700;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: #fff;
+        }
+    }
+
+    .btn-primary-custom {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 10px 24px;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
+
+/* --- Gartner Section --- */
+.tableau-gartner {
+    background-color: #fff;
+}
+
+/* --- Customer Story Section --- */
+.tableau-customer-story {
+    .story-card {
+        background-color: #fff1ed;
+        /* Light peach/reddish */
+        border-radius: 16px;
+        padding: 4rem;
+
+        @include mobile {
+            padding: 2rem;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: $primary-color;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-text {
+            font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+
+            @include mobile {
+                font-size: 1.25rem;
+            }
+        }
+
+        .author-info {
+            margin-bottom: 2rem;
+            color: $secondary-color;
+
+            strong {
+                display: block;
+                font-size: 1.1rem;
+                margin-bottom: 0.25rem;
+            }
+
+            p {
+                margin: 0;
+                font-size: 0.95rem;
+            }
+        }
+
+        .rounded-circle-custom {
+            border-radius: 50%;
+            max-width: 350px;
+        }
+    }
+}
+
+/* --- CTO Section --- */
+.tableau-cto {
+    background-color: #fff;
+}
+
+/* --- Data Culture Playbook Section --- */
+.tableau-playbook {
+    background-color: #fff;
+
+    .playbook-card {
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        padding: 0 4rem;
+        overflow: hidden;
+
+        @include mobile {
+            padding: 2rem;
+        }
+
+        .two-col-grid {
+            gap: 0;
+
+            @include small-tab {
+                gap: 2rem;
+            }
+        }
+
+        .col-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* --- Tableau Trailhead Section --- */
+.tableau-trailhead {
+    position: relative;
+    padding: 6rem 0 12rem;
+    /* Extra bottom padding for background */
+    background-color: #f8faff;
+    /* Very light blue/white */
+    overflow: hidden;
+
+    .trailhead-title {
+        font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: $secondary-color;
+        margin-bottom: 4rem;
+        line-height: 1.2;
+
+        @include mobile {
+            font-size: 1.75rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .trailhead-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+
+        @include small-tab {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .trailhead-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-badge-wrapper {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1.5rem;
+
+            .card-badge {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 50%;
+                /* Just in case */
+            }
+        }
+
+        .badge-pill {
+            background-color: #eef4ff;
+            color: $secondary-color;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $secondary-color;
+            margin-bottom: 1rem;
+
+            @include mobile {
+                font-size: 1.25rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            color: $text-color;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .trailhead-link {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $secondary-color;
+            text-decoration: underline;
+
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .trailhead-bg-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        /* Approximate height of illustration */
+        background-image: url('../assets/Tableau/trailhead-mfe-background.webp');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+
+        @include mobile {
+            height: 200px;
+        }
+    }
+}
+
+/* --- Tableau Resources Section --- */
+.tableau-resources {
+    background-color: #fff;
+
+    .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        @include small-tab {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    .resource-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        /* Soft shadow */
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image {
+            height: 200px;
+            /* Fixed height for consistency */
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+        }
+
+        &:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            .badge-pill {
+                background-color: #eef4ff;
+                color: $secondary-color;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 4px 12px;
+                border-radius: 20px;
+                align-self: flex-start;
+                margin-bottom: 16px;
+            }
+
+            h3 {
+                font-size: 25px;
+                font-weight: 700;
+                color: $secondary-color;
+                margin-bottom: 16px;
+                line-height: 1.4;
+                flex-grow: 1;
+            }
+
+            .resource-link {
+                font-size: 16px;
+                font-weight: 700;
+                color: $secondary-color;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* --- Tableau Next Step Section --- */
+.tableau-next-step {
+    background-color: #fff;
+    padding-bottom: 250px;
+    /* Space for the bottom image */
+    position: relative;
+    overflow: hidden;
+
+    @include mobile {
+        padding-bottom: 150px;
+    }
+
+    .next-step-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+
+        @include small-tab {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    .step-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 3rem 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background-color: #eef4ff;
+            /* Light blue circle */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+
+            i {
+                font-size: 1.5rem;
+                color: $primary-color;
+                /* Salesforce Blue */
+            }
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: $secondary-color;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        p {
+            font-size: 20px;
+            color: $text-color;
+            margin-bottom: 32px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .step-link {
+            font-size: 18px;
+            font-weight: 600;
+            color: $secondary-color;
+            text-decoration: underline;
+
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+
+            i {
+                margin-left: 0.25rem;
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .next-step-bg-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 350px;
+        /* Adjust based on image aspect ratio and desired visible amount */
+        background-image: url('../assets/Tableau/contact-us-footer-service.webp');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+
+        @include mobile {
+            height: 200px;
+        }
+    }
+
+}
+
+/* --- Tableau FAQ Section --- */
+.tableau-faq {
+    background-color: #fff;
+
+    .faq-accordion {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.faq-item {
+    border-top: 1px solid #e5e5e5;
+
+    &:last-child {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    &.active {
+        .icon-wrapper {
+            background-color: $secondary-color;
+
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $secondary-color;
+        margin: 0;
+        padding-right: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .icon-wrapper {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        background-color: #eef4ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        i {
+            font-size: 0.875rem;
+            color: $primary-color;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    &:hover h3 {
+        color: $primary-color;
+    }
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+
+    .answer-content {
+        padding-bottom: 1.5rem;
+
+        p {
+            margin-bottom: 1rem;
+            color: $text-color;
+            font-size: 1rem;
+            line-height: 1.6;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $primary-color;
+                text-decoration: underline;
+                font-weight: 600;
+
+                &:hover {
+                    color: darken($primary-color, 10%);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* Active State Handling via JS classes */
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    /* Sufficient height */
+    transition: max-height 0.6s ease-in;
+}

@@ -1,0 +1,1207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salesforce Products Overview - Discover what AI was always meant to be.">
+    <title>Products Overview - Salesforce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+</head>
+
+<body class="products-page">
+    <!-- Global Header -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle (Moved here for layout) -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item"><a href="#" class="nav-link" id="productsMenuTrigger">Products <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items (320px - 1023px) -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View (Hidden by default) -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="../assets/icons/salesforce-logo.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box (Moved out of nav-actions for responsive layout) -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <!-- Globe Icon -->
+                <span class="globe-icon">🌐</span>
+
+                <!-- Login Link -->
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon (Visible 320px-1200px) -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series,
+                            events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Button -->
+                <a href="contact.html" class="btn-contact">Contact us</a>
+                <!-- Mobile Contact Button (Visible 320px-1200px) -->
+                <a href="contact.html" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Top Banner -->
+    <div class="promo-banner">
+        <div class="container">
+            <p>Limited time offer for Indian SMBs – 40% off Sales Cloud, Marketing Cloud & Service Cloud. <a
+                    href="marketing.html">Know more</a></p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Products Hero Section -->
+        <section class="products-hero">
+            <div class="container hero-grid">
+                <!-- Left Content -->
+                <div class="hero-left">
+                    <h1 class="hero-title">
+                        Discover what AI <span class="blue-text">was always meant to be.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Improve customer relationships with Salesforce, the #1 AI CRM where humans with agents drive
+                        customer success together. Our integrated platform pairs your unified customer data with trusted
+                        agents that can assist, take action autonomously and hand off seamlessly to your employees in
+                        sales, service, marketing, commerce and more.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Watch Customer Demos</a>
+                        <a href="#" class="btn-outline">See all products</a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="hero-right">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe
+                                src="https://play.vidyard.com/yJZhqSyvJQBG65BjdxSmE7?disable_popouts=1&type=inline&hidden_controls=0&hide_playlist=0&hide_html5_playlist=0&viral_sharing=0&name_overlay=0&autoplay=0&preload=metadata&v=4.3.15"
+                                width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards Section -->
+        <section class="products-features">
+            <div class="container">
+                <h2 class="section-title">Connect with your customers in a whole new way with the #1 AI CRM.
+                </h2>
+                <div class="features-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card">
+                        <div class="card-image">
+                            <img src="../assets/product overview/data-16x9-small.webp" alt="Agentforce">
+                        </div>
+                        <div class="card-content">
+                            <div class="label-wrapper">
+                                <span class="card-label">Agentforce</span>
+                            </div>
+                            <h3>Meet Agentforce: Your workforce without limits.</h3>
+                            <p>Augment every employee and serve customers 24/7 with agents that assist and
+                                take action autonomously in sales, service, marketing, commerce and more.
+                                You can even build your own customised agents with low-code tools.</p>
+                            <a href="#" class="card-link">Get started with Agentforce</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="feature-card">
+                        <div class="card-image">
+                            <img src="../assets/product overview/data-16x9-small-2.webp" alt="Data 360">
+                        </div>
+                        <div class="card-content">
+                            <div class="label-wrapper">
+                                <span class="card-label">Data</span>
+                            </div>
+                            <h3>Unlock, unify and take action on all your data with Data 360.</h3>
+                            <p>Easily connect structured and unstructured data with Salesforce using zero
+                                copy to create a single source of truth that drives action across agents,
+                                apps, automation, prompts, analytics and more.</p>
+                            <a href="#" class="card-link">Learn about Data 360</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="feature-card">
+                        <div class="card-image">
+                            <img src="../assets/product overview/crm-16x9-small-3.webp" alt="Customer 360">
+                        </div>
+                        <div class="card-content">
+                            <div class="label-wrapper">
+                                <span class="card-label">#1 CRM Apps</span>
+                            </div>
+                            <h3>Activate your Customer 360 across every app with one platform.</h3>
+                            <p>Get a complete view of your customers on one platform and create a seamless
+                                handoff between agents and employees across sales, service, marketing,
+                                commerce and more. With us, a Customer 360 comes standard.</p>
+                            <a href="#" class="card-link">See all products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mountain Background Image at bottom -->
+            <div class="sec-bg-visual">
+                <img src="../assets/product overview/02-card-bg.webp" alt="" class="bg-img-left">
+            </div>
+        </section>
+
+        <!-- Low Code Section -->
+        <section class="products-low-code">
+            <div class="container">
+                <div class="low-code-card">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="visual-container">
+                                <img src="../assets/product overview/product-features-SFFlow-blade-4.webp"
+                                    alt="Flow Builder and Agentforce">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-wrapper">
+                                <h2>Build, customise and scale fast with low code.</h2>
+                                <p>Salesforce makes it easy to innovate fast with AI. Build and customise your apps,
+                                    agents, prompts, models, automations and more with no-code, low-code and
+                                    pro-code
+                                    tools - all with any external data or partner you need on our open, secure
+                                    platform.
+                                </p>
+                                <a href="#" class="btn-capabilities">View capabilities</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Customer Stories Logo Grid Section -->
+        <section class="products-customer-stories">
+            <div class="container">
+                <h2 class="section-title">Learn how Salesforce delivers customer success for any business, in any
+                    industry.</h2>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn-outline-blue">View more stories</a>
+                </div>
+
+                <div class="logo-grid-container">
+                    <div class="logo-row main-row">
+                        <div class="logo-card">
+                            <img src="../assets/product overview/l-t-electrical-automation-logo-1.webp"
+                                alt="L&T Electrical & Automation">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/hero-fincorp-logo.webp" alt="Hero FinCorp">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-jaipur-rugs-logo.webp" alt="Jaipur Rugs">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/jsw-steel-logo.webp" alt="JSW Steel">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-reva-uni-logo.webp" alt="Reva University">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-hp-min-logo-mahindra.webp" alt="Mahindra">
+                        </div>
+                    </div>
+                    <div class="logo-row secondary-row">
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-ask-logo.webp" alt="ASK">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-narayana-logo.webp" alt="Narayana Health">
+                        </div>
+                        <div class="logo-card">
+                            <img src="../assets/product overview/in-tvs-logo.webp" alt="TVS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Background Visual -->
+            <div class="stories-bg-visual">
+                <img src="../assets/product overview/logo-grid-background.webp" alt="" class="bg-scene">
+            </div>
+        </section>
+
+        <!-- Customer 360 Section -->
+        <section class="products-customer-360">
+            <div class="container container-fluid">
+                <div class="c360-card">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="content-wrapper">
+                                <h2>Get a Customer 360 out of the box.</h2>
+                                <p>Our CRM provides every data-centric app you need with a foundation of the most
+                                    popular
+                                    features across Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud and
+                                    Data 360
+                                    in a streamlined experience - and at no extra cost. From startups to large scale
+                                    enterprises, Salesforce has a 360 solution for your unique business.</p>
+                                <a href="#" class="btn-primary">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="visual-container">
+                                <img src="../assets/product overview/Right-Panel.webp" alt="Customer 360 Ecosystem">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Integrated Platform Section -->
+        <section class="products-integrated-platform">
+            <div class="container platform-container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">All Salesforce products. One integrated platform.</h2>
+                    <p class="section-desc">Every solution in your Customer 360 works together on one platform, so it's
+                        easier for your agents, employees and data to work together, too. Click the icons below to learn
+                        more.</p>
+                </div>
+
+                <div class="platform-grid">
+                    <!-- Row 1 -->
+                    <div class="platform-row">
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-ai.svg" alt="Einstein AI">
+                            </div>
+                            <span class="platform-label">Einstein AI</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-sales.svg" alt="Sales Cloud">
+                            </div>
+                            <span class="platform-label">Sales Cloud</span>
+                        </div>
+                        <a href="service.html" class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-service.svg" alt="Service Cloud">
+                            </div>
+                            <span class="platform-label">Service Cloud</span>
+                        </a>
+                        <a href="marketing.html" class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-marketing.svg" alt="Marketing Cloud">
+                            </div>
+                            <span class="platform-label">Marketing Cloud</span>
+                        </a>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-commerce.svg" alt="Commerce Cloud">
+                            </div>
+                            <span class="platform-label">Commerce Cloud</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-data-cloud.svg" alt="Data 360">
+                            </div>
+                            <span class="platform-label">Data 360</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-tableau.svg" alt="Tableau">
+                            </div>
+                            <span class="platform-label">Tableau</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-mulesoft.svg" alt="MuleSoft">
+                            </div>
+                            <span class="platform-label">MuleSoft</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="platform-row secondary-row">
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-slack.svg" alt="Slack">
+                            </div>
+                            <span class="platform-label">Slack</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-agentforce.svg" alt="Agentforce 360 Platform">
+                            </div>
+                            <span class="platform-label">Agentforce 360 Platform</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/product overview/icon-heroku.svg" alt="Heroku">
+                            </div>
+                            <span class="platform-label">Heroku</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-net-zero.svg" alt="Net Zero Cloud">
+                            </div>
+                            <span class="platform-label">Net Zero Cloud</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-small-business.svg" alt="Small Business">
+                            </div>
+                            <span class="platform-label">Small Business</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-partner-apps.svg" alt="Partners">
+                            </div>
+                            <span class="platform-label">Partners</span>
+                        </div>
+                        <div class="platform-item highlighted">
+                            <div class="icon-circle">
+                                <img src="../assets/products/icon-cust-success.svg" alt="Customer Success">
+                            </div>
+                            <span class="platform-label">Customer Success</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- G2 Ranking Section -->
+        <section class="products-promo-g2">
+            <div class="container container-fluid">
+                <div class="promo-card g2-ranking-card">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="content-wrapper">
+                                <h2>Voted #1 Best Software Company on G2</h2>
+                                <p>Thank you for ranking us the #1 GridÂ® leader in 170 categories, with 88,258
+                                    reviews and
+                                    an average 4.4 star rating.</p>
+                                <a href="#" class="btn-primary">Learn more <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="visual-wrapper text-center">
+                                <img src="../assets/product overview/image-24.webp" alt="G2 Best Software 2025 Top 100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Success Section -->
+        <section class="products-promo-success">
+            <div class="container container-fluid">
+                <div class="promo-card success-plans-card">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="content-wrapper">
+                                <h2>Get to AI success faster with Customer Success.</h2>
+                                <p>Meet your most ambitious goals with tailored Success Plans and Professional
+                                    Services
+                                    from our Customer Success team. Implement robust AI, data and integration
+                                    strategies, optimise your tech stack and get expert guidance for your current
+                                    and
+                                    future roadmap as you unlock your agent-powered future.</p>
+                                <a href="#" class="btn-primary">Explore Success Plans</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="visual-wrapper text-end">
+                                <img src="../assets/product overview/AI-Success.webp" alt="AI Success Plans"
+                                    class="success-visual">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="products-faq">
+            <div class="container container-fluid">
+                <h2 class="section-title">Frequently asked questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is Salesforce?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Salesforce is the #1 <a href="#">AI CRM</a>, helping Humans and Agents drive customer
+                                    success together on one integrated platform. Our best-in-class CRM apps help you to
+                                    create a 360-degree view of your customer across sales, service, marketing,
+                                    commerce, IT
+                                    and data departments with shared, easy-to-understand data. With a single view of
+                                    your
+                                    customer, your teams can create connected, personalised customer experiences that
+                                    build
+                                    stronger relationships. Our artificial intelligence (AI) solutions help every
+                                    employee
+                                    be more productive with generative, predictive and autonomous AI you can safely use
+                                    with
+                                    sensitive customer data, thanks to our Einstein Trust Layer. Our data solutions like
+                                    Data 360 and MuleSoft help you unlock trapped data so you can activate real-time
+                                    customer data from multiple sources whether that be <a href="#">CRM</a>, legacy
+                                    or
+                                    third-party data across <a href="#">Salesforce CRM</a> apps.</p>
+                                <a href="#" class="faq-link">See it in action.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is Agentforce?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p><a href="#">Agentforce</a> is Salesforce's groundbreaking suite of customisable
+                                    agents
+                                    and tools, deeply integrated with the Agentforce 360 Platform that helps companies
+                                    build, customise and deploy autonomous agents to support employees and customers.
+                                    With
+                                    Agentforce, you can get out-of-the-box templates for quickly building and
+                                    customising AI
+                                    agents that meet specific business requirements. These agents can also be
+                                    personalised
+                                    using familiar Salesforce tools, including prompt templates, Flows and Apex. Agents
+                                    are
+                                    able to carry out business tasks using a company's CRM data, external data and
+                                    metadata
+                                    while adhering to strict privacy and security guidelines and action guardrails.
+                                    Because
+                                    these agents are completely integrated with your Customer 360 apps across sales,
+                                    service, marketing, commerce and more, they can seamlessly hand off to employees
+                                    right
+                                    in the flow of work. You can collaborate with your agents as a true extension of
+                                    your
+                                    team in any Salesforce app, partner app or customised app you build.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is an AI agent?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>An <a href="#">AI agent</a> is an intelligent reasoning application that can use data
+                                    and
+                                    large language
+                                    models to conduct planning, task execution and conversations. An agent takes action
+                                    based
+                                    on a trigger, which can be changes in data, conversations and scheduled automations.
+                                    It
+                                    then uses that trigger to determine a plan of action. The plan of action is
+                                    determined
+                                    by
+                                    the predefined topics assigned to an agent. A topic is a job to be done, complete
+                                    with
+                                    the
+                                    instructions and set of actions the agent can execute to achieve that goal. The
+                                    agent
+                                    then
+                                    reasons through the query, selects a relevant topic, selects the action to take and
+                                    gathers
+                                    the data required to execute. Agentforce is the platform where IT teams can define
+                                    the
+                                    following parameters for their AI agents.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is Customer 360 a product?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Customer 360 is not one specific product; its an end state we help our customers
+                                    achieve
+                                    by using the
+                                    breadth of our portfolio. We offer apps for virtually every team within your
+                                    organisation, which means
+                                    everyone-your employees and AI agents-can take action on a 360-degree view and is
+                                    united
+                                    around the customer
+                                    to manage and grow customer relationships.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>I'm just looking to get started with CRM and don't think I need AI solutions yet. Is
+                                Salesforce right for me?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes. Our CRM apps are designed to meet you exactly where you are today and help you
+                                    to
+                                    embrace the latest
+                                    technologies. Some organisations may just need one of our market-leading CRM
+                                    solutions
+                                    to support a single
+                                    department or business goal, while others may benefit from connecting more of their
+                                    teams and data on an
+                                    AI-powered CRM platform to manage customer relationships more holistically.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I know Salesforce can deliver results for my business?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Were proud of the results our customers see with Salesforce. But you don't have
+                                    to
+                                    take
+                                    our word for it.
+                                    A customer survey completed in August 2024 revealed 99% of our customers achieved
+                                    positive ROI with Salesforce
+                                    and 99% were satisfied with Salesforce. On average, customers report a 30% faster
+                                    response to customers, 30%
+                                    faster decision-making, 30% more employee productivity and 29% more teamwork, among
+                                    other metrics, across their
+                                    entire Salesforce implementation. Read our <a href="#">customer success stories</a>
+                                    to
+                                    learn more about the value Salesforce provides.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How is Salesforce priced?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We offer a variety of pricing options for our customers, including:</p>
+                                <p>Starter Suite, Pro Suite or Foundation Suites: When you select a suite, you get a
+                                    bundle
+                                    of some of our most popular
+                                    features in one package to create a Customer 360 out of the box across sales,
+                                    service,
+                                    marketing, commerce and Data 360.
+                                    Starter Suite is great for startups, whereas Foundations provides a more robust set
+                                    of
+                                    features for more established
+                                    businesses.</p>
+                                <p>Add-ons: Each add-on you select helps you to customise your CRM solution to get
+                                    exactly
+                                    what your organisation needs.
+                                    We offer add-ons with different tiers of functionality, which is similar to how our
+                                    editions have varying levels of
+                                    functionality for most products.</p>
+                                <p>To learn more, please visit the <a href="#">Salesforce Product Pricing page</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is AI included in all Salesforce apps and solutions?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Customers must purchase product-specific add-ons to take advantage
+                                    of Agentforce and other generative AI capabilities embedded within
+                                    Salesforce clouds. However, many predictive AI features are offered
+                                    as add-ons to our standard cloud editions. Get in touch with our sales
+                                    team to learn more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>My bussiness is a non-profit. Can Salesforce help me?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>For organisations in the non-profit, education or philanthropy sectors,
+                                    Salesforce offers <a href="#">Nonprofit Cloud</a>, a special version of our CRM
+                                    platform
+                                    and other solutions that can power your organisations purpose. <a href="#">Keep
+                                        in
+                                        touch</a> to our team of experts to unlock the best solutions for your
+                                    organisation.
+                                </p>
+
+                                <p>As always, our representatives are available for a no-pressure consultation to help
+                                    you
+                                    figure out the best solution for your budget and business needs. We can find the
+                                    services
+                                    and packages that will serve your current needs, with plenty of options for growth
+                                    in
+                                    the
+                                    future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Does Salesforce integrate with other applications? How?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Salesforce CRM apps are deeply integrated, as they operate from one core platform
+                                    with
+                                    one metadata
+                                    framework that creates a common language across apps. This means you can customise
+                                    something in one
+                                    app for example, a customised object specific to your business like a pet name for
+                                    an animal
+                                    hospital or a vehicle for a car dealership and that same customisation can appear
+                                    across every
+                                    other app, automatically. In addition, Salesforce is open to external apps and
+                                    technologies by design,
+                                    because we never want to box our customers into solutions. Our platform is built to
+                                    provide a seamless
+                                    back-end experience with any external partner, model, data store or productivity
+                                    suite
+                                    you currently use.
+                                    We also operate a robust SaaS marketplace, AppExchange, where partners build
+                                    customised
+                                    apps to extend your
+                                    use of Salesforce.</p>
+
+                                <p>You can also integrate any system with Salesforce thanks to MuleSoft, the worldâ€™s
+                                    #1
+                                    integration and API platform
+                                    owned and operated by Salesforce. With the MuleSoft Anypoint Platformâ„¢, you can
+                                    connect
+                                    any system, application,
+                                    data and device to unleash the full power of the #1 AI CRM.</p>
+
+                                <p>And we know how important unified data is to trusted AI, so we make it easy to bring
+                                    in
+                                    any external data to Salesforce
+                                    with our <a href="#">Zero Copy Partner Network</a>. Zero copy enables organisations
+                                    to
+                                    easily connect and use all of their data within
+                                    the Agentforce 360 Platform without needing to move or copy data between platforms.
+                                    Learn more about zero copy <a href="#">here</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How does Salesforce create a 360-degree view of my customer if our data is living in
+                                silos and disparate systems?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>It's entirely too common for data to be sitting in silos and disconnected from the
+                                    customer experience. That is why we created <a href="#">Data 360</a>,
+                                    which brings all your disconnected enterprise data into Salesforce to deliver a
+                                    comprehensive, 360-degree view of your customer. When we say all your data, we mean
+                                    it: <a href="#">MuleSoft</a>, the world's #1 integration and API platform, connects
+                                    data from anywhere (yes, even mainframes) so you can unite all your islands of data
+                                    to get a complete view of your customers and business. And our <a href="#">Zero Copy
+                                        Partner Network</a> enables organisations to easily connect and use all their
+                                    data within the Agentforce 360 Platform without needing to move or copy data between
+                                    platforms.</p>
+                                <p>When you get all your data together in one place, you can do amazing things with <a
+                                        href="#">Tableau</a> to explore data, uncover insights and take action across
+                                    your
+                                    CRM to better serve your customers. Together, our data solutions empower your people
+                                    with access to real-time data and insights about your customers and
+                                    their interactions with your products and services, enabling them to deliver
+                                    personalised customer experiences at every touchpoint.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How are Salesforce AI solutions different from public generative AI models?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Public generative AI models can do amazing things, but the model learns from
+                                    everything
+                                    you enter into your prompts. That's why enterprise AI is different you certainly
+                                    can't have public models learning from your sensitive customer data.</p>
+
+                                <p>Salesforce helps you to harness AI to deliver impactful customer experiences across
+                                    your
+                                    business with data privacy and security built in. Our Einstein Trust Layer prevents
+                                    sensitive data from leaving the Salesforce trust boundary, so you can use AI in
+                                    every
+                                    app, across every user and in every workflow across your CRM with confidence. Learn
+                                    more
+                                    about how we build <a href="#">AI for business</a> and learn more about <a
+                                        href="#">Salesforce Einstein</a>, our native AI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Where can I find more about Salesforce new releases and products updates?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We incorporate the latest innovations into our products three times a year. But we
+                                    can't
+                                    do it alone. Our customers' input helps us to develop products that best serve
+                                    their
+                                    business needs. Providing continual technology releases gives our customers a
+                                    competitive advantage.</p>
+                                <p>Learn how <a href="#">each Salesforce Release brings hundreds of new products and
+                                        features</a> that's a lot of fresh ideas to keep you ahead of the game and
+                                    maximise ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Where can I learn more about salesforce products?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you haven't already, make sure that you watch <a href="">our latest demos</a> of
+                                    Salesforce in action. Continue learning about all the incredible solutions that help
+                                    companies create their own Customer 360 by exploring the product pages of our
+                                    website.</p>
+                                <p>Then, make sure that you head over to the <a href="">Salesforce Resource Centre</a>
+                                    for thought leadership, research and how-to content on the latest topics and
+                                    resources
+                                    tailored to your role and industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container sf-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" class="footer-logo">
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-square-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-square-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="footer-phone">Call us at 1800-420-7332</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>New to Salesforce?</h4>
+                    <ul>
+                        <li><a href="#">Why Salesforce</a></li>
+                        <li><a href="#">What is CRM?</a></li>
+                        <li><a href="#">Explore All Products</a></li>
+                        <li><a href="#">SaaS</a></li>
+                        <li><a href="#">Customer Success</a></li>
+                        <li><a href="#">Product Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>About Salesforce</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Blog <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Security and Performance <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce.org <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Best CRM Software</a></li>
+                        <li><a href="#">Sustainability <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Legal <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Give us your Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Popular Links</h4>
+                    <ul>
+                        <li><a href="#">New Release Features <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce Mobile App</a></li>
+                        <li><a href="#">Business App Store <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Dreamforce <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">CRM Software</a></li>
+                        <li><a href="#">Salesforce Plus <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce for startups <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container sf-container footer-bottom-content">
+                <div class="footer-bottom-links">
+                    <div class="globe-selector">
+                        <img src="../assets/backgrounds/icons8-worldwide-64.png" alt="World">
+                        <span>Worldwide</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="legal-list">
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Trust</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">
+                                <img class="footer-link-icon footer-link-icon_left"
+                                    src="../assets/small-business/icon-cpra.svg"> Your Privacy Choices
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Â© Copyright 2025 Krishna, Inc. <a href="#" style="text-decoration:underline; color:inherit;">All
+                            rights reserved</a>. Various
+                        trademarks held by their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Products Offcanvas Menu (Reused from index.html) -->
+    <div class="offcanvas-overlay" id="productsOffcanvasOverlay"></div>
+    <div class="offcanvas-menu" id="productsOffcanvas">
+        <div class="offcanvas-header">
+            <h2>Products</h2>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-content">
+                <div class="products-categories">
+                    <a href="products.html" class="category-item active-category" data-category="overview">
+                        <img src="../assets/products/icon-customer360.svg" alt="" class="product-icon">
+                        <span>Products Overview</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="agentforce.html" class="category-item" data-category="agentforce">
+                        <img src="../assets/products/icon-agentforce.svg" alt="" class="product-icon">
+                        <span>Agentforce</span>
+                    </a>
+                    <a href="datacloud.html" class="category-item" data-category="data-cloud">
+                        <img src="../assets/products/icon-data-cloud.svg" alt="" class="product-icon">
+                        <span>Data Cloud</span>
+                    </a>
+                    <a href="agentforce_ai_app.html" class="category-item" data-category="agentforce-ai">
+                        <img src="../assets/products/icon-low-code.svg" alt="" class="product-icon">
+                        <span>Agentforce & AI App Development</span>
+                    </a>
+                    <a href="small-business.html" class="category-item" data-category="smb"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-small-business.svg" alt="" class="product-icon">
+                        <span>Small Business</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="artificial-intelligence.html" class="category-item" data-category="ai"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-ai.svg" alt="" class="product-icon">
+                        <span>Artificial Intelligence</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="sales.html" class="category-item" data-category="sales"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-sales.svg" alt="" class="product-icon">
+                        <span>Sales</span>
+                    </a>
+                    <a href="service.html" class="category-item" data-category="service"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-service.svg" alt="Service" class="product-icon">
+                        <span>Service</span>
+                    </a>
+                    <a href="marketing.html" class="category-item" data-category="marketing"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-marketing.svg" alt="" class="product-icon">
+                        <span>Marketing</span>
+                    </a>
+                    <a href="commerce.html" class="category-item" data-category="commerce"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-commerce.svg" alt="Commerce" class="product-icon">
+                        <span>Commerce</span>
+                    </a>
+                    <a href="tableau.html" class="category-item" data-category="tableau"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-tableau.svg" alt="Tableau" class="product-icon">
+                        <span>Tableau</span>
+                    </a>
+                    <a href="mulesoft.html" class="category-item" data-category="mulesoft">
+                        <img src="../assets/products/icon-mulesoft.svg" alt="" class="product-icon">
+                        <span>MuleSoft</span>
+                    </a>
+                    <a href="slack.html" class="category-item" data-category="slack"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-slack.svg" alt="" class="product-icon">
+                        <span>Slack</span>
+                    </a>
+                    <div class="category-link">
+                        <a href="#">See all product pricing</a>
+                    </div>
+                </div>
+                <div class="products-featured" id="featured-overview">
+                    <div class="featured-product">
+                        <div class="featured-img">
+                            <img src="../assets/backgrounds/icon-360.webp" alt="">
+                        </div>
+                        <h3>Explore Customer 360.</h3>
+                        <p>Unite your teams around your customer with shared data and integrated tools to drive growth
+                            and lower costs.</p>
+                        <a href="#" class="btn-featured">See all Salesforce products</a>
+
+                        <!-- Decorative Images -->
+                        <img src="../assets/backgrounds/products-promo-sky-desktop.webp" alt=""
+                            class="featured-decoration" aria-hidden="true">
+
+                        <!-- Customer 360 Mascot -->
+                        <img src="../assets/backgrounds/360-background.webp" alt="Customer 360" class="featured-mascot">
+                    </div>
+                </div>
+
+                <div class="products-featured" id="featured-smb" style="display: none;">
+                    <div class="featured-product smb-featured">
+                        <div class="smb-content-panel">
+                            <div class="smb-header">
+                                <span class="smb-category-label">Small Business</span>
+                                <h3 class="smb-title">Salesforce for SMBs <br>Now at Special Pricing</h3>
+                            </div>
+                            <div class="smb-description">
+                                <p>For the first time, Salesforce India is making it easier than ever for Indian SMBs to
+                                    compete – and win.</p>
+                                <p>For a limited time, get <strong>40% off our flagship solutions</strong> – Sales
+                                    Cloud, Service Cloud, and Marketing Cloud – along with fast-track implementation
+                                    packages, to go live in just 2 weeks.</p>
+                            </div>
+                            <div class="smb-actions">
+                                <a href="#" class="btn-watch-demo">Watch Customer Demos</a>
+                                <a href="#" class="link-all-products">See all small business products</a>
+                            </div>
+                        </div>
+                        <div class="smb-visual-panel">
+                            <div class="smb-video-card">
+                                <div class="video-overlay">
+                                    <span class="offer-text">Ready to claim your 40% OFF?</span>
+                                    <div class="play-btn-circle">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                </div>
+                                <img src="https://wp.salesforce.com/en-in/wp-content/uploads/sites/18/2023/12/php-ch-smb-video.jpg?w=1024"
+                                    alt="Small Business Offer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>

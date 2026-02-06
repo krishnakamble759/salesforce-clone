@@ -1,0 +1,1707 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Agentforce Service - Connected service on every channel. Deliver seamless support with AI-powered tools.">
+    <title>Service - Salesforce India</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+</head>
+
+<body class="service-page">
+    <!-- Global Header -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle (Moved here for layout) -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item"><a href="#" class="nav-link" id="productsMenuTrigger">Products <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items (320px - 1023px) -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="contact.html" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View (Hidden by default) -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="../assets/icons/salesforce-logo.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box (Moved out of nav-actions for responsive layout) -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <!-- Globe Icon -->
+                <span class="globe-icon">🌐</span>
+
+                <!-- Login Link -->
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon (Visible 320px-1200px) -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series,
+                            events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Button -->
+                <a href="contact.html" class="btn-contact">Contact us</a>
+                <!-- Mobile Contact Button (Visible 320px-1200px) -->
+                <a href="contact.html" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Service Sub-navigation -->
+    <div class="sb-sub-nav">
+        <div class="sub-nav-wrapper">
+            <div class="sub-nav-left">
+                <div class="sub-nav-title">
+                    <a href="service.html" class="title-link">Service</a>
+                    <i class="fa-solid fa-chevron-down mobile-sub-nav-toggle"></i>
+                </div>
+                <ul class="sub-nav-links">
+                    <li><a href="#" class="active">Overview</a></li>
+                    <li class="has-sub-dropdown">
+                        <a href="javascript:void(0)">Service Products <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="sub-dropdown-menu">
+                            <div class="dropdown-arrow"></div>
+                            <div class="dropdown-columns">
+                                <div class="dropdown-col">
+                                    <ul class="service-col-links">
+                                        <li><a href="#">Customer Service Management</a></li>
+                                        <li><a href="#">Field Service</a></li>
+                                        <li><a href="#">IT Service</a></li>
+                                        <li><a href="#">Service Portal</a></li>
+                                        <li><a href="#">Digital Engagement</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-col">
+                                    <ul class="service-col-links">
+                                        <li><a href="#">Service Analytics</a></li>
+                                        <li><a href="#">Customer Service AI</a></li>
+                                        <li><a href="#">Contact Centre</a></li>
+                                        <li><a href="#">Voice & Phone Support</a></li>
+                                        <li><a href="#">HR Service</a></li>
+                                        <li><a href="#" class="see-all-link">See all Service Products</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Pricing</a></li>
+                    <li class="desktop-hide">
+                        <div class="mobile-nav-buttons">
+                            <a href="#" class="btn-try-free">Try for free</a>
+                            <a href="#" class="btn-watch-demo">Watch Demo</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-nav-right">
+                <a href="#" class="btn-try-free">Try for free</a>
+                <a href="#" class="btn-watch-demo">Watch Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <p>Discover how to ensure and measure AI accuracy on 14th January. <a href="#">Register now</a></p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-bg-main">
+            <img src="../assets/service/Service-Marquee-2880x900-1.webp" alt="" role="presentation">
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <img src="../assets/products/icon-service.svg" alt="" class="service-heart-icon">
+                    <span class="hero-tagline">Agentforce Service (formerly Service Cloud)</span>
+                </div>
+                <h1>Connected service on every channel. Service that never sleeps.</h1>
+                <p>Deliver seamless support across every channel and industry with Agentforce Service, the complete
+                    service platform powered by humans, AI agents, and trusted data. Let AI handle routine tasks and
+                    elevate human reps to boost productvity and CSAT.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary">Try for free</a>
+                    <a href="#" class="btn-outline">Watch Demo</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="video-card">
+                    <img src="../assets/Agentforce/Customer-Service-1.webp" alt="Service Console">
+                    <div class="play-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Customers Section -->
+    <section class="service-customers">
+        <div class="g2-badge-container">
+            <img src="../assets/service/G2_Logo_DarkBlue_RGB.webp" alt="G2 Badge">
+            <span>#1 Best Customer Service Software | 2025</span>
+        </div>
+
+        <div class="container customer-container">
+            <h2 class="section-title">Service teams in every industry scale with Agentforce Service.</h2>
+
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <!-- Original Logos -->
+                    <div class="logo-card">
+                        <img src="../assets/service/logo-fisher-paykel.webp" alt="Fisher & Paykel">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/logo-simplyhealth.webp" alt="Simplyhealth">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/aaa-logo-1.webp" alt="AAA">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/service-customer-logowall-uber-eats.webp" alt="Uber Eats">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/service-customer-logowall-southwest-airlines.webp"
+                            alt="Southwest Airlines">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/Logo-320x180-SecretEscapes.webp" alt="Secret Escapes">
+                    </div>
+
+                    <!-- Duplicated Logos for Infinite Scroll -->
+                    <div class="logo-card">
+                        <img src="../assets/service/logo-fisher-paykel.webp" alt="Fisher & Paykel">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/logo-simplyhealth.webp" alt="Simplyhealth">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/aaa-logo-1.webp" alt="AAA">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/service-customer-logowall-uber-eats.webp" alt="Uber Eats">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/service-customer-logowall-southwest-airlines.webp"
+                            alt="Southwest Airlines">
+                    </div>
+                    <div class="logo-card">
+                        <img src="../assets/service/Logo-320x180-SecretEscapes.webp" alt="Secret Escapes">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-bg-layer">
+            <img src="../assets/service/Service-Logo-BG-2880x878.5.webp" alt="" role="presentation">
+        </div>
+
+        <div class="curve-separator">
+            <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,60 C480,0 960,0 1440,60 V60 H0 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Agentforce Service Section -->
+    <section class="about-agentforce">
+        <div class="container-fluid">
+            <div class="content-wrapper">
+                <h2 class="about-title">What is Agentforce Service?</h2>
+                <p class="about-desc">
+                    Agentforce Service is the complete platform that empowers your service teams to
+                    deliver seamless support across every channel – from the contact centre, to the field, to
+                    HR, and now IT Service. With humans and AI agents working together on one unified,
+                    metadata-based platform, you can transform every customer interaction into a
+                    personalised experience while driving efficiency.
+                </p>
+                <div class="about-buttons">
+                    <a href="#" class="btn-filled">Find out more</a>
+                    <a href="#" class="btn-outline">Explore AI</a>
+                </div>
+            </div>
+
+            <div class="business-help-title-wrapper">
+                <h2 class="business-help-title">How can Agentforce Service help your business?</h2>
+            </div>
+
+            <!-- Business Help Cards Grid -->
+            <div class="business-help-grid">
+                <!-- Card 1 -->
+                <div class="help-card">
+                    <div class="card-thumb">
+                        <img src="../assets/service/video1.webp" alt="Optimise Service Efficiency">
+                        <div class="play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Optimise Service Efficiency</h3>
+                        <p>Move beyond managing to optimising service team performance.</p>
+                        <a href="#" class="watch-link">Watch now</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="help-card">
+                    <div class="card-thumb">
+                        <img src="../assets/service/Video2.webp" alt="Enhance Service Rep Impact">
+                        <div class="play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Enhance Service Rep Impact</h3>
+                        <p>Transform service reps into strategic problem solvers.</p>
+                        <a href="#" class="watch-link">Watch now</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="help-card">
+                    <div class="card-thumb">
+                        <img src="../assets/service/Video3.webp" alt="Enrich Customer Experiences">
+                        <div class="play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Enrich Customer Experiences</h3>
+                        <p>Let your customers move from endless searching to proactive experiences.</p>
+                        <a href="#" class="watch-link">Watch now</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="help-card">
+                    <div class="card-thumb">
+                        <img src="../assets/service/Video4.webp" alt="Simplify Admin Setup">
+                        <div class="play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Simplify Admin Setup</h3>
+                        <p>Build an agentic enterprise, not just a tech slack.</p>
+                        <a href="#" class="watch-link">Watch now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover New Section -->
+    <section class="discover-new">
+        <div class="container-fluid">
+            <h2 class="section-title">Discover what's new in Service.</h2>
+
+            <div class="innovations-tabs">
+                <button class="tab-btn active" data-tab="innovation">Innovation</button>
+                <button class="tab-btn desktop-tab" data-tab="contents">Contents</button>
+                <button class="tab-btn desktop-tab" data-tab="events">Events</button>
+                <button class="tab-btn desktop-tab" data-tab="reports">Reports</button>
+
+                <div class="more-tabs-container">
+                    <button class="more-btn" id="moreTabsBtn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="more-tabs-dropdown" id="moreTabsDropdown">
+                        <button class="tab-btn" data-tab="contents">Contents</button>
+                        <button class="tab-btn" data-tab="events">Events</button>
+                        <button class="tab-btn" data-tab="reports">Reports</button>
+                    </div>
+                </div>
+                <div class="tab-line"></div>
+            </div>
+
+            <!-- Innovation Tab Content -->
+            <div class="news-grid tab-content active" id="innovation-content">
+                <!-- Card 1 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/Salesforce-Declares-End-to-Legacy-ITSM-Introduces-Agentforce-IT-Service-to-Enhance-Employee-Productivity-and-Reduce-IT-Support-Costs.webp"
+                            alt="Agentforce IT Service">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Product</span>
+                        <h3>Agentforce IT Service</h3>
+                        <p>Salesforce is excited to introduce Agentforce IT Service, an agent-first,
+                            conversational-first IT support product suite. This scalable, secure, and trusted offering
+                            lightens the load of IT teams by delivering instant, conversational resolutions for
+                            employees, directly where they work.</p>
+                        <a href="#" class="find-out-link">Find out more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/Agentforce-Service.webp" alt="Agentforce Service">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Product</span>
+                        <h3>Agentforce Service</h3>
+                        <p>Reinvent support with an AI-powered service platform that transforms every customer
+                            interaction into a proactive, personalised conversation.</p>
+                        <a href="#" class="find-out-link">Find out more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/Salesforce-Voice.webp" alt="Salesforce Voice">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Product</span>
+                        <h3>Salesforce Voice</h3>
+                        <p>Salesforce voice solutions connect your phone system to the rest of your customer experience
+                            – turning every conversation into data your reps can use.</p>
+                        <a href="#" class="find-out-link">Find out more <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contents Tab Content -->
+            <div class="news-grid contents-grid tab-content" id="contents-content">
+                <!-- Card 1 -->
+                <div class="news-card content-card">
+                    <div class="card-image curved-bottom">
+                        <img src="../assets/service/Serviceblazer-Hub-Hero-1534x840-1.webp" alt="Serviceblazer">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Serviceblazer</span>
+                        <h3>Join the #Serviceblazer movement.</h3>
+                        <p>Together, we are building the premier destination for service and field service
+                            professionals.</p>
+                        <a href="#" class="find-out-link">Get started <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="news-card content-card">
+                    <div class="card-image curved-bottom">
+                        <img src="../assets/service/Service-ResourceCard-1536x864-x2.webp" alt="Guided Tour">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Guided Tour</span>
+                        <h3>Take a tour of the #1 AI CRM for service.</h3>
+                        <p>Take a tour of Service Cloud and see how to drive productivity with trusted AI and data.</p>
+                        <a href="#" class="find-out-link">Take the tour <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="news-card content-card">
+                    <div class="card-image curved-bottom">
+                        <img src="../assets/service/FS-Promo-Card-Image_1200x675-1.webp" alt="Field Service Guide">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Guide</span>
+                        <h3>Discover the latest trends in field service at a pivotal moment of change.</h3>
+                        <p>Get insights from over 5,500 service and field service professionals worldwide.</p>
+                        <a href="#" class="find-out-link">Get the report <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="news-card content-card">
+                    <div class="card-image curved-bottom">
+                        <img src="../assets/service/svc-agentforce-digital-guide-og.webp" alt="Digital Labour Guide">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Guide</span>
+                        <h3>How to Prepare Your Service Team for Digital Labour</h3>
+                        <p>Read this practical guide to learn the best actions to take before launching Agentforce.</p>
+                        <a href="#" class="find-out-link">Get the guide <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Tab Content -->
+            <div class="news-grid tab-content" id="events-content">
+                <!-- Event 1 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/service-expert-series-1200x675-1.webp" alt="Service Expert Series">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Multiple events</span>
+                        <h3>Service Expert Series</h3>
+                        <p>Learn how Salesforce can boost resolution speed, enhance customer satisfaction (CSAT)
+                            and improve efficiency for service professionals.</p>
+                        <a href="#" class="find-out-link">Register now</a>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/houston.webp" alt="Agentforce World Tour Houston">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Houston</span>
+                        <h3>Agentforce World Tour Houston</h3>
+                        <p class="card-date">13th January 2026</p>
+                        <p>Explore expert-led learning, demos, and consultations featuring Dreamforce's boldest
+                            launches,
+                            including Agentforce 360, Slack, and Data 360, to unlock limitless productivity and
+                            customer success.</p>
+                        <a href="#" class="find-out-link">Find out more <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/boston.webp" alt="Agentforce World Tour Boston">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Boston</span>
+                        <h3>Agentforce World Tour Boston</h3>
+                        <p class="card-date">14 January 2026</p>
+                        <p>Explore expert-led learning, demos, and consultations featuring Dreamforce's boldest
+                            launches,
+                            including Agentforce 360, Slack, and Data 360, to unlock limitless productivity and
+                            customer success.</p>
+                        <a href="#" class="find-out-link">Find out more <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports Tab Content -->
+            <div class="news-grid reports-grid tab-content" id="reports-content">
+                <!-- Report 1 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/SVC_State-of-Service-7_OG_1200x675.webp"
+                            alt="The Seventh Edition State of Service Report">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Report</span>
+                        <h3>The Seventh Edition State of Service Report</h3>
+                        <p>Discover cutting edge trends and gain valuable insights from more than 6,500 service
+                            professionals. Explore their top priorities and see how they're innovating in the face of
+                            the industry's greatest challenges.</p>
+                        <a href="#" class="find-out-link btn-outline-blue">Download the report</a>
+                    </div>
+                </div>
+                <!-- Report 2 -->
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="../assets/service/service-ogimageforresterreport-1200x675-1.webp"
+                            alt="Service Cloud ROI Study">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Report</span>
+                        <h3>Service Cloud customers saw a 125% ROI.</h3>
+                        <p>Read the study and see how Service Cloud increased customersâ€™ ROI with a seamless agent
+                            experience. Customers were able to: Move up to 50% of cases to lower-cost digital channels,
+                            improve agent retention by 40% and reduce onboarding times by 30%!</p>
+                        <a href="#" class="find-out-link btn-outline-blue">Read the study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potential of Humans + AI Section -->
+    <section class="potential-section">
+        <div class="container-fluid">
+            <h2 class="section-title">Unlock the full potential of Humans + AI Agents for Service.</h2>
+
+            <div class="potential-grid">
+                <!-- Row 1: For Customers -->
+                <div class="potential-row">
+                    <div class="row-label">
+                        <h3>For Customers</h3>
+                    </div>
+                    <div class="row-cards">
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Service Portal</h3>
+                                <p>Deliver faster resolutions with 24/7 personalised support that gets customers the
+                                    answers they need, whenever they need them.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Digital Channels</h3>
+                                <p>Deliver personalised experiences across every service channels to increase customer
+                                    satisfaction.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Salesforce Voice</h3>
+                                <p>Speed up call resolution and increase customer satisfaction by uniting cloud
+                                    telephony and Salesforce CRM.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: For Service Reps -->
+                <div class="potential-row">
+                    <div class="row-label">
+                        <h3>For Service Reps</h3>
+                    </div>
+                    <div class="row-cards">
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Customer Service Manager</h3>
+                                <p>Drive efficiency and speed up case resolutions with centrally managed interactions,
+                                    cases, incidents, knowledge and assets.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Customer Service AI</h3>
+                                <p>Improve service team productivity and elevate customer experiences by integrating AI
+                                    directly into the flow of work.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Slack for Service</h3>
+                                <p>Save time by automatically bringing the right experts together to swarm on complex
+                                    issues in Slack.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: For Service Leaders -->
+                <div class="potential-row slider-row" data-slider="service-leaders">
+                    <div class="row-label">
+                        <h3>For Service Leaders</h3>
+                    </div>
+                    <div class="row-content">
+                        <div class="slider-wrapper">
+                            <button class="slider-arrow prev" disabled><i class="fas fa-chevron-left"></i></button>
+                            <div class="row-cards slider-track">
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Service Analytics</h3>
+                                        <p>Drive operational efficiency and productivity with data and AI-powered
+                                            insights built directly into your CRM.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Tableau</h3>
+                                        <p>Make faster decisions using intelligent recommendations and actionable
+                                            insights from Tableau.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Data 360</h3>
+                                        <p>Deliver proactive service with a single, dynamic view of every customer by
+                                            unifying all your data across your business.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>CRM Analytics</h3>
+                                        <p>Make faster decisions using intelligent recommendations and actionable
+                                            insights from Tableau.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="slider-progress-container">
+                            <div class="slider-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: For Admins -->
+                <div class="potential-row">
+                    <div class="row-label">
+                        <h3>For Admins</h3>
+                    </div>
+                    <div class="row-cards">
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Customer 360</h3>
+                                <p>Tailor experiences to every customer. Connect service to your sales, marketing,
+                                    commerce, and IT.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="potential-card">
+                            <div class="card-accent"></div>
+                            <div class="card-body">
+                                <h3>Integration</h3>
+                                <p>Connect data from any system and integrate apps instantly with MuleSoft.</p>
+                                <a href="#" class="card-link">Find out more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5: For Every Type of Service -->
+                <div class="potential-row slider-row" data-slider="every-service">
+                    <div class="row-label">
+                        <h3>For Every Type of Service</h3>
+                    </div>
+                    <div class="row-content">
+                        <div class="slider-wrapper">
+                            <button class="slider-arrow prev" disabled><i class="fas fa-chevron-left"></i></button>
+                            <div class="row-cards slider-track">
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Agentforce IT Service</h3>
+                                        <p>Delight employees and empower IT teams with agentic, data-driven,
+                                            conversational IT support on one unified platform.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Contact Centre</h3>
+                                        <p>Transform your contact centre into an omni-channel engagement centre with
+                                            every channel on one platform.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>HR Service</h3>
+                                        <p>Streamline HR support to reduce operating costs and keep employees happy.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                                <div class="potential-card">
+                                    <div class="card-accent"></div>
+                                    <div class="card-body">
+                                        <h3>Field Service</h3>
+                                        <p>Boost front-line workforce productivity with an end-to-end field service
+                                            solution.</p>
+                                        <a href="#" class="card-link">Find out more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="slider-progress-container">
+                            <div class="slider-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="potential-footer">
+                    <a href="#" class="btn-explore">Explore all service products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Layer with Einstein Graphic -->
+        <div class="potential-bg-layer">
+            <img src="../assets/service/product-portfolio-service-category-alt-background.webp" alt="">
+        </div>
+    </section>
+
+    <!-- Service Resources Section -->
+    <section class="service-resources">
+        <div class="container-fluid">
+            <div class="resources-grid">
+                <!-- Card 1: ROI Calculator -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/service/card-resources-service-roi-calculator-2-1.webp"
+                            alt="ROI Calculator">
+                    </div>
+                    <div class="card-content">
+                        <h2>How much can you save with Service Cloud?</h2>
+                        <p>Businesses have saved 27% in support costs with Service Cloud. Try our interactive Contact
+                            Centre or Field Service value calculator to see how much you can save.</p>
+                        <a href="#" class="btn-outline">Calculate your savings</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: AI CRM Tour -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/service/Service-ResourceCard-1536x864-x2.webp" alt="Service Cloud Tour">
+                    </div>
+                    <div class="card-content">
+                        <h2>Take a tour of the #1 AI CRM for service.</h2>
+                        <p>Find out how Service Cloud helps you deflect 30% of cases and deliver value across your
+                            customer journey with CRM + AI + Data + Trust.</p>
+                        <a href="#" class="btn-outline">Take the tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dreamforce Agentforce Service Promo Section -->
+    <section class="dreamforce-promo">
+        <div class="container-fluid">
+            <div class="promo-content-wrapper">
+                <div class="promo-text">
+                    <h2>Discover the power of agentic, proactive service.</h2>
+                    <p>Catch up on the top innovations in the Service Keynote from Dreamforce 2025. See how Agentforce
+                        Service is uniting humans and AI agents to turn service cases into personalised, timely
+                        resolutions that drive efficiency.</p>
+                    <div class="promo-buttons">
+                        <a href="#" class="btn-primary">Watch now <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="btn-secondary">Read the blog <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="promo-image">
+                    <img src="../assets/service/Dreamforce-Agentforce-Service.webp" alt="Agentforce Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starter CRM Section -->
+    <section class="starter-crm">
+        <div class="container-fluid">
+            <div class="starter-content-wrapper">
+                <div class="starter-text">
+                    <h2>Deliver faster service with our free CRM.</h2>
+                    <p>Resolve cases quickly and keep every customer conversation connected – all in one place, so
+                        nothing falls through the cracks.</p>
+                    <div class="starter-buttons">
+                        <a href="#" class="btn-primary">Find out more <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="btn-secondary-outline">Get free CRM</a>
+                    </div>
+                </div>
+                <div class="starter-image">
+                    <img src="../assets/service/starter-1400x1400-1.webp" alt="Free CRM">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTO Advisors Section -->
+    <section class="cto-advisors">
+        <div class="container-fluid">
+            <div class="cto-content-wrapper">
+                <div class="cto-image">
+                    <img src="../assets/service/success-ecosystem-min.webp" alt="Salesforce CTOs">
+                </div>
+                <div class="cto-text">
+                    <h2>Achieve your AI and data goals with Salesforce CTOs.</h2>
+                    <p>Trusted advisors with unmatched Salesforce experience and expertise, by your side.</p>
+                    <div class="cto-buttons">
+                        <a href="#" class="btn-primary">Learn more <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviceblazer Community Section -->
+    <section class="serviceblazer-community">
+        <div class="container-fluid">
+            <div class="community-content-wrapper">
+                <div class="community-text">
+                    <h2>Join the Serviceblazer Community.</h2>
+                    <p>Learn, connect, and grow with fellow service and field service professionals. Network and get
+                        answers in real time.</p>
+                    <div class="community-buttons">
+                        <a href="#" class="btn-primary">Join on Slack <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="community-video">
+                    <div class="video-wrapper">
+                        <img src="../assets/service/Serviceblazer-Hub-Hero-1534x840-1.webp"
+                            alt="Serviceblazer Community">
+                        <div class="video-play-overlay">
+                            <button class="play-button" aria-label="Play video">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="customer-testimonials">
+        <div class="container-fluid">
+            <div class="testimonials-grid">
+                <!-- Testimonial Card 1: Wiley -->
+                <div class="testimonial-card">
+                    <div class="card-logo">
+                        <img src="../assets/service/wiley-1024x1024-1.webp" alt="Wiley">
+                    </div>
+                    <div class="card-quote">
+                        <img src="../assets/service/Screenshot 2025-12-11 150755.png" alt="Quote" class="quote-icon">
+                        <h3>Agentforce outperforms our old chatbot by over 40%.</h3>
+                    </div>
+                    <div class="card-author">
+                        <p class="author-name">Kevin Quigley</p>
+                        <p class="author-title">Senior Manager, Process Transformation and Continuous Improvement, Wiley
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn-read-story">Read the story</a>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2: OpenTable -->
+                <div class="testimonial-card">
+                    <div class="card-logo">
+                        <img src="../assets/service/opentable-1024x1024-1.webp" alt="OpenTable">
+                    </div>
+                    <div class="card-quote">
+                        <img src="../assets/service/Screenshot 2025-12-11 150755.png" alt="Quote" class="quote-icon">
+                        <h3>Agentforce could be Salesforce's most powerful support tool yet.</h3>
+                    </div>
+                    <div class="card-author">
+                        <p class="author-name">Talia Leclere</p>
+                        <p class="author-title">Manager, Global Revenue Operations, OpenTable</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn-read-story">Read the story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trailhead Learning Section -->
+    <section class="trailhead-learning">
+        <div class="trailhead-bg-layer">
+            <img src="../assets/service/trailhead-mfe-background.webp" alt="Background">
+        </div>
+        <div class="container-fluid">
+            <div class="learning-header">
+                <h2>Learn more about customer service with free learning on Trailhead.</h2>
+            </div>
+            <div class="learning-grid">
+                <!-- Card 1: Customer Service Strategies -->
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <img src="../assets/service/848fa725e53b855d40ae23653af46cc9_badge.webp" alt="Strategies Badge">
+                    </div>
+                    <div class="card-content">
+                        <span class="module-tag">Module</span>
+                        <h3>Salesforce Customer Service Strategies</h3>
+                        <p>Learn how Salesforce uses Service Cloud to deliver great customer service.</p>
+                        <a href="#" class="btn-start-learning">Start learning</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Service Cloud Basics -->
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <img src="../assets/service/28b1ef147375f9e10c1c8f994b880ba5_badge.webp" alt="Basics Badge">
+                    </div>
+                    <div class="card-content">
+                        <span class="module-tag">Module</span>
+                        <h3>Service Cloud Basics</h3>
+                        <p>Supercharge your agents with omni-channel tools and an intelligent service platform.</p>
+                        <a href="#" class="btn-start-learning">Start learning</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Einstein Service Replies -->
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <img src="../assets/service/db2713f3bec133c96429ddc96373ed09_badge.webp" alt="Einstein Badge">
+                    </div>
+                    <div class="card-content">
+                        <span class="module-tag">Module</span>
+                        <h3>Einstein Service Replies</h3>
+                        <p>Use Einstein Service Replies to enhance service efficiency.</p>
+                        <a href="#" class="btn-start-learning">Start learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Trends Section -->
+    <section class="service-trends">
+        <div class="container-fluid">
+            <div class="trends-header">
+                <h2>Keep up with the latest service trends, insights, and conversations.</h2>
+            </div>
+            <div class="trends-grid">
+                <!-- Card 1: TEI Report -->
+                <div class="trend-card">
+                    <div class="card-image">
+                        <img src="../assets/service/card-resources-service-cloud-TEI-report.webp"
+                            alt="Service Cloud TEI Report">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag report">Report</span>
+                        <h3>Service Cloud TEI Report.</h3>
+                        <a href="#" class="item-link">Read the report</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: State of Service -->
+                <div class="trend-card">
+                    <div class="card-image">
+                        <img src="../assets/service/SVC_State-of-Service-7_OG_1200x675.webp"
+                            alt="State of Service Report">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag report">Report</span>
+                        <h3>The Sixth Edition State of Service Report.</h3>
+                        <a href="#" class="item-link">Get the report</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Guide -->
+                <div class="trend-card">
+                    <div class="card-image">
+                        <img src="../assets/service/svc-agentforce-digital-guide-og.webp" alt="AI and Data Guide">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag guide">Guide</span>
+                        <h3>Learn how over 5,500 service and field professionals are meeting today's challenges.</h3>
+                        <a href="#" class="item-link">Get the guide</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Field Service News -->
+                <div class="trend-card">
+                    <div class="card-image">
+                        <img src="../assets/service/FS-Promo-Card-Image_1200x675-1.webp" alt="Field Service News">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag news">News</span>
+                        <h3>Salesforce Field Service is now available on Government Cloud.</h3>
+                        <a href="#" class="item-link">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="trends-footer">
+                <a href="#" class="btn-secondary-outline">See all resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Step CTA Section -->
+    <section class="next-step-cta">
+        <div class="cta-bg-layer">
+            <img src="../assets/service/contact-us-footer-service.webp" alt="Background">
+        </div>
+        <div class="container-fluid">
+            <div class="cta-header">
+                <h2>Ready to take the next step with the service solution built on the world's #1 CRM?</h2>
+            </div>
+            <div class="cta-cards-grid">
+                <!-- Card 1: Trial -->
+                <div class="cta-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Start your trial.</h3>
+                    <p>Try Service Cloud free for 30 days. No credit card, no installations.</p>
+                    <a href="#">Try for free</a>
+                </div>
+
+                <!-- Card 2: Expert -->
+                <div class="cta-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Talk to an expert.</h3>
+                    <p>Tell us a bit more so the right person can keep in touch faster.</p>
+                    <a href="#">Request a call</a>
+                </div>
+
+                <!-- Card 3: Updates -->
+                <div class="cta-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Stay up to date.</h3>
+                    <p>Get the latest research, industry insights and product news delivered straight to your inbox.</p>
+                    <a href="#">Sign up for newsletter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container-fluid">
+            <h2 class="faq-heading">Salesforce Customer Service Software FAQs</h2>
+
+            <div class="faq-tabs">
+                <button class="faq-tab active" data-tab="cust-service">Customer Service & Support</button>
+                <button class="faq-tab" data-tab="knowledge-mgmt">Knowledge Management</button>
+                <button class="faq-tab" data-tab="incident-mgmt">Incident Management</button>
+            </div>
+
+            <div class="faq-container active" id="cust-service-faq">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is customer service?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Customer service</a> is the support you offer your customers – both before
+                                and after they buy and use your products or services – that helps them have an easy,
+                                enjoyable experience with your brand.</p>
+                            <p><a href="#">Customer service is important</a> as it helps build and maintain positive
+                                relationships with customers, leading to higher satisfaction, loyalty, and ultimately,
+                                achieving <a href="#">customer service goals</a>.</p>
+                            <p>Check out our <a href="#">tips</a> & <a href="#">best practices</a> for <a
+                                    href="#">improving customer service</a> in your organisation. Or learn about
+                                important <a href="#">customer service strategies</a> to help you stay ahead of emerging
+                                service <a href="#">trends</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is customer service and support software?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Customer service and support software</a> is a solution that helps businesses
+                                manage <a href="#">digital customer service</a> interactions across channels, from
+                                self-service and phone to messaging and email. It streamlines customer support processes
+                                and provides features like case management, <a href="#">digital engagement</a>, <a
+                                    href="#">knowledge management</a> and collaboration to help companies solve customer
+                                enquiries faster and increase customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Why is customer service and support software so important?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Customer service</a> and support software is crucial for businesses because
+                                it enables them to deliver more efficient support to their customers, leading to
+                                increased satisfaction and loyalty. It helps manage support enquiries and track and
+                                resolve issues promptly and it provides valuable insights to enhance overall customer
+                                experiences, ultimately driving business growth and success.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the benefits of customer service and support software?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Customer service and support software software offers benefits such as improved
+                                efficiency in handling customer enquiries, streamlined communication across multiple
+                                channels, increased customer satisfaction, faster issue resolution, actionable insights
+                                and the ability to scale and adapt to evolving customer needs – all to drive more
+                                customer loyalty and better return on investment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I choose the right customer service solution?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>When choosing a customer service solution, consider factors like your business needs,
+                                scalability, ease of use and integration capabilities. Assess features such as case
+                                management, digital engagement, self-service portals, automation and AI. Evaluate
+                                pricing models and <a href="#">success plans</a>, <a href="#">trial different
+                                    options</a> and prioritise customer service solutions that align with your specific
+                                requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does Salesforce customer service software cost?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Explore Service Cloud pricing and find the right solutions for your business by visiting
+                                the <a href="#">pricing page</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is customer support?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Customer support</a> refers to the people and interactions that help
+                                customers who use a business's service or product. Help can include answering a
+                                question, providing training or installation and of course, troubleshooting an issue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-container" id="knowledge-mgmt-faq" style="display:none;">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is knowledge management?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Knowledge management</a> means capturing, organising and distributing
+                                information that is critical to providing customer support in a centralised digital
+                                library that agents, field service technicians and customers can access from anywhere
+                                for fast, quality service. Learn how a <a href="#">knowledge management system</a> can
+                                help your organisation manage this information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you create a knowledge base?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Creating a knowledge base</a> involves gathering and organising information,
+                                setting up a user-friendly platform, categorising content, ensuring accuracy and
+                                relevance and regularly updating and maintaining the information to keep it current and
+                                useful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-container" id="incident-mgmt-faq" style="display:none;">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is incident management?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Incident management</a> is a structured process used by customer support and
+                                operations teams to respond to and resolve issues that disrupt the normal functioning of
+                                services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Why is customer experience important?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><a href="#">Customer experience</a> is important as it directly influences <a
+                                    href="#">customer satisfaction</a>, loyalty and advocacy, which in turn can lead to
+                                increased customer retention, positive word-of-mouth and higher revenue for a business.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is a support ticketing system?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>A <a href="#">support ticketing system</a> is a software tool that logs, organises and
+                                tracks customer enquiries and issues to ensure that they are resolved efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container sf-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" class="footer-logo">
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-square-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-square-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="footer-phone">Call us at 1800-420-7332</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>New to Salesforce?</h4>
+                    <ul>
+                        <li><a href="#">Why Salesforce</a></li>
+                        <li><a href="#">What is CRM?</a></li>
+                        <li><a href="#">Explore All Products</a></li>
+                        <li><a href="#">SaaS</a></li>
+                        <li><a href="#">Customer Success</a></li>
+                        <li><a href="#">Product Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>About Salesforce</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Blog <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Security and Performance <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce.org <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Best CRM Software</a></li>
+                        <li><a href="#">Sustainability <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Legal <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Give us your Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Popular Links</h4>
+                    <ul>
+                        <li><a href="#">New Release Features <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce Mobile App</a></li>
+                        <li><a href="#">Business App Store <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Dreamforce <img src="../assets/backgrounds/next-page.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">CRM Software</a></li>
+                        <li><a href="#">Salesforce Plus <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce for startups <img src="../assets/backgrounds/next-page.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- end of footer-top container -->
+        <div class="footer-bottom">
+            <div class="container sf-container footer-bottom-content">
+                <div class="footer-bottom-links">
+                    <div class="globe-selector">
+                        <img src="../assets/backgrounds/icons8-worldwide-64.png" alt="World">
+                        <span>Worldwide</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="legal-list">
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Trust</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">
+                                <img class="footer-link-icon footer-link-icon_left"
+                                    src="../assets/small-business/icon-cpra.svg"> Your Privacy Choices
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Â© Copyright 2025 Krishna, Inc. <a href="#" style="text-decoration:underline; color:inherit;">All
+                            rights reserved</a>. Various
+                        trademarks held by their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Products Offcanvas Menu -->
+    <div class="offcanvas-overlay" id="productsOffcanvasOverlay"></div>
+    <div class="offcanvas-menu" id="productsOffcanvas">
+        <div class="offcanvas-header">
+            <button class="back-to-menu-btn" id="backToMainFromProducts">
+                <i class="fa-solid fa-chevron-left"></i> Back
+            </button>
+            <h2>Products</h2>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-content">
+                <!-- Left Side - Product Categories -->
+                <div class="products-categories">
+                    <a href="agentforce.html" class="category-item" data-category="agentforce"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-agentforce.svg" alt="Agentforce" class="product-icon">
+                        <span>Agentforce</span>
+                    </a>
+                    <a href="datacloud.html" class="category-item" data-category="data-cloud"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-data-cloud.svg" alt="Data Cloud" class="product-icon">
+                        <span>Data Cloud</span>
+                    </a>
+                    <a href="agentforce_ai_app.html" class="category-item" data-category="agentforce-ai"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-low-code.svg" alt="App Development" class="product-icon">
+                        <span>Agentforce & AI App Development</span>
+                    </a>
+                    <a href="products.html" class="category-item" data-category="overview">
+                        <img src="../assets/products/icon-customer360.svg" alt="Overview" class="product-icon">
+                        <span>Products Overview</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="small-business.html" class="category-item" data-category="smb"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-small-business.svg" alt="Small Business" class="product-icon">
+                        <span>Small Business</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="artificial-intelligence.html" class="category-item" data-category="ai"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-ai.svg" alt="Artificial Intelligence" class="product-icon">
+                        <span>Artificial Intelligence</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="sales.html" class="category-item" data-category="sales"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-sales.svg" alt="Sales" class="product-icon">
+                        <span>Sales</span>
+                    </a>
+                    <a href="service.html" class="category-item active-category" data-category="service"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-service.svg" alt="Service" class="product-icon">
+                        <span>Service</span>
+                    </a>
+                    <a href="marketing.html" class="category-item" data-category="marketing"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-marketing.svg" alt="Marketing" class="product-icon">
+                        <span>Marketing</span>
+                    </a>
+                    <a href="commerce.html" class="category-item" data-category="commerce"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-commerce.svg" alt="Commerce" class="product-icon">
+                        <span>Commerce</span>
+                    </a>
+                    <a href="tableau.html" class="category-item" data-category="tableau"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-tableau.svg" alt="Tableau" class="product-icon">
+                        <span>Tableau</span>
+                    </a>
+                    <a href="mulesoft.html" class="category-item" data-category="mulesoft">
+                        <img src="../assets/products/icon-mulesoft.svg" alt="MuleSoft" class="product-icon">
+                        <span>MuleSoft</span>
+                    </a>
+                    <a href="slack.html" class="category-item" data-category="slack"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-slack.svg" alt="Slack" class="product-icon">
+                        <span>Slack</span>
+                    </a>
+                </div>
+
+                <!-- Right Side - Featured Product & Popular Links -->
+                <div class="products-featured" id="featured-overview">
+                    <div class="featured-product">
+                        <div class="featured-img">
+                            <img src="../assets/backgrounds/icon-360.webp" alt="">
+                        </div>
+                        <h3>Explore Customer 360.</h3>
+                        <p>Unite your teams around your customer with shared data and integrated tools to drive growth
+                            and lower costs.</p>
+                        <a href="#" class="btn-featured">See all Salesforce products</a>
+
+                        <!-- Decorative Images -->
+                        <img src="../assets/backgrounds/products-promo-sky-desktop.webp" alt=""
+                            class="featured-decoration" aria-hidden="true">
+
+                        <!-- Customer 360 Mascot -->
+                        <img src="../assets/backgrounds/360-background.webp" alt="Customer 360" class="featured-mascot">
+                    </div>
+                </div>
+
+                <div class="products-featured" id="featured-smb" style="display: none;">
+                    <div class="featured-product smb-featured">
+                        <div class="smb-content-panel">
+                            <div class="smb-header">
+                                <span class="smb-category-label">Small Business</span>
+                                <h3 class="smb-title">Salesforce for SMBs <br>Now at Special Pricing</h3>
+                            </div>
+                            <div class="smb-description">
+                                <p>For the first time, Salesforce India is making it easier than ever for Indian SMBs to
+                                    compete – and win.</p>
+                                <p>For a limited time, get <strong>40% off our flagship solutions</strong> – Sales
+                                    Cloud, Service Cloud, and Marketing Cloud – along with fast-track implementation
+                                    packages, to go live in just 2 weeks.</p>
+                            </div>
+                            <div class="smb-actions">
+                                <a href="#" class="btn-watch-demo">Watch Customer Demos</a>
+                                <a href="#" class="link-all-products">See all small business products</a>
+                            </div>
+                        </div>
+                        <div class="smb-visual-panel">
+                            <div class="smb-video-card">
+                                <div class="video-overlay">
+                                    <span class="offer-text">Ready to claim your 40% OFF?</span>
+                                    <div class="play-btn-circle">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                </div>
+                                <img src="https://wp.salesforce.com/en-in/wp-content/uploads/sites/18/2023/12/php-ch-smb-video.jpg?w=1024"
+                                    alt="Small Business Offer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-featured" id="featured-ai" style="display: none;">
+                    <div class="featured-product ai-featured">
+                        <div class="ai-content-panel">
+                            <div class="ai-header">
+                                <span class="ai-category-label">Artificial Intelligence</span>
+                                <h3 class="ai-title">Meet Agentforce: Your <br>Workforce Without Limits</h3>
+                            </div>
+                            <div class="ai-description">
+                                <p>Augment every employee and serve customers 24/7 with agents that assist and take
+                                    action autonomously in sales, service, marketing, and more.</p>
+                                <p>Built on the trusted Salesforce platform, our AI helps you build, customize, and
+                                    scale fast with low-code tools.</p>
+                            </div>
+                            <div class="ai-actions">
+                                <a href="artificial-intelligence.html" class="btn-watch-demo">Explore AI</a>
+                                <a href="agentforce_ai_app.html" class="link-all-products">Learn about AI
+                                    Development</a>
+                            </div>
+                        </div>
+                        <div class="ai-visual-panel">
+                            <div class="ai-image-wrapper">
+                                <img src="../assets/Agentforce/AFDC-Overview-Marquee-Hero_617e34.webp"
+                                    alt="Agentforce AI">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-link">
+                    <a href="#">See all product pricing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>

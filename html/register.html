@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salesforce Webinars - AI and the Future of Work">
+    <title>Salesforce Webinars</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+    <link rel="stylesheet" href="../css/_register.scss"> <!-- New register styles -->
+</head>
+
+<body class="register-page">
+
+    <!-- Simple Header - Content moved to main body as requested -->
+    <header class="register-header header" style="display:none;">
+        <div class="container-fluid">
+            <div class="header-content">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="register-main">
+        <div class="container">
+            <div class="register-layout">
+                <!-- Left Column: Visual & Content -->
+                <div class="content-col">
+                    <div class="logo-area mb-4">
+                        <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" class="sf-logo">
+                        <div class="header-text">
+                            <h1>Salesforce Webinars</h1>
+                            <p>Questions? Call us at 1-800-667-6389</p>
+                        </div>
+                    </div>
+
+                    <div class="webinar-card">
+                        <div class="webinar-visual">
+                            <img src="../assets/register/5027970.jpg" alt="Webinar Speakers" class="img-fluid">
+                        </div>
+
+                        <div class="webinar-info">
+                            <h2>AI and the Future of Work: What’s Changing and How to Prepare</h2>
+                            <p class="subtitle">On-Demand Webinar</p>
+
+                            <div class="description">
+                                <p class="mb-4">AI is transforming how work gets done - reshaping roles, redefining
+                                    required skills,
+                                    and challenging traditional workforce models. But staying competitive requires more
+                                    than adopting the latest tools. It takes a clear strategy that balances automation
+                                    with human expertise and prepares your teams for what's next.</p>
+
+                                <p class="mb-4">Join Usman Nasir, VP, Agentforce Engineer, and Joahna Kuiper, RVP,
+                                    Responsible AI Agentforce Engineer, as they break down what the rise of AI really
+                                    means for your workforce - and how leading organizations are taking action.</p>
+
+                                <p class="mb-2">In this session, you'll learn:</p>
+                                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 24px;">
+                                    <li class="mb-1">How AI is influencing the evolution of jobs, teams, and core
+                                        business functions</li>
+                                    <li class="mb-1">Why striking the right balance between AI and human expertise is
+                                        key</li>
+                                    <li class="mb-1">Practical steps to help your workforce adapt, upskill, and stay
+                                        ahead</li>
+                                </ul>
+
+                                <p>You'll leave with a clearer view of what's changing and how to lead your organization
+                                    through it with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Registration Form -->
+                <div class="form-col">
+                    <h3>Access the webinar now.</h3>
+                    <p>Please fill out all fields.</p>
+
+                    <form class="register-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label visually-hidden">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label visually-hidden">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="jobTitle" class="form-label visually-hidden">Job title</label>
+                            <input type="text" class="form-control" id="jobTitle" placeholder="Job title" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label visually-hidden">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="company" class="form-label visually-hidden">Company</label>
+                                <input type="text" class="form-control" id="company" placeholder="Company" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="employees" class="form-label visually-hidden">Employees</label>
+                                <select class="form-select" id="employees" required>
+                                    <option value="" selected disabled>Employees</option>
+                                    <option value="1-20">1-20</option>
+                                    <option value="21-200">21-200</option>
+                                    <option value="201-1000">201-1000</option>
+                                    <option value="1000+">1000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label visually-hidden">Phone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="country" class="form-label visually-hidden">Country/Region</label>
+                                <div class="select-wrapper">
+                                    <label class="floating-label"
+                                        style="font-size: 11px; color: #555; position: absolute; top: 4px; left: 12px; z-index: 2;">Country/Region</label>
+                                    <select class="form-select pt-3" id="country" required style="padding-top: 20px;">
+                                        <option value="India" selected>India</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-disclaimer mb-4">
+                            <p>By registering, you confirm that you have read and agree to the <a href="#">Program Terms
+                                    for Events</a>. Salesforce values your privacy. To learn more, visit our <a
+                                    href="#">Privacy Statement</a>.</p>
+                            <p>This session will be recorded. If applicable, recordings may be shared with the
+                                participating partner/sponsor.</p>
+                            <p>Your entered name(s) may be displayed to other participants during this virtual event.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 submit-btn">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Truste Logo (Fixed Position) -->
+    <div class="truste-logo-fixed">
+        <img src="../assets/register/seal.svg" alt="TRUSTe Verified Privacy">
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <div class="footer-bottom-links">
+                    <div class="globe-selector">
+                        <img src="../assets/backgrounds/icons8-worldwide-64.png" alt="World">
+                        <span>Worldwide</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="legal-list">
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Trust</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">
+                                <img class="footer-link-icon footer-link-icon_left"
+                                    src="../assets/small-business/icon-cpra.svg"> Your Privacy Choices
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>© Copyright 2025 Krishna, Inc. <a href="#" style="text-decoration:underline; color:inherit;">All
+                            rights reserved</a>. Various
+                        trademarks held by their respective owners.Salesforce, Inc. Salesforce Tower, 415 Mission
+                        Street, 3rd Floor, San Francisco, CA 94105, United States</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+<!-- JavaScript -->
+<script type="module" src="../js/main.js"></script>
+</body>
+
+</html>

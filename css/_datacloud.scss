@@ -1,0 +1,3480 @@
+@import 'variable';
+
+.data360-body {
+    background-color: #f4f6f9;
+    padding-top: 65px; // Default for large screens
+
+    @include desktop {
+        padding-top: 130px; // Perfectly flush with bottom of 121px header + 61px sub-nav
+    }
+
+    @include small-desktop {
+        padding-top: 195px;
+    }
+
+    @include mobile {
+        padding-top: 190px;
+    }
+}
+
+.data360-nav {
+    background-color: #ffffff;
+    height: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    z-index: 2500; // Increased to be above banner but below main header
+
+    @include desktop {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 65px; // Aligned with the compact single-row header at 1200px
+        padding: 0 20px;
+        flex-wrap: wrap;
+        height: auto;
+
+        &.active {
+            .data360-nav-logo .nav-toggle-icon {
+                transform: rotate(180deg);
+            }
+
+            .data360-nav-links {
+                display: flex !important;
+            }
+        }
+    }
+
+    @include small-desktop {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 140px;
+    }
+
+    @include big-tab {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 135px;
+    }
+
+    @include small-tab {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 135px;
+    }
+
+    @include mobile {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 130px;
+        padding: 8px 15px;
+        flex-wrap: wrap;
+    }
+
+    @include mid-mobile {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 130px;
+        padding: 8px 12px;
+    }
+
+    @include small-mobile {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 130px;
+        padding: 8px 12px;
+    }
+
+    @include mid-small-mobile {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 125px;
+        padding: 6px 10px;
+    }
+
+    @include too-small-mobile {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 125px;
+        padding: 6px 10px;
+    }
+
+    .data360-nav-logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+
+        @include desktop {
+            width: 100%;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #032d60;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            @include desktop {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @include mobile {
+                font-size: 20px;
+            }
+
+            @include mid-mobile {
+                font-size: 19px;
+            }
+
+            @include small-mobile {
+                font-size: 18px;
+            }
+
+            @include too-small-mobile {
+                font-size: 17px;
+            }
+
+            .nav-toggle-icon {
+                display: none;
+                margin-left: 10px;
+                transition: transform 0.3s;
+                font-size: 18px; // Matching screenshot depth
+                pointer-events: none; // Ensure it doesn't block clicks on the toggle
+
+                @include desktop {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+
+    .data360-nav-links {
+        display: flex;
+        gap: 45px;
+        margin-left: 80px;
+        flex: 1;
+        align-items: center;
+
+        @include large-desktop {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+
+        @include desktop {
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            margin-left: 0;
+            display: none; // Hidden by default
+            flex: none; // Don't use flex-grow in column mode
+            background: #fff;
+            padding: 0;
+
+            // Show when parent nav is active
+            .data360-nav.active & {
+                display: flex !important;
+            }
+
+            // Allow scrolling within links, keeping main nav header visible
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+
+        @include small-desktop {
+            margin-left: 20px;
+            gap: 15px;
+        }
+
+
+        .data360-nav-item {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            @include desktop {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include small-desktop {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include big-tab {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include small-tab {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include mobile {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include mid-mobile {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include small-mobile {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include mid-small-mobile {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            @include too-small-mobile {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+
+            // Desktop Hover State
+            @include min-desktop {
+                &:hover {
+                    .data360-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                }
+            }
+
+            // Mobile/Tablet Active State
+            &.active {
+                .data360-nav-link {
+                    color: #0176d3;
+
+                    .nav-icon-small {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .data360-dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(-50%) translateY(0);
+
+                    @include desktop {
+                        position: static;
+                        transform: none;
+                        display: block;
+                        max-height: 1000px;
+                        opacity: 1;
+                        visibility: visible;
+                        width: 100%;
+                        padding-left: 24px;
+                        padding-right: 24px;
+                    }
+                }
+            }
+        }
+
+        .data360-nav-link {
+            text-decoration: none;
+            color: #032d60;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            outline: none;
+
+            @include desktop {
+                font-size: 14px;
+                padding: 12px 0; // Better tap target for mobile
+                width: 100%; // Ensure it takes full width for clicking
+            }
+
+            &.active {
+                color: #0176d3;
+            }
+
+            i {
+                font-size: 10px;
+                margin-top: 1px;
+                transition: transform 0.3s ease;
+                pointer-events: none; // Ensure clicks pass to the link
+            }
+        }
+
+        .data360-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 24px;
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+
+            @include desktop {
+                position: absolute; // Default closed
+                opacity: 0;
+                visibility: hidden;
+                display: none; // Hide from flow
+                width: 100%;
+                min-width: 0;
+                left: 0;
+                box-shadow: none;
+                padding: 15px 20px;
+                border-radius: 0;
+                background: #fcfcfc;
+                border-bottom: 1px solid #eee;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid white;
+            }
+
+            &.jumbo {
+                min-width: 650px;
+
+                @include desktop {
+                    min-width: 0;
+                    width: 100%;
+                }
+            }
+
+            .mobile-back-btn {
+                display: none;
+                background: none;
+                border: none;
+                color: #0176d3;
+                font-size: 16px;
+                font-weight: 700;
+                padding: 10px 0;
+                margin-bottom: 15px;
+                cursor: pointer;
+                align-items: center;
+                gap: 8px;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+
+                @include desktop {
+                    display: flex;
+                }
+
+                i {
+                    font-size: 12px;
+                }
+            }
+
+            .dropdown-content {
+                display: flex;
+                gap: 40px;
+
+                // Force single column for all mobile breakpoints
+                @include desktop {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include small-desktop {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include big-tab {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include small-tab {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include mid-mobile {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include small-mobile {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include mid-small-mobile {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                @include too-small-mobile {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                &.single {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .dropdown-link {
+                    text-decoration: none !important;
+                    color: #032d60;
+                    font-size: 16px;
+                    transition: color 0.2s;
+                    display: inline-block;
+
+                    @include desktop {
+                        font-size: 14px;
+                    }
+
+                    &.bold {
+                        font-weight: 700;
+                        text-decoration: none !important;
+                    }
+
+                    &:hover {
+                        color: #0176d3;
+                        text-decoration: none !important;
+                    }
+                }
+
+                .dropdown-column {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    &.divider {
+                        border-left: 1px solid #f0f0f0;
+                        padding-left: 40px;
+
+                        @include desktop {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include small-desktop {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include big-tab {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include small-tab {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include mobile {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include mid-mobile {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include small-mobile {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include mid-small-mobile {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+
+                        @include too-small-mobile {
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 0;
+                        }
+                    }
+
+                    .column-label {
+                        font-size: 13px;
+                        color: #706e6b;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                        text-transform: none;
+                    }
+
+                    .dropdown-feature {
+                        margin-bottom: 8px;
+
+                        // Responsive overrides for "Link-like" appearance
+                        @include desktop {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include small-desktop {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include big-tab {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include small-tab {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include mobile {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include mid-mobile {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include small-mobile {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include mid-small-mobile {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        @include too-small-mobile {
+                            margin-bottom: 0;
+                            padding-bottom: 24px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+
+                        h3 {
+                            font-size: 16px;
+                            color: #032d60;
+                            font-weight: 700;
+                            margin: 0 0 5px 0;
+
+                            // Blue link color on mobile
+                            @include desktop {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include small-desktop {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include big-tab {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include small-tab {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include mobile {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include mid-mobile {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include small-mobile {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include mid-small-mobile {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+
+                            @include too-small-mobile {
+                                color: #0176d3;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        p {
+                            font-size: 14px;
+                            color: #444;
+                            margin: 0;
+                            line-height: 1.4;
+                            font-weight: 400;
+                            white-space: normal;
+                            max-width: 100%;
+
+                            // Hide paragraph on mobile as requested
+                            @include desktop {
+                                display: none;
+                            }
+
+                            @include small-desktop {
+                                display: none;
+                            }
+
+                            @include big-tab {
+                                display: none;
+                            }
+
+                            @include small-tab {
+                                display: none;
+                            }
+
+                            @include mobile {
+                                display: none;
+                            }
+
+                            @include mid-mobile {
+                                display: none;
+                            }
+
+                            @include small-mobile {
+                                display: none;
+                            }
+
+                            @include mid-small-mobile {
+                                display: none;
+                            }
+
+                            @include too-small-mobile {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-talk-expert {
+        margin-left: auto;
+        background-color: #0176d3;
+        color: white;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s;
+
+        @include desktop {
+            width: calc(100% - 30px);
+            margin: 15px auto;
+            display: block;
+            text-align: center;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+
+        @include small-tab {
+            margin: 15px auto;
+        }
+
+        @include mobile {
+            padding: 12px 20px;
+            font-size: 14px;
+            width: calc(100% - 30px);
+            margin: 15px auto;
+        }
+
+        &:hover {
+            background-color: #015ba1;
+        }
+    }
+}
+
+
+.data360-banner-dark {
+    background-color: #051c37;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 60px;
+
+    @include desktop {
+        margin-top: -5px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    p {
+        margin: 0;
+
+        .data360-banner-link {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+            margin-left: 5px;
+            font-size: 16px;
+
+            @include mobile {
+                font-size: 13px;
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
+            &:hover {
+                color: #c9c9c9;
+                text-decoration: none;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+            margin-left: 5px;
+
+            @include mobile {
+                font-size: 13px;
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
+            &:hover {
+                color: #c9c9c9;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.data360-banner-secondary {
+    background-color: #051c37;
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    margin-top: 2px;
+    font-size: 19px;
+    font-weight: 600;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include mobile {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+    p {
+        margin: 0;
+
+        a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 5px;
+            font-weight: normal;
+
+            @include mobile {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
+            &:hover {
+                color: #c9c9c9;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+.data360-hero-section {
+    background: radial-gradient(circle at 50% 0%, #1a3aff 0%, #0b1ba1 60%);
+    color: white;
+    padding: 60px 0 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include desktop {
+        padding: 40px 0 0;
+    }
+
+    @include mobile {
+        padding: 30px 15px 0;
+    }
+
+    .hero-content-centered {
+        max-width: 810px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+
+        @include small-tab {
+            gap: 20px;
+        }
+
+        .pill-logo {
+            background-color: white;
+            border-radius: 50px;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+            @include mobile {
+                padding: 8px 16px;
+            }
+
+            .pill-img {
+                height: 48px;
+                width: auto;
+
+                @include mobile {
+                    height: 32px;
+                }
+            }
+
+            .pill-text {
+                color: #032d60;
+                font-size: 18px;
+                font-weight: 700;
+
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 53px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0;
+
+            @include desktop {
+                font-size: 44px;
+            }
+
+            @include small-tab {
+                font-size: 36px;
+            }
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        h2 {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            opacity: 0.9;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+
+            @include desktop {
+                font-size: 18px;
+            }
+
+            @include small-tab {
+                font-size: 16px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+
+            @include mobile {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            a {
+                display: inline-block;
+                padding: 12px 28px;
+                border-radius: 4px;
+                font-weight: 700;
+                text-decoration: none;
+                font-size: 16px;
+                transition: all 0.2s;
+
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+            }
+
+            .btn-hero-primary {
+                background-color: #3b6bef;
+                color: white;
+
+                &:hover {
+                    background-color: #2a56d1;
+                }
+            }
+
+            .btn-hero-secondary {
+                background-color: white;
+                color: #0b1ba1;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+        }
+    }
+
+    .diagram-image-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 60px;
+
+        @include desktop {
+            max-width: 90%;
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+
+        .hero-diagram-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+    }
+}
+
+.data360-stories-section {
+    background: radial-gradient(circle at 50% 0%, #1a3aff 0%, #0b1ba1 60%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-top: 40px;
+
+    @include desktop {
+        padding-top: 30px;
+    }
+
+    @include mobile {
+        padding-top: 20px;
+    }
+
+    .hero-stories-section {
+        width: 100%;
+        padding-bottom: 200px;
+
+        @include desktop {
+            padding-bottom: 150px;
+        }
+
+        @include small-tab {
+            padding-bottom: 100px;
+        }
+
+        @include mobile {
+            padding-bottom: 80px;
+        }
+
+        .stories-headline {
+            font-size: 42px;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.1;
+
+            @include desktop {
+                font-size: 36px;
+                padding: 0 40px;
+            }
+
+            @include small-tab {
+                font-size: 28px;
+                padding: 0 20px;
+            }
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        .btn-see-stories {
+            background: white;
+            color: #0176d3;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 60px;
+            transition: background 0.2s;
+
+            @include mobile {
+                padding: 10px 20px;
+                margin-bottom: 40px;
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: #1e0d31;
+                color: white;
+            }
+        }
+
+        .stories-carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            overflow: hidden;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+
+            @include mobile {
+                padding: 0 20px;
+                gap: 10px;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 50px;
+                z-index: 2;
+                pointer-events: none;
+
+                @include mobile {
+                    width: 30px;
+                }
+            }
+
+            &::before {
+                left: 0;
+                background: linear-gradient(90deg, #0b1ba1 0%, transparent 100%);
+            }
+
+            &::after {
+                right: 0;
+                background: linear-gradient(-90deg, #0b1ba1 0%, transparent 100%);
+            }
+
+            .marquee-pause-btn {
+                position: absolute;
+                right: 10px;
+                background: transparent;
+                border: none;
+                color: white;
+                cursor: pointer;
+                z-index: 10;
+                opacity: 0.7;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .logos-track {
+                display: flex;
+                gap: 60px;
+                animation: scrollLogos 40s linear infinite;
+
+                @include desktop {
+                    gap: 40px;
+                }
+
+                @include small-tab {
+                    gap: 30px;
+                }
+
+                @include mobile {
+                    gap: 20px;
+                }
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+                .logo-box {
+                    background: white;
+                    border-radius: 12px;
+                    width: 200px;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px;
+                    flex-shrink: 0;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+                    @include small-tab {
+                        width: 160px;
+                        height: 80px;
+                        padding: 10px;
+                    }
+
+                    @include mobile {
+                        width: 120px;
+                        height: 60px;
+                        padding: 8px;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: auto;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-curve {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-height: 80px;
+            display: block;
+
+            @include mobile {
+                max-height: 40px;
+            }
+        }
+    }
+}
+
+// Keyframes for Marquee
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.floating-chat-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1050;
+
+    button {
+        background-color: #0176d3;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        i {
+            font-size: 18px;
+        }
+    }
+}
+
+// Discover Section Styles
+.data360-discover-section {
+    background-color: $background-color;
+    padding: 80px 0;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+    overflow: hidden;
+
+    @include desktop {
+        padding: 60px 0;
+    }
+
+    @include small-tab {
+        padding: 50px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    .discover-container {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 24px;
+
+        @include mid-mobile {
+            padding: 0 16px;
+        }
+
+        .discover-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+
+            @include small-tab {
+                margin-bottom: 40px;
+            }
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                color: $sky-blue;
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 24px;
+                line-height: 1.1;
+
+                @include desktop {
+                    font-size: 36px;
+                }
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 26px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                color: #444;
+                line-height: 1.5;
+
+                @include small-tab {
+                    font-size: 16px;
+                }
+
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .discover-carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .discover-track-container {
+                overflow: hidden;
+                width: 100%;
+                margin: 0 -12px;
+                padding: 10px 12px;
+            }
+
+            .discover-track {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+
+            .discover-card {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+                padding: 0 12px;
+                min-height: 600px;
+                box-sizing: border-box;
+
+                @include desktop {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+
+                @include small-tab {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    min-height: auto;
+                    margin-bottom: 30px;
+                }
+
+                display: flex;
+                flex-direction: column;
+
+                .card-image-wrapper {
+                    position: relative;
+                    border-radius: 16px 16px 0 0;
+                    overflow: hidden;
+                    aspect-ratio: 16/9;
+                    background-color: #f0f0f0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.3s;
+                    }
+
+                    &.fedex-bg {
+                        background-color: #d1e0ff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 60%;
+                            height: auto;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .card-play-overlay {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 48px;
+                        height: 48px;
+                        background: rgba(0, 0, 0, 0.6);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: 18px;
+                        transition: background 0.3s;
+
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.8);
+                        }
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .card-content {
+                    background: white;
+                    border: 1px solid #e5e5e5;
+                    border-top: none;
+                    border-radius: 0 0 16px 16px;
+                    padding: 24px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+                    .card-pill {
+                        font-size: 12px;
+                        font-weight: 700;
+                        padding: 4px 12px;
+                        border-radius: 12px;
+                        margin-bottom: 16px;
+                        display: inline-block;
+
+                        &.pill-blue {
+                            background-color: #eef4ff;
+                            color: #0176d3;
+                        }
+
+                        &.pill-light {
+                            background-color: #f3f3f3;
+                            color: #032d60;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: #032d60;
+                        margin: 0 0 12px;
+                        line-height: 1.3;
+                    }
+
+                    p {
+                        font-size: 17px;
+                        color: #444;
+                        margin: 0 0 24px;
+                        line-height: 1.5;
+                        flex-grow: 1;
+                    }
+
+                    .card-link {
+                        font-weight: 700;
+                        color: #032d60;
+                        text-decoration: underline;
+                        font-size: 16px;
+
+                        &:hover {
+                            color: #0176d3;
+                        }
+                    }
+                }
+            }
+
+            .discover-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 48px;
+                height: 48px;
+                background: white;
+                border: 1px solid #e5e5e5;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+                color: #0176d3;
+                font-size: 18px;
+                transition: all 0.2s;
+
+                &:hover {
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                    transform: translateY(-50%) scale(1.05);
+                }
+
+                &.discover-next {
+                    right: -24px;
+
+                    @include big-tab {
+                        right: 0;
+                    }
+                }
+
+                &.discover-prev {
+                    left: -24px;
+
+                    @include big-tab {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .discover-scrollbar-container {
+            margin-top: 40px;
+            padding: 0 125px; // Approximate padding to align with where cards might visually end or just centered
+
+            @include mobile {
+                padding: 0 20px;
+            }
+
+            .discover-scrollbar-track {
+                width: 100%;
+                height: 4px;
+                background-color: #e0e0e0;
+                border-radius: 2px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .discover-scrollbar-thumb {
+                height: 100%;
+                background-color: #032d60; // Dark blue
+                border-radius: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0; // Will be set by JS
+                cursor: pointer;
+                transition: left 0.3s ease, width 0.3s ease, background-color 0.2s;
+
+                &:hover {
+                    background-color: #0176d3;
+                }
+            }
+        }
+    }
+}
+
+// Contact Us Section
+.data360-contact-section {
+    background-color: #d1e0ff; // darker periwinkle
+    padding: 60px 0 100px;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    // Bottom Curve SVG styling
+    .bottom-curve-shape {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        z-index: 1;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 80px;
+            fill: white;
+        }
+    }
+
+    .contact-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2;
+
+        .text-col {
+            color: #032d60;
+            padding-right: 60px;
+
+            @include desktop {
+                padding-right: 30px;
+            }
+
+            @include big-tab {
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1.2;
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .contact-list {
+                list-style: none;
+                padding: 0;
+                font-size: 18px;
+
+                @include big-tab {
+                    text-align: left;
+                    display: inline-block;
+                }
+
+                li {
+                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    i {
+                        color: #1b9d48; // Green check
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .contact-phone {
+                font-size: 18px;
+            }
+
+            .contact-image {
+                // Style for the dashboard image under text
+                max-width: 600px;
+                margin: 40px 0 0;
+
+                @include big-tab {
+                    display: block;
+                    margin: 40px auto 0;
+                    width: 100%;
+                }
+
+                img {
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                }
+            }
+        }
+
+        .form-col {
+            .contact-form-card {
+                background: white;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+                @include mobile {
+                    padding: 24px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #181818;
+                }
+
+                .form-floating {
+                    label {
+                        font-size: 14px;
+                        color: #666;
+                    }
+
+                    .form-control,
+                    .form-select {
+                        border-radius: 4px;
+                        border: 1px solid #ccc;
+
+                        &:focus {
+                            border-color: #0176d3;
+                            box-shadow: 0 0 0 1px #0176d3;
+                        }
+                    }
+
+                    textarea {
+                        resize: none;
+                    }
+                }
+
+                .privacy-text {
+                    font-size: 12px;
+                    color: #444;
+
+                    a {
+                        color: #0176d3;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .btn-primary {
+                    background-color: #0b5cab;
+                    border-color: #0b5cab;
+                    font-size: 16px;
+                    transition: background 0.2s;
+
+                    &:hover {
+                        background-color: #032d60;
+                        border-color: #032d60;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// TRUSTe Container
+.truste-container {
+    background-color: white;
+    padding: 40px 0;
+
+    .truste-inner {
+        max-width: 1440px;
+        padding: 0 40px;
+        text-align: right;
+
+        img {
+            height: 35px;
+            display: inline-block;
+        }
+    }
+}
+
+// Dark Footer Bar
+.contact-footer-bar {
+    background-color: #032d60;
+    padding: 20px 0;
+    color: white;
+    font-family: 'Salesforce Sans', sans-serif;
+    font-size: 11px;
+
+    .container-fluid {
+        max-width: 1440px;
+        padding: 0 40px;
+    }
+
+    .footer-btn-worldwide {
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 8px 16px;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .footer-legal-text {
+        opacity: 0.8;
+        margin-bottom: 4px;
+
+        span {
+            margin-right: 5px;
+        }
+
+        .footer-link-underline {
+            color: white;
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .footer-legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.9;
+            }
+        }
+
+        .privacy-choices-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+
+            img {
+                width: 26px;
+                height: auto;
+            }
+        }
+    }
+}
+
+// Integration Cards Section
+.data360-integration-section {
+    // Background: Blue gradient + Bottom Shape Image
+    background: url('../assets/datacloud/Background-After-DF.png') center bottom no-repeat;
+    background-size: 100% auto;
+    padding: 10px 0 250px; // Restoring padding to ensure image visibility
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+    position: relative;
+
+    @include big-tab {
+        padding: 80px 0 100px;
+    }
+
+    @include small-tab {
+        padding: 70px 0 90px;
+    }
+
+    @include mobile {
+        padding: 60px 0 80px;
+    }
+
+    .integration-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include desktop {
+            padding: 0 30px;
+        }
+
+        @include big-tab {
+            padding: 0 24px;
+        }
+
+        @include small-tab {
+            padding: 0 20px;
+        }
+
+        @include mobile {
+            padding: 0 16px;
+        }
+
+        .integration-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+
+            @include small-tab {
+                margin-bottom: 50px;
+            }
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 44px;
+                font-weight: 700;
+                color: #032d60;
+                line-height: 1.2;
+                margin: 0 0 24px;
+
+                @include big-tab {
+                    font-size: 40px;
+                }
+
+                @include small-tab {
+                    font-size: 34px;
+                    margin-bottom: 20px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                    margin-bottom: 18px;
+                }
+
+                @include small-mobile {
+                    font-size: 24px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                color: #444;
+                line-height: 1.6;
+                margin: 0;
+
+                @include small-tab {
+                    font-size: 17px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .integration-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+
+            @include desktop {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            @include small-tab {
+                gap: 18px;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .integration-card {
+                background: white;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                display: flex;
+                flex-direction: column;
+
+                @include small-tab {
+                    border-radius: 14px;
+                }
+
+                @include mobile {
+                    border-radius: 12px;
+                }
+
+                &:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+                    @include mobile {
+                        transform: translateY(-4px);
+                    }
+                }
+
+                .card-header {
+                    background: linear-gradient(135deg, #e8f4ff 0%, #d1e0ff 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 180px;
+
+                    @include big-tab {
+                        min-height: 160px;
+                    }
+
+                    @include small-tab {
+                        min-height: 140px;
+                    }
+
+                    @include mobile {
+                        min-height: 120px;
+                    }
+
+                    img {
+                        max-width: 1100px;
+                        height: auto;
+                        object-fit: contain;
+                        max-height: 180px;
+
+                        @include small-tab {
+                            max-height: 80px;
+                        }
+
+                        @include mobile {
+                            max-height: 70px;
+                        }
+                    }
+                }
+
+                .card-body {
+                    padding: 28px 24px 32px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+
+                    @include big-tab {
+                        padding: 26px 22px 30px;
+                    }
+
+                    @include small-tab {
+                        padding: 24px 20px 28px;
+                    }
+
+                    @include mobile {
+                        padding: 22px 18px 26px;
+                    }
+
+                    .card-badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: #0176d3;
+                        background: #eef4ff;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        margin-bottom: 16px;
+                        align-self: flex-start;
+
+                        @include mobile {
+                            font-size: 11px;
+                            padding: 5px 10px;
+                            margin-bottom: 14px;
+                        }
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            background-image: url('../assets/datacloud/Pill@2x.png');
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+
+                            @include mobile {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #032d60;
+                        line-height: 1.3;
+                        margin: 0 0 20px;
+                        flex-grow: 1;
+
+                        @include big-tab {
+                            font-size: 19px;
+                        }
+
+                        @include small-tab {
+                            font-size: 18px;
+                            margin-bottom: 18px;
+                        }
+
+                        @include mobile {
+                            font-size: 17px;
+                            margin-bottom: 16px;
+                        }
+
+                        @include small-mobile {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .card-link {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #032d60;
+                        text-decoration: underline;
+                        transition: color 0.2s ease;
+                        align-self: flex-start;
+
+                        @include small-tab {
+                            font-size: 15px;
+                        }
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            color: #0176d3;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Data 360 Activate Section
+.data360-activate-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 70px 0;
+    }
+
+    @include small-tab {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 50px 0;
+    }
+
+    .activate-header {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 80px;
+        padding: 0 24px;
+
+        @include small-tab {
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            margin-bottom: 50px;
+            padding: 0 16px;
+        }
+
+        h2 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #032d60;
+            line-height: 1.2;
+            margin: 0;
+
+            @include desktop {
+                font-size: 40px;
+            }
+
+            @include small-tab {
+                font-size: 32px;
+            }
+
+            @include mobile {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .activate-feature {
+        padding: 60px 0;
+
+        @include small-tab {
+            padding: 50px 0;
+        }
+
+        @include mobile {
+            padding: 40px 0;
+        }
+
+        &:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .activate-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+
+            @include desktop {
+                gap: 60px;
+                padding: 0 32px;
+            }
+
+            @include small-tab {
+                gap: 40px;
+                padding: 0 24px;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .activate-visual {
+                flex: 1;
+                min-width: 0;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .activate-image-box {
+                    background: linear-gradient(135deg, #1a3aff 0%, #0b1ba1 100%);
+                    border-radius: 24px;
+                    padding: 40px;
+                    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                    @include small-tab {
+                        padding: 32px;
+                        border-radius: 20px;
+                    }
+
+                    @include mobile {
+                        padding: 20px;
+                        border-radius: 16px;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+                        pointer-events: none;
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: 12px;
+                        position: relative;
+                        z-index: 1;
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+                        @include mobile {
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+
+            .activate-content {
+                flex: 1;
+                min-width: 0;
+
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                h3 {
+                    font-size: 38px;
+                    font-weight: 700;
+                    color: #032d60;
+                    margin: 0 0 24px;
+                    line-height: 1.2;
+
+                    @include desktop {
+                        font-size: 34px;
+                    }
+
+                    @include small-tab {
+                        font-size: 28px;
+                        margin-bottom: 20px;
+                    }
+
+                    @include mobile {
+                        font-size: 24px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #444;
+                    line-height: 1.6;
+                    margin: 0 0 32px;
+
+                    @include small-tab {
+                        font-size: 16px;
+                        margin-bottom: 24px;
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .activate-buttons {
+                    display: flex;
+                    gap: 16px;
+                    flex-wrap: wrap;
+
+                    @include mobile {
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    .btn-activate-primary {
+                        background-color: #0176d3;
+                        color: white;
+                        padding: 14px 32px;
+                        border-radius: 6px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        text-decoration: none;
+                        display: inline-block;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 2px 8px rgba(1, 118, 211, 0.2);
+
+                        @include small-tab {
+                            padding: 12px 24px;
+                            font-size: 15px;
+                        }
+
+                        @include mobile {
+                            width: 100%;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            background-color: #015ba1;
+                            box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3);
+                            transform: translateY(-2px);
+                        }
+                    }
+
+                    .btn-activate-secondary {
+                        background-color: transparent;
+                        color: #0176d3;
+                        padding: 14px 32px;
+                        border-radius: 6px;
+                        border: 2px solid #0176d3;
+                        font-weight: 700;
+                        font-size: 16px;
+                        text-decoration: none;
+                        display: inline-block;
+                        transition: all 0.3s ease;
+
+                        @include small-tab {
+                            padding: 12px 24px;
+                            font-size: 15px;
+                        }
+
+                        @include mobile {
+                            width: 100%;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            background-color: #0176d3;
+                            color: white;
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.activate-reverse {
+            .activate-container {
+                flex-direction: row-reverse;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+// Capabilities Section
+.data360-capabilities-section {
+    background-color: white;
+    padding: 100px 0;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 80px 0;
+    }
+
+    @include small-tab {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 50px 15px;
+    }
+
+    .capabilities-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include mid-desktop {
+            padding: 0 32px;
+        }
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .capabilities-header {
+            text-align: center;
+            margin-bottom: 80px;
+
+            @include small-tab {
+                margin-bottom: 60px;
+            }
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                color: #032d60;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1.2;
+                max-width: 900px;
+                margin: 0 auto;
+
+                @include desktop {
+                    font-size: 40px;
+                }
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .capability-row {
+            display: flex;
+            margin-bottom: 60px;
+            align-items: flex-start;
+
+            @include desktop {
+                margin-bottom: 40px;
+            }
+
+            @include small-tab {
+                flex-direction: column;
+                margin-bottom: 50px;
+                align-items: center;
+            }
+
+            .row-label {
+                flex: 0 0 250px;
+                padding-right: 40px;
+                padding-top: 10px;
+
+                @include mid-desktop {
+                    flex: 0 0 200px;
+                }
+
+                @include small-tab {
+                    flex: auto;
+                    padding-right: 0;
+                    padding-bottom: 24px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                h3 {
+                    color: #032d60;
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin: 0;
+
+                    @include desktop {
+                        font-size: 28px;
+                    }
+
+                    @include mobile {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .row-cards {
+                flex: 1;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                width: 100%;
+
+                @include desktop {
+                    gap: 20px;
+                }
+
+                @include big-tab {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include small-tab {
+                    gap: 15px;
+                }
+
+                @include mobile {
+                    grid-template-columns: 1fr;
+                }
+
+                .capability-card {
+                    background: white;
+                    border-radius: 8px;
+                    padding: 30px;
+                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+                    border-top: 5px solid #0176d3;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    @include desktop {
+                        padding: 20px;
+                    }
+
+                    @include mobile {
+                        padding: 24px;
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+                    }
+
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #032d60;
+                        margin-bottom: 16px;
+                        line-height: 1.3;
+
+                        @include desktop {
+                            font-size: 18px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #181818;
+                        line-height: 1.6;
+                        margin: 0;
+                        flex-grow: 1;
+
+                        @include desktop {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Gartner Section
+.data360-gartner-section {
+    background-color: white;
+    padding: 20px 0 100px;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 20px 0 80px;
+    }
+
+    @include mobile {
+        padding: 20px 15px 60px;
+    }
+
+    .gartner-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include mid-desktop {
+            padding: 0 32px;
+        }
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .gartner-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+
+            @include small-tab {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gartner-image-col {
+                flex: 1;
+                max-width: 60%;
+                padding: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include desktop {
+                    padding: 30px;
+                }
+
+                @include small-tab {
+                    max-width: 100%;
+                    width: 100%;
+                    padding: 30px;
+                    border-bottom: 1px solid #f0f0f0;
+                }
+
+                @include mobile {
+                    padding: 20px;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 600px;
+                    height: auto;
+                    display: block;
+                    border-radius: 8px;
+                }
+            }
+
+            .gartner-content-col {
+                flex: 1;
+                padding: 40px 40px 40px 60px;
+
+                @include desktop {
+                    padding: 30px 30px 30px 40px;
+                }
+
+                @include big-tab {
+                    padding: 40px;
+                }
+
+                @include small-tab {
+                    padding: 40px 30px;
+                    width: 100%;
+                }
+
+                @include mobile {
+                    padding: 30px 20px;
+                }
+
+                h2 {
+                    font-size: 38px;
+                    font-weight: 750;
+                    color: #1d32ec;
+                    line-height: 1.2;
+                    margin: 0 0 24px;
+
+                    @include desktop {
+                        font-size: 32px;
+                    }
+
+                    @include mobile {
+                        font-size: 26px;
+                    }
+                }
+
+                p {
+                    font-size: 19px;
+                    color: #181818;
+                    margin: 0 0 32px;
+                    line-height: 1.5;
+
+                    @include desktop {
+                        font-size: 17px;
+                    }
+
+                    @include mobile {
+                        font-size: 16px;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .btn-gartner {
+                    background-color: #0176d3;
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    font-size: 16px;
+                    display: inline-block;
+                    transition: background 0.3s;
+                    border: none;
+
+                    @include mobile {
+                        width: 100%;
+                        text-align: center;
+                        padding: 10px 20px;
+                    }
+
+                    &:hover {
+                        background-color: #015ba1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Datablazer Community Section
+.data360-community-section {
+    background-color: white;
+    padding: 80px 0;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 50px 15px;
+    }
+
+    .community-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include mid-desktop {
+            padding: 0 32px;
+        }
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .community-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+
+            @include desktop {
+                gap: 40px;
+            }
+
+            @include small-tab {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .community-text-col {
+                flex: 1;
+                max-width: 600px;
+
+                @include small-tab {
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: #2719ee;
+                    margin: 0 0 24px;
+                    line-height: 1.2;
+
+                    @include desktop {
+                        font-size: 34px;
+                    }
+
+                    @include mobile {
+                        font-size: 26px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #181818;
+                    margin: 0 0 32px;
+                    line-height: 1.6;
+
+                    @include desktop {
+                        font-size: 16px;
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .btn-community {
+                    background-color: #3b6bef;
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    font-size: 16px;
+                    display: inline-block;
+                    border: none;
+                    transition: all 0.2s;
+
+                    @include mobile {
+                        width: 100%;
+                        text-align: center;
+                        padding: 10px 20px;
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        background-color: #2a56d1;
+                    }
+                }
+            }
+
+            .community-image-col {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+
+                @include small-tab {
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 550px;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Resources Section
+.data360-resources-section {
+    background-color: white;
+    padding: 80px 0 100px;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 60px 0 80px;
+    }
+
+    @include mobile {
+        padding: 40px 0 60px;
+    }
+
+    .resources-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include mid-desktop {
+            padding: 0 32px;
+        }
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0 15px;
+        }
+
+        .resources-header {
+            text-align: center;
+            margin-bottom: 60px;
+
+            @include small-tab {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                color: #2719ee;
+                font-size: 38px;
+                font-weight: 700;
+                line-height: 1.2;
+                margin: 0 0 24px;
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 26px;
+                }
+            }
+
+            .btn-explore-resources {
+                display: inline-block;
+                background-color: #3b6bef;
+                color: white;
+                font-weight: 700;
+                font-size: 16px;
+                padding: 12px 24px;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: background 0.3s;
+
+                @include mobile {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background-color: #2a56d1;
+                }
+            }
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+
+            @include desktop {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .resource-card {
+                background: white;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+                transition: transform 0.2s, box-shadow 0.2s;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                border: 1px solid #f0f0f0;
+
+                @include mobile {
+                    border-radius: 12px;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+                }
+
+                .card-image {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    background-color: #f4f4f4;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.3s;
+                    }
+                }
+
+                &:hover .card-image img {
+                    transform: scale(1.05);
+                }
+
+                .card-content {
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+
+                    @include mobile {
+                        padding: 20px;
+                    }
+
+                    .resource-tag {
+                        display: inline-block;
+                        background-color: #eef4ff;
+                        color: #0176d3;
+                        font-size: 11px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        padding: 4px 12px;
+                        border-radius: 100px;
+                        align-self: flex-start;
+                        margin-bottom: 16px;
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #032d60;
+                        line-height: 1.4;
+                        margin: 0 0 16px;
+                        flex-grow: 1;
+
+                        @include small-tab {
+                            font-size: 18px;
+                        }
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .card-link {
+                        color: #0176d3;
+                        font-weight: 700;
+                        font-size: 16px;
+                        text-decoration: underline;
+                        text-underline-offset: 4px;
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            color: #015ba1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Next Step Section
+.data360-next-step-section {
+    background: url('../assets/datacloud/trailhead-background_3fb138.png') center bottom no-repeat;
+    background-size: 100% auto;
+    padding-top: 80px;
+    padding-bottom: 260px;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    @include desktop {
+        padding-top: 60px;
+        padding-bottom: 200px;
+    }
+
+    @include mobile {
+        padding-top: 50px;
+        padding-bottom: 150px;
+    }
+
+    .next-step-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+        z-index: 1;
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2719ee;
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 60px;
+
+            @include desktop {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            @include mobile {
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .next-step-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            @include desktop {
+                gap: 20px;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .next-step-card {
+                background: white;
+                border-radius: 16px;
+                padding: 40px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                flex: 1;
+                max-width: 450px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                width: 100%;
+
+                @include desktop {
+                    padding: 30px;
+                }
+
+                @include mobile {
+                    padding: 24px;
+                    max-width: 100%;
+                    border-radius: 12px;
+                }
+
+                .card-icon {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: #eef4ff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 24px;
+
+                    @include mobile {
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 16px;
+                    }
+
+                    i {
+                        color: #0176d3;
+                        font-size: 24px;
+
+                        @include mobile {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                h3 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #032d60;
+                    margin: 0 0 16px;
+
+                    @include desktop {
+                        font-size: 20px;
+                    }
+
+                    @include mobile {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #181818;
+                    margin: 0 0 24px;
+                    line-height: 1.5;
+                    flex-grow: 1;
+
+                    @include mobile {
+                        font-size: 14px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                a {
+                    color: #0176d3;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+
+                    @include mobile {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        color: #015ba1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FAQ Section
+.data360-faq-section {
+    background-color: $background-color;
+    padding: 80px 0;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+
+    @include desktop {
+        padding: 60px 0;
+    }
+
+    @include small-tab {
+        padding: 50px 0;
+    }
+
+    @include mobile {
+        padding: 40px 15px;
+    }
+
+    .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @include small-tab {
+            padding: 0 24px;
+        }
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 44px;
+                font-weight: 700;
+                color: $secondary-color;
+                line-height: 1.2;
+                margin: 0;
+
+                @include desktop {
+                    font-size: 38px;
+                }
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+
+            .faq-item {
+                border-bottom: 1px solid $border-color;
+
+                &:first-child {
+                    border-top: 1px solid $border-color;
+                }
+
+                .faq-question {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: none;
+                    border: none;
+                    padding: 24px 0;
+                    text-align: left;
+                    cursor: pointer;
+                    font-family: 'Salesforce Sans', system-ui, sans-serif;
+                    transition: color 0.2s ease;
+
+                    @include mobile {
+                        padding: 15px 0;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: $secondary-color;
+                        padding-right: 20px;
+                        line-height: 1.4;
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+                    }
+
+                    i {
+                        font-size: 16px;
+                        color: $primary-color;
+                        background-color: rgba($primary-color, 0.1);
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                        transition: transform 0.3s ease, background-color 0.3s ease;
+
+                        @include mobile {
+                            width: 24px;
+                            height: 24px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    &:hover {
+                        span {
+                            color: $primary-color;
+                        }
+
+                        i {
+                            background-color: rgba($primary-color, 0.2);
+                        }
+                    }
+
+                    &[aria-expanded="true"] {
+                        span {
+                            color: $secondary-color;
+                        }
+
+                        i {
+                            background-color: rgba($primary-color, 0.1);
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                .faq-answer {
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+
+                    .faq-answer-content {
+                        padding-bottom: 24px;
+
+                        p {
+                            font-size: 16px;
+                            color: black;
+                            line-height: 1.6;
+                            margin: 0;
+
+                            @include mobile {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .faq-answer {
+                        max-height: 1000px;
+                        opacity: 1;
+                        transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+                    }
+
+                    .faq-question i {
+                        background-color: rgba($primary-color, 0.1);
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

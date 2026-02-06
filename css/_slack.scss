@@ -1,0 +1,1768 @@
+@use 'variable' as *;
+
+.slack-page {
+
+    /* --- Sub Navigation --- */
+    .slack-sub-nav {
+        position: fixed;
+        top: 65px; // Matches main header top
+        z-index: 990;
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0;
+        width: 100%;
+        transition: top 0.3s ease;
+
+        @include small-desktop {
+            top: 130px;
+        }
+
+        @include mid-small-mobile {
+            top: 125px;
+        }
+
+        .sf-container {
+            max-width: 1500px;
+            padding: 0 40px;
+
+            @include small-tab {
+                padding: 0 16px;
+            }
+        }
+
+        .sub-nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80px;
+
+            @include desktop {
+                flex-direction: column;
+                align-items: flex-start;
+                min-height: 60px;
+            }
+        }
+
+        .sub-nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            @include desktop {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                width: 100%;
+            }
+
+            .product-name {
+                font-size: 26px;
+                font-weight: 700;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                @include desktop {
+                    width: 100%;
+                    height: 60px;
+                    justify-content: space-between;
+                }
+
+                .slack-title-link {
+                    color: $secondary-color;
+                    text-decoration: none;
+                    font-size: 32px;
+                }
+
+                .mobile-toggle-arrow {
+                    display: none;
+                    font-size: 18px;
+                    cursor: pointer;
+
+                    @include desktop {
+                        display: block;
+                    }
+                }
+
+                &.active .mobile-toggle-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .sub-nav-menu {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 32px;
+
+                @include desktop {
+                    display: none;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 0;
+                    border-top: 1px solid #eee;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+
+                li {
+                    position: relative;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+
+                    @include desktop {
+                        width: 100%;
+                        height: auto;
+                        border-bottom: 1px solid #f2f2f2;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $secondary-color;
+                        font-size: 17px;
+                        font-weight: 600;
+                        transition: color 0.3s ease;
+
+                        @include desktop {
+                            width: 100%;
+                            padding: 18px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $primary-color;
+                        }
+
+                        i {
+                            font-size: 12px;
+                            margin-left: 5px;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+
+                    &.has-dropdown {
+                        @include desktop {
+                            &.active {
+                                a {
+                                    color: $primary-color;
+
+                                    i {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+                        }
+
+                        .sub-nav-dropdown {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background: white;
+                            min-width: 250px;
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                            padding: 20px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(10px);
+                            transition: all 0.3s ease;
+                            z-index: 1000;
+                            border-radius: 8px;
+
+                            @include desktop {
+                                position: static;
+                                opacity: 1;
+                                visibility: visible;
+                                transform: none;
+                                box-shadow: none;
+                                display: none;
+                                padding: 0 0 20px 24px; // Indented on mobile
+                                width: 100%;
+                            }
+
+                            a {
+                                display: block;
+                                padding: 12px 0;
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: $secondary-color;
+
+                                &:hover {
+                                    color: $primary-color;
+                                }
+
+                                @include desktop {
+                                    padding: 10px 0;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+
+                        &:hover .sub-nav-dropdown {
+                            @include min-desktop {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        &.active .sub-nav-dropdown {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sub-nav-right {
+            display: flex;
+            gap: 15px;
+
+            @include desktop {
+                display: none;
+                width: 100%;
+                padding: 15px 0;
+                flex-direction: column; // Stack buttons vertically
+                gap: 12px;
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-weight: 700;
+                font-size: 16px;
+                width: auto;
+
+                @include desktop {
+                    width: 100%; // Full width on mobile
+                    text-align: center;
+                }
+            }
+
+            .contact-sales-btn {
+                border-color: $primary-color;
+                color: $primary-color;
+                background: white;
+
+                &:hover {
+                    background: rgba(1, 118, 211, 0.05);
+                }
+            }
+
+            .watch-demo-btn {
+                background-color: $primary-color;
+                color: white;
+                border: none;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .slack-hero {
+        margin-top: 80px; // Matches header + sub-nav height
+        padding: 60px 0 100px;
+        background: url('../assets/slack/marquee-BG.webp') no-repeat center center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+
+        @include small-desktop {
+            margin-top: 210px;
+            padding: 40px 0 80px;
+        }
+
+        @include mid-small-mobile {
+            margin-top: 205px;
+        }
+
+        .hero-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+
+            @include big-tab {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+
+            .hero-title {
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 1.1;
+                color: $secondary-color;
+                margin-bottom: 24px;
+
+                @include desktop {
+                    font-size: 48px;
+                }
+
+                @include mobile {
+                    font-size: 36px;
+                }
+            }
+
+            .hero-description {
+                font-size: 20px;
+                line-height: 1.5;
+                color: $text-color;
+                margin-bottom: 40px;
+                font-weight: 400;
+
+                @include mobile {
+                    font-size: 18px;
+                }
+            }
+
+            .hero-btns {
+                display: flex;
+                gap: 16px;
+
+                @include big-tab {
+                    justify-content: center;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .btn {
+                    padding: 16px 32px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border-radius: 4px;
+
+                    &.watch-demo-hero {
+                        background-color: $sky-blue;
+                        color: white;
+                        border: none;
+
+                        &:hover {
+                            background-color: darken($sky-blue, 10%);
+                        }
+                    }
+
+                    &.try-free-hero {
+                        background-color: transparent;
+                        color: $sky-blue;
+                        border: 2px solid $sky-blue;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        &:hover {
+                            background-color: rgba($sky-blue, 0.05);
+                        }
+
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            @include big-tab {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .hero-main-img {
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                object-fit: contain;
+
+                @include big-tab {
+                    max-width: 600px;
+                }
+            }
+        }
+    }
+
+
+
+    // Company Logos Section
+    .slack-companies {
+        padding: 80px 0 200px;
+        background-color: #fff;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        @include mobile {
+            padding: 60px 0 140px;
+        }
+
+        .sf-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .companies-bg-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+
+                @include desktop {
+                    min-height: 300px;
+                }
+
+                @include mobile {
+                    min-height: 200px;
+                }
+            }
+        }
+
+        .companies-title {
+            font-size: 44px;
+            font-weight: 700;
+            color: $secondary-color;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            line-height: 1.3;
+
+            @include mobile {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 24px;
+            margin: 0 auto;
+
+            .logo-card {
+                background: #FFFFFF;
+                border-radius: 8px;
+                width: 240px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                }
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+
+                @include mobile {
+                    width: calc(50% - 12px);
+                    height: 80px;
+                }
+            }
+        }
+
+        .section-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            line-height: 0;
+            z-index: 3; // On top of everything
+
+            svg {
+                display: block;
+                width: 100%;
+                height: 80px;
+            }
+        }
+    }
+
+    // Transition Header Section
+    .slack-transition-header {
+        padding: 100px 0 60px;
+        text-align: center;
+
+        .transition-title {
+            font-size: 54px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.1;
+            margin-bottom: 24px;
+
+            @include desktop {
+                font-size: 40px;
+            }
+
+            @include mobile {
+                font-size: 32px;
+            }
+        }
+
+        .transition-subtitle {
+            font-size: 20px;
+            color: $text-color;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        .transition-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .btn {
+                    width: 100%;
+                    max-width: 320px;
+                }
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 18px;
+                font-weight: 700;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+
+                &.btn-primary {
+                    background-color: $sky-blue;
+                    color: white;
+                    border: none;
+
+                    &:hover {
+                        background-color: darken($sky-blue, 10%);
+                    }
+                }
+
+                &.btn-outline {
+                    background: transparent;
+                    color: $sky-blue;
+                    border: 2px solid $sky-blue;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:hover {
+                        background-color: rgba($sky-blue, 0.05);
+                    }
+                }
+            }
+        }
+    }
+
+    // Features Alternate Block
+    .slack-features-alternate {
+        padding: 80px 0;
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+
+            @include desktop {
+                gap: 40px;
+            }
+
+            @include big-tab {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+
+        .feature-text {
+            flex: 1;
+
+            .feature-title {
+                font-size: 44px;
+                font-weight: 700;
+                color: $secondary-color;
+                line-height: 1.2;
+                margin-bottom: 24px;
+
+                @include desktop {
+                    font-size: 36px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+            }
+
+            .feature-desc {
+                font-size: 18px;
+                line-height: 1.6;
+                color: $text-color;
+                margin-bottom: 32px;
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 4px;
+                background-color: $sky-blue;
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($sky-blue, 10%);
+                }
+            }
+        }
+
+        .feature-image {
+            flex: 1.2;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 12px;
+                // box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            }
+        }
+
+        &.reversed {
+            .feature-row {
+                flex-direction: row-reverse;
+
+                @include big-tab {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    // Spotlight Section (The wide card)
+    .slack-spotlight-section {
+        padding: 60px 0 100px;
+        // background-color: #f9f9f9;
+
+        .spotlight-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 80px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+
+            @include desktop {
+                padding: 60px;
+            }
+
+            @include small-tab {
+                padding: 40px 30px;
+            }
+
+            .spotlight-content {
+                display: flex;
+                align-items: center;
+                gap: 80px;
+
+                @include desktop {
+                    gap: 40px;
+                }
+
+                @include big-tab {
+                    flex-direction: column-reverse;
+                    text-align: center;
+                }
+            }
+
+            .spotlight-text {
+                flex: 1;
+
+                .spotlight-title {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1.2;
+                    margin-bottom: 24px;
+
+                    @include desktop {
+                        font-size: 32px;
+                    }
+
+                    @include mobile {
+                        font-size: 26px;
+                    }
+                }
+
+                .spotlight-desc {
+                    font-size: 18px;
+                    line-height: 1.6;
+                    color: $text-color;
+                    margin-bottom: 32px;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+
+                .btn {
+                    padding: 14px 28px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border-radius: 4px;
+                    background-color: $sky-blue;
+                    color: white;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: darken($sky-blue, 10%);
+                    }
+                }
+            }
+
+            .spotlight-image {
+                flex: 1;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    // Connect Salesforce and Slack Section
+    .slack-connect-ecosystem {
+        padding: 100px 0 80px;
+        text-align: center;
+        background-color: #fff;
+
+        .connect-content {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+
+            .connect-title {
+                font-size: 48px;
+                font-weight: 700;
+                color: $secondary-color;
+                line-height: 1.1;
+                margin-bottom: 24px;
+
+                @include desktop {
+                    font-size: 36px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+            }
+
+            .connect-desc {
+                font-size: 18px;
+                line-height: 1.5;
+                color: $text-color;
+                margin-bottom: 32px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 4px;
+                background-color: $sky-blue;
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($sky-blue, 10%);
+                }
+            }
+        }
+
+        .ecosystem-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            flex-wrap: wrap;
+
+            @include big-tab {
+                gap: 40px;
+            }
+
+            @include mobile {
+                gap: 30px;
+            }
+
+            .eco-icon {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                @include mobile {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+
+    // Slack and Salesforce Transform Section
+    .slack-transform-section {
+        padding: 100px 0 200px;
+        position: relative;
+        background-color: #fff;
+        overflow: hidden;
+
+        @include mobile {
+            padding: 60px 0 160px;
+        }
+
+        .sf-container {
+            position: relative;
+            z-index: 5;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 44px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.2;
+            margin-bottom: 60px;
+
+            @include desktop {
+                font-size: 36px;
+            }
+
+            @include mobile {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .transform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            @include big-tab {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .transform-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-image {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            .card-content {
+                padding: 40px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                @include mobile {
+                    padding: 30px 20px;
+                }
+
+                .card-title {
+                    font-size: 34px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1.3;
+                    margin-bottom: 20px;
+                    text-align: start;
+
+                    @include mobile {
+                        font-size: 22px;
+                    }
+                }
+
+                .card-desc {
+                    font-size: 18px;
+                    line-height: 1.6;
+                    color: $text-color;
+                    margin-bottom: 30px;
+                    text-align: start;
+                }
+
+                .btn-outline {
+                    margin-top: auto;
+                    align-self: flex-start;
+                    padding: 12px 24px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $sky-blue;
+                    border: 1.5px solid $sky-blue;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: rgba($sky-blue, 0.05);
+                    }
+                }
+            }
+        }
+
+        .transform-bg-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        .section-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            line-height: 0;
+            z-index: 10;
+
+            svg {
+                display: block;
+                width: 100%;
+                height: 80px;
+            }
+        }
+    }
+
+    // IDC MarketScape Section
+    .slack-idc-section {
+        padding: 50px 0 100px;
+        background-color: #fff;
+
+        .idc-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            border: 1px solid #f0f0f0;
+
+            @include desktop {
+                padding: 60px;
+                gap: 40px;
+            }
+
+            @include big-tab {
+                flex-direction: column;
+                text-align: flex-start; // Keep text left aligned as per design often, or center if requested. Screenshot shows left text.
+                // Actually screenshot looks like wide card.
+                align-items: flex-start;
+                padding: 40px;
+            }
+
+            .idc-content {
+                flex: 1;
+                max-width: 600px;
+
+                .idc-title {
+                    font-size: 36px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1.2;
+                    margin-bottom: 40px;
+
+                    @include desktop {
+                        font-size: 30px;
+                    }
+
+                    @include mobile {
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .btn-outline {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 12px 24px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $sky-blue;
+                    border: 1.5px solid $sky-blue;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: rgba($sky-blue, 0.05);
+                    }
+                }
+            }
+
+            .idc-image {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+
+                @include big-tab {
+                    width: 100%;
+                    justify-content: center; // Center image on mobile/tablet
+                    margin-top: 20px;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px; // Optional, image in screenshot has rounded corners? Hard to see, usually vectors don't but the graphic might.
+                    // The graphic is a card itself inside. 
+                    // Let's keep it clean.
+                }
+            }
+        }
+    }
+
+    // Customer Success Section
+    .slack-customer-section {
+        padding: 80px 0 200px;
+        position: relative;
+        background-color: #f8f9fa; // Light background for contrast if needed, or white if seamless
+        background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F9 100%);
+        overflow: hidden;
+
+        @include mobile {
+            padding: 60px 0 160px;
+        }
+
+        .sf-container {
+            position: relative;
+            z-index: 5;
+        }
+
+        .customer-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 80px;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            border: 1px solid #eee;
+
+            @include desktop {
+                gap: 50px;
+                padding: 60px;
+            }
+
+            @include big-tab {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .customer-image {
+                flex: 0 0 350px;
+                display: flex;
+                justify-content: center;
+
+                @include desktop {
+                    flex: 0 0 300px;
+                }
+
+                @include big-tab {
+                    flex: 0 0 auto;
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            .customer-content {
+                flex: 1;
+
+                .quote-icon {
+                    font-size: 40px;
+                    color: $primary-color;
+                    margin-bottom: 24px;
+                }
+
+                .customer-quote {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1.3;
+                    margin-bottom: 30px;
+                    font-family: 'ITC Avant Garde', 'Salesforce Sans', sans-serif; // Ensure distinct font
+
+                    @include desktop {
+                        font-size: 24px;
+                    }
+
+                    @include mobile {
+                        font-size: 20px;
+                    }
+                }
+
+                .customer-info {
+                    margin-bottom: 30px;
+
+                    .customer-name {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $secondary-color;
+                    }
+
+                    .customer-role {
+                        font-size: 16px;
+                        color: $text-color;
+                        margin-top: 4px;
+                    }
+                }
+
+                .btn-outline {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 12px 24px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $sky-blue;
+                    border: 1.5px solid $sky-blue;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: rgba($sky-blue, 0.05);
+                    }
+                }
+            }
+        }
+
+        .customer-bg-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                min-height: 200px;
+            }
+        }
+
+        .section-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            line-height: 0;
+            z-index: 10;
+
+            svg {
+                display: block;
+                width: 100%;
+                height: 80px;
+            }
+        }
+    }
+
+    // Trailhead Section
+    .slack-trailhead-section {
+        padding: 80px 0 350px;
+        position: relative;
+        background-color: #fff;
+        overflow: hidden;
+
+        @include mobile {
+            padding: 60px 0 160px;
+        }
+
+        .sf-container {
+            position: relative;
+            z-index: 5;
+        }
+
+        .trailhead-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.2;
+            margin-bottom: 60px;
+
+            @include desktop {
+                font-size: 32px;
+            }
+
+            @include mobile {
+                font-size: 26px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .trailhead-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            @include big-tab {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .trailhead-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            width: 350px;
+            max-width: 100%;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            @include big-tab {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .card-badge {
+                margin-bottom: 24px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .badge-pill {
+                    background-color: #EBF8FE;
+                    color: $sky-blue;
+                    font-size: 12px;
+                    font-weight: 700;
+                    padding: 4px 12px;
+                    border-radius: 20px;
+                    text-transform: uppercase;
+                    margin-bottom: 16px;
+                    display: inline-block;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: contain;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                color: $secondary-color;
+                line-height: 1.3;
+                margin-bottom: 12px;
+                min-height: 52px; // Align titles
+            }
+
+            .card-desc {
+                font-size: 16px;
+                line-height: 1.5;
+                color: $text-color;
+                margin-bottom: 24px;
+                flex: 1;
+            }
+
+            .btn-link {
+                font-size: 16px;
+                font-weight: 700;
+                color: $sky-blue;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                    color: darken($sky-blue, 10%);
+                }
+            }
+        }
+
+        .trailhead-bg-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 0;
+            pointer-events: none;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                min-height: 200px;
+            }
+        }
+    }
+
+    // Trends Section
+    .slack-trends-section {
+        padding: 80px 0;
+        background-color: #fff;
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.2;
+            margin-bottom: 60px;
+
+            @include mobile {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+
+            @include desktop {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .trend-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-image {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .card-content {
+                padding: 24px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .trend-tag {
+                    background-color: #EBF8FE;
+                    color: $sky-blue; // #0176D3
+                    font-size: 11px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    margin-bottom: 12px;
+                    display: inline-block;
+                }
+
+                .trend-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1.3;
+                    margin-bottom: 24px;
+                    flex: 1; // Pushes link to bottom
+                }
+
+                .btn-link {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $text-color; // Often links are dark, turning blue on hover, or strictly blue. 
+                    // Screenshot shows "Read more" underlined in dark/blue. Let's use blue.
+                    color: $secondary-color;
+                    text-decoration: underline;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    &:hover {
+                        color: $sky-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    // Next Step Section
+    .slack-next-step-section {
+        padding: 60px 0 100px;
+        background-color: #fff;
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.2;
+            margin-bottom: 60px;
+
+            @include mobile {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .next-step-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+
+            @include desktop {
+                gap: 20px;
+            }
+
+            @include big-tab {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px 30px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; // Screenshot shows left align content inside card? 
+            // Screenshot 2: "Start your trial" text is left aligned.
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .icon-circle {
+                width: 48px;
+                height: 48px;
+                background-color: #EBF8FE;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 24px;
+                color: $sky-blue;
+                font-size: 20px;
+            }
+
+            .step-title {
+                font-size: 22px;
+                font-weight: 700;
+                color: $secondary-color; // #032D60
+                margin-bottom: 12px;
+            }
+
+            .step-desc {
+                font-size: 16px;
+                line-height: 1.5;
+                color: $text-color;
+                margin-bottom: 24px;
+                flex: 1;
+            }
+
+            .step-link {
+                font-size: 16px;
+                font-weight: 700;
+                color: $secondary-color;
+                text-decoration: underline;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+
+                &:hover {
+                    color: $sky-blue;
+                }
+            }
+        }
+    }
+
+    // FAQ Section
+    .slack-faq-section {
+        padding: 80px 0 350px; // Padding bottom to accommodate the landscape image
+        position: relative;
+        background-color: #fcfcfc; // Slightly off-white or white, screenshot looks very clean.
+
+        @include mobile {
+            padding: 60px 0 200px;
+        }
+
+        .sf-container {
+            position: relative;
+            z-index: 5;
+            max-width: 1000px; // Limit width for readability
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: $secondary-color;
+            line-height: 1.2;
+            margin-bottom: 60px;
+
+            @include mobile {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .faq-accordion {
+            .faq-item {
+                border-bottom: 1px solid #e0e0e0;
+
+                &:first-child {
+                    border-top: 1px solid #e0e0e0;
+                }
+
+                &.active {
+                    .faq-question {
+                        .icon-toggle {
+                            .fa-plus {
+                                display: none;
+                            }
+
+                            .fa-minus {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .faq-answer {
+                        max-height: 500px; // Arbitrary large height for expansion
+                        opacity: 1;
+                        padding-bottom: 24px;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .faq-question {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 24px 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                text-align: left;
+
+                .question-text {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    padding-right: 20px;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+
+                .icon-toggle {
+                    color: $sky-blue; // #0176D3
+                    font-size: 18px;
+
+                    .fa-minus {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    .question-text {
+                        color: $primary-color; // Hover color
+                    }
+                }
+            }
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+
+                .answer-content {
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: $text-color;
+
+                    a {
+                        color: $sky-blue;
+                        text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .faq-bg-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 0;
+            pointer-events: none;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                // Ensure it covers bottom area
+            }
+        }
+    }
+}

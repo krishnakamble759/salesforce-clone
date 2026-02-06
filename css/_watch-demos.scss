@@ -1,0 +1,380 @@
+// Watch Demos Page Styles
+@use './variable.scss' as *;
+
+.watch-demos-page {
+    font-family: 'Salesforce Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #fff;
+    color: #181818;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    // Background Graphic (Purple curve at bottom)
+    position: relative;
+    background-color: #ffffff;
+
+    // Use pseudo-element for reliable fixed background positioning
+    &::before {
+        content: "";
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(ellipse 80% 60% at 0% 100%, #B0C0FF 0%, #dce4fd 45%, #ffffff 75%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .main-content {
+        position: relative;
+        z-index: 1; // Ensure content sits above background
+        flex: 1;
+        padding: 40px 0;
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+
+            @include small-tab {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            // Left Column
+            .left-col {
+                padding-top: 20px;
+
+                .logo-cloud {
+                    width: 60px;
+                    margin-bottom: 24px;
+                }
+
+                h1 {
+                    font-size: 48px;
+                    font-weight: 700;
+                    color: #032d60;
+                    line-height: 1.1;
+                    margin-bottom: 32px;
+
+                    @include mobile {
+                        font-size: 36px;
+                    }
+                }
+
+                .intro-text {
+                    font-size: 18px;
+                    color: #181818;
+                    margin-bottom: 24px;
+                }
+
+                .benefits-list {
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 32px;
+
+                    li {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 12px;
+                        margin-bottom: 16px;
+                        font-size: 16px;
+                        color: #181818;
+                        line-height: 1.5;
+
+                        &::before {
+                            content: '\f00c'; // FontAwesome check
+                            font-family: 'Font Awesome 6 Free';
+                            font-weight: 900;
+                            color: #027e46; // Green check color
+                            font-size: 16px;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+
+                .contact-text {
+                    font-size: 16px;
+                    margin-bottom: 40px;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+
+                .mascot-graphic {
+                    width: 100%;
+                    max-width: 600px; // Increased size
+                    margin-top: 40px;
+                    position: relative;
+                    z-index: 2;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)); // Add shadow to image itself rather than box
+                    }
+                }
+            }
+
+            // Right Column (Form)
+            .right-col {
+                background: #fff;
+                padding: 10px; // Visual padding mainly
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #181818;
+                    margin-bottom: 24px;
+                }
+
+                .watch-demos-form {
+                    .form-row {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 16px;
+                        margin-bottom: 16px;
+
+                        @include mobile {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+
+                    .form-group {
+                        margin-bottom: 16px;
+
+                        input,
+                        select {
+                            width: 100%;
+                            height: 48px;
+                            padding: 12px 16px;
+                            border: 1px solid #949494;
+                            border-radius: 4px;
+                            font-size: 16px;
+                            color: #181818;
+                            background: #fff;
+
+                            &::placeholder {
+                                color: #757575;
+                            }
+
+                            &:focus {
+                                border-color: $primary-color;
+                                outline: 1px solid $primary-color;
+                            }
+                        }
+
+                        select {
+                            appearance: none;
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                            background-repeat: no-repeat;
+                            background-position: right 1rem center;
+                            background-size: 1em;
+                        }
+
+                        // Special styling for country/region with checkmark if needed, 
+                        // but standard select is usually fine.
+                        // The screenshot shows "India" with a green checkmark INSIDE the select box.
+                        // This is tricky with standard select. I'll just style the select.
+                        // Or if it's a selected state visual.
+
+                        &.has-check {
+                            position: relative;
+
+                            &::after {
+                                content: '\f00c';
+                                font-family: 'Font Awesome 6 Free';
+                                font-weight: 900;
+                                color: #027e46;
+                                position: absolute;
+                                right: 40px; // Left of the dropdown arrow
+                                top: 50%;
+                                transform: translateY(-50%);
+                                pointer-events: none;
+                            }
+                        }
+                    }
+
+                    .privacy-text {
+                        font-size: 11px;
+                        color: #555;
+                        margin-top: 8px;
+                        margin-bottom: 24px;
+                        line-height: 1.4;
+
+                        a {
+                            color: #0070d2;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .btn-submit {
+                        width: 100%;
+                        background-color: #0176D3;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 700;
+                        padding: 14px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        transition: background-color 0.2s;
+
+                        &:hover {
+                            background-color: #005fb2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Background Graphic (Purple curve at bottom)
+
+    // ... (rest of main content code)
+
+    // Footer Override for Watch Demos Page
+    .main-footer {
+        margin-top: 0 !important; // Remove large gap
+        padding-top: 0 !important;
+        background: transparent;
+
+        .footer-bottom {
+            background-color: $navy-blue;
+            padding: 20px 0;
+
+            // Force full viewport width
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+
+            .bottom-container {
+                max-width: 1200px; // Match main content width
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            // Target the flexible content container
+            .footer-bottom-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between; // Align left and right groups apart
+                // gap: 20px; // Optional gap if screen gets small
+
+                .footer-left-group {
+                    display: flex;
+                    align-items: center; // Align globe box vertically center
+                    gap: 32px;
+                    width: 100%;
+
+                    .footer-text-group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        .copyright {
+                            margin-bottom: 2px;
+                        }
+                    }
+                }
+
+                // Globe Selector Box Style
+                .globe-selector {
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    transition: all 0.2s;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    height: 48px;
+
+                    span {
+                        font-family: 'Salesforce Sans', sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        color: #fff;
+                    }
+
+                    img {
+                        width: 18px;
+                        height: 18px;
+                        filter: invert(1); // Make white
+                    }
+
+                    .fa-angle-down {
+                        font-size: 12px;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        border-color: #fff;
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+                }
+
+                // Links List
+                .legal-list {
+                    margin: 0;
+                    gap: 24px;
+                    text-decoration: underline;
+                    display: flex;
+                    list-style: none;
+
+                    li a {
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: #fff;
+                        opacity: 0.8;
+
+                        &:hover {
+                            text-decoration: underline;
+                            opacity: 1;
+                        }
+
+                        .footer-link-icon {
+                            width: 29px;
+                            height: auto;
+                            margin-right: 6px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                .copyright {
+                    margin: 0;
+                    text-align: left;
+
+                    p {
+                        font-size: 11px;
+                        color: #fff;
+                        opacity: 0.7;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

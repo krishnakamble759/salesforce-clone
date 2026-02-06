@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MuleSoft - The world's #1 integration and API platform.">
+    <title>MuleSoft | Salesforce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+    <link rel="stylesheet" href="../css/_mulesoft.scss">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item"><a href="#" class="nav-link" id="productsMenuTrigger">Products <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="../assets/icons/salesforce-logo.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <span class="globe-icon">🌐</span>
+
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="?page=contact" class="btn-contact">Contact us</a>
+                <a href="?page=contact" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MuleSoft Sub-Navigation -->
+    <div class="mulesoft-sub-nav">
+        <div class="container sf-container">
+            <div class="sub-nav-content">
+                <div class="sub-nav-left">
+                    <div class="product-name">
+                        <a href="mulesoft.html" class="mulesoft-title-link">MuleSoft</a>
+                        <i class="fa-solid fa-chevron-down mobile-toggle-arrow"></i>
+                    </div>
+                    <ul class="sub-nav-menu">
+                        <li><a href="#">Overview</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">MuleSoft Anypoint Platform</a>
+                                <a href="#">MuleSoft Composer</a>
+                                <a href="#">MuleSoft RPA</a>
+                                <a href="#">Salesforce Flow</a>
+                                <a href="#">Dataloader.io <i class="fa-solid fa-arrow-up-right-from-square"
+                                        style="font-size: 0.75em;"></i></a>
+                                <a href="#" class="view-all-link">See all MuleSoft products</a>
+                            </div>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Pricing <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">MuleSoft Anypoint Platform Pricing</a>
+                                <a href="#">MuleSoft Automation Pricing</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub-nav-right">
+                    <a href="#" class="btn btn-outline talk-expert-btn">Talk to an expert</a>
+                    <a href="#" class="btn btn-primary try-free-btn">Try for free</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MuleSoft Hero Section -->
+    <section class="mulesoft-hero">
+        <div class="container sf-container">
+            <div class="row align-items-center">
+                <!-- Content Side -->
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Power AI agents to<br>take action with<br>APIs</h1>
+                    <p class="hero-desc">
+                        Integration is the foundation for actionable AI and<br>with MuleSoft, Agentforce agents can take
+                        action<br>anywhere. Seamlessly integrate any system, orchestrate<br>complex workflows and secure
+                        mission critical APIs to<br>extend the power of Agentforce across your IT<br>environment.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Try for free <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <a href="#" class="btn btn-outline">Talk to an expert <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+                <!-- Visual Side -->
+                <div class="col-lg-6 hero-visual text-lg-end text-center mt-4 mt-lg-0">
+                    <div class="video-container">
+                        <!-- Using the provided asset name or styling a placeholder to look like the screenshot -->
+                        <div class="video-box">
+                            <img src="../assets/MuleSoft/bc826d78e7d38d25785679.gif" alt="MuleSoft AI integration"
+                                class="img-fluid video-cover">
+                            <div class="play-overlay">
+                                <div class="play-icon-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="mulesoft-brands">
+        <div class="container sf-container">
+            <h2 class="brands-title">See how top brands use MuleSoft to<br>innovate with agility and efficiency.</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="../assets/MuleSoft/logo-att.webp" alt="AT&T">
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/MuleSoft/logo-wall-rbc.webp" alt="RBC Wealth Management">
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/MuleSoft/logo-ge-appliances.webp" alt="GE Appliances">
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/MuleSoft/invesco.webp" alt="Invesco">
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/MuleSoft/customer-logo-sandbox-schneider-electric.webp"
+                        alt="Schneider Electric">
+                </div>
+            </div>
+        </div>
+
+        <!-- Curved Bottom Decoration -->
+        <div class="curved-bottom">
+            <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 80 C480 0 960 0 1440 80 V80 H0 Z" fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- MuleSoft Statistics Section -->
+    <section class="mulesoft-stats">
+        <div class="container sf-container">
+            <div class="stats-header">
+                <div class="mulesoft-icon">
+                    <img src="../assets/MuleSoft/mulesoft-logo.webp" alt="MuleSoft">
+                </div>
+                <h2 class="stats-title">Accelerate time to value with our market-<br>leading platform and proven
+                    methodology.</h2>
+                <a href="#" class="btn btn-primary read-research-btn">
+                    Read the research <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card stat-card-purple">
+                    <div class="stat-bg">
+                        <img src="../assets/MuleSoft/mulesoft-products-brand-proof-point-1.webp" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">78<sup>%</sup></h3>
+                        <p class="stat-label">faster time to market</p>
+                        <p class="stat-description">Accelerate development and delivery speed with a unified platform
+                            that drives efficiencies across the software development lifecycle.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-green">
+                    <div class="stat-bg">
+                        <img src="../assets/MuleSoft/mulesoft-products-brand-proof-point-2.webp" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">49<sup>%</sup></h3>
+                        <p class="stat-label">integration and API reuse rate</p>
+                        <p class="stat-description">Increase agility with asset reuse to develop and deliver
+                            higher-quality integrations and APIs faster, while minimising rework.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-cyan">
+                    <div class="stat-bg">
+                        <img src="../assets/MuleSoft/mulesoft-products-brand-proof-point-3.webp" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">74<sup>%</sup></h3>
+                        <p class="stat-label">reduced maintenance costs and effort</p>
+                        <p class="stat-description">Lower your maintenance effort and innovate more efficiently with
+                            reduced run, change, security and governance costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Agentforce Integration Platform Section -->
+    <section class="mulesoft-agentforce">
+        <div class="container sf-container">
+            <div class="agentforce-content">
+                <h2 class="agentforce-title">Meet the only native integration platform powering Agentforce</h2>
+
+                <p class="agentforce-description">
+                    With the rise of generative AI and AI agents, data is the new currency. To move the business
+                    forward, companies must scale API adoption to bring all their disparate data to bear across the
+                    Agentforce 360 Platform.
+                </p>
+
+                <p class="agentforce-description">
+                    But it doesn't stop there. You need the ability to democratise automation and take action on your
+                    data. This is why Salesforce customers trust MuleSoft's unified integration, automation and API
+                    management platform to close data silos and power agent action across teams, technologies and
+                    systems.
+                </p>
+
+                <a href="#" class="btn btn-primary read-report-btn">
+                    Read the report <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <div class="agentforce-diagram">
+                    <img src="../assets/MuleSoft/mulesoft-feature-ai-integration-automation-api-management.webp"
+                        alt="Integration Platform Diagram" class="diagram-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MuleSoft Features Section -->
+    <section class="mulesoft-features">
+        <div class="container sf-container">
+            <!-- Feature 1: Image Right, Content Left -->
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-image">
+                    <img src="../assets/MuleSoft/mulesoft-anypoint-exchange-cloud-connectors.webp"
+                        alt="Build an agent-ready foundation">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Build an agent-ready foundation</h2>
+                    <p class="feature-description">Enable agent connectivity and discoverability with integrated
+                        systems, models and applications.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Watch demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Connect systems at lightning-fast speed.</h3>
+                            <p class="feature-item-text">With an extensive library of prebuilt connectors for critical
+                                enterprise applications, databases, protocols and industry standards, connectivity has
+                                never been easier. These connectors are fully maintained and ready to use, which means
+                                that teams can spend less time developing and more time innovating.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Build an integrated foundation.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Accelerate delivery with intuitive tooling.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Image Left, Content Right -->
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="../assets/MuleSoft/mulesoft-feature-automate-any-system-process.webp"
+                        alt="Put your data to work">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Put your data to work, by turning it into action.</h2>
+                    <p class="feature-description">Empower developers and business users to automate workflows across
+                        any system or touchpoint, using natural language prompts and no-code to pro-code tools.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Get the guide <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Automate any system or process.</h3>
+                            <p class="feature-item-text">Use natural language prompts and no code to pro-code tools to
+                                automate any process or subprocess quickly. Get to value faster by reuse components like
+                                bots, connectors, workflows and APIs.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Manage and optimise workflows across teams and systems.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Create new customer and employee experiences at any
+                                touchpoint.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Image Right, Content Left -->
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-image">
+                    <img src="../assets/MuleSoft/mulesoft-feature-discover-build-catalog-api.webp"
+                        alt="Scale innovation with API security">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Scale innovation with API security and governance.</h2>
+                    <p class="feature-description">Centrally manage, govern and secure your data and APIs, from
+                        anywhere, as you build new experiences, products and services.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Watch demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Discover, build and catalog any API.</h3>
+                            <p class="feature-item-text">Jumpstart application and automation delivery by discovering
+                                and building APIs using diverse protocols. With a single pane of glass across all of
+                                your APIs, your teams can reuse APIs, decrease redundancies and accelerate delivery.
+                                Easily share APIs for use in Agentforce through API Catalogue.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Ensure consistent API quality.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Control and secure access to all APIs.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Create API ecosystems.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Products Portfolio Section -->
+    <section class="mulesoft-products-portfolio">
+        <img src="../assets/MuleSoft/mulesoft-product-portfolio-background.webp" alt="Background Decorations"
+            class="portfolio-bg">
+        <div class="container sf-container">
+            <h2 class="portfolio-title">Explore MuleSoft's unified integration, automation and API management solutions.
+            </h2>
+
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft Anypoint Platform</h3>
+                    <p class="product-card-description">Start fast and realise immediate value with a single, unified
+                        solution for integration and APIs.</p>
+                    <a href="#" class="product-card-link">Learn more</a>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft for Flow: Integration</h3>
+                    <p class="product-card-description">Enable business teams to automate workflows and connect apps and
+                        data easily.</p>
+                    <a href="#" class="product-card-link">Learn more <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft for Agentforce</h3>
+                    <p class="product-card-description">Extend Agentforce to securely take action across your business.
+                    </p>
+                    <a href="#" class="product-card-link">Learn more <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">Salesforce Flow</h3>
+                    <p class="product-card-description">Fast-track work between people and departments by automating
+                        multiuser processes.</p>
+                    <a href="#" class="product-card-link">Learn more</a>
+                </div>
+            </div>
+
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-outline-primary">View all products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Customer Story Section -->
+    <section class="mulesoft-customer-story">
+        <img src="../assets/MuleSoft/mulesoft-products-brand-customer-story-quote-background.webp"
+            alt="Background Decorations" class="customer-story-bg">
+        <div class="container sf-container">
+            <h2 class="story-title">How customers use MuleSoft to transform experiences.</h2>
+
+            <div class="story-card">
+                <div class="story-content-wrapper">
+                    <div class="story-image">
+                        <img src="../assets/MuleSoft/mulesoft-customer-story-royal-bank-of-canada.webp"
+                            alt="Greg Beltzer, RBC Wealth Management">
+                    </div>
+                    <div class="story-info">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="quote-text">MuleSoft has been critical in enabling our IT team to bring our legacy
+                            technology and modern platforms together. We now have a single view of each and every
+                            customer. And, with our new solution, clients are onboarded in just 24 minutes, versus
+                            weeks.</p>
+                        <div class="quote-author">
+                            <p class="author-name">Greg Beltzer</p>
+                            <p class="author-title">Head of Technology, RBC Wealth Management</p>
+                        </div>
+                        <div class="story-cta">
+                            <a href="#" class="btn btn-outline-primary">Read the story <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Trailhead Section -->
+    <section class="mulesoft-trailhead">
+        <div class="container sf-container">
+            <h2 class="trailhead-title">Learn new skills with free, guided training on Trailhead.</h2>
+            <div class="trailhead-grid">
+                <!-- Card 1 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/f6725ef15a4183ed9867ebf6995b7ab5_badge.webp"
+                            alt="API Lifecycle Management">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">API Lifecycle Management with Anypoint Platform</h3>
+                    <p class="card-text">Learn how MuleSoft simplifies the design and management of your APIs and
+                        integrations.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/4d5b695039a70b4384630ca538cceaa7_badge.webp" alt="RPA Automation">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">RPA Automation with MuleSoft Composer</h3>
+                    <p class="card-text">Build and run a flow to sync leads in Gmail with Salesforce and Slack using
+                        MuleSoft RPA.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/c2d1e1b78bb73f734b6f668e6f9428de_badge.webp"
+                            alt="Flow Builder Basics">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">Flow Builder Basics</h3>
+                    <p class="card-text">Explore Flow Builder and learn when to use flows to automate your business
+                        processes.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+            </div>
+            <div class="trailhead-footer">
+                <img src="../assets/MuleSoft/mulesoft-products-brand-trailhead-background.webp"
+                    alt="Clouds and Butterflies" class="trailhead-bg">
+                <a href="#" class="btn btn-outline-primary">Learn for free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Resources Section -->
+    <section class="mulesoft-resources">
+        <div class="container sf-container">
+            <h2 class="resources-title">Keep up with the latest trends, insights, and conversations.</h2>
+            <div class="resources-grid">
+                <!-- Card 1 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/mulesoft-resources-report-connectivity-benchmark.webp"
+                            alt="Connectivity Benchmark Report">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Report</div>
+                        <h3 class="card-title">See how companies are tackling today's economic challenges with
+                            digital transformation.</h3>
+                        <p class="card-text">Read the insights from over 1,050 IT leaders in the "2024 Connectivity
+                            Benchmark Report."</p>
+                        <a href="#" class="card-link">Read the report <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/mulesoft-resources-report-it-leaders-insights-pulse.webp"
+                            alt="Integration Tips Blog">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Blog</div>
+                        <h3 class="card-title">Salesforce-MuleSoft integration: 9 tips to remember.</h3>
+                        <p class="card-text">Learn how MuleSoft unleashes the power of Salesforce's Customer 360 by
+                            unlocking, unifying, and securing data.</p>
+                        <a href="#" class="card-link">Read the blog</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/MuleSoft/mulesoft-resources-guide-salesforce-integration-customer-360.webp"
+                            alt="AI Future Salesforce+">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Salesforce+</div>
+                        <h3 class="card-title">Experience the future of AI and hyperautomation.</h3>
+                        <p class="card-text">Watch how MuleSoft's hyperautomation platform transforms employee and
+                            customer experiences.</p>
+                        <a href="#" class="card-link">Watch the keynote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="resources-footer">
+                <a href="#" class="btn btn-outline-primary">See all resources <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Innovation Journey Section -->
+    <section class="mulesoft-innovation-journey">
+        <div class="container sf-container">
+            <h2 class="journey-title">Start your innovation journey with MuleSoft.</h2>
+            <div class="journey-grid">
+                <!-- Card 1 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="card-title">Begin your trial.</h3>
+                    <p class="card-text">Try MuleSoft Anypoint Platform free for 30 days. No credit card, no
+                        installations.</p>
+                    <a href="#" class="card-link">Try for free <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="card-title">Talk to an expert.</h3>
+                    <p class="card-text">Tell us a bit more so the right person can keep in touch faster.</p>
+                    <a href="#" class="card-link">Request a call <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="card-title">Stay up to date.</h3>
+                    <p class="card-text">Get the latest research, industry insights and product news delivered straight
+                        to your inbox.</p>
+                    <a href="#" class="card-link">Sign up for newsletter</a>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/MuleSoft/contact-us-footer-service.webp" alt="Innovation Journey Background"
+            class="journey-bg">
+    </section>
+
+    <!-- MuleSoft FAQ Section -->
+    <section class="mulesoft-faq">
+        <div class="container sf-container">
+            <h2 class="faq-title text-center">MuleSoft FAQs</h2>
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is MuleSoft?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MuleSoft was founded 2006 based on the idea that connecting applications should be easy.
+                            Today, IT Environments are more complex than ever before and MuleSoft
+                            has emerged as the leading unified platform for integration, automation and API management.
+                            MuleSoft provides easy-to-use tools to connect systems and data from
+                            anywhere - on-premises, cloud or hybrid.
+                        </p>
+                        <p>Using MuleSoft, both IT and business users can do more with less, quickly creating AI-powered
+                            workflows and integrations that enable the creation of efficient growth
+                            and differentiated customer experiences
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is MuleSoft different from other integration and automation solutions?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Over a decade ago, MuleSoft was the first to introduce the world to <a href="#">API-led
+                                connectivity</a> and redefined integration for IT. Over time, we've expanded our product
+                            portfolio to include <a href="#">automation</a>, <a href="#">API management</a> and <a
+                                href="#">AI</a>, because we recognise that end-to-end digital transformation is
+                            dependant on accessing these capabilities on a single, unified platform.</p>
+                        <p>MuleSoft is now the trusted solution in the market. We're Leaders in the Gartner Magic
+                            Quadrant for API Management and Visionary in the Gartner Magic Quadrant for <a
+                                href="#">Robotic Process Automation (RPA)</a>.</p>
+                        <p>Additionally, MuleSoft has quickly risen to become one of the fastest growing Salesforce
+                            cloud products by driving meaningful results and value for Trailblazers across industries.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Does MuleSoft integrate non-Salesforce systems?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The average enterprise has data siloed across over 900 systems and only one-third of those
+                            are integrated.</p>
+                        <p>In order to make the Customer 360 vision a reality, you must be able to bring all of your
+                            customer data to bear and to leverage all of your siloed systems and applications. With
+                            MuleSoft, customers can quickly connect to any system, both inside and outside of
+                            Salesforce.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the advantages for Salesforce customers who use MuleSoft?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Together, MuleSoft and Salesforce offer customers access to MuleSoft integration and <a
+                                href="#">automation</a>, without leaving the Agentforce 360 Platform. For example,
+                            directly from your Salesforce instance, you can invoke MuleSoft APIs, Flows or RPA bots.</p>
+                        <p>Additionally, MuleSoft and Salesforce offer customers the ability to accelerate delivery
+                            using hundreds of pre-built connectors and accelerators.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How will MuleSoft reduce the complexity of my existing architecture?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>At MuleSoft, we pioneered the concept of <a href="#">composability</a> as the foundation for
+                            successful innovation strategies. The goal of this integration approach is to reduce
+                            complexity and increase agility using standardised, reusable building blocks – like <a
+                                href="#">APIs</a> – to build new experiences, products and services instead of writing
+                            <a href="#">customised code</a> or starting from scratch with every project.</p>
+                        <p>MuleSoft combines our technology with best-in-class methodologies to help customers reduce
+                            complexity and reimagine customer experience.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is MuleSoft expensive?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MuleSoft is often compared to lower cost competitors that only offer basic solutions in one
+                            area: <a href="#">integration</a>, <a href="#">automation</a> or <a href="#">API
+                                management</a>. Unlike these point solutions, MuleSoft is a market leader, providing a
+                            unified platform with robust capabilities across all three categories.</p>
+                        <p>What's more, MuleSoft has evolved its pricing and packaging to lower the barrier to entry and
+                            to provide increased flexibility based on customer needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/MuleSoft/background-sales-cloud-pricing-3.webp" alt="FAQ Background" class="faq-bg">
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/mulesoft.js"></script>
+</body>
+
+</html>

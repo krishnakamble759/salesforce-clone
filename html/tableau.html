@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salesforce Commerce Cloud - Unified commerce platform.">
+    <title>Tableau: Visual Analytics from Salesforce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+    <link rel="stylesheet" href="../css/_tableau.scss">
+    <link rel="stylesheet" href="../css/_products.scss">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/icons/salesforce-logo.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item"><a href="#" class="nav-link" id="productsMenuTrigger">Products <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="../assets/icons/salesforce-logo.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <span class="globe-icon">🌐</span>
+
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="?page=contact" class="btn-contact">Contact us</a>
+                <a href="?page=contact" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tableau Sub-Navigation -->
+    <div class="tableau-sub-nav">
+        <div class="container sf-container">
+            <div class="sub-nav-content">
+                <div class="sub-nav-left">
+                    <div class="product-name">
+                        <a href="tableau.html" class="tableau-title-link">Analytics</a>
+                        <i class="fa-solid fa-chevron-down mobile-toggle-arrow"></i>
+                    </div>
+                    <ul class="sub-nav-menu">
+                        <li><a href="#">Overview</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">Business Intelligence</a>
+                                <a href="#">Data Visualisation</a>
+                                <a href="#">Augmented Analytics</a>
+                                <a href="#">Data Management</a>
+                                <a href="#">Data Integration</a>
+                            </div>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">Tableau Next</a>
+                                <a href="#">Tableau Semantics</a>
+                                <a href="#">Tableau</a>
+                                <a href="#">Tableau Pulse</a>
+                                <a href="#">CRM Analytics</a>
+                                <a href="#">Embedded Analytics</a>
+                                <a href="#" class="view-all-link">See all Analytics products</a>
+                            </div>
+                        </li>
+                        <li><a href="#">Data Culture</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="sub-nav-right">
+                    <a href="#" class="btn btn-primary try-free-btn">Try for Free</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agentforce Tableau Banner -->
+    <div class="tableau-banner">
+        <div class="container sf-container text-center">
+            <p><strong>The Agentic Enterprise starts with your data: Is yours ready?</strong> <a href="#"
+                    class="banner-link">Find out what top leaders have learnt.</a></p>
+        </div>
+    </div>
+
+    <!-- Tableau Hero Section -->
+    <section class="tableau-hero">
+        <div class="container sf-container">
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Agentforce Tableau</span>
+                    <h1 class="hero-title">
+                        Tableau: Visual<br>Analytics from<br>Salesforce
+                    </h1>
+                    <p class="hero-desc">
+                        Humans and agents work together to drive smarter decisions. Agentforce Tableau delivers
+                        actionable insights to every user in every industry, right in the flow of work.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Watch Demo</a>
+                        <a href="#" class="btn btn-outline">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <div class="video-preview-card">
+                            <img src="../assets/Tableau/YZwq-47hhQcD7SMoRaVYt7PM0fjZMMy1.gif" alt="Tableau Dashboard"
+                                class="hero-img">
+                            <div class="play-button-wrapper">
+                                <div class="play-icon">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="floating-badge">
+                            <div class="badge-icon">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+                            <div class="badge-text">
+                                The #1<br>Analytics<br>tool
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Gradient -->
+        <div class="hero-bg-gradient"></div>
+
+    </section>
+
+
+
+
+    <!-- Dreamforce Promo Section -->
+    <section class="tableau-dreamforce-promo">
+        <div class="container sf-container">
+            <div class="dreamforce-grid">
+                <div class="promo-image">
+                    <img src="../assets/Tableau/TabDF25k_SFDC-A.webp" alt="Dreamforce Tableau Keynote"
+                        class="img-fluid">
+                </div>
+                <div class="promo-content">
+                    <h2 class="promo-title">Grab a front-row seat to the agentic analytics revolution.</h2>
+                    <p class="promo-desc">Catch the latest in analytics innovation for the Agentic Enterprise from
+                        Dreamforce. Watch the Tableau keynote on demand on Salesforce+.</p>
+                    <a href="#" class="btn btn-light-custom">Watch now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Stats Section -->
+    <section class="tableau-stats">
+        <div class="container sf-container">
+            <div class="stats-header text-center">
+                <div class="stats-icon">
+                    <img src="../assets/Tableau/icon-tableau.svg" alt="" width="60">
+                </div>
+                <h2 class="section-title">Set your organisation apart with analytics.</h2>
+            </div>
+
+            <div class="stats-grid">
+                <!-- Card 1 -->
+                <div class="stat-card stat-card-1">
+                    <div class="stat-content">
+                        <span class="stat-number">32%</span>
+                        <p class="stat-text">increase in business user productivity</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="stat-card stat-card-2">
+                    <div class="stat-content">
+                        <span class="stat-number">26%</span>
+                        <p class="stat-text">decrease in time to analyse information</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="stat-card stat-card-3">
+                    <div class="stat-content">
+                        <span class="stat-number">33%</span>
+                        <p class="stat-text">increase in insights-driven decision making</p>
+                    </div>
+                </div>
+            </div>
+            <div class="source-text text-center mt-4">
+                <p>Source: 2024 Salesforce Success Metrics Analytics Highlights. Data is aggregated from 1,536 customers
+                    across 9 countries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau Solutions Section -->
+    <section class="tableau-solutions">
+        <div class="container sf-container">
+            <h2 class="section-title text-center mb-5">With Tableau as the foundation, build<br>your perfect analytics
+                solution:</h2>
+
+            <!-- Row 1 -->
+            <div class="solutions-row">
+                <div class="row-header">
+                    <h3>Deliver high-quality data more efficiently.</h3>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="solution-card">
+                        <h4>Data Management</h4>
+                        <p>Access secure, trusted data where you need it by ensuring visibility and control.</p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                    <div class="solution-card">
+                        <h4>Data Integration</h4>
+                        <p>Seamlessly connect data sources and boost dashboard functionality.</p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="solutions-row">
+                <div class="row-header">
+                    <h3>Explore insights and anticipate needs—faster.</h3>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="solution-card">
+                        <h4>Data Culture</h4>
+                        <p>Weave data into the operations, culture, tech and identity of your organisation.</p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                    <div class="solution-card">
+                        <h4>Business Intelligence</h4>
+                        <p>Discover answers to business-critical questions with a holistic, real-time view of your
+                            relevant data.</p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                    <div class="solution-card">
+                        <h4>Data Visualisation</h4>
+                        <p>Tell a story and act collaboratively with visual analytics.</p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="solutions-row">
+                <div class="row-header">
+                    <h3>Fuel growth with intelligent actions.</h3>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="solution-card">
+                        <h4>Augmented Analytics</h4>
+                        <p>Use AI to automate summaries, personalise insights and explore data with natural language.
+                        </p>
+                        <a href="#" class="card-link">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Image Container (Styled in CSS) -->
+        <div class="solutions-bg-layer"></div>
+    </section>
+
+    <!-- Gartner Section -->
+    <section class="tableau-gartner section-padding">
+        <div class="container sf-container">
+            <div class="two-col-grid align-center">
+                <div class="col-image">
+                    <img src="../assets/Tableau/MQProductPage2.webp" alt="Gartner Magic Quadrant" class="img-fluid">
+                </div>
+                <div class="col-content">
+                    <h2 class="section-heading">12 years strong—Tableau is a Leader in the Gartner® Magic Quadrant™ for
+                        Analytics and Business Intelligence Platforms.</h2>
+                    <a href="#" class="btn btn-outline-custom">Read the report <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Story Section (RBC) -->
+    <section class="tableau-customer-story section-padding">
+        <div class="container sf-container">
+            <div class="story-card">
+                <div class="two-col-grid align-center reverse-mobile">
+                    <div class="col-content">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <h3 class="quote-text">To prepare for client meetings, advisors had to reference up to 26
+                            different systems. It would take 3-4 hours to prepare for the meeting. Now, all the
+                            information advisors need is right there at the click of a button.</h3>
+                        <div class="author-info">
+                            <strong>Greg Beltzer</strong>
+                            <p>Head of Technology, RBC Wealth Management - U.S.</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-custom">Read the story</a>
+                    </div>
+                    <div class="col-image">
+                        <img src="../assets/Tableau/image-11.webp" alt="Greg Beltzer"
+                            class="img-fluid rounded-circle-custom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTO Section -->
+    <section class="tableau-cto section-padding">
+        <div class="container sf-container">
+            <div class="two-col-grid align-center">
+                <div class="col-image">
+                    <img src="../assets/Tableau/success-ecosystem-min.webp" alt="Salesforce CTOs" class="img-fluid">
+                </div>
+                <div class="col-content">
+                    <h2 class="section-heading">Achieve your AI and data goals with Salesforce CTOs.</h2>
+                    <p class="section-desc">Trusted advisors with unmatched Salesforce experience and expertise, by your
+                        side.</p>
+                    <a href="#" class="btn btn-primary-custom">Learn more <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Culture Playbook Section -->
+    <section class="tableau-playbook section-padding">
+        <div class="container sf-container">
+            <div class="playbook-card">
+                <div class="two-col-grid align-center">
+                    <div class="col-content">
+                        <h2 class="section-heading">Put data at the centre of every decision.</h2>
+                        <p class="section-desc">Transform your company by infusing your data with AI and building a
+                            thriving data culture.</p>
+                        <a href="#" class="btn btn-outline-custom">Get the Data Culture Playbook <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="col-image">
+                        <img src="../assets/Tableau/data-culture-playbook-1-1-1.webp" alt="Data Culture Playbook"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau Trailhead Section -->
+    <section class="tableau-trailhead">
+        <div class="container sf-container">
+            <h2 class="trailhead-title text-center">Learn new skills with free, guided learning<br>on Trailhead.</h2>
+
+            <div class="trailhead-grid">
+                <!-- Card 1 -->
+                <div class="trailhead-card">
+                    <div class="card-badge-wrapper">
+                        <img src="../assets/Tableau/31082312be9ed85da9f3769c7d03e103_badge.webp"
+                            alt="Tableau Basics Badge" class="card-badge">
+                    </div>
+                    <span class="badge-pill">Module</span>
+                    <h3>Tableau Basics</h3>
+                    <p>Visualize and understand your data in new ways with Tableau.</p>
+                    <a href="#" class="trailhead-link">Start learning</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="trailhead-card">
+                    <div class="card-badge-wrapper">
+                        <img src="../assets/Tableau/9662ea5221f0f2aa3f4fe68df5935d9a_badge.webp"
+                            alt="CRM Analytics Basics Badge" class="card-badge">
+                    </div>
+                    <span class="badge-pill">Module</span>
+                    <h3>CRM Analytics Basics</h3>
+                    <p>Uncover new insights from your business data using CRM Analytics.</p>
+                    <a href="#" class="trailhead-link">Start learning</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="trailhead-card">
+                    <div class="card-badge-wrapper">
+                        <img src="../assets/Tableau/ec05052df4f2267da12ca869c2f03487_badge.webp"
+                            alt="Data Fundamentals for AI Badge" class="card-badge">
+                    </div>
+                    <span class="badge-pill">Module</span>
+                    <h3>Data Fundamentals for AI</h3>
+                    <p>Learn the importance of data and ethics to prep for the AI innovations shaping our future.</p>
+                    <a href="#" class="trailhead-link">Start learning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau Resources Section -->
+    <section class="tableau-resources section-padding">
+        <div class="container sf-container">
+            <h2 class="section-heading text-center mb-5">Keep up with the latest data and analytics<br>trends,
+                insights and conversations.</h2>
+
+            <div class="resources-grid">
+                <!-- Card 1 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/Tableau/spring-25-analytics.webp" alt="Spring '25 Release">
+                    </div>
+                    <div class="card-body">
+                        <span class="badge-pill">Product Release</span>
+                        <h3>Check out the latest innovations.</h3>
+                        <a href="#" class="resource-link">See the latest release</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/Tableau/card-resources-drive-data-transformation.webp"
+                            alt="Data Transformation Whitepaper">
+                    </div>
+                    <div class="card-body">
+                        <span class="badge-pill">Whitepaper</span>
+                        <h3>How Successful IT Leaders Drive Data Transformation</h3>
+                        <a href="#" class="resource-link">Get the whitepaper <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="../assets/Tableau/card-resources-forrester-wave.webp" alt="Forrester Wave Report">
+                    </div>
+                    <div class="card-body">
+                        <span class="badge-pill">Report</span>
+                        <h3>The Forrester Wave™: Business Intelligence Platforms, Q2 2025, Tableau a Leader</h3>
+                        <a href="#" class="resource-link">Get the report <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-custom">See all resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau Next Step Section -->
+    <section class="tableau-next-step section-padding">
+        <div class="container sf-container">
+            <h2 class="section-heading text-center mb-5">Take the next step with the world’s leading<br>analytics
+                platform.</h2>
+
+            <div class="next-step-grid">
+                <!-- Card 1 -->
+                <div class="step-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3>Start your Tableau trial.</h3>
+                    <p>Try Tableau for free—a fully-hosted enterprise solution for deep data exploration.</p>
+                    <a href="#" class="step-link">Try for free <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="step-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <h3>Start your CRM Analytics trial.</h3>
+                    <p>Try CRM Analytics for free to get actionable insights within your existing Salesforce
+                        workflows.</p>
+                    <a href="#" class="step-link">Try for free</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="step-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Talk to an expert.</h3>
+                    <p>Tell us a bit more so the right person can keep in touch faster.</p>
+                    <a href="#" class="step-link">Contact us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Background Image -->
+        <div class="next-step-bg-layer"></div>
+    </section>
+
+    <!-- Tableau FAQ Section -->
+    <section class="tableau-faq section-padding">
+        <div class="container sf-container">
+            <h2 class="section-heading text-center mb-5">Salesforce analytics from Tableau FAQs</h2>
+
+            <div class="faq-accordion">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3>What do you mean by Salesforce analytics from Tableau?</h3>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Salesforce analytics refers to a portfolio of analytics products delivered primarily
+                                through the Tableau brand, including <a href="#">Tableau</a>, <a href="#">CRM
+                                    Analytics</a>, <a href="#">Embedded Analytics</a>, <a href="#">Tableau
+                                    Pulse</a>, <a href="#">Data 360 for Tableau</a>, and an ever-expanding lineup of
+                                <a href="#">visual analytics tools</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3>What is Tableau?</h3>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Tableau is the leading analytics and <a href="#">business intelligence</a> (BI)
+                                platform from Salesforce that enables everyone to make better, faster business
+                                decisions. A powerful visual analytics platform, Tableau transforms how individuals
+                                and organisations use <a href="#">data and insights</a> to solve problems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3>How can Tableau help me?</h3>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Tableau can take data from almost any system—including your Salesforce CRM
+                                instance—and provide quick, actionable insights. With the flexibility to deploy
+                                on-prem or in the cloud and scale across your organisation, Tableau enables everyone
+                                to make <a href="#">data-driven decisions</a> and better serve customers. And with
+                                the integrations of AI, <a href="#">Tableau Accelerators</a>, and <a href="#">Customer
+                                    360</a>, you can get started fast and stay in the flow of
+                                work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3>What is the difference between Tableau and CRM Analytics?</h3>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>CRM Analytics and Tableau are complementary products from Salesforce. Select the
+                                right product for your organisation by determining where your users need to see
+                                their insights.</p>
+                            <p>Tableau is an end-to-end <a href="#">analytics platform</a> for a broad range of <a
+                                    href="#">enterprise use cases</a>. If you need a business intelligence solution
+                                that provides actionable analytics across all of your business functions and
+                                operations, try Tableau.</p>
+                            <p>CRM Analytics is ideal for teams who need analytics and insights deeply integrated
+                                into their Salesforce CRM. If you want to augment any Salesforce Cloud with native,
+                                actionable insights in your CRM workflow, try <a href="#">CRM Analytics</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer handled by main.js -->
+    <div class="offcanvas-menu" id="productsOffcanvas">
+        <div class="offcanvas-header">
+            <button class="back-to-menu-btn" id="backToMainFromProducts">
+                <i class="fa-solid fa-chevron-left"></i> Back
+            </button>
+            <h2>Products</h2>
+            <button class="offcanvas-close" id="closeProductsOffcanvas">✕</button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-content">
+                <!-- Left Side - Product Categories -->
+                <div class="products-categories">
+                    <a href="agentforce.html" class="category-item" data-category="agentforce"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-agentforce.svg" alt="Agentforce" class="product-icon">
+                        <span>Agentforce</span>
+                    </a>
+                    <a href="datacloud.html" class="category-item" data-category="data-cloud"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-data-cloud.svg" alt="Data Cloud" class="product-icon">
+                        <span>Data Cloud</span>
+                    </a>
+                    <a href="agentforce_ai_app.html" class="category-item" data-category="agentforce-ai"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-low-code.svg" alt="App Development" class="product-icon">
+                        <span>Agentforce & AI App Development</span>
+                    </a>
+                    <a href="products.html" class="category-item" data-category="overview">
+                        <img src="../assets/products/icon-customer360.svg" alt="Overview" class="product-icon">
+                        <span>Products Overview</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="small-business.html" class="category-item" data-category="smb"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-small-business.svg" alt="Small Business" class="product-icon">
+                        <span>Small Business</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="artificial-intelligence.html" class="category-item" data-category="ai"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-ai.svg" alt="Artificial Intelligence" class="product-icon">
+                        <span>Artificial Intelligence</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="sales.html" class="category-item" data-category="sales"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-sales.svg" alt="Sales" class="product-icon">
+                        <span>Sales</span>
+                    </a>
+                    <a href="service.html" class="category-item" data-category="service"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-service.svg" alt="Service" class="product-icon">
+                        <span>Service</span>
+                    </a>
+                    <a href="marketing.html" class="category-item" data-category="marketing"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-marketing.svg" alt="Marketing" class="product-icon">
+                        <span>Marketing</span>
+                    </a>
+                    <a href="commerce.html" class="category-item" data-category="commerce"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-commerce.svg" alt="Commerce" class="product-icon">
+                        <span>Commerce</span>
+                    </a>
+                    <a href="tableau.html" class="category-item active-category" data-category="tableau"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-tableau.svg" alt="Tableau" class="product-icon">
+                        <span>Tableau</span>
+                    </a>
+                    <a href="mulesoft.html" class="category-item" data-category="mulesoft">
+                        <img src="../assets/products/icon-mulesoft.svg" alt="MuleSoft" class="product-icon">
+                        <span>MuleSoft</span>
+                    </a>
+                    <a href="slack.html" class="category-item" data-category="slack"
+                        style="text-decoration: none !important;">
+                        <img src="../assets/products/icon-slack.svg" alt="Slack" class="product-icon">
+                        <span>Slack</span>
+                    </a>
+                    <div class="products-featured" id="featured-ai" style="display: none;">
+                        <div class="featured-product ai-featured">
+                            <div class="ai-content-panel">
+                                <div class="ai-header">
+                                    <span class="ai-category-label">Artificial Intelligence</span>
+                                    <h3 class="ai-title">Meet Agentforce: Your <br>Workforce Without Limits</h3>
+                                </div>
+                                <div class="ai-description">
+                                    <p>Augment every employee and serve customers 24/7 with agents that assist and
+                                        take
+                                        action autonomously in sales, service, marketing, and more.</p>
+                                    <p>Built on the trusted Salesforce platform, our AI helps you build, customize,
+                                        and
+                                        scale fast with low-code tools.</p>
+                                </div>
+                                <div class="ai-actions">
+                                    <a href="artificial-intelligence.html" class="btn-watch-demo">Explore AI</a>
+                                    <a href="agentforce_ai_app.html" class="link-all-products">Learn about AI
+                                        Development</a>
+                                </div>
+                            </div>
+                            <div class="ai-visual-panel">
+                                <div class="ai-image-wrapper">
+                                    <img src="../assets/Agentforce/AFDC-Overview-Marquee-Hero_617e34.webp"
+                                        alt="Agentforce AI">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-link">
+                        <a href="#">See all product pricing</a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Featured Product & Popular Links -->
+                <div class="products-featured" id="featured-overview">
+                    <div class="featured-product">
+                        <div class="featured-img">
+                            <img src="../assets/backgrounds/icon-360.webp" alt="">
+                        </div>
+                        <h3>Explore Customer 360.</h3>
+                        <p>Unite your teams around your customer with shared data and integrated tools to drive
+                            growth
+                            and lower costs.</p>
+                        <a href="#" class="btn-featured">See all Salesforce products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script type="module" src="../js/main.js?v=final"></script>
+    <script type="module" src="../js/tableau.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,4172 @@
+﻿@use 'sass:color';
+@use './variable.scss' as *;
+@import '_register.scss';
+@import '_sales.scss';
+@import '_service.scss';
+@import '_products.scss';
+@import '_small_business.scss';
+@import '_agentforce.scss';
+@import '_datacloud.scss';
+@import '_artificial_intelligence.scss';
+@import '_agentforce_ai_app.scss';
+@import '_marketing.scss';
+@import '_commerce.scss';
+@import '_tableau.scss';
+@import '_slack.scss';
+
+// Default Hidden State for Mobile Elements
+.mobile-search-row {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: $text-color;
+    background-color: $background-color;
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
+    padding: 65px 0 0; // Default padding to account for fixed header on large screens
+    overflow-x: hidden;
+
+    @include desktop {
+        padding-top: 70px;
+    }
+
+    @include small-desktop {
+        padding-top: 145px;
+    }
+
+    @include big-tab {
+        padding-top: 140px;
+    }
+
+    @include small-tab {
+        padding-top: 140px;
+    }
+
+    @include mobile {
+        padding-top: 135px;
+    }
+
+    @include mid-mobile {
+        padding-top: 115px; // Header wraps
+    }
+
+    @include small-mobile {
+        padding-top: 115px;
+    }
+
+    @include mid-small-mobile {
+        padding-top: 115px;
+    }
+
+    @include too-small-mobile {
+        padding-top: 115px;
+    }
+
+    &.mobile-menu-active {
+        overflow: hidden !important;
+    }
+
+
+}
+
+.sf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @include small-tab {
+        padding: 0 16px;
+    }
+
+    @include mobile {
+        padding: 0 12px;
+    }
+
+    @include too-small-mobile {
+        padding: 0 8px;
+    }
+}
+
+.header {
+    background-color: $text-white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3000;
+
+    @include desktop {
+        height: auto;
+        background-color: white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+    }
+
+    @include mobile {
+        padding: 3px 0;
+    }
+
+    @include small-mobile {
+        padding: 2px 0;
+    }
+
+    &::after {
+        content: '';
+        position: fixed;
+        top: 115px; // Start below header to keep header clear
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 115px);
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2300;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    @at-root body.mobile-menu-active .header::after {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 28px;
+        max-width: 1500px;
+        margin: 0 auto;
+
+        @include mid-desktop {
+            padding: 5px 10px; // Further reduced from 15px
+            gap: 8px; // Further reduced from 10px
+            flex-wrap: nowrap !important;
+        }
+
+        @include desktop {
+            display: flex !important;
+            flex-wrap: nowrap !important; // Reverted to nowrap for screens above 1023px
+            padding: 4px 15px !important;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            gap: 15px !important;
+        }
+
+        // Search box placement for mobile and tablet (using project breakpoint)
+        @include small-desktop {
+            flex-wrap: wrap !important;
+        }
+
+        // Ensure wrap at big-tab (992px) for 4+1 layout
+        @include big-tab {
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 4px 15px;
+            justify-content: space-between;
+        }
+
+        @include small-tab {
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 3px 12px;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 2px 10px;
+        }
+
+        @include mid-mobile {
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 2px 10px;
+        }
+
+        @include small-mobile {
+            gap: 3px;
+            padding: 2px 8px;
+        }
+
+        @include too-small-mobile {
+            gap: 2px;
+            padding: 2px 6px;
+        }
+
+        .mobile-only-item {
+            display: none;
+
+            @include desktop {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            z-index: 3005; // Ensure visible above overlay
+            position: relative;
+
+            @include desktop {
+                order: 2 !important;
+                flex: none !important;
+                display: flex !important;
+                justify-content: flex-start !important;
+                position: relative !important;
+                transform: none !important;
+                margin: 0 !important;
+                margin-left: 12px !important; // Keep logo close to menu icon
+            }
+
+            @include mid-desktop {
+                margin-left: 5px; // Reduced from default to save space
+            }
+
+            @include small-desktop {
+                order: 2;
+                margin-left: 12px; // Consistent spacing from menu icon
+            }
+
+            @include big-tab {
+                margin-left: 12px;
+            }
+
+            @include small-tab {
+                margin-left: 10px;
+            }
+
+            @include mobile {
+                margin-left: 10px;
+            }
+
+            @include mid-mobile {
+                margin-left: 10px;
+            }
+
+            @include small-mobile {
+                margin-left: 8px;
+            }
+
+            @include mid-small-mobile {
+                margin-left: 8px;
+            }
+
+            @include too-small-mobile {
+                margin-left: 8px;
+            }
+
+            img {
+                height: 38px;
+                width: auto;
+
+                @include big-tab {
+                    height: 32px;
+                }
+
+                @include small-tab {
+                    height: 30px;
+                }
+
+                @include mobile {
+                    height: 28px;
+                }
+
+                @include too-small-mobile {
+                    height: 22px;
+                }
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+
+            @include mid-desktop {
+                gap: 10px; // Further reduced from 15px
+            }
+
+            @include desktop {
+                display: none; // Default hidden for mobile/tablet unless active
+                position: fixed;
+                top: 115px; // Matches header height
+                left: -320px;
+                width: 320px;
+                max-width: 100%;
+                height: calc(100vh - 115px);
+
+                background-color: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 20px 40px; // Added left padding for items gap
+                z-index: 2800; // Increased to be above agentforce-nav (2500) but below header (3000)
+                box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow-y: auto;
+                visibility: hidden;
+                margin: 0;
+                transform: none;
+                border: none;
+
+                &.active {
+                    display: flex;
+                    left: 0 !important;
+                    visibility: visible !important;
+                }
+            }
+
+            @include too-small-mobile {
+                padding-top: 20px !important; // Adjusted for smaller gap
+            }
+
+            // Remove previous narrow tablet styles to avoid conflict
+            @include big-tab {
+                display: none;
+                gap: 20px;
+            }
+
+            // Mobile Search Menu Item
+            .search-menu-item {
+                display: none !important;
+            }
+
+            // View Containers - Desktop Structure (> 1200px)
+            @include min-desktop {
+                .menu-main-view {
+                    display: flex !important;
+                    align-items: center;
+                    gap: 28px;
+                }
+
+                .menu-login-view {
+                    display: none !important;
+                }
+            }
+
+            // View Containers - Mobile Offcanvas Structure (<= 1200px)
+            @include desktop {
+
+                .menu-main-view,
+                .menu-login-view {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            // Login Sub-Menu Specific Styles
+            .menu-login-view {
+                padding-bottom: 40px;
+
+                .back-to-main {
+                    color: #032d60;
+                    font-weight: 700;
+                    padding: 20px 28px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 19px;
+
+                    i {
+                        margin-right: 12px;
+                        font-size: 16px;
+                    }
+                }
+
+                .login-header-item {
+                    padding: 10px 28px 25px;
+
+                    .login-menu-title {
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #032d60;
+                        margin: 0;
+                    }
+                }
+
+                .login-section-label {
+                    padding: 15px 28px 10px;
+                    font-size: 14px;
+                    color: #666;
+                    font-weight: 400;
+                    text-transform: none;
+                    border-bottom: none !important;
+                }
+
+                .login-sub-item {
+                    padding: 12px 28px;
+                    font-size: 19px;
+                    font-weight: 600;
+                    color: #0176d3; // Salesforce blue
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    &.underline-link {
+                        text-decoration: underline;
+                    }
+
+                    .mini-logo {
+                        height: 18px;
+                        margin-left: 8px;
+                    }
+
+                    &:hover {
+                        color: #014486;
+                    }
+                }
+
+                .divider-small {
+                    height: 1px;
+                    background-color: #eee;
+                    margin: 20px 28px;
+                    width: calc(100% - 56px);
+                }
+
+                .login-description-item {
+                    padding: 5px 28px 20px;
+                    border-bottom: none !important;
+
+                    .login-menu-desc {
+                        font-size: 16px;
+                        color: #032d60;
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .nav-item {
+                position: relative;
+
+                @include small-desktop {
+                    width: 100%;
+                    border-bottom: 1px solid #f5f5f5;
+                }
+
+                .nav-link {
+                    color: #032d60;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 8px 0;
+                    transition: color 0.15s ease;
+                    display: block;
+
+                    @include mid-desktop {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                    @include big-tab {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                }
+
+                @include desktop {
+                    padding: 10px 28px;
+                    width: 100%;
+                }
+
+                @include small-desktop {
+                    padding: 0 28px;
+                }
+
+                @include big-tab {
+                    padding: 0px 28px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+
+                .mobile-chevron {
+                    display: none;
+
+                    @include big-tab {
+                        display: block;
+                        font-size: 16px;
+                        color: #888;
+                        font-weight: 900;
+                        margin-left: auto;
+                    }
+                }
+
+                // Standard icons (direct child or inside span)
+                i:first-child:not(.fa-angle-down),
+                span>i:first-child {
+                    margin-right: 20px;
+                    width: 25px;
+                    text-align: center;
+                    color: #032d60; // Secondary color
+                    display: none;
+
+                    @include big-tab {
+                        display: inline-block;
+                    }
+                }
+
+                // Dropdown Arrow
+                .fa-angle-down {
+                    display: inline-block;
+                    margin-left: 6px;
+                    font-size: 14px;
+                    transition: transform 0.3s ease;
+                }
+
+                &.has-dropdown:hover .fa-angle-down {
+                    transform: rotate(180deg);
+                }
+
+                // Specific styling for mobile action links (Login, Contact, Change Region)
+                &.mobile-action-link {
+                    @include big-tab {
+                        padding: 18px 28px;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            font-weight: 700;
+                            color: #032d60;
+
+                            i {
+                                font-size: 24px; // Larger as in screenshot
+                                margin-right: 20px;
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.divider {
+                display: none;
+
+                @include big-tab {
+                    display: block;
+                    height: 1px;
+                    background-color: #eee;
+                    margin: 15px 28px;
+                    width: calc(100% - 56px);
+                }
+            }
+
+            &.phone-display-row {
+                display: none;
+
+                @include big-tab {
+                    display: block;
+                    margin-top: 30px;
+                    padding-bottom: 40px;
+                    text-align: center;
+                    border-bottom: none !important;
+
+                    .phone-number-link {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #032d60;
+                        text-decoration: none;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &.has-dropdown {
+
+            // Desktop hover
+            @include small-desktop {
+                &:hover .dropdown-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                    display: block;
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $text-white;
+                border-radius: 4px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                padding: 8px 0;
+                min-width: 220px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+                margin-top: 0;
+
+                &.show {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    transform: translateY(0) !important;
+                    display: block !important;
+                }
+
+                @include small-desktop {
+                    position: static;
+                    width: 100%;
+                    box-shadow: none;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                    display: none; // Hidden by default on mobile
+                    padding: 0;
+                    background-color: #f9f9f9;
+                    border-top: 1px solid #eee;
+
+                    // When .show is toggled by JS
+                    &.show {
+                        display: block !important;
+                    }
+                }
+
+                .dropdown-item {
+                    display: block;
+                    padding: 10px 20px;
+                    color: #032d60;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    transition: background-color 0.15s ease;
+
+                    @include small-desktop {
+                        padding: 12px 40px; // Indent for hierarchy
+                        font-size: 15px;
+                    }
+
+                    @include mid-desktop {
+                        & {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @include large-desktop {
+                        font-weight: 700;
+                    }
+
+                    &:hover {
+                        background-color: #f3f3f3;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Only Items (Display logic)
+.mobile-only-item {
+    display: none; // Default hidden on desktop
+}
+
+@include desktop {
+    .desktop-only-more {
+        display: none !important;
+    }
+}
+
+@include small-desktop {
+    .mobile-only-item {
+        display: block !important;
+    }
+}
+
+
+// Search Box (Desktop and general styling)
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid #d8dde6;
+    min-width: 250px;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+
+    @include mid-desktop {
+        margin: 0 5px; // Further reduced from 10px
+        padding: 4px 8px; // More compact
+        min-width: 140px; // Further reduced from 180px to allow more shrinking
+        flex: 1;
+    }
+
+    &.active {
+        border-color: $primary-color;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @include desktop {
+        display: flex !important;
+        width: auto !important;
+        order: 3 !important;
+        margin: 0 20px !important;
+        border: 2px solid #0176d3 !important;
+        border-radius: 8px !important;
+        background: white !important;
+        padding: 8px 12px !important;
+        max-width: none !important;
+        flex: 1 !important;
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 18px !important;
+            margin-right: 10px !important;
+        }
+
+        input {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            color: #032d60 !important;
+            width: 100% !important;
+            height: auto !important;
+
+            &::placeholder {
+                color: #032d60 !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    @include small-desktop {
+        display: flex !important;
+        width: calc(100% - 30px) !important;
+        flex: 0 0 calc(100% - 30px) !important;
+        order: 10 !important;
+        margin: 12px 15px !important;
+        border: 2px solid #0176d3 !important; // Use the blue border as per previous requirements
+        border-radius: 8px;
+        padding: 10px 15px;
+        background: white;
+        max-width: calc(100% - 30px) !important;
+        min-width: auto;
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+
+        input {
+            font-size: 16px;
+            height: 35px;
+            width: 100%;
+
+            &::placeholder {
+                color: #032d60;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Explicit styling for big-tab (992px) to ensure 4+1 layout
+    @include big-tab {
+        display: flex;
+        width: calc(100% - 30px);
+        flex: 0 0 calc(100% - 30px);
+        order: 10;
+        margin: 6px 15px;
+        border: 2px solid #0176d3;
+        border-radius: 8px;
+        padding: 6px 15px;
+        background: white;
+        max-width: calc(100% - 30px);
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+
+        input {
+            font-size: 16px;
+            height: 35px;
+            width: 100%;
+
+            &::placeholder {
+                color: #032d60;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Explicit styling for small-tab (768px) to ensure 4+1 layout
+    @include small-tab {
+        display: flex;
+        width: calc(100% - 30px);
+        flex: 0 0 calc(100% - 30px);
+        order: 10;
+        margin: 5px 15px;
+        border: 2px solid #0176d3;
+        border-radius: 8px;
+        padding: 5px 15px;
+        background: white;
+        max-width: calc(100% - 30px);
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 17px;
+            margin-right: 12px;
+        }
+
+        input {
+            font-size: 16px;
+            height: 34px;
+            width: 100%;
+
+            &::placeholder {
+                color: #032d60;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Explicit styling for mobile (576px) to ensure 4+1 layout
+    @include mobile {
+        display: flex;
+        width: calc(100% - 24px);
+        flex: 0 0 calc(100% - 24px);
+        order: 10;
+        margin: 4px 12px;
+        border: 2px solid #0176d3;
+        border-radius: 8px;
+        padding: 5px 15px;
+        background: white;
+        max-width: calc(100% - 24px);
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input {
+            font-size: 15px;
+            height: 32px;
+            width: 100%;
+
+            &::placeholder {
+                color: #032d60;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Explicit styling for mid-mobile (500px) to ensure 4+1 layout
+    @include mid-mobile {
+        display: flex;
+        width: calc(100% - 24px);
+        flex: 0 0 calc(100% - 24px);
+        order: 10;
+        margin: 4px 12px;
+        border: 2px solid #0176d3;
+        border-radius: 8px;
+        padding: 5px 15px;
+        background: white;
+        max-width: calc(100% - 24px);
+
+        .search-icon {
+            color: #0176d3 !important;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input {
+            font-size: 15px;
+            height: 32px;
+            width: 100%;
+
+            &::placeholder {
+                color: #032d60;
+                font-weight: 500;
+            }
+        }
+    }
+
+    @include too-small-mobile {
+        margin: 3px 8px;
+        padding: 4px 10px;
+        max-width: calc(100% - 16px);
+
+        .search-close {
+            display: block;
+        }
+    }
+
+    input {
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 14px;
+        width: 100%;
+        margin-left: 8px;
+
+        &::placeholder {
+            color: $text-light;
+        }
+    }
+
+    .search-icon {
+        color: $primary-color;
+        font-size: 16px;
+    }
+
+    .search-close {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 0 4px;
+        margin-left: 8px;
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    .search-dropdown {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        border: 1px solid #e0e0e0;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .search-option {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            i {
+                color: $primary-color;
+                font-size: 16px;
+                margin-right: 12px;
+                width: 20px;
+                text-align: center;
+            }
+
+            span {
+                color: #032d60;
+                font-size: 14px;
+            }
+
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @include mid-desktop {
+        gap: 8px; // Further reduced from 12px
+    }
+
+    @include desktop {
+        order: 4 !important;
+        gap: 20px;
+        margin-left: 0 !important;
+        flex: none !important;
+        justify-content: flex-end;
+    }
+
+    @include small-desktop {
+        order: 3;
+        gap: 15px;
+        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+    }
+
+    @include big-tab {
+        order: 3;
+        gap: 15px;
+        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+    }
+
+    @include small-tab {
+        order: 3;
+        gap: 14px;
+        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+    }
+
+    @include mobile {
+        order: 3;
+        gap: 12px;
+        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+    }
+
+    @include mid-mobile {
+        order: 3;
+        gap: 12px;
+        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+    }
+
+    @include too-small-mobile {
+        gap: 8px; // Tighten gap between login and contact
+    }
+
+    @include big-tab {
+        gap: 12px;
+    }
+
+    @include too-small-mobile {
+        gap: 8px;
+    }
+
+
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 25px;
+
+        @include mid-desktop {
+            padding-right: 10px;
+        }
+
+        @include desktop {
+            display: none !important;
+        }
+
+        .call-label {
+            font-size: 15px;
+            color: #032d60;
+            text-decoration: underline;
+            padding-top: 2px;
+            display: inline-block;
+
+            @include mid-desktop {
+                font-size: 13px;
+            }
+        }
+
+        .phone-number {
+            font-size: 14px;
+            color: #032d60;
+
+            @include mid-desktop {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .globe-icon {
+        cursor: pointer;
+        font-size: 18px;
+        color: $text-dark;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include desktop {
+            display: none !important;
+        }
+    }
+
+    // Login Wrapper and Dropdown
+    .login-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+        padding-bottom: 0;
+        z-index: 3005; // Ensure visible above overlay
+
+        &:hover {
+            .login-dropdown {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        .login-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: $text-dark;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 0;
+
+            @include small-tab {
+                display: none;
+            }
+
+            @include small-desktop {
+                display: flex; // Force show
+                text-decoration: none;
+                margin-right: 0;
+
+                .login-text {
+                    display: none;
+                }
+
+                i {
+                    font-size: 20px;
+                    color: #032d60;
+                }
+            }
+        }
+
+        @include desktop {
+            order: 3 !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+
+            .login-link {
+                display: none;
+            }
+
+            .mobile-login-icon {
+                display: flex !important;
+                align-items: center;
+                color: #032d60;
+                font-size: 20px;
+                text-decoration: none;
+                margin-left: auto !important;
+                margin-right: 12px !important;
+            }
+        }
+
+        // Dropdown Styles
+        .login-dropdown {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            right: -50px; // Center roughly relative to button
+            transform: translateY(10px);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+            padding: 24px;
+            width: 320px;
+            z-index: 9999;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: default;
+            transition: all 0.2s ease;
+
+            @include small-desktop {
+                right: -10px;
+                width: 280px;
+            }
+
+            @include mobile {
+                right: -100px;
+                width: 300px;
+            }
+
+            // Arrow
+            &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                right: 65px; // Approximate point to login button
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid white;
+                filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.05));
+
+                @include mobile {
+                    right: 125px;
+                }
+            }
+
+            .login-dropdown-title {
+                font-size: 24px;
+                font-weight: 700;
+                color: #032d60;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+
+            .login-group {
+                margin-bottom: 16px;
+
+                .login-group-label {
+                    font-size: 13px;
+                    color: #444;
+                    margin-bottom: 12px;
+                    font-weight: 400;
+                }
+
+                .login-item {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    color: #0176d3; // Primary blue
+                    text-decoration: none;
+                    margin-bottom: 12px;
+                    font-weight: 400;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.link-underline {
+                        text-decoration: underline;
+                    }
+
+                    i {
+                        color: #0176d3;
+                    }
+                }
+            }
+
+            .dropdown-divider {
+                height: 1px;
+                background-color: #ededed;
+                margin: 20px 0;
+                border: none;
+                width: 100%;
+            }
+
+            .login-desc {
+                font-size: 13px;
+                color: #181b1f;
+                line-height: 1.5;
+                margin-top: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .mobile-btn-contact {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            order: 4;
+            background-color: #2e8b57;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            align-items: center;
+            justify-content: center;
+            z-index: 3001;
+        }
+
+        @include mobile {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        @include small-mobile {
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+
+        @include too-small-mobile {
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+    }
+
+    .btn-contact {
+        @include desktop {
+            display: none !important;
+        }
+
+        background-color: #159F4F;
+        color: $text-white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+
+        @include mid-desktop {
+            padding: 8px 15px;
+            font-size: 13px;
+        }
+
+        &:hover {
+            background-color: color.adjust(#159F4F, $lightness: -10%);
+        }
+    }
+}
+
+// End of .nav-actions
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    @include big-tab {
+        display: block;
+    }
+
+    @include desktop {
+        order: 1 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        padding: 0;
+        color: #032d60;
+        z-index: 3005;
+        position: relative;
+        width: auto !important;
+        height: auto !important;
+        min-width: 30px;
+    }
+
+    @include too-small-mobile {
+        font-size: 26px !important;
+        margin-right: 10px;
+    }
+
+    @include too-small-mobile {
+        font-size: 20px; // Slightly smaller hamburger
+        margin-right: 8px; // Reduced margin
+    }
+}
+
+// Mobile Search Row - Moved OUT of .mobile-menu-toggle
+.mobile-search-row {
+    @include small-desktop {
+        order: 4;
+        width: 100%;
+        margin-top: 15px;
+        display: block !important;
+        position: relative;
+
+        .btn-mobile-search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 2px solid #9050e9;
+            border-radius: 4px;
+            padding: 10px;
+            color: #032d60;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+
+            i {
+                color: #9050e9 !important;
+                margin-right: 8px;
+                font-size: 18px;
+            }
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
+        }
+    }
+}
+
+.banner {
+    background-color: $navy-blue;
+    color: $text-white;
+    padding: 20px 0;
+    text-align: center;
+
+    @include small-mobile {
+        display: block;
+        position: relative;
+        z-index: 5;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: 700;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .banner-link {
+            color: $text-white;
+            text-decoration: underline;
+            font-weight: 500;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.hero {
+    background: url('../assets/backgrounds/sky.webp') center/cover no-repeat, linear-gradient(135deg, rgba(128, 191, 237, 0.9) 0%, rgba(232, 244, 248, 0.9) 100%);
+    background-blend-mode: overlay;
+    padding: 60px 0 80px;
+    position: relative;
+    overflow: hidden;
+
+    @include small-desktop {
+        padding: 64px 0;
+    }
+
+    @include small-tab {
+        padding: 48px 0;
+    }
+
+    .hero-container {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        @include small-desktop {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            padding: 0 60px;
+        }
+
+        @include small-tab {
+            padding: 0 32px;
+        }
+
+        .hero-content {
+            width: 85%;
+            max-width: 82%;
+
+            .hero-title {
+                font-size: 48px;
+                font-weight: 700;
+                color: $navy-blue;
+                line-height: 1.2;
+                margin-bottom: 24px;
+
+                @include small-desktop {
+                    font-size: 40px;
+                }
+
+                @include small-tab {
+                    font-size: 32px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                }
+
+                .highlight {
+                    color: $primary-color;
+                    display: block;
+                }
+            }
+
+            .hero-description {
+                font-size: 21px;
+                color: $text-dark;
+                margin-bottom: 32px;
+                line-height: 1.6;
+
+                @include small-desktop {
+                    font-size: 19px;
+                }
+
+                @include small-tab {
+                    font-size: 18px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                }
+
+                @include mid-mobile {
+                    font-size: 15px; // Use mid-mobile
+                }
+
+                p {
+                    font-size: inherit; // Inherit to scale
+                    margin-bottom: 16px;
+                }
+
+                .bold-text {
+                    font-weight: 700;
+                }
+            }
+
+
+            .hero-cta {
+                display: flex;
+                gap: 16px;
+                margin-top: 32px;
+                /* Button Box styling */
+
+                @include small-tab {
+                    justify-content: flex-start;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                // Buttons are handled by global .btn styles now to ensure consistency "same to same"
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 100px;
+
+            .video-wrapper {
+                position: relative;
+                background: linear-gradient(180deg, #555 0%, #333 100%);
+                border-radius: 8px;
+                overflow: hidden;
+                aspect-ratio: 16 / 9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1030;
+
+    .chat-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+        transition: transform 0.3s ease;
+        // box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3); // Optional: add shadow to image if it doesn't have one
+        border-radius: 50px;
+
+        .chat-img {
+            display: block;
+            height: 65px; // Reduced size as requested (was 50px)
+            width: 230px;
+            border-radius: 50px; // Curved shape corners
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Add shadow to image
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            // box-shadow: 0 6px 16px rgba(1, 118, 211, 0.4);
+        }
+
+        @include mobile {
+            padding: 12px 18px;
+            font-size: 14px;
+        }
+
+        .chat-icon {
+            font-size: 20px;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Starter Suite Section
+.starter-suite {
+    padding: 80px 0;
+    overflow: hidden;
+
+    .starter-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        @include small-desktop {
+            gap: 48px;
+        }
+
+        @include small-tab {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .starter-video-card {
+            flex: 1;
+            width: 100%;
+
+            .video-thumbnail {
+                position: relative;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                aspect-ratio: 16/9;
+                background: linear-gradient(135deg, #1e2150 0%, #2a1b50 50%, #1a3a60 100%);
+
+                .video-bg-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .video-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+
+                    h3 {
+                        color: $text-white;
+                        font-size: 28px;
+                        font-weight: 700;
+                        text-align: center;
+                        margin-bottom: 24px;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                        max-width: 80%;
+                        line-height: 1.3;
+                    }
+
+                    .play-button-large {
+                        width: 72px;
+                        height: 72px;
+                        background: rgba(0, 0, 0, 0.6);
+                        backdrop-filter: blur(4px);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            background: rgba(0, 0, 0, 0.8);
+                        }
+
+                        .play-icon {
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 12px 0 12px 20px;
+                            border-color: transparent transparent transparent #ffffff;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .starter-content {
+            flex: 1;
+
+            h2 {
+                font-size: 42px;
+                line-height: 1.2;
+                font-weight: 700;
+                color: $navy-blue;
+                margin-bottom: 24px;
+                font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+
+                @include mobile {
+                    font-size: 32px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+                color: #444;
+                margin-bottom: 32px;
+                max-width: 95%;
+            }
+
+            .starter-cta {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+
+                @include small-tab {
+                    // ensure consistent alignment
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: center; // Full width buttons
+                    width: 100%;
+                }
+
+                // Uses global .btn
+            }
+        }
+    }
+}
+
+.products-headline {
+    padding: 60px 0 40px;
+    background-color: #fff;
+
+    h2 {
+        font-size: 38px;
+        color: $navy-blue;
+        font-weight: 700;
+        line-height: 1.3;
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+}
+
+// Products Grid Section
+.products-section {
+    padding: 0 0 80px;
+    background-color: #fff;
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: 48px;
+
+        @include mid-desktop {
+            gap: 28px;
+        }
+
+        @include small-desktop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        @include small-tab {
+            gap: 20px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @include mid-small-mobile {
+            gap: 12px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            text-align: left;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+
+            &:hover {
+                box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+                border-color: transparent;
+                transform: translateY(-5px);
+            }
+
+            .card-icon {
+                width: 100%;
+                background-color: transparent;
+                height: 200px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                overflow: hidden;
+                padding: 0;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                    margin: 0;
+                }
+            }
+
+            .card-content {
+                padding: 24px 24px 32px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #032D60;
+                    margin-bottom: 16px;
+                    font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #181818;
+                    line-height: 1.5;
+                }
+
+                .card-link {
+                    color: #032D60;
+                    text-decoration: underline;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 4px;
+
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .view-all-products {
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #0176D3;
+            color: #fff;
+            border: none;
+
+            &:hover {
+                background-color: #015ba3;
+            }
+        }
+    }
+}
+
+// ============== NEW SECTIONS SCSS ==============
+
+.spacer-section {
+    padding: 80px 0;
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+// Industries Section
+.industries-section {
+    background-color: #fff;
+
+    // Use wider container as requested to reduce side gaps
+    .sf-container {
+        max-width: 1400px;
+        width: 95%; // Ensure it takes up most space on smaller wide screens too
+    }
+
+    .section-header {
+        max-width: 900px;
+        margin: 0 auto 80px;
+
+        h2 {
+            font-size: 42px;
+            color: $navy-blue;
+            margin-bottom: 24px;
+            line-height: 1.3;
+
+            @include mobile {
+                font-size: 29px;
+            }
+        }
+
+        p {
+            font-size: 25px;
+            color: $text-dark;
+            line-height: 1.2;
+        }
+    }
+
+    .industries-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px; // Reduced gap further 
+        max-width: 100%;
+
+        @include mid-desktop {
+            gap: 18px;
+        }
+
+        @include small-desktop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        @include small-tab {
+            gap: 20px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .industry-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s;
+            background: #fff;
+            min-height: 340px;
+            position: relative; // Needed for absolute positioning of visual
+
+            &:hover {
+                box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+                transform: translateY(-5px);
+                border-color: transparent;
+            }
+
+            .ind-content {
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1; // Make content fill space to push link down
+                z-index: 2;
+
+                h3 {
+                    font-size: 20px;
+                    color: $navy-blue;
+                    margin-bottom: 12px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: $text-dark;
+                    margin-bottom: 16px;
+                    line-height: 1.5;
+                }
+
+                .ind-link {
+                    font-weight: 700;
+                    color: $navy-blue;
+                    text-decoration: underline;
+                    font-size: 15px;
+                    text-decoration-thickness: 1px;
+                    margin-top: auto; // Push to bottom
+                    align-self: flex-start; // Align left
+                    z-index: 10; // Ensure clickable
+                    position: relative;
+                    max-width: 65%; // Prevent overlap with the icon area
+
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .ind-visual {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 150px; // Ensure height covers the area
+                pointer-events: none; // Let clicks pass through if needed (though link is separate)
+
+                // The wave background container
+                .wave-bg {
+                    display: none; // Hiding the old div based wave if we are using the pseudo element or image
+                }
+
+                // Cloud shape background using Salesforce logo mask
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30%; // Push down to hide bottom part of cloud if needed, adj for look
+                    right: -20%; // Push right
+                    width: 200px;
+                    height: 200px;
+
+                    background-color: #7F22E8;
+
+                    // Use the mask to create the shape
+                    -webkit-mask: url('/assets/icons/salesforce-logo.svg') no-repeat center;
+                    -webkit-mask-size: contain;
+                    mask: url('/assets/icons/salesforce-logo.svg') no-repeat center;
+                    mask-size: contain;
+
+                    z-index: 1;
+                    opacity: 1;
+                }
+
+                // Removed the ::before gradient overlay as we use solid/masked shape now
+
+                .ind-icon {
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+                    width: 64px; // Increased size
+                    height: 64px; // Increased size
+                    background: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    z-index: 3;
+
+                    img {
+                        width: 36px; // Increased icon size
+                        height: 36px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CRM Section
+.crm-section {
+    position: relative;
+    padding: 0 0 100px;
+    background: #fff;
+
+    .relative-z {
+        position: relative;
+        z-index: 3;
+    }
+
+    .h2 {
+        font-size: 52px;
+        color: $navy-blue;
+        margin-bottom: 24px;
+        font-weight: 900;
+        line-height: 1.2;
+
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+
+    .section-desc {
+        max-width: 800px;
+        margin: 0 auto 32px;
+        font-size: 20px;
+        color: $text-dark;
+        line-height: 1.6;
+    }
+
+    .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+
+            &.btn-primary {
+                background: #0176D3;
+                color: white;
+                border: 1px solid #051a2b;
+
+                &:hover {
+                    background: #031e55;
+                }
+            }
+
+            &.btn-outline {
+                background: #fff;
+                color: #0176D3;
+                border: 1px solid #0176D3;
+
+                &:hover {
+                    background: #dadbdd;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .mountain-bg {
+        width: 100%;
+        margin-top: -160px;
+        height: 350px;
+        background: url('../assets/backgrounds/background-top.webp') center bottom/cover no-repeat;
+        border-radius: 0 0 50% 50% / 0 0 50px 50px;
+        margin-bottom: 60px;
+    }
+}
+
+// Trailhead Section (preceded by shared button styles)
+.btn {
+    padding: 10px 24px; // Matched looking padding
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; // Space between text and icon
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid transparent; // Base border
+
+    @include mid-mobile {
+        width: fit-content; // Set to fit-content to avoid overly large buttons on small screens
+        justify-content: center;
+    }
+
+    // General icon style for all buttons
+    .icon-right {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.2s ease;
+        vertical-align: middle;
+        // Icon is naturally white. Turn it to #00A1E0 (Salesforce Blue)
+        filter: brightness(0) invert(53%) sepia(65%) saturate(2641%) hue-rotate(167deg) brightness(96%) contrast(101%);
+    }
+
+    &:hover {
+        .icon-right {
+            transform: translateX(2px) translateY(-2px);
+        }
+    }
+
+    &.btn-primary {
+        background-color: #0176D3;
+        color: $text-white;
+        border-color: #0176D3;
+
+        .icon-right {
+            filter: none; // Keep it white on blue background
+        }
+
+        &:hover {
+            background-color: #014486;
+            border-color: #014486;
+        }
+    }
+
+    &.btn-outline,
+    &.btn-secondary {
+        background-color: $text-white;
+        color: #0176D3;
+        border: 1px solid #0176D3;
+        position: relative;
+
+        &:hover {
+            background-color: #F4F6F9;
+            color: #014486;
+            border-color: #014486;
+            text-decoration: none;
+        }
+    }
+}
+
+// Trailhead Section
+.trailhead-section {
+    background-color: #fff;
+    padding-top: 60px;
+
+    .section-header {
+        max-width: 75%;
+        margin: 0 auto 40px;
+
+        h2 {
+            font-size: 40px;
+            color: $navy-blue;
+            margin-bottom: 24px;
+            font-weight: 700;
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            max-width: 75%;
+            font-size: 18px;
+            justify-content: center;
+            margin-left: 70px;
+            color: $text-dark;
+        }
+    }
+
+    .trailhead-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 42px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        @include small-desktop {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+        }
+
+        .trailhead-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: left;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; // Centered content as per design usually for Trailhead items inside, wait users image shows left aligned content?
+            // Image 3 shows: Left aligned title/text/link. Centered/Top image.
+
+            align-items: flex-start;
+            text-align: left;
+
+            &:hover {
+                border-color: transparent;
+                box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+                transform: translateY(-5px);
+            }
+
+            .th-visual {
+                margin-bottom: 24px;
+                width: 100%;
+                display: flex;
+                justify-content: center; // Icon centered
+
+                .badge-img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: contain;
+                    border-radius: 50%;
+                }
+            }
+
+            .th-content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                .pill {
+                    background-color: #EBF5FA;
+                    color: $navy-blue;
+                    font-size: 12px;
+                    font-weight: 700;
+                    padding: 6px 14px;
+                    border-radius: 20px;
+                    margin-bottom: 16px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    align-self: flex-start;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    color: $navy-blue;
+                    margin-bottom: 12px;
+                    font-weight: 700;
+                    transition: color 0.2s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+                    color: $text-dark;
+                    margin-bottom: 24px;
+                    line-height: 1.5;
+                }
+
+                .th-link {
+                    font-weight: 700;
+                    color: $navy-blue;
+                    text-decoration: underline;
+                    font-size: 16px;
+                    transition: all 0.2s;
+                    margin-top: auto;
+                    align-self: flex-start;
+
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Customers Section
+.customers-section {
+    padding: 80px 0 200px;
+    background-color: #EBF5FA; // Light blue background often used with this forest image
+    background-image: url('../assets/backgrounds/pb-hp-logos-bg-2.webp');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    border-radius: 0 0 461px 461px / 0 0 120px 120px;
+    /* Irregular/Asymmetric curve */
+    position: relative;
+    overflow: hidden;
+
+    .container-fluid {
+        max-width: 1400px; // Increased width for 6 items
+    }
+
+    h2 {
+        font-size: 38px;
+        color: $navy-blue;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.3;
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+
+    .customers-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 40px;
+        max-width: 100%;
+
+        .customer-box {
+            background: #fff;
+            padding: 24px 40px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            transition: all 0.3s;
+
+            // Flex widths for grid behavior
+            width: calc((100% - 120px) / 6); // 6 items: 5 gaps of 24px -> 120px
+
+            @include small-desktop {
+                width: calc((100% - 72px) / 4); // 4 items: 3 gaps of 24px -> 72px
+            }
+
+            @include small-tab {
+                width: calc((100% - 48px) / 3); // 3 items: 2 gaps of 24px -> 48px
+            }
+
+            @include mobile {
+                width: calc((100% - 24px) / 2); // 2 items: 1 gap of 24px -> 24px
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 60px;
+                object-fit: contain;
+                // Gray scale is common but let's leave it colored if images are colored
+            }
+
+            &:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}
+
+
+
+
+
+// Grow Business Section
+.grow-business-section {
+    background-color: #fff;
+    max-width: 100%;
+
+    .sf-container {
+        max-width: 90%;
+    }
+
+    .section-title {
+        font-size: 40px;
+        color: $navy-blue;
+        font-weight: 700;
+        margin-bottom: 60px;
+        font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+
+        @include small-desktop {
+            font-size: 32px;
+            margin-bottom: 48px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .grow-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        align-items: flex-start;
+
+        @include mid-desktop {
+            gap: 20px;
+        }
+
+        @include small-desktop {
+            // Keep 4 columns but tighter? Or switch to 2 if too tight
+            // Let's check image size. Images are likely wide.
+            // Switching to 2 columns for better readability on small desktop/tablets
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        @include small-tab {
+            gap: 40px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+        }
+
+        .grow-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; // Centered
+            text-align: center; // Centered text unless specified otherwise, image implies centered
+
+            // If the user wants left align for links, we can adjust, but image shows centered
+            // Actually the image shows the link is left aligned relative to the text?
+            // "I'm move cursor on sell faster option so there invisible line bottom and change color."
+
+            // Looking at the image uploaded by user:
+            // The text "Sell faster" is underlined and seems left aligned or centered under the image.
+            // In the image provided (Step 31), the text is Left Aligned relative to the image block?
+            // Actually they look centered under the illustrations.
+            // Let's stick to left align as per standard Salesforce grids, oop wait, image shows LEFT aligned text below the image.
+
+            align-items: flex-start; // Align everything left
+            text-align: left;
+
+            .grow-visual {
+                margin-bottom: 24px;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    // Images in the user upload have a specific shape/blob background built-in
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            .grow-link {
+                color: $navy-blue;
+                font-size: 18px;
+                font-weight: 700;
+                text-decoration: underline;
+                position: relative;
+                transition: all 0.2s ease;
+
+                @include small-desktop {
+                    font-size: 17px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                .grow-visual img {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+.free-trial-section {
+    position: relative;
+    z-index: 2; // Ensure it sits above any backgrounds if necessary
+
+    .sf-container {
+        max-width: 1200px;
+    }
+
+    .free-trial-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        min-height: 400px;
+        padding: 0 0 0 80px; // Padding left only, image goes to edge
+
+        @include small-desktop {
+            padding: 0 0 0 48px;
+        }
+
+        @include small-tab {
+            flex-direction: column;
+            padding: 40px 24px 0;
+            text-align: center;
+            min-height: auto;
+        }
+
+        .ft-content {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-right: 40px;
+            padding-bottom: 80px;
+            padding-top: 80px;
+
+            @include small-tab {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0 0 40px;
+            }
+
+            h2 {
+                font-size: 44px;
+                color: $navy-blue;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 40px;
+                font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+
+                @include small-desktop {
+                    font-size: 36px;
+                }
+
+                @include mobile {
+                    font-size: 32px;
+                }
+            }
+
+            .ft-actions {
+                display: flex;
+                gap: 16px;
+
+                @include small-tab {
+                    justify-content: center;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+        }
+
+        .ft-visual {
+            flex: 0 0 50%;
+            max-width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            @include small-tab {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                display: block;
+                object-fit: contain;
+
+                @include small-tab {
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
+.footer {
+    .footer-promo {
+        background: url('../assets/backgrounds/pb-hp-products-bg-2.webp') center/cover no-repeat;
+        padding: 40px 0 0;
+        position: relative;
+        overflow: hidden;
+        background-color: #EBF5FA; // Fallback
+
+        .promo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+
+            @include small-tab {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 40px;
+            }
+
+            .promo-content {
+                padding: 40px 0;
+                z-index: 2;
+
+                h3 {
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: $navy-blue;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: $text-dark;
+                    margin-bottom: 24px;
+                }
+            }
+
+            .promo-image {
+                align-self: flex-end;
+                margin-bottom: -10px; // Slight adjustment to sit on bottom
+                z-index: 1;
+
+                img {
+                    max-height: 250px;
+                    width: auto;
+
+                    @include mobile {
+                        max-height: 180px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-links-section {
+        background-color: $dark-blue;
+        color: $text-white;
+        padding: 64px 0 32px;
+        font-size: 14px;
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 64px;
+            max-width: 1200px;
+            margin: 0 auto 64px;
+            padding: 0 24px;
+
+            @include big-tab {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .footer-col {
+                h4 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 24px;
+                    color: $text-white;
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-bottom: 16px;
+
+                        a {
+                            color: $text-white;
+                            text-decoration: none;
+                            opacity: 0.8;
+                            transition: opacity 0.2s;
+
+                            &:hover {
+                                opacity: 1;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .socials-col {
+                .social-links {
+                    display: flex;
+                    gap: 16px;
+                    margin-bottom: 24px;
+
+                    a {
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $text-white;
+                        text-decoration: none;
+                        transition: background 0.2s;
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px 0;
+
+            @include small-tab {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .legal-links {
+                display: flex;
+                gap: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                a {
+                    color: $text-white;
+                    text-decoration: none;
+                    opacity: 0.8;
+                    font-size: 12px;
+
+                    &:hover {
+                        opacity: 1;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .copyright {
+                opacity: 0.6;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// Values Section
+.values-section {
+    // background-image: url('../assets/backgrounds/pb-hp-products-bg-2.webp') no-repeat center/cover; 
+    // Image is now explicit in HTML
+    background-color: #fff;
+    padding-bottom: 0;
+    height: 100%;
+    position: relative; // Context for image if needed
+    padding-bottom: 0; // Bottom visual touches footer or bottom
+
+    .section-title {
+        font-size: 38px;
+        color: $navy-blue;
+        font-weight: 700;
+        margin-bottom: 60px;
+        line-height: 1.3;
+        font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+
+        @include small-desktop {
+            font-size: 32px;
+            margin-bottom: 48px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .values-grid {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 80px;
+
+        @include small-desktop {
+            gap: 40px;
+        }
+
+        @include small-tab {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .value-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 320px; // Fixed width for consistent card sizes
+            max-width: 100%;
+
+            .value-card {
+                background: #fff;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); // Soft shadow
+                border-radius: 16px;
+                width: 280px;
+                height: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative; // For decorations
+                margin-bottom: 32px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                // Inner Stats/Text
+                h3.stat-text {
+                    font-size: 64px;
+                    color: $navy-blue;
+                    font-weight: 700;
+                    margin: 0;
+                    z-index: 2;
+                }
+
+                h3.fortune-text {
+                    font-size: 36px;
+                    color: #000;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-family: 'serif'; // Approximation for Fortune logo
+                    z-index: 2;
+                }
+
+                // Decorations
+                .decoration {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    pointer-events: none;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .deco-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .value-desc {
+                font-size: 16px;
+                color: $navy-blue;
+                text-align: center;
+                line-height: 1.5;
+                font-weight: 400;
+                max-width: 260px;
+            }
+        }
+    }
+
+    .curved-visual {
+        width: 100%;
+        margin-bottom: 7%; // Reduced overlap so card sits lower
+        position: relative;
+        z-index: 1;
+
+        .curved-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            // Create irregular curved bottom
+            // Salesforce style often: border-radius: 0 0 50% 50% / 0 0 100px 100px;
+            // Trying a more specific irregular loop if requested, usually requires SVG clip-path.
+            // Using a strong asymmetric border radius for "irregular" look:
+            border-radius: 0 0 70% 30% / 0 0 10% 10%;
+        }
+    }
+
+    // Questions Card
+    .questions-card {
+        background: url('../assets/backgrounds/pb-hp-footer-mid3-in.webp') center bottom/cover no-repeat;
+        background-color: #EBF5FA;
+        border-radius: 24px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 40px;
+        min-height: 500px;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 10;
+
+        @include small-tab {
+            flex-direction: column;
+            padding: 40px 24px;
+            text-align: center;
+            min-height: auto;
+        }
+
+        @include mid-mobile {
+            max-width: 95%;
+            padding: 40px 16px;
+            background-position: 92% bottom; // Focus on the man on the right
+            background-size: 160% auto; // Zoom in more for smaller screens
+        }
+
+        .q-content {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 40px 0;
+            z-index: 2;
+            text-align: center;
+
+            @include small-tab {
+                padding: 20px 0;
+            }
+
+            .q-title {
+                font-size: 36px;
+                color: $navy-blue;
+                font-weight: 700;
+                margin-top: -120px;
+                line-height: 1.2;
+                font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
+
+                @include small-tab {
+                    font-size: 30px;
+                    margin-top: -60px; // Pull up slightly into the sky area
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                    margin-top: 0;
+                }
+
+                @include mid-mobile {
+                    font-size: 24px;
+                }
+            }
+
+            .q-desc {
+                font-size: 20px;
+                color: $text-dark;
+                margin-top: 40px;
+                line-height: 1.5;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 53.5%;
+
+                @include small-tab {
+                    max-width: 70%;
+                    font-size: 18px;
+                    margin-top: 24px;
+                }
+
+                @include mobile {
+                    max-width: 100%;
+                    margin-top: 24px;
+                }
+
+                @include mid-mobile {
+                    font-size: 16px;
+                    margin-top: 16px;
+                }
+            }
+
+            .q-actions {
+                display: flex;
+                gap: 24px;
+                margin-top: 80px;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile {
+                    margin-top: 40px;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                @include small-tab {
+                    justify-content: center;
+                }
+
+                .btn-link {
+                    color: $primary-color;
+                    font-weight: 700;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main Footer
+.main-footer {
+    background-color: #fff;
+    padding-top: 54px;
+    margin-top: 0;
+
+    @include big-tab {
+        padding-top: 0 !important;
+        background-color: transparent !important;
+    }
+
+    font-size: 12px;
+    width: 100%;
+
+    .sf-container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 64px;
+        width: 100%;
+        max-width: 100%;
+        gap: 40px;
+        justify-content: space-between;
+        padding: 0 120px; // Matching hero padding
+
+        @include desktop {
+            padding: 0 40px;
+        }
+
+        @include mobile {
+            padding: 0 24px;
+        }
+
+        @include small-desktop {
+            display: none !important;
+        }
+
+        @include small-tab {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 160px;
+
+            &.brand-col {
+                flex: 0 0 300px;
+
+                @include small-tab {
+                    flex: auto;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .footer-logo {
+                width: 100px;
+                margin-bottom: 56px;
+
+                @include too-small-mobile {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .social-links {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 56px;
+
+                a {
+                    color: $text-dark;
+                    transition: color 0.2s;
+                    text-decoration: none; // Remove underline from icon links
+
+                    i {
+                        font-size: 28px; // FontAwesome uses font-size
+                        color: #4b4b4b;
+                        transition: color 0.2s;
+
+                        @include desktop {
+                            font-size: 32px;
+                        }
+
+                        @include mid-desktop {
+                            font-size: 36px;
+                        }
+
+                        @include large-desktop {
+                            font-size: 40px;
+                        }
+                    }
+
+                    &:hover {
+                        color: $primary-color;
+
+                        i {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            .footer-phone {
+                font-weight: 700;
+                color: black;
+                font-size: 16px;
+                text-decoration: underline; // Add underline
+
+                @include mid-desktop {
+                    font-size: 22px;
+                }
+
+                @include large-desktop {
+                    font-size: 22px;
+                }
+            }
+
+            h4 {
+                font-size: 15px;
+                font-weight: 700;
+                color: $text-dark;
+                margin-bottom: 24px;
+
+                @include desktop {
+                    font-size: 20px;
+                }
+
+                @include mid-desktop {
+                    font-size: 22px;
+                }
+
+                @include large-desktop {
+                    font-size: 24px;
+                }
+
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 16px;
+
+
+                    a {
+                        color: $primary-color;
+                        text-decoration: none;
+                        font-family: 'Salesforce Sans', sans-serif;
+                        margin-left: -30px;
+
+                        @include large-desktop {
+                            font-size: 18px;
+                        }
+
+                        @include mid-desktop {
+                            font-size: 16px;
+                        }
+
+                        @include desktop {
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            color: $primary-color;
+                            text-decoration: underline;
+
+
+                        }
+
+                        .icon-external {
+                            width: 20px;
+                            height: 20px;
+                            vertical-align: middle;
+                            filter: brightness(0) invert(53%) sepia(65%) saturate(2641%) hue-rotate(167deg) brightness(96%) contrast(101%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: $navy-blue;
+        color: $text-white;
+        padding: 10px 0 20px; // Reduced height
+        width: 100%;
+        position: relative;
+
+        @include small-desktop {
+            display: block;
+        }
+
+        margin-left: 0;
+        margin-right: 0;
+
+        .footer-bottom-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; // Reduced gap between rows
+            line-height: 1.2; // Tighter line height
+            max-width: 100%; // Full width
+            padding: 0 120px;
+
+            @include desktop {
+                padding: 0 40px;
+            }
+
+            @include mobile {
+                padding: 0 24px;
+            }
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            gap: 32px;
+            margin-left: 0;
+
+            @include small-tab {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .globe-selector {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                transition: 0.2s;
+
+                @include too-small-mobile {
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                img {
+                    filter: invert(90%); // Change black to bright white
+                    width: 24px;
+                    height: 24px;
+
+                    @include large-desktop {
+                        width: 28px;
+                        height: 28px;
+                    }
+
+                    @include desktop {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: 700;
+
+                    @include large-desktop {
+                        font-size: 26px;
+                    }
+
+                    @include desktop {
+                        font-size: 20px;
+                    }
+                }
+
+                .fa-angle-down {
+                    font-size: 24px;
+                    margin-left: 4px;
+
+                    @include desktop {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .legal-list {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                gap: 24px;
+                padding-left: 0;
+
+                @include large-desktop {
+                    gap: 12px;
+                }
+
+                @include mid-desktop {
+                    gap: 12px;
+                }
+
+                @include desktop {
+                    gap: 12px;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                li {
+                    a {
+                        color: $text-white;
+                        text-decoration: underline;
+                        font-size: 14px;
+                        opacity: 1;
+                        display: inline-flex;
+                        align-items: center;
+
+                        @include large-desktop {
+                            font-size: 18px;
+                        }
+
+                        @include mid-desktop {
+                            font-size: 16px;
+                        }
+
+                        @include desktop {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        .footer-link-icon {
+                            width: 29px;
+                            height: auto;
+                            margin-right: 6px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            text-align: left;
+            margin-left: 185px; // Default for screens > 1500px
+
+            @include large-desktop {
+                text-align: left;
+                margin-left: 185px;
+            }
+
+            @include mid-desktop {
+                text-align: left;
+                margin-left: 235px;
+            }
+
+            @include desktop {
+                text-align: left;
+                margin-left: 195px;
+            }
+
+            @include small-desktop {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include big-tab {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include small-tab {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include mobile {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include mid-mobile {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include small-mobile {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include mid-small-mobile {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            @include too-small-mobile {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            p {
+                font-size: 15px;
+                opacity: 0.9;
+
+                @include large-desktop {
+                    font-size: 18px;
+                }
+
+                @include desktop {
+                    font-size: 16px;
+                }
+
+                a {
+                    color: $text-white;
+
+                    &:hover {
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'agentforce';
+
+.chatbot-modal {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 10000;
+    animation: slideUp 0.3s ease;
+
+    @include too-small-mobile {
+        right: 10px;
+        bottom: 80px;
+    }
+
+    &.show {
+        display: block;
+    }
+
+    .chatbot-container {
+        width: 380px;
+        max-height: 600px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @include mobile {
+            width: calc(100vw - 40px);
+            right: 20px;
+        }
+
+        @include too-small-mobile {
+            width: calc(100vw - 20px);
+            right: 10px;
+            max-height: 80vh;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, $primary-color 0%, #0051a3 100%);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .chatbot-header-info {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .chatbot-logo {
+                    width: 40px;
+                    height: 40px;
+                    background: white;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin: 0;
+                    font-weight: 600;
+                }
+
+                .status-online {
+                    font-size: 12px;
+                    opacity: 0.9;
+                    display: block;
+                }
+            }
+
+            .chatbot-close {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 400px;
+            background: #f8f9fa;
+
+            .chat-message {
+                display: flex;
+                gap: 12px;
+                margin-bottom: 16px;
+
+                &.bot-message {
+                    .message-avatar {
+                        background: $primary-color;
+                        color: white;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: padding;
+                            padding: 3px;
+                            background: white;
+                        }
+                    }
+
+                    .message-content {
+                        background: white;
+                        padding: 12px 16px;
+                        border-radius: 12px 12px 12px 4px;
+                        max-width: 70%;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                            color: #333;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+
+                &.user-message {
+                    flex-direction: row-reverse;
+
+                    .message-avatar {
+                        background: #032d60;
+                        color: white;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+                    }
+
+                    .message-content {
+                        background: $primary-color;
+                        color: white;
+                        padding: 12px 16px;
+                        border-radius: 12px 12px 4px 12px;
+                        max-width: 70%;
+
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .chatbot-input-area {
+            padding: 16px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 12px;
+
+            input {
+                flex: 1;
+                padding: 10px 16px;
+                border: 1px solid #ddd;
+                border-radius: 20px;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.2s;
+
+                &:focus {
+                    border-color: $primary-color;
+                }
+            }
+
+            button {
+                background: $primary-color;
+                color: white;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #0051a3;
+                }
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Floating Chat Button
+
+// Global Footer Alignment Fixes for Privacy Icon
+.contact-footer-bar .footer-legal-links a,
+.news-footer .legal-links li a,
+.legal-links a {
+    display: inline-flex;
+    align-items: center;
+
+    .footer-link-icon {
+        width: 29px;
+        height: auto;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+}
+
+.floating-chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2313d4; // Salesforce Blue
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(95, 107, 233, 0.4);
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999 !important;
+    transition: all 0.3s ease;
+
+    @include too-small-mobile {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .chatbot-icon {
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0;
+    }
+}
+
+@import '_watch-demos.scss';
+@import '_small_business.scss';
+@import '_get_free_crm.scss';
+@import '_products.scss';
+@import '_agentforce.scss';
+@import '_datacloud.scss';
+@import '_agentforce_ai_app.scss';
+@import '_artificial_intelligence.scss';
+
+// =========================================
+// Contact Page Styles (New)
+// =========================================
+.contact-main-section {
+    background-color: #d8f0ff; // Sky blue background
+    padding: 80px 0;
+    position: relative;
+    font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, -apple-system, sans-serif;
+
+    // Optional cloud background
+    background-image: url('../assets/backgrounds/sky.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    .page-title {
+        color: $navy-blue;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        text-align: center;
+
+        @include mobile {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .contact-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        height: 100%;
+        margin-bottom: 0;
+
+        &.form-card {
+            // Form specific styles
+            position: relative;
+        }
+
+        &.info-card {
+            height: auto; // Stacked nature
+            padding: 32px;
+            margin-bottom: 24px; // Spacing between stacked cards
+        }
+
+        .card-title {
+            color: $navy-blue;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-subtitle {
+            font-size: 18px;
+            color: $text-color;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .card-title-small {
+            font-size: 20px;
+            font-weight: 700;
+            color: $navy-blue;
+            margin-bottom: 16px;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: $text-light;
+            line-height: 1.5;
+            margin-bottom: 12px;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // Form Specifics
+    .form-floating {
+        >label {
+            color: $text-light;
+            font-size: 15px;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1px solid #d8dde6;
+            border-radius: 4px;
+            height: 50px;
+            background-color: #fff;
+
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: 0 0 3px rgba(1, 118, 211, 0.5);
+                outline: none;
+            }
+        }
+
+        textarea.form-control {
+            height: 100px;
+        }
+    }
+
+    .privacy-text {
+        font-size: 13px;
+        color: $text-light;
+        line-height: 1.5;
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    // WhatsApp Button
+    .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #25D366;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 4px;
+        padding: 10px 24px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        border: none;
+
+        &:hover {
+            background-color: #128c7e;
+            color: white;
+        }
+
+        i {
+            font-size: 22px;
+        }
+    }
+
+    // Call Section
+    .call-number {
+        font-size: 24px;
+        color: $navy-blue;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .info-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 8px;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-size: 15px;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    text-decoration: none;
+                    border-bottom-color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .email-info {
+        font-size: 14px;
+        color: $text-color;
+        line-height: 1.6;
+        margin-top: 24px;
+
+        a {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+
+    // Feedback Button
+    .btn-feedback {
+        background-color: #0176d3;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 12px 24px;
+        border-radius: 4px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #005fb2;
+            color: white;
+        }
+    }
+}
+
+// Adjust footer for Contact Page to be full width/normal
+// Mobile Footer Visibility - As requested for breakpoints 320px to 992px
+@include big-tab {
+    .main-footer {
+        padding-top: 0 !important;
+        background-color: transparent !important;
+
+        .footer-top {
+            display: none !important;
+        }
+
+        .footer-bottom {
+            display: block !important;
+            margin-top: 0 !important;
+        }
+    }
+}
+
+.contact-page {
+    .main-footer {
+        margin-top: 0;
+        border-top: none;
+
+        .footer-top {
+            display: flex !important; // Ensure flex for standard footer
+        }
+    }
+}

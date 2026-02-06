@@ -1,0 +1,340 @@
+// Register Page Styles
+@use './variable.scss' as *;
+
+body.register-page {
+    font-family: 'Salesforce Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #fff;
+    color: #181818;
+}
+
+.register-header {
+    display: none; // Hidden as per layout requirement
+    background-color: #fff;
+    padding: 20px 40px;
+    // Override inherited styles from .header
+    border-bottom: none !important;
+    box-shadow: none !important;
+
+    @include mobile {
+        padding: 15px 20px;
+    }
+
+    // Set padding-bottom to 0 to remove gap between header and form
+    padding-bottom: 0;
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.register-main {
+    padding: 0 0 60px 0;
+    background-color: #fff;
+
+    @include mobile {
+        padding: 30px 0;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        .sf-logo {
+            width: 130px;
+            height: auto;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-size: 32px;
+                margin: 0;
+                color: #181818;
+                line-height: 1.2;
+            }
+
+            p {
+                margin: 0;
+                font-size: 16px;
+                color: #666;
+            }
+        }
+    }
+
+    .register-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: start; // Prevent form column from stretching to match left column height
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-top: 0;
+
+        @include small-tab {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .content-col {
+            .webinar-visual {
+                margin-bottom: 30px;
+                border-radius: 8px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            .webinar-info {
+                text-align: center;
+                padding: 0 20px;
+                position: relative;
+                background: transparent;
+                box-shadow: none;
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 300; // Light/Thin typical of headers
+                    color: #032d60;
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                }
+
+                .subtitle {
+                    font-size: 16px;
+                    color: #666;
+                    margin-bottom: 30px;
+                }
+
+                .description {
+                    text-align: left;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #181818;
+
+                    ul {
+                        list-style-type: disc;
+                        padding-left: 20px;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+
+        .form-col {
+            background: #f4f6f9;
+            padding: 0 30px 20px 30px; // Removed top padding, reduced bottom padding
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+            h3 {
+                font-size: 20px;
+                color: #181818;
+                margin-top: 0; // Remove default top margin
+                padding-top: 20px;
+                margin-bottom: 8px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 13px;
+                color: #181818;
+                margin-bottom: 24px;
+            }
+
+            .form-control,
+            .form-select {
+                border: 1px solid #949494; // Darker border
+                border-radius: 4px;
+                padding: 10px 12px;
+                font-size: 14px;
+                color: #181818;
+                height: 44px;
+
+                &::placeholder {
+                    color: #555;
+                }
+
+                &:focus {
+                    border-color: $primary-color;
+                    box-shadow: 0 0 0 1px $primary-color;
+                }
+            }
+
+            // Specific style for country select
+            #country {
+                padding-top: 20px;
+            }
+
+            .form-disclaimer {
+                font-size: 11px;
+                color: #555;
+                line-height: 1.4;
+
+                p {
+                    margin-bottom: 10px;
+                    color: #555;
+                }
+
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .select-wrapper {
+                position: relative; // Ensure relative positioning for absolute child
+
+                .floating-label {
+                    font-size: 11px;
+                    color: #555;
+                    position: absolute;
+                    top: 4px;
+                    left: 12px;
+                    z-index: 2;
+                }
+            }
+
+            .submit-btn {
+                background-color: #0176D3;
+                border: none;
+                font-weight: 700;
+                font-size: 15px;
+                padding: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #005fb8;
+                }
+            }
+        }
+    }
+}
+
+// Ask Agentforce Bot (Fixed bottom right)
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    .ask-btn-content {
+        background: #0176D3;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// Chatbot Modal
+.chatbot-modal {
+    display: none;
+
+    &.show {
+        display: flex !important;
+    }
+}
+
+// Chat message styles
+.chat-message {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    &.user-message {
+        flex-direction: row-reverse;
+
+        .message-content {
+            background: #0176D3;
+            color: white;
+        }
+    }
+
+    &.bot-message {
+        .message-content {
+            background: white;
+        }
+    }
+}
+
+
+// TRUSTe Logo Fixed
+.truste-logo-fixed {
+    position: absolute;
+    right: 240px;
+    bottom: -395px;
+
+    img {
+        height: 60px;
+        width: auto;
+    }
+
+    @include mobile {
+        right: 90px; // Adjust for mobile if needed, or hide
+        bottom: 15px;
+    }
+}
+
+// Footer Alignment Override for Register Page
+.register-page {
+    .main-footer {
+        .footer-bottom {
+            .footer-bottom-links {
+                .legal-list {
+                    li {
+                        a {
+                            .footer-link-icon {
+                                width: 29px;
+                                height: auto;
+                                margin-right: 6px;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                margin-left: 0;
+                text-align: left;
+                margin-left: 230px;
+
+                p a {
+                    text-decoration: underline;
+                    color: inherit;
+                }
+
+                @include mobile {
+                    margin-left: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
