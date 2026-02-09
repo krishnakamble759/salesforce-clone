@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MuleSoft - The world's #1 integration and API platform.">
+    <title>MuleSoft | Salesforce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="module" crossorigin src="/salesforce-clone/assets/mulesoft-B9tw-Oc9.js"></script>
+  <link rel="modulepreload" crossorigin href="/salesforce-clone/assets/smallbusiness-Z-44Fml2.js">
+  <link rel="modulepreload" crossorigin href="/salesforce-clone/assets/main-CbkxiTIk.js">
+  <link rel="stylesheet" crossorigin href="/salesforce-clone/assets/mulesoft-BcB3vqPI.css">
+  <link rel="stylesheet" crossorigin href="/salesforce-clone/assets/style-aH3gmmDX.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/salesforce-clone/assets/salesforce-logo-DfrOb3XM.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item"><a href="#" class="nav-link" id="productsMenuTrigger">Products <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="/salesforce-clone/assets/salesforce-logo-DfrOb3XM.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <span class="globe-icon"></span>
+
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="?page=contact" class="btn-contact">Contact us</a>
+                <a href="?page=contact" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MuleSoft Sub-Navigation -->
+    <div class="mulesoft-sub-nav">
+        <div class="container sf-container">
+            <div class="sub-nav-content">
+                <div class="sub-nav-left">
+                    <div class="product-name">
+                        <a href="mulesoft.html" class="mulesoft-title-link">MuleSoft</a>
+                        <i class="fa-solid fa-chevron-down mobile-toggle-arrow"></i>
+                    </div>
+                    <ul class="sub-nav-menu">
+                        <li><a href="#">Overview</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">MuleSoft Anypoint Platform</a>
+                                <a href="#">MuleSoft Composer</a>
+                                <a href="#">MuleSoft RPA</a>
+                                <a href="#">Salesforce Flow</a>
+                                <a href="#">Dataloader.io <i class="fa-solid fa-arrow-up-right-from-square"
+                                        style="font-size: 0.75em;"></i></a>
+                                <a href="#" class="view-all-link">See all MuleSoft products</a>
+                            </div>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Pricing <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">MuleSoft Anypoint Platform Pricing</a>
+                                <a href="#">MuleSoft Automation Pricing</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub-nav-right">
+                    <a href="#" class="btn btn-outline talk-expert-btn">Talk to an expert</a>
+                    <a href="#" class="btn btn-primary try-free-btn">Try for free</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MuleSoft Hero Section -->
+    <section class="mulesoft-hero">
+        <div class="container sf-container">
+            <div class="row align-items-center">
+                <!-- Content Side -->
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Power AI agents to<br>take action with<br>APIs</h1>
+                    <p class="hero-desc">
+                        Integration is the foundation for actionable AI and<br>with MuleSoft, Agentforce agents can take
+                        action<br>anywhere. Seamlessly integrate any system, orchestrate<br>complex workflows and secure
+                        mission critical APIs to<br>extend the power of Agentforce across your IT<br>environment.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Try for free <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <a href="#" class="btn btn-outline">Talk to an expert <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+                <!-- Visual Side -->
+                <div class="col-lg-6 hero-visual text-lg-end text-center mt-4 mt-lg-0">
+                    <div class="video-container">
+                        <!-- Using the provided asset name or styling a placeholder to look like the screenshot -->
+                        <div class="video-box">
+                            <img src="/salesforce-clone/assets/bc826d78e7d38d25785679-BiKgqaZh.gif" alt="MuleSoft AI integration"
+                                class="img-fluid video-cover">
+                            <div class="play-overlay">
+                                <div class="play-icon-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="mulesoft-brands">
+        <div class="container sf-container">
+            <h2 class="brands-title">See how top brands use MuleSoft to<br>innovate with agility and efficiency.</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="data:image/webp;base64,UklGRpgNAABXRUJQVlA4IIwNAAAwQwCdASosAakAPm02lkikIyIhJFN56IANiU3cLqojUvNF7s3mbVX+4fif5w6grotwj/gf1X3B/kv/Tfnn9AH6Hf67+1+tz6p/5l/r/UN/Lf8B+xnvveiL/peoL/lfT/9Q/0APLX/dD4Sv27/bX2lf/zrL3kf/Fdqn+H6Uv1rLoOK/jP4K/g+afeb8iNQj8d/lP+i/LrhiwAfov9W/5Pr2TQfyHUA/VDirqAH81/yvoYf+PmS+qv/V7i/83/wnWj9HggroNsnY6dCn1yg5Sw82GeGug2ydjpvgWn7M7sImf0bm46AG2/sp380yJ0HKqqqqH2M8Kp0TzKRZswrZ6f/AkNWe1ynOpxmuvXHon8M+pc4UtMMj/4ASvsTGm4y4T+QknS91jTh9ErwgTWTuE9DQCFMmCNAP6a3m5qh0dLS8df6krYylbCugkhD/y4OBZX7ywWNWCzKiEDLIaZ/uebY3Gor+yI4AUVDSlovTxlHtI3YTLy5Z5lp2uKnGVlIfgxcsJ5mP+rayi+NULzMUHi23q7d8MsvwVBtzvCt2OFsdyCZgQW7Ac8pmP1slnyg2sgVBALEpxp8sdu337eoGrDAmz5hkJXdEG/ytqUVZju2jbyD4Gk+3Up0OwOkbnTX3FvcweWntbV46cYBeVMU3IGHqIlF93eF6vkhv+4ZIZFO973tSeugnQ/T4oOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVCAAA/v+4cAcbeLS0ui1MI4g839KCz5DpKhRGfn0dSK/f7m6+YTaKVuMupikl8blPaou/s/o0zk5ZQRyGemP+zNdww03/XtZWqAFsP6DdRVlQ7fSiNm+mCzusAY1FiM/85snnbckdRyBPVa0/OSNHL9nHGC0JAl/R/BwBm0yDmsugSDoBoC1jrjVu3NxaOOzgHHWyUbNszjwayW8zlVaASZmxJ5/GPaQOwHPSb/AKOtFYq1OopCFhFMY4jGObmQ0N6PP8Jw49Fhdg6rSDo9gd0CYZh4N9rHX2+PoyqmLB2AFIiCUSVpG8Fsyfb1IbkgK+xDimXlrF6SXY+JELoEspIiprya1JN5n3zE+9FZDIpApCE57BIw+M0/WqjS4u6/kRyunnAJmRRQDjw6SPVXP+FYXbQPucBbisbIZO+SdUWfatfJwqIiw7yC5i9s1kk2wSXvHP4X5ZCNRAXRRS6w/t6mj5mTyvNtyh1Dtt3HYu1DjZtM/0b6YIhyLrIJWbLCQ/Y+nbDdttqLL12z/A56PD/IvzlXXA3NTtgtRdbvJ81zDiVPwaoJfKP4q6IwLN1Kt+HNB/F840ILWkI521/HzYwo9aq+oiE7fo+SSRM6qaqhdkwgQ163LnNdQBYp8cBL8pc1RBoqrMnL/NoiCUOvcMaKFR4jfxiTKAQJsRjn1VTClvgGqG+D28r/Q8XgvL2zpNNYQHrdqrxLuhV4OoXEvaE6JQGKJzl2LOgur7e5qDF2EJ7ChyUtOUbwituIPLoU8Jw/eWz7m5AeiJyw/+H+xsRvub/1eKcdGQE2WPD8tLyIiQODY+/Elyfipicp0TldYm/SE/slvfAE3pquZyf/W6aMBO4I00cKWBjJyhVU+/qyVsy/o9aBtUXlcIhF4hhLQ+bUMirGlkcpxIFXOkN4Zj/+7p9I/B7ovcJexvhkVrA/9DWTnkLQ2zjRLmXjiXJ2n1ottpVEljEEixHeP5svtj5q9ojfeTFfEiG4geWcmGq7P1Yfzx+/qiGbqLe8A9MzO0mAq3LXSvy9HDrLRFDqkNxPaIKML//qrtUIiVs1NG/vbEDr3CksXGbu80lXf7HvHGDNjBYpW/3Tw/zu/Wq+Nt/Cqwq6zfJ9hbYyVpa9dBbur9+/sl7s+d0GOLMhzGTqINNad1T8NbKE2ACk5rWGwxEG7pEGdS0qH6ETnltz4LHzvKYSCS/Ele7kuXiUtO7fD6pMwi6Lf12wm3aiwTltaqNE7MKwW/h4pBSkBZceqXsrTqBLD629vPHahyjw7QuBHdbYVnZMXRchAe9jiB9QtIB9xi4cpQw5hRBBGYW65/e3YG/lrb8AWnRkLC3sNsRaU8DQb+051DpY1ZNwRaPMlWwKzBTbiz17ChbgoBRYwEPG+jFodEsmG8CPt/HLTtp4Xv35TsiyMqI4we/BqfcfybIl7S2Gv88l9lnmHBLqvnavOKZRiuhZgZ6+jYDcf7b5uP3clE50czEzX0aUc/aSbj1YkQYrIBA/k7wjiFydLv10Y9cs/Xqoy9UWhJ4M0xmzAAlP2g1S9Oh/GL/664XeUJPWzEh4RK3R8GopKfHw5ZqdJ9a4CCNfDIAQYb90y8j5ak7omrag+v802SJCzbYDuiep6HH9i7F9sVQvBM2VY8s9W3KUHhcfSMgY6hKX40oVd6f1WzSkeJKD9yhc8vfD8vVJj41JJUhxUrtd6p1OcqdBOHhencvRbQ34ZfcgXEaq3ogZxA1UJLw68cZuJSQ086gyfEhR1oDjUPKz61Hq2rH1oGZx4DPA/Hb9Ai7D/V3q/oncA3P7bz5nfB6WhJad5IqoM5ZX6IBvO0k23+3v9K30+eIQ/pQ01CmdhE0Qbn6353Ct7K6K4+0iuZv0Ew3a0WIuqnjpE1qyjLcwzTt6rFyxoCeIThFtY2hYg7yOInVje2kxEb5KPWM7tjRAXYJ519BfA+56t4VT30Llcl4jkU6nQ6zuRIl1vaawJhiUzB8yo8mkqpuyEiiC/Jfk3AsIq7nSzNnFLAl8tIcbWG3UHbq6jMwo0ZD1H+ZuyorsjFVLOKsh2wFUz33CnVwfsGMrDJ8RaMarcbr0s8ih11ESAW3CdmrFkGoLELDBOZjfdS7//ctysehP7HhFXcSaRS9EqQ+d4eECbYHsKwdMyRCfrd03lbaTgxyns/2uvpR5jfC/fIDU5XWtnZjdkxwnwShdR7iDoatvrt2u2OEdkPwfMFXd2q5gBWtu6Wt83oR3y0cqGTpKWXm3rZQPLkfrPtYQhAquL/XxDZhbhS+D4ZCd5T37DuhXtYg9w+//t+EhN2Xfx0XSPFIcKJ92qvFP7kTk5jftLcW15TJxmwEz2pHcHz/RSxOAGS1W1O+O3pllGIr4+dBEqd4oHQhQBCpisKD8y2pI6o8Nkx2IeEmvTTrRrv8S1eGy4lKzyBrxyBed7saTYNPDnZvkHZUUzZMap0c437C1haAN8ZVIGSIPKS7xU1dLvTHbfJVn4/LO08v+pSYXrmUDoY5DZALZ/JTM+r6TJ6hk9bHLc7L05XuqWKjx1kF552OuUwukNoYIit5agZPtZjPAPA9Lte8wo6foP+raUv0fhrIwGip29es6WEd2g6AT+bP9153zOB88Yilqq1EcWR2l+gYjtDn+uhB9R0mlc1V9vzD0mpmBmMJhVXoJpJ9jaHmpFITjBeVOkMWKRchkf0xd/NOdR6BOuryLvxT4k8SCipdvHsGHLt7GfGwD1CfVfFse6MdjBaaB2AkAXYWLrR/mdSh0nkXJInnysdiGS7bgRyfX3RUoVgPF4jnVpcmowjWMai7QWl8rgoDm+SE5Lpbj4daOp10LOlhyFmOQskvW3eOJKAi9IHiGko+jPzlXamHB9OB/ALWsqrOsGmbPFyRu0qfsqJ1wOZC6DjQKdJpoHVF70rla3knOJDpSthIF5onz4il2j8fF5kGS6v/QeMIVL5lPA8IfRLaaqxCDnyYos6YotjqJk2cf76AACjncDxxciiiEdlgCWzijE7+OPIMiZuCcXfhOPAAeFCyOjLIo0bw6HHN8BRGdGABVBK4cIBtXjM6zS2rs7LEICwUTOecu2BTPCbbxQg7GZlDP7XmXkVi24oIdpfEILnhr2fNT8hm3yoNHHXq9zJ42M9I7zGsjA2k0nrgFXzjAoJZlbS3LlFVaBFnak8oi7Lyn+ARHyLlgo80WGL85eItkMG9f/HVW1BiTG/1W3ViGMp+DneB2J1p9u/NzYwnx/Y62UX69taG3Q15Ed+Uzwx4Bfl2dtcvp9gUMx5AoghIaR8wlis5fNtM5i3QmIZQfdh/3tKpC7khX1EBJyAUzZ7vlJPlQnZ1y9nHFy0qVBFyjQpm72DdTAdv1FadioP6qwJPZn+758hZekuex4HZmEPElsi6/+bKt+9QFIM6eIU4JtfmdEJ1nQsME5+ppHh5S4vH9s+BpNbEPypL3ohOc8DC2flCKOcTysCAhUKDM6BI6Sg4fuhr6KdL+lOSyKKD1201XbkRPxVjtCGU2+KWdRRSq/4v09yNumQm3wmW2y45PmSyfYHjixFbi5ZufK6jqvhAWcZJLAqwvj1CpAUj6XzP5bfNiVZRAMYE1a4Ixovc3gC5vD4k4QCfPG3s+M6AXWPx7WC5h0Gy++RfBfVyNk7RaTypFD1impnMfS2uevMWkiDiKUHHJOj7lpoE6mEIdG/5x2HXKjQYTzD04QE2U8zWXx+325iDszZzEGPuEpuFdml4LmcEz9SImJCBlU3phk/D+mRrvPiqzJLs3yXBkd6f4jkKnqYVmhALV8v2+PRWo4rY8BZ+/j1OSY4EW+FmJ60Fucsyq93Uw3K66AlFphO0nzzhINLpjUeNSqQMLVKpYIuegc9zdTfCeIjqACsOF0jddo5QmtLC8AAAAAAAAAAAAA=" alt="AT&T">
+                </div>
+                <div class="brand-card">
+                    <img src="/salesforce-clone/assets/logo-wall-rbc-DbrPi56E.webp" alt="RBC Wealth Management">
+                </div>
+                <div class="brand-card">
+                    <img src="data:image/webp;base64,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" alt="GE Appliances">
+                </div>
+                <div class="brand-card">
+                    <img src="data:image/webp;base64,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" alt="Invesco">
+                </div>
+                <div class="brand-card">
+                    <img src="/salesforce-clone/assets/customer-logo-sandbox-schneider-electric-C5UJ1Ch3.webp"
+                        alt="Schneider Electric">
+                </div>
+            </div>
+        </div>
+
+        <!-- Curved Bottom Decoration -->
+        <div class="curved-bottom">
+            <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 80 C480 0 960 0 1440 80 V80 H0 Z" fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- MuleSoft Statistics Section -->
+    <section class="mulesoft-stats">
+        <div class="container sf-container">
+            <div class="stats-header">
+                <div class="mulesoft-icon">
+                    <img src="/salesforce-clone/assets/mulesoft-logo-B6_9_Szq.webp" alt="MuleSoft">
+                </div>
+                <h2 class="stats-title">Accelerate time to value with our market-<br>leading platform and proven
+                    methodology.</h2>
+                <a href="#" class="btn btn-primary read-research-btn">
+                    Read the research <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card stat-card-purple">
+                    <div class="stat-bg">
+                        <img src="data:image/webp;base64,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" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">78<sup>%</sup></h3>
+                        <p class="stat-label">faster time to market</p>
+                        <p class="stat-description">Accelerate development and delivery speed with a unified platform
+                            that drives efficiencies across the software development lifecycle.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-green">
+                    <div class="stat-bg">
+                        <img src="data:image/webp;base64,UklGRpAIAABXRUJQVlA4IIQIAAAQewCdASoABIwBPm02mEmkIyIhIFTYCIANiWlu4W5RfmAaew0rFvJJoVC829fmA/aDqibzd6AFl4elwFlXrBT4Iaqk122i4QZBDVUmu20XCDIIaqk122i4QZBDVUmu20XCDIIaqk122i4QZBDVUmu20XCDIIaqk122iP7hTY3SBmRVZFFFwgyCGqpNdtouEGQQ1VJrttEQ6qk122aq8FCwn9eT0xTIB8HUUE4acXaLOO1DV+r9YaqkAvY8xBcBHosvf/Gpmhm6uH4MgOkASA+8bIgqHETWGvRVwgyCGqpNdtouEGQQ0wjHwyEEZoY83tUP96dGYK6UDayQUdSy7lPXHU4vYQ1VH9lo3tlATaJt64ZGd9gUVcIMghqqTXbaLhBkENVSYUPHFWSXbG6Sk/ctHx+q/OGrkuF/yrrPZV2ve7lskWcoZzzkJaWqxFZSXj1baJAWbCWuw55GZmO5qTVjMzGZ0ttQ6KdBc32euMFzf+7ty16IsT/RD3e9jooq+Ray+Z0irht/hJETiltMvhm20XDbv86hc9g3ct2M+GwEb7E1AVvgxy0+3S4pGlmTVoN8GQs4wbPGoufISPNuTKAH79Wa3JkzD+XlE7WTaidOXiKx1kxFWf6bbjDUdVSa7bRcIO7DeYqqGwYMDBjGMDGDGMDBgwMGMYMYYN3NQp+6929qUdRYMYwYYwYMEBPHGvRVwgyB+MzYg//Q5WT2vIgLoMcnr7/+coQ8+zsd+u5NfodWk3vWuazak9sTpwSY7GpeSvnNU+dBLu8RRHrAS8QJOJpHJSSlOIgoxxxt+dBjk9ff/zoMcnr7/+dBjk9ff/zoMcnr7/+dBjpP1GDBJAom8UyQU5K27333gouEGQQ1VJsoQ1VJrtv9VJ1sg3h14NirxFl0AJxwRWtHXmDL8Ieimmccs7+4+CG/rssmORTWWeWd/ba7MBW3fvPU9tpBauOuNFFB0R1017kygFh8/eN6qKJp7ctDqAVZNeIq4QZBDVVQFlAD7cteirhBkFwVZNuiOuoWIJxS2iIdVSAYb/BkENVSa7bRcIMghqqTXbaLhBkENVSa7bRcIMghqqTXRFrM87M87M/D5/cx/9s8Btzt5gCE5n6xmfXIUQ366NYt09RI6qk122i4QZBDVUmu20XCDIIaqk122i4QZBC8zMZmZmYzMzMzGZmZmYzMzMzGZmZmYzMzMzGZmZmYzM5ux8GQQ1VJh+DIIaqkAxBkENVN4JxS2i32YgyCGqpNdtouEGQQ1VJrttFwgyCGqpNdtouEGQQ1VJrttFwgyCGqpNdtouEGQQ1VJrttFwgyCGqpNWAA/v5Yo/ua/lSYv9zX8qLQAAAAE3gAAAAriMfUmi7pnbsh9vcqwk9LN6ec8sTmL3qR2oAAJjWH5lOQLhMOqOjRiaaa/qMbajdUqfWLpltlRY6ZyyPU7MtEEWdnHaPwU8uCp9z7jPp8vcxIT2ndddeRAHBf55XD+6CWvuwNcjeRN9zQLMJG39PWp4kFEdtDz9Uqd2WbcJkVjz7P8+9TkkGBvilMGvn0w/g2IM0Ovj7Ch5UVUeJlbnb5mKn5LPHA95JQVI8RxmjTYCF6tchqn6V4QAAE4BMIGvh/Am3cYLIelAWCf4kY/M7/EjH5oaw+6EtEofbgQnDo31hMskP4O418sEiL2957TW+9ttPYMhTOc3bso4m1z8YysLlkugbVlsq/3qlKpFI5r2ZSp/sBEa1eU0QSf9pPqMkif+fPIrf8TgyvWcdbFBAVNMnhI99lpPFtfjIvtlVPnEDeXiBlc5jv1dcwEt9Oe6STS5Zk6W5PgXmk/2zh+d3Cp4M1EsGQWDW8daFYVCT/BmeaLMoSVsFE25IPvwUqddiorDkO/duuKU72Li/ZIHOfmoAXzpKkYeSktrjxiVtOEb9/RDT8AAwvVS1H69pXA+lr6fUpXTKzlqqf+Ol6qZrq15BmG2QYgc6M8986B1QLdo9KhYqN/b7HAAMyOjvqbNJYtgmKboe6XtZr3BGxOU7d9DEPNKGNqjRkTUaZ9Ms7DLCC/i4coDhcoV6yK0/TKp/jgENL8vMq+rTKytNRXSGZVYp88ifOjyDdOFTDmmzCRev1lyjBq8F9doDywDOcROrhp3fnPYwrlqXiM++5TfZL1LFygWNPyz4SdtF69upIOJWnoc+AVO+R48MYtP5Qdf5Wr2zLf/SsPxkEngIL33qvQBFIYSEm+QWGvG/DDczLVojTh0H6E7+kqd9pKlskX7HoAy3txgdEFr5xDU2j8LrktmZHHAMillkmce0fPVPPis+ii8GkegTPrKhwvLgPtlbDwJD6PMCW9SfdGAZEYT181IfbZclVVaWHiefwBhGtijriCoitNj/wR4sBYIBO2SRZlndz1IAAAFRYgsNoPlprJh1/WtKbLgtm59iSJpn7Ui1z5Anvy5UonlUBaFNBF50igAAFKfcrHw7nkQQAFv186o4/Lg+WCV2cbOpB8LpZkkHAMhfVnocxIp3MXgdyo9ry38qLMl8KtDcxOhecHuquovGSkySKS2EJPeUUScilKkAqQZbUpN1q6nwxRqEzAAB0v2U22HSMoCHtXdiCcQiu9eLpgMAABAT3tgMplYEZCR0bRfNkEO3ZWqDH3DWHzhgOGsKKlvIJft188gJy7N2PVAjttRKvQHA33nhHKOt6klyBkXL59WzubGyzJtRpMasvuL4WssGWs6yMXAm0oJVeMZWJogXHoZY40uCNuiJmIhg7UTXZswR2CBUj5UbvdRnduu6mXk/EW0zTAZQNBYIAAB/wZxuazDZGgAAAAZf2eGfZihD1VwrtXzXE0IPPsvS7q4h5Z3bXPDPsxmfZl7pjyL0UEtirFMMXmhGRQAAAAAAc0UAAAAAJTZ4KFAAAAA0/AAAAAAAAAAAAAA==" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">49<sup>%</sup></h3>
+                        <p class="stat-label">integration and API reuse rate</p>
+                        <p class="stat-description">Increase agility with asset reuse to develop and deliver
+                            higher-quality integrations and APIs faster, while minimising rework.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-cyan">
+                    <div class="stat-bg">
+                        <img src="data:image/webp;base64,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" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">74<sup>%</sup></h3>
+                        <p class="stat-label">reduced maintenance costs and effort</p>
+                        <p class="stat-description">Lower your maintenance effort and innovate more efficiently with
+                            reduced run, change, security and governance costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Agentforce Integration Platform Section -->
+    <section class="mulesoft-agentforce">
+        <div class="container sf-container">
+            <div class="agentforce-content">
+                <h2 class="agentforce-title">Meet the only native integration platform powering Agentforce</h2>
+
+                <p class="agentforce-description">
+                    With the rise of generative AI and AI agents, data is the new currency. To move the business
+                    forward, companies must scale API adoption to bring all their disparate data to bear across the
+                    Agentforce 360 Platform.
+                </p>
+
+                <p class="agentforce-description">
+                    But it doesn't stop there. You need the ability to democratise automation and take action on your
+                    data. This is why Salesforce customers trust MuleSoft's unified integration, automation and API
+                    management platform to close data silos and power agent action across teams, technologies and
+                    systems.
+                </p>
+
+                <a href="#" class="btn btn-primary read-report-btn">
+                    Read the report <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <div class="agentforce-diagram">
+                    <img src="/salesforce-clone/assets/mulesoft-feature-ai-integration-automation-api-management-Bsqfpq-z.webp"
+                        alt="Integration Platform Diagram" class="diagram-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MuleSoft Features Section -->
+    <section class="mulesoft-features">
+        <div class="container sf-container">
+            <!-- Feature 1: Image Right, Content Left -->
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-image">
+                    <img src="/salesforce-clone/assets/mulesoft-anypoint-exchange-cloud-connectors-Cam-bkHh.webp"
+                        alt="Build an agent-ready foundation">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Build an agent-ready foundation</h2>
+                    <p class="feature-description">Enable agent connectivity and discoverability with integrated
+                        systems, models and applications.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Watch demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Connect systems at lightning-fast speed.</h3>
+                            <p class="feature-item-text">With an extensive library of prebuilt connectors for critical
+                                enterprise applications, databases, protocols and industry standards, connectivity has
+                                never been easier. These connectors are fully maintained and ready to use, which means
+                                that teams can spend less time developing and more time innovating.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Build an integrated foundation.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Accelerate delivery with intuitive tooling.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Image Left, Content Right -->
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="/salesforce-clone/assets/mulesoft-feature-automate-any-system-process-9kmLpGQo.webp"
+                        alt="Put your data to work">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Put your data to work, by turning it into action.</h2>
+                    <p class="feature-description">Empower developers and business users to automate workflows across
+                        any system or touchpoint, using natural language prompts and no-code to pro-code tools.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Get the guide <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Automate any system or process.</h3>
+                            <p class="feature-item-text">Use natural language prompts and no code to pro-code tools to
+                                automate any process or subprocess quickly. Get to value faster by reuse components like
+                                bots, connectors, workflows and APIs.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Manage and optimise workflows across teams and systems.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Create new customer and employee experiences at any
+                                touchpoint.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Image Right, Content Left -->
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-image">
+                    <img src="/salesforce-clone/assets/mulesoft-feature-discover-build-catalog-api-jJcNP7tQ.webp"
+                        alt="Scale innovation with API security">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">Scale innovation with API security and governance.</h2>
+                    <p class="feature-description">Centrally manage, govern and secure your data and APIs, from
+                        anywhere, as you build new experiences, products and services.</p>
+
+                    <div class="feature-buttons">
+                        <a href="#" class="btn btn-primary">Watch demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#" class="btn btn-outline-primary">Learn more <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Discover, build and catalog any API.</h3>
+                            <p class="feature-item-text">Jumpstart application and automation delivery by discovering
+                                and building APIs using diverse protocols. With a single pane of glass across all of
+                                your APIs, your teams can reuse APIs, decrease redundancies and accelerate delivery.
+                                Easily share APIs for use in Agentforce through API Catalogue.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Ensure consistent API quality.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Control and secure access to all APIs.</h3>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-item-title">Create API ecosystems.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Products Portfolio Section -->
+    <section class="mulesoft-products-portfolio">
+        <img src="/salesforce-clone/assets/mulesoft-product-portfolio-background-CRni1kKL.webp" alt="Background Decorations"
+            class="portfolio-bg">
+        <div class="container sf-container">
+            <h2 class="portfolio-title">Explore MuleSoft's unified integration, automation and API management solutions.
+            </h2>
+
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft Anypoint Platform</h3>
+                    <p class="product-card-description">Start fast and realise immediate value with a single, unified
+                        solution for integration and APIs.</p>
+                    <a href="#" class="product-card-link">Learn more</a>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft for Flow: Integration</h3>
+                    <p class="product-card-description">Enable business teams to automate workflows and connect apps and
+                        data easily.</p>
+                    <a href="#" class="product-card-link">Learn more <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">MuleSoft for Agentforce</h3>
+                    <p class="product-card-description">Extend Agentforce to securely take action across your business.
+                    </p>
+                    <a href="#" class="product-card-link">Learn more <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <h3 class="product-card-title">Salesforce Flow</h3>
+                    <p class="product-card-description">Fast-track work between people and departments by automating
+                        multiuser processes.</p>
+                    <a href="#" class="product-card-link">Learn more</a>
+                </div>
+            </div>
+
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-outline-primary">View all products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Customer Story Section -->
+    <section class="mulesoft-customer-story">
+        <img src="/salesforce-clone/assets/mulesoft-products-brand-customer-story-quote-background-D0UqmFiu.webp"
+            alt="Background Decorations" class="customer-story-bg">
+        <div class="container sf-container">
+            <h2 class="story-title">How customers use MuleSoft to transform experiences.</h2>
+
+            <div class="story-card">
+                <div class="story-content-wrapper">
+                    <div class="story-image">
+                        <img src="/salesforce-clone/assets/mulesoft-customer-story-royal-bank-of-canada-BAHfKMRD.webp"
+                            alt="Greg Beltzer, RBC Wealth Management">
+                    </div>
+                    <div class="story-info">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="quote-text">MuleSoft has been critical in enabling our IT team to bring our legacy
+                            technology and modern platforms together. We now have a single view of each and every
+                            customer. And, with our new solution, clients are onboarded in just 24 minutes, versus
+                            weeks.</p>
+                        <div class="quote-author">
+                            <p class="author-name">Greg Beltzer</p>
+                            <p class="author-title">Head of Technology, RBC Wealth Management</p>
+                        </div>
+                        <div class="story-cta">
+                            <a href="#" class="btn btn-outline-primary">Read the story <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Trailhead Section -->
+    <section class="mulesoft-trailhead">
+        <div class="container sf-container">
+            <h2 class="trailhead-title">Learn new skills with free, guided training on Trailhead.</h2>
+            <div class="trailhead-grid">
+                <!-- Card 1 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="/salesforce-clone/assets/f6725ef15a4183ed9867ebf6995b7ab5_badge-C89JY0cd.webp"
+                            alt="API Lifecycle Management">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">API Lifecycle Management with Anypoint Platform</h3>
+                    <p class="card-text">Learn how MuleSoft simplifies the design and management of your APIs and
+                        integrations.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="data:image/webp;base64,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" alt="RPA Automation">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">RPA Automation with MuleSoft Composer</h3>
+                    <p class="card-text">Build and run a flow to sync leads in Gmail with Salesforce and Slack using
+                        MuleSoft RPA.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="trailhead-card">
+                    <div class="card-image">
+                        <img src="/salesforce-clone/assets/c2d1e1b78bb73f734b6f668e6f9428de_badge-C7YrScFo.webp"
+                            alt="Flow Builder Basics">
+                    </div>
+                    <div class="card-badge">Module</div>
+                    <h3 class="card-title">Flow Builder Basics</h3>
+                    <p class="card-text">Explore Flow Builder and learn when to use flows to automate your business
+                        processes.</p>
+                    <a href="#" class="card-link">Start learning</a>
+                </div>
+            </div>
+            <div class="trailhead-footer">
+                <img src="/salesforce-clone/assets/mulesoft-products-brand-trailhead-background-BfpXcCUd.webp"
+                    alt="Clouds and Butterflies" class="trailhead-bg">
+                <a href="#" class="btn btn-outline-primary">Learn for free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Resources Section -->
+    <section class="mulesoft-resources">
+        <div class="container sf-container">
+            <h2 class="resources-title">Keep up with the latest trends, insights, and conversations.</h2>
+            <div class="resources-grid">
+                <!-- Card 1 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="/salesforce-clone/assets/mulesoft-resources-report-connectivity-benchmark-Cl03DZ64.webp"
+                            alt="Connectivity Benchmark Report">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Report</div>
+                        <h3 class="card-title">See how companies are tackling today's economic challenges with
+                            digital transformation.</h3>
+                        <p class="card-text">Read the insights from over 1,050 IT leaders in the "2024 Connectivity
+                            Benchmark Report."</p>
+                        <a href="#" class="card-link">Read the report <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="/salesforce-clone/assets/mulesoft-resources-report-it-leaders-insights-pulse-rSC9aZ8_.webp"
+                            alt="Integration Tips Blog">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Blog</div>
+                        <h3 class="card-title">Salesforce-MuleSoft integration: 9 tips to remember.</h3>
+                        <p class="card-text">Learn how MuleSoft unleashes the power of Salesforce's Customer 360 by
+                            unlocking, unifying, and securing data.</p>
+                        <a href="#" class="card-link">Read the blog</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="/salesforce-clone/assets/mulesoft-resources-guide-salesforce-integration-customer-360-BBR4S3gM.webp"
+                            alt="AI Future Salesforce+">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-badge">Salesforce+</div>
+                        <h3 class="card-title">Experience the future of AI and hyperautomation.</h3>
+                        <p class="card-text">Watch how MuleSoft's hyperautomation platform transforms employee and
+                            customer experiences.</p>
+                        <a href="#" class="card-link">Watch the keynote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="resources-footer">
+                <a href="#" class="btn btn-outline-primary">See all resources <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MuleSoft Innovation Journey Section -->
+    <section class="mulesoft-innovation-journey">
+        <div class="container sf-container">
+            <h2 class="journey-title">Start your innovation journey with MuleSoft.</h2>
+            <div class="journey-grid">
+                <!-- Card 1 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="card-title">Begin your trial.</h3>
+                    <p class="card-text">Try MuleSoft Anypoint Platform free for 30 days. No credit card, no
+                        installations.</p>
+                    <a href="#" class="card-link">Try for free <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="card-title">Talk to an expert.</h3>
+                    <p class="card-text">Tell us a bit more so the right person can keep in touch faster.</p>
+                    <a href="#" class="card-link">Request a call <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="journey-card">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="card-title">Stay up to date.</h3>
+                    <p class="card-text">Get the latest research, industry insights and product news delivered straight
+                        to your inbox.</p>
+                    <a href="#" class="card-link">Sign up for newsletter</a>
+                </div>
+            </div>
+        </div>
+        <img src="/salesforce-clone/assets/contact-us-footer-service-BROL7lCm.webp" alt="Innovation Journey Background"
+            class="journey-bg">
+    </section>
+
+    <!-- MuleSoft FAQ Section -->
+    <section class="mulesoft-faq">
+        <div class="container sf-container">
+            <h2 class="faq-title text-center">MuleSoft FAQs</h2>
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is MuleSoft?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MuleSoft was founded 2006 based on the idea that connecting applications should be easy.
+                            Today, IT Environments are more complex than ever before and MuleSoft
+                            has emerged as the leading unified platform for integration, automation and API management.
+                            MuleSoft provides easy-to-use tools to connect systems and data from
+                            anywhere - on-premises, cloud or hybrid.
+                        </p>
+                        <p>Using MuleSoft, both IT and business users can do more with less, quickly creating AI-powered
+                            workflows and integrations that enable the creation of efficient growth
+                            and differentiated customer experiences
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is MuleSoft different from other integration and automation solutions?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Over a decade ago, MuleSoft was the first to introduce the world to <a href="#">API-led
+                                connectivity</a> and redefined integration for IT. Over time, we've expanded our product
+                            portfolio to include <a href="#">automation</a>, <a href="#">API management</a> and <a
+                                href="#">AI</a>, because we recognise that end-to-end digital transformation is
+                            dependant on accessing these capabilities on a single, unified platform.</p>
+                        <p>MuleSoft is now the trusted solution in the market. We're Leaders in the Gartner Magic
+                            Quadrant for API Management and Visionary in the Gartner Magic Quadrant for <a
+                                href="#">Robotic Process Automation (RPA)</a>.</p>
+                        <p>Additionally, MuleSoft has quickly risen to become one of the fastest growing Salesforce
+                            cloud products by driving meaningful results and value for Trailblazers across industries.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Does MuleSoft integrate non-Salesforce systems?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The average enterprise has data siloed across over 900 systems and only one-third of those
+                            are integrated.</p>
+                        <p>In order to make the Customer 360 vision a reality, you must be able to bring all of your
+                            customer data to bear and to leverage all of your siloed systems and applications. With
+                            MuleSoft, customers can quickly connect to any system, both inside and outside of
+                            Salesforce.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the advantages for Salesforce customers who use MuleSoft?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Together, MuleSoft and Salesforce offer customers access to MuleSoft integration and <a
+                                href="#">automation</a>, without leaving the Agentforce 360 Platform. For example,
+                            directly from your Salesforce instance, you can invoke MuleSoft APIs, Flows or RPA bots.</p>
+                        <p>Additionally, MuleSoft and Salesforce offer customers the ability to accelerate delivery
+                            using hundreds of pre-built connectors and accelerators.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How will MuleSoft reduce the complexity of my existing architecture?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>At MuleSoft, we pioneered the concept of <a href="#">composability</a> as the foundation for
+                            successful innovation strategies. The goal of this integration approach is to reduce
+                            complexity and increase agility using standardised, reusable building blocks  like <a
+                                href="#">APIs</a>  to build new experiences, products and services instead of writing
+                            <a href="#">customised code</a> or starting from scratch with every project.</p>
+                        <p>MuleSoft combines our technology with best-in-class methodologies to help customers reduce
+                            complexity and reimagine customer experience.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is MuleSoft expensive?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MuleSoft is often compared to lower cost competitors that only offer basic solutions in one
+                            area: <a href="#">integration</a>, <a href="#">automation</a> or <a href="#">API
+                                management</a>. Unlike these point solutions, MuleSoft is a market leader, providing a
+                            unified platform with robust capabilities across all three categories.</p>
+                        <p>What's more, MuleSoft has evolved its pricing and packaging to lower the barrier to entry and
+                            to provide increased flexibility based on customer needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/salesforce-clone/assets/background-sales-cloud-pricing-3-C-919uGz.webp" alt="FAQ Background" class="faq-bg">
+    </section>
+
+    <!-- Scripts -->
+</body>
+
+</html>
