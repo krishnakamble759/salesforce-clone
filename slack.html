@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Slack - The AI Productivity Platform. Connect your people, tools, and data in one place.">
+    <meta name="keywords" content="Slack, Salesforce, Collaboration, AI Productivity, Productivity Platform">
+    <title>Slack: The AI Productivity Platform | Salesforce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="module" crossorigin src="/salesforce-clone/assets/slack-BGyLFPkR.js"></script>
+  <link rel="modulepreload" crossorigin href="/salesforce-clone/assets/smallbusiness-Z-44Fml2.js">
+  <link rel="modulepreload" crossorigin href="/salesforce-clone/assets/main-CbkxiTIk.js">
+  <link rel="stylesheet" crossorigin href="/salesforce-clone/assets/style-aH3gmmDX.css">
+</head>
+
+<body class="slack-page">
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/salesforce-clone/assets/salesforce-logo-DfrOb3XM.svg" alt="Salesforce" />
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <!-- Main Menu View -->
+                <div class="menu-main-view">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="productsMenuTrigger">Products
+                            <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Industries <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Customers <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learning <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Support <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item has-dropdown desktop-only-more">
+                        <a href="#" class="nav-link">More <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Company</a>
+                            <a href="#" class="dropdown-item">Salesforce+</a>
+                        </div>
+                    </li>
+                    <!-- Mobile Only Items -->
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Company <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+                    <li class="nav-item mobile-only-item"><a href="#" class="nav-link">Salesforce+ <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i></a></li>
+
+                    <!-- Divider for Mobile Menu Actions -->
+                    <li class="nav-item mobile-only-item divider"></li>
+
+                    <!-- Action Items for Mobile Menu -->
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link" id="mobileLoginTrigger">
+                            <span><i class="fa-solid fa-user"></i> Login</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-phone"></i> Contact</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item mobile-only-item">
+                        <a href="#" class="nav-link mobile-action-link">
+                            <span><i class="fa-solid fa-globe"></i> Change Region</span> <i
+                                class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        </a>
+                    </li>
+
+                    <!-- Phone Number at bottom -->
+                    <li class="nav-item mobile-only-item phone-display-row">
+                        <a href="tel:1800-420-7332" class="phone-number-link">1800-420-7332</a>
+                    </li>
+                </div>
+
+                <!-- Login Sub-Menu View (Hidden by default) -->
+                <div class="menu-login-view" style="display: none;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link back-to-main" id="backToMainMenu">
+                            <i class="fa-solid fa-chevron-left"></i> Back
+                        </a>
+                    </li>
+                    <li class="nav-item login-header-item">
+                        <h2 class="login-menu-title">Login</h2>
+                    </li>
+                    <li class="nav-item login-section-label">Products</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item">
+                            Salesforce <img src="/salesforce-clone/assets/salesforce-logo-DfrOb3XM.svg" alt="" class="mini-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Marketing Cloud</a>
+                    </li>
+
+                    <li class="nav-item divider-small"></li>
+
+                    <li class="nav-item login-section-label">Experiences</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link login-sub-item underline-link">Trailblazer Account</a>
+                    </li>
+                    <li class="nav-item login-description-item">
+                        <p class="login-menu-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <span class="search-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <input type="text" placeholder="Ask Agentforce anything" class="search-input">
+
+                <!-- Search Dropdown -->
+                <div class="search-dropdown">
+                    <div class="search-option" data-message="Connect me with a sales rep">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Connect me with a sales rep</span>
+                    </div>
+                    <div class="search-option" data-message="Show me an Agentforce demo">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Show me an Agentforce demo</span>
+                    </div>
+                    <div class="search-option" data-message="How can Salesforce help my business">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>How can Salesforce help my business</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <span class="call-label">Call Us</span>
+                    <span class="phone-number">1800-420-7332</span>
+                </div>
+
+                <!-- Globe Icon -->
+                <span class="globe-icon"></span>
+
+                <!-- Login Link with Dropdown -->
+                <div class="login-wrapper">
+                    <a href="#" class="login-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                    <!-- Mobile Login Icon -->
+                    <a href="#" class="mobile-login-icon mobile-only-item">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div class="login-dropdown">
+                        <h3 class="login-dropdown-title">Login</h3>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Products</h4>
+                            <a href="#" class="login-item">
+                                Salesforce <i class="fa-solid fa-cloud text-primary ms-1" style="font-size: 14px;"></i>
+                            </a>
+                            <a href="#" class="login-item">Marketing Cloud</a>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="login-group">
+                            <h4 class="login-group-label">Experiences</h4>
+                            <a href="#" class="login-item link-underline">Trailblazer Account</a>
+                        </div>
+
+                        <p class="login-desc">
+                            Access Trailhead, your Trailblazer profile, community, learning, original series, events,
+                            support, and more.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Button -->
+                <a href="?page=contact" class="btn-contact">Contact us</a>
+                <!-- Mobile Contact Button -->
+                <a href="?page=contact" class="mobile-btn-contact mobile-only-item">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Slack Sub-Navigation -->
+    <div class="slack-sub-nav">
+        <div class="container sf-container">
+            <div class="sub-nav-content">
+                <div class="sub-nav-left">
+                    <div class="product-name">
+                        <a href="slack.html" class="slack-title-link">Slack</a>
+                        <i class="fa-solid fa-chevron-down mobile-toggle-arrow"></i>
+                    </div>
+                    <ul class="sub-nav-menu">
+                        <li><a href="#" class="active">Overview</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Features <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="sub-nav-dropdown">
+                                <a href="#">Collaboration & Productivity</a>
+                                <a href="#">Platform & Integrations</a>
+                                <a href="#">Agentforce in Slack</a>
+                                <a href="#">Salesforce channels</a>
+                            </div>
+                        </li>
+                        <li><a href="#">For Departments</a></li>
+                        <li><a href="#">For Industries</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="sub-nav-right">
+                    <a href="#" class="btn btn-outline contact-sales-btn">Contact sales</a>
+                    <a href="#" class="btn btn-primary watch-demo-btn">Watch demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Slack Hero Section -->
+        <section class="slack-hero">
+            <div class="container sf-container">
+                <div class="hero-content-wrapper">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Slack is your work operating system.</h1>
+                        <p class="hero-description">Slack is where humans with agents meet data, workflows and apps to
+                            deliver big results, right where people love to work.</p>
+                        <div class="hero-btns">
+                            <a href="#" class="btn btn-primary watch-demo-hero">Watch demo</a>
+                            <a href="#" class="btn btn-outline try-free-hero">Try for free <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="/salesforce-clone/assets/hero-slack-overview-071725-2ooA9ngO.webp" alt="Slack Interface with Agentforce"
+                            class="hero-main-img">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Company Logos Section -->
+        <section class="slack-companies">
+            <div class="container sf-container">
+                <h2 class="companies-title">The world's most innovative, fastest-growing companies run on Slack.</h2>
+                <div class="logos-grid">
+                    <div class="logo-card"><img src="/salesforce-clone/assets/logo-capital-one-DASmBi1_.webp" alt="Capital One"></div>
+                    <div class="logo-card"><img src="data:image/webp;base64,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" alt="Rivian"></div>
+                    <div class="logo-card"><img src="/salesforce-clone/assets/logo-ibm-1-BuoTUgza.webp" alt="IBM"></div>
+                    <div class="logo-card"><img src="/salesforce-clone/assets/logo-openAI-slack-YfzT6nGi.webp" alt="OpenAI"></div>
+                    <div class="logo-card"><img src="/salesforce-clone/assets/spotify-advertising-logo-slack-dvTObiSe.webp"
+                            alt="Spotify Advertising"></div>
+                    <div class="logo-card"><img src="/salesforce-clone/assets/logo-box-DEPsMPVZ.webp" alt="Box"></div>
+                </div>
+            </div>
+
+            <!-- Background Illustration -->
+            <div class="companies-bg-illustration">
+                <img src="/salesforce-clone/assets/page-divider-6-slack-C0LDJJlA.webp" alt="" aria-hidden="true">
+            </div>
+
+            <!-- Bottom Curve -->
+            <div class="section-curve">
+                <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 80 C480 0 960 0 1440 80 V80 H0 Z" fill="white" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Transition Header Section -->
+        <section class="slack-transition-header">
+            <div class="container sf-container">
+                <h2 class="transition-title">Where Work Happens for Millions,<br>Every Day</h2>
+                <p class="transition-subtitle">Say hello to the conversational interface for Salesforce that drives real
+                    business results.</p>
+                <div class="transition-btns">
+                    <a href="#" class="btn btn-primary">Watch demo</a>
+                    <a href="#" class="btn btn-outline">Try for free <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 1: Empower your people -->
+        <section class="slack-features-alternate">
+            <div class="container sf-container">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h2 class="feature-title">Empower your people with agent-powered productivity in one work OS.
+                        </h2>
+                        <p class="feature-desc">Keep teams in the flow of work in a user-friendly, personalised
+                            experience that helps everyone get their jobs done. Bring collaboration, purpose-built
+                            productivity tools and intuitive, secure AI and agents to your employees' fingertips
+                            throughout their workday.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/salesforce-clone/assets/img_workos_blade_01@2x-DsIrAqss.webp" alt="Work OS Interface">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 2: Co-ordinate work -->
+        <section class="slack-features-alternate reversed">
+            <div class="container sf-container">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h2 class="feature-title">Co-ordinate work across apps, agents and processes.</h2>
+                        <p class="feature-desc">All the ways you work work in Slack. Over 2,600 out-of-the-box
+                            integrations, customised apps and third-party agents are here, with no-code workflow
+                            automation to keep your teams focused on work that matters.</p>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/salesforce-clone/assets/one-up-work-orchestration-DJ1F3r8P.webp" alt="Work Orchestration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlight Card Section: Salesforce channels -->
+        <section class="slack-spotlight-section">
+            <div class="container sf-container">
+                <div class="spotlight-card">
+                    <div class="spotlight-content">
+                        <div class="spotlight-text">
+                            <h2 class="spotlight-title">Salesforce channels bring data and dialogue together.</h2>
+                            <p class="spotlight-desc">Align teams, close information gaps and get deeper insights with
+                                AI. Salesforce channels unite CRM and conversational data directly in Salesforce and in
+                                Slack, so you can keep your customers front and centre.</p>
+                            <a href="#" class="btn btn-primary">Learn more</a>
+                        </div>
+                        <div class="spotlight-image">
+                            <img src="/salesforce-clone/assets/1_up_spotlight_data_and_dialogue_1x1_1x-BSCo9kAC.webp"
+                                alt="Salesforce Channels Integration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Salesforce and Slack Section -->
+        <section class="slack-connect-ecosystem">
+            <div class="container sf-container">
+                <div class="connect-content">
+                    <h2 class="connect-title">Connect Salesforce and Slack without ever<br>leaving the conversation.
+                    </h2>
+                    <p class="connect-desc">Bring customer data to where teams are already working. It's the world's #1
+                        AI-powered CRM and the world's most beloved work OS, side-by-side.</p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+                <div class="ecosystem-icons">
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cpath%20d='M11,34.18l7.59-7.59c.78-.78,2.04-.78,2.82,0l6.59,6.53,11.17-11.12h-9.17c-1.1,0-2-.9-2-2s.9-2,2-2h14c1.1,0,2,.9,2,2v14c0,1.1-.9,2-2,2s-2-.9-2-2v-9.16l-12.53,12.52c-.78,.78-2.04,.78-2.82,0l-6.65-6.54-9,9v13.18h7v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h8v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h8v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h7V11H11v23.18Z'%20fill='%2304e1cb'/%3e%3cpath%20d='M26.65,37.36c.78,.78,2.04,.78,2.82,0l12.53-12.52v9.16c0,1.1,.9,2,2,2s2-.9,2-2v-14c0-1.1-.9-2-2-2h-14c-1.1,0-2,.9-2,2s.9,2,2,2h9.17l-11.17,11.12-6.59-6.53c-.78-.78-2.04-.78-2.82,0l-7.59,7.59v5.64l9-9,6.65,6.54Z'%20fill='%23fff'/%3e%3cpath%20d='M55,7H9c-1.1,0-2,.9-2,2V55c0,1.1,.9,2,2,2H55c1.1,0,2-.9,2-2V9c0-1.1-.9-2-2-2Zm-2,46h-7v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-8v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-8v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-7V11H53V53Z'%20fill='%230b827c'/%3e%3c/svg%3e" alt="Sales"></div>
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23ff538a;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%23fff;%20}%20.cls-3%20{%20fill:%20%238a033e;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M51.6,16.02c-3.83-3.64-9.76-3.64-13.5,0l-4.88,4.88c-.77.77-1.91.77-2.68,0l-4.88-4.88c-1.82-1.82-4.31-2.87-6.89-2.87-5.46,0-9.86,4.4-9.86,9.76,0,2.58,1.05,5.07,2.87,6.99l20.1,20.1,20.1-20.1c3.73-3.92,3.54-10.15-.38-13.88Z'/%3e%3cpath%20class='cls-1'%20d='M19.45,20.8c-1.63,0-2.87,1.24-2.87,2.87,0,1.05-.86,1.91-1.91,1.91s-1.91-.86-1.91-1.91c0-3.73,2.97-6.7,6.7-6.7,1.05,0,1.91.86,1.91,1.91s-.86,1.91-1.91,1.91Z'/%3e%3cpath%20class='cls-3'%20d='M54.67,13.34c-5.36-5.36-13.97-5.36-19.33,0l-3.54,3.54-3.54-3.54c-5.26-4.98-13.5-4.98-18.76,0-5.36,5.17-5.65,13.88-.38,19.33l21.44,21.44c.38.38.86.57,1.34.57s.96-.19,1.34-.57l21.44-21.44c5.36-5.36,5.36-13.97,0-19.33Z'/%3e%3cpath%20class='cls-1'%20d='M31.89,49.99L11.79,29.89c-1.82-1.82-2.87-4.31-2.87-6.99,0-5.46,4.4-9.76,9.86-9.76,2.58,0,5.07,1.05,6.89,2.87l4.88,4.88c.77.77,1.91.77,2.68,0l4.88-4.88c3.83-3.64,9.76-3.64,13.5,0,3.92,3.73,4.12,9.95.38,13.88l-20.1,20.1Z'/%3e%3cpath%20class='cls-2'%20d='M19.45,16.97c-3.73,0-6.7,2.97-6.7,6.7,0,1.05.86,1.91,1.91,1.91s1.91-.86,1.91-1.91c0-1.63,1.24-2.87,2.87-2.87,1.05,0,1.91-.86,1.91-1.91s-.86-1.91-1.91-1.91Z'/%3e%3c/svg%3e" alt="Service"></div>
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cpath%20d='M31,36c-4.97,0-9,4.03-9,9,0,.18-.03,.36-.08,.52,2.67,1.56,5.76,2.48,9.08,2.48s6.41-.91,9.08-2.48c-.05-.17-.08-.34-.08-.52,0-4.97-4.03-9-9-9Z'%20fill='%23fff'/%3e%3ccircle%20cx='31'%20cy='26'%20r='6'%20fill='%23fff'/%3e%3cpath%20d='M24.61,33.69c-2.2-1.83-3.61-4.6-3.61-7.69,0-5.52,4.48-10,10-10s10,4.48,10,10c0,3.09-1.4,5.85-3.61,7.69,3.3,1.87,5.69,5.13,6.39,8.98,3.23-3.25,5.22-7.73,5.22-12.67,0-9.94-8.06-18-18-18S13,20.06,13,30c0,4.94,1.99,9.42,5.22,12.67,.7-3.86,3.09-7.12,6.39-8.98Z'%20fill='%23ffba90'/%3e%3cpath%20d='M59.41,51.58l-9.82-9.82c2.16-3.4,3.41-7.43,3.41-11.76,0-12.15-9.85-22-22-22S9,17.85,9,30s9.85,22,22,22c3.81,0,7.39-.97,10.51-2.67l10.08,10.08c.37,.38,.88,.59,1.41,.59,.53,0,1.04-.21,1.41-.59l5-5h0c.78-.78,.78-2.05,0-2.83Z'%20fill='%23dd7a01'/%3e%3cpath%20d='M13,30c0-9.94,8.06-18,18-18s18,8.06,18,18c0,4.94-1.99,9.42-5.22,12.67-.7-3.86-3.09-7.12-6.39-8.98,2.2-1.83,3.61-4.6,3.61-7.69,0-5.52-4.48-10-10-10s-10,4.48-10,10c0,3.09,1.4,5.85,3.61,7.69-3.3,1.87-5.69,5.13-6.39,8.98-3.23-3.25-5.22-7.73-5.22-12.67Z'%20fill='%23ffba90'/%3e%3ccircle%20cx='31'%20cy='26'%20r='6'%20fill='%23fff'/%3e%3cpath%20d='M31,48c-3.32,0-6.41-.91-9.08-2.48,.05-.17,.08-.34,.08-.52,0-4.97,4.03-9,9-9s9,4.03,9,9c0,.18,.03,.36,.08,.52-2.67,1.56-5.76,2.48-9.08,2.48Z'%20fill='%23fff'/%3e%3cpath%20d='M53,55.17l-8.11-8.11h0c.38-.31,.75-.64,1.12-.98,.03-.03,.06-.06,.09-.09,.35-.33,.7-.68,1.03-1.03h0l8.04,8.04-2.17,2.17Z'%20fill='%23dd7a01'/%3e%3cpath%20d='M47.13,44.96c-.33,.36-.67,.7-1.03,1.03-.03,.03-.06,.06-.09,.09-.36,.34-.73,.66-1.12,.98h0l8.11,8.11,2.17-2.17-8.04-8.04h0Z'%20fill='%23fff'/%3e%3cpath%20d='M46.01,46.08c-.36,.34-.73,.66-1.12,.98'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0'/%3e%3cpath%20d='M47.13,44.96c-.33,.36-.67,.7-1.03,1.03'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0'/%3e%3c/svg%3e" alt="Marketing"></div>
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23396547;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%2391db8b;%20}%20.cls-3%20{%20fill:%20%23fff;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-2'%20d='M53.5,19H17.7l3,15h29.6l3.2-15Z'/%3e%3cpath%20class='cls-1'%20d='M53.9,36.4l4.1-19v-.5c0-1.1-.9-2-2-2H16.9l-.9-4.3c-.2-.9-1-1.6-2-1.6h-6c-1.1,0-2,.9-2,2s.9,2,2,2h4.4l6.2,30.5c-2.1.9-3.6,3-3.6,5.5,0,3.3,2.7,6,6,6s6-2.7,6-6c0-.7-.1-1.4-.3-2h14.7c-.2.6-.3,1.3-.3,2,0,3.3,2.7,6,6,6s6-2.7,6-6c0-.7-.1-1.4-.3-2h1.3c1.1,0,2-.9,2-2s-.9-2-2-2h-31.6l-1-5h30.4c1,0,1.8-.6,2-1.6Z'/%3e%3cpath%20class='cls-1'%20d='M47,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-2'%20d='M17.7,19h35.8l-3.2,15h-29.6l-3-15Z'/%3e%3cpath%20class='cls-1'%20d='M21,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-3'%20d='M21,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-3'%20d='M47,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3c/svg%3e" alt="Commerce"></div>
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%2326569a;%20}%20.cls-1,%20.cls-2,%20.cls-3,%20.cls-4,%20.cls-5,%20.cls-6%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%23fbaf3c;%20}%20.cls-3%20{%20fill:%20%2363a5b9;%20}%20.cls-4%20{%20fill:%20%23f58220;%20}%20.cls-5%20{%20fill:%20%23cd2033;%20}%20.cls-6%20{%20fill:%20%23576eb2;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-4'%20d='M40.75,33.28h-7.26v7.9h-2.88v-7.9h-7.26v-2.78h7.26v-7.9h2.88v7.9h7.26v2.78Z'/%3e%3cpath%20class='cls-5'%20d='M26.13,43.42h-6.51v-7.15h-2.46v7.15h-6.62v2.14h6.62v7.05h2.46v-7.05h6.51v-2.14Z'/%3e%3cpath%20class='cls-3'%20d='M53.46,18.01h-6.51v-7.05h-2.46v7.05h-6.51v2.24h6.51v7.05h2.46v-7.05h6.51v-2.24Z'/%3e%3cpath%20class='cls-6'%20d='M37.55,51.22h-4.38v-4.91h-2.14v4.91h-4.48v1.92h4.48v5.02h2.14v-5.02h4.38v-1.92Z'/%3e%3cpath%20class='cls-2'%20d='M26.13,18.01h-6.62v-7.05h-2.35v7.05h-6.62v2.14h6.62v7.15h2.35v-7.15h6.62v-2.14Z'/%3e%3cpath%20class='cls-6'%20d='M58.48,30.93h-4.38v-4.91h-2.14v4.91h-4.48v1.92h4.48v4.91h2.14v-4.91h4.38v-1.92Z'/%3e%3cpath%20class='cls-1'%20d='M53.46,43.42h-6.51v-7.15h-2.46v7.15h-6.51v2.14h6.51v7.05h2.46v-7.05h6.51v-2.14Z'/%3e%3cpath%20class='cls-3'%20d='M37.23,10.75h-4.38v-4.91h-1.6v4.91h-4.38v1.49h4.38v4.8h1.6v-4.8h4.38v-1.49Z'/%3e%3cpath%20class='cls-3'%20d='M15.88,31.15h-4.38v-4.8h-1.6v4.8h-4.38v1.49h4.38v4.8h1.6v-4.8h4.38v-1.49Z'/%3e%3c/svg%3e" alt="Tableau"></div>
+                    <div class="eco-icon"><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%230d9dda;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%2300004c;%20}%20.cls-3%20{%20fill:%20%23fff;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M32,56.22c-13.33.09-24.13-10.61-24.22-23.94-.09-13.33,10.7-24.13,24.03-24.22,13.33-.09,24.13,10.7,24.22,23.94v.09c0,13.33-10.8,24.13-24.03,24.13Z'/%3e%3cpath%20class='cls-2'%20d='M32,58.29c14.52,0,26.29-11.77,26.29-26.29S46.52,5.71,32,5.71,5.71,17.48,5.71,32s11.77,26.29,26.29,26.29Z'/%3e%3cpath%20class='cls-1'%20d='M32,56.22c-13.33.09-24.13-10.61-24.22-23.94-.09-13.33,10.7-24.13,24.03-24.22,13.33-.09,24.13,10.7,24.22,23.94v.09c0,13.33-10.8,24.13-24.03,24.13Z'/%3e%3cpath%20class='cls-3'%20d='M25.33,43.83c-4.13-2.07-6.76-6.38-6.76-10.98,0-2.44.75-4.88,2.07-6.95l8.64,12.95h5.26l8.64-12.95c1.31,2.07,2.07,4.51,2.07,6.95,0,4.32-2.25,8.36-5.91,10.61l1.69,6.38c9.67-5.07,13.52-16.99,8.45-26.75-1.69-3.29-4.22-6.01-7.42-7.89l-10.04,15.58-9.95-15.58c-9.39,5.54-12.58,17.65-6.95,27.04,2.07,3.38,5.07,6.2,8.64,7.89l1.6-6.29Z'/%3e%3c/svg%3e" alt="MuleSoft"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Slack and Salesforce Transform Section -->
+        <section class="slack-transform-section">
+            <div class="container sf-container">
+                <h2 class="section-title">See how Slack and Salesforce transform<br>how your people get work done.
+                </h2>
+                <div class="transform-grid">
+                    <!-- Card 1 -->
+                    <div class="transform-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/2_up_resource_card-CC-Z513p.webp"
+                                alt="Drive growth for every line of business">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Drive growth for every line of business from Slack</h3>
+                            <p class="card-desc">Streamline processes, reduce friction and improve efficiency for
+                                everyone with use cases that show real results. Sales, service, marketing, finance,
+                                IT and HR teams use Slack to meet each goal and milestone.</p>
+                            <a href="#" class="btn btn-outline">Learn more</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="transform-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/2up-slack-for-industries-DP0o_RAx.webp" alt="Slack for Industries">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Slack for Industries</h3>
+                            <p class="card-desc">Slack makes all kinds of work seamless, to help teams in any
+                                industry boost productivity.</p>
+                            <a href="#" class="btn btn-outline">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Illustration -->
+            <div class="transform-bg-illustration">
+                <img src="/salesforce-clone/assets/background-top-CXT5WEBc.webp" alt="" aria-hidden="true">
+            </div>
+        </section>
+
+        <!-- IDC MarketScape Section -->
+        <section class="slack-idc-section">
+            <div class="container sf-container">
+                <div class="idc-card">
+                    <div class="idc-content">
+                        <h2 class="idc-title">Slack has been named a Leader in the IDC MarketScape: Worldwide Team
+                            Collaboration 2024 Vendor Assessment</h2>
+                        <a href="#" class="btn btn-outline">Get the excerpt <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="idc-image">
+                        <img src="/salesforce-clone/assets/idc-marketscape-2-XUeK4C2h.webp" alt="IDC MarketScape Report">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Success Section -->
+        <section class="slack-customer-section">
+            <div class="container sf-container">
+                <div class="customer-card">
+                    <div class="customer-image">
+                        <img src="/salesforce-clone/assets/1up-customer-shipt-1-B-1yuZjp.webp" alt="Chayse Porter, Shipt">
+                    </div>
+                    <div class="customer-content">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <blockquote class="customer-quote">
+                            My team and I use Slack in so many ways that make the work we do here at Shipt that much
+                            more impactful. Were able to innovate and collaborate in real-time, which is incredibly
+                            valuable.
+                        </blockquote>
+                        <div class="customer-info">
+                            <div class="customer-name">Chayse Porter</div>
+                            <div class="customer-role">Senior Director IT, Shipt</div>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read the story <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Illustration -->
+            <div class="customer-bg-illustration">
+                <img src="/salesforce-clone/assets/page-divider-8-slack-CWbfM4nE.webp" alt="" aria-hidden="true">
+            </div>
+
+            <!-- Bottom Curve -->
+            <div class="section-curve">
+                <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 80 C480 0 960 0 1440 80 V80 H0 Z" fill="white" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Trailhead Section -->
+        <section class="slack-trailhead-section">
+            <div class="container sf-container">
+                <h2 class="trailhead-title">Learn new skills with free, guided learning<br>on Trailhead.</h2>
+                <div class="trailhead-grid">
+                    <!-- Module 1 -->
+                    <div class="trailhead-card">
+                        <div class="card-badge">
+                            <span class="badge-pill">Module</span>
+                            <img src="/salesforce-clone/assets/150a65c34abd3dd22eb90aac8c4c8c01_badge-Cwd6iv1Z.webp" alt="Slack Basics">
+                        </div>
+                        <h3 class="card-title">Slack Basics</h3>
+                        <p class="card-desc">Discover the basics so you can get the most out of Slack.</p>
+                        <a href="#" class="btn-link">Start learning</a>
+                    </div>
+                    <!-- Module 2 -->
+                    <div class="trailhead-card">
+                        <div class="card-badge">
+                            <span class="badge-pill">Module</span>
+                            <img src="/salesforce-clone/assets/31abb226b80792d351f1007accd947e2_badge-XFKkNVOw.webp"
+                                alt="Slack + Salesforce">
+                        </div>
+                        <h3 class="card-title">Slack + Salesforce for the Future of Work</h3>
+                        <p class="card-desc">See how Slack and Salesforce power a new way of working to grow your
+                            business.</p>
+                        <a href="#" class="btn-link">Start learning</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Illustration -->
+            <div class="trailhead-bg-illustration">
+                <img src="/salesforce-clone/assets/trailhead-mfe-background-BxC4QGlL.webp" alt="" aria-hidden="true">
+            </div>
+
+            <!-- Bottom Curve - Optional if needed for next section or just design element -->
+            <!-- Removing bottom curve here as this leads to footer usually, but if user wants "same to same shape" at bottom of page... -->
+            <!-- The screenshot shows the mountain image at the bottom. If the footer follows, usually there's no curve covering the mountain. -->
+            <!-- But wait, if the "white shape" is the user request, maybe they want the white curve ON TOP of the mountain? -->
+            <!-- No, the mountain IS the bottom shape. -->
+        </section>
+
+
+        <!-- Trends Section -->
+        <section class="slack-trends-section">
+            <div class="container sf-container">
+                <h2 class="section-title">Keep up with the latest productivity trends,<br>insights and conversations.
+                </h2>
+                <div class="trends-grid">
+                    <!-- Card 1 -->
+                    <div class="trend-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/stevewood-resources-article-CZkiKCKx.webp" alt="AI and automation">
+                        </div>
+                        <div class="card-content">
+                            <span class="trend-tag">Article</span>
+                            <h3 class="trend-title">Experience the future of work with AI and automation in Slack.</h3>
+                            <a href="#" class="btn-link">Read more</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="trend-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/card-resource-efficiency-Cc9qtDXG.webp" alt="Boosted efficiency">
+                        </div>
+                        <div class="card-content">
+                            <span class="trend-tag">Guide</span>
+                            <h3 class="trend-title">See how 9 businesses boosted efficiency and productivity with Slack.
+                            </h3>
+                            <a href="#" class="btn-link">Get the guide <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="trend-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/card-resource-slack-ai-webinar-_1024x575_-Z-wzBc8L.webp" alt="Trusted AI">
+                        </div>
+                        <div class="card-content">
+                            <span class="trend-tag">Webinar</span>
+                            <h3 class="trend-title">Work smarter and faster with trusted AI in Slack.</h3>
+                            <a href="#" class="btn-link">Tune in <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="trend-card">
+                        <div class="card-image">
+                            <img src="/salesforce-clone/assets/card-resource-productive-CrhD2-lb.webp" alt="More productive">
+                        </div>
+                        <div class="card-content">
+                            <span class="trend-tag">Resource</span>
+                            <h3 class="trend-title">See why teams that use Slack are 47% more productive.</h3>
+                            <a href="#" class="btn-link">Read more <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Step Section -->
+        <section class="slack-next-step-section">
+            <div class="container sf-container">
+                <h2 class="section-title">Ready to take the next step?</h2>
+                <div class="next-step-grid">
+                    <!-- Card 1 -->
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h3 class="step-title">Start your trial.</h3>
+                        <p class="step-desc">Try Slack for free. No credit card, no installations.</p>
+                        <a href="#" class="step-link">Try for free <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="step-title">Talk to an expert.</h3>
+                        <p class="step-desc">Tell us a bit more so the right person can keep in touch faster.</p>
+                        <a href="#" class="step-link">Request a call</a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <h3 class="step-title">Watch Demo</h3>
+                        <p class="step-desc">See how Slack works seamlessly across Salesforce's deeply unified platform.
+                        </p>
+                        <a href="#" class="step-link">Watch now.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="slack-faq-section">
+            <div class="container sf-container">
+                <h2 class="faq-title">Slack FAQs</h2>
+                <div class="faq-accordion">
+                    <!-- item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="question-text">What is Slack?</span>
+                            <span class="icon-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Slack is the AI-powered platform for work that unlocks your organisations full
+                                    potential with AI, data and CRM. Slack goes beyond chat and video collaboration,
+                                    empowering teams to <a href="#">automate any process with no code</a>, <a
+                                        href="#">find and share relevant data and knowledge</a>, and engage with AI in a
+                                    trusted and flexible conversational platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="question-text">How does Slack help with productivity?</span>
+                            <span class="icon-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Slack fundamentally transforms the way teams work, with a new kind of productivity
+                                    thats focused on business outcomes. By bringing together people, tools and data,
+                                    teams can perform at a new level. In Slack, everyone can tap into the power of <a
+                                        href="#">automation and AI</a>, and find answers faster across conversations,
+                                    content and data from connected apps, all in a modern conversational experience that
+                                    keeps everyone engaged.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="question-text">Is Slack integrated with Salesforce?</span>
+                            <span class="icon-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Salesforce is Slacks parent company and there are 40+ native Salesforce and Slack
+                                    integrations purpose-built for all of the Salesforce Clouds. The most popular
+                                    Salesforce integrations with Slack are for Sales Cloud, Service Cloud and Marketing
+                                    Cloud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="question-text">How do I access Slack if Im already an existing Salesforce
+                                customer?</span>
+                            <span class="icon-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Slack integrates to Salesforce clouds via integrations. Slack is an add-on product
+                                    that is not part of the Salesforce standard subscription. To learn how to access
+                                    Slack, please refer to our <a href="#">pricing plan</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="question-text">How does using an AI-powered platform for work affect my
+                                business performance?</span>
+                            <span class="icon-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Slack helps companies transform their processes without the need for heavy IT
+                                    involvement or systems integration. Slack customers report that their teams are more
+                                    productive, sales teams increase their win rate and customer service teams resolve
+                                    issues faster. And now, Slack AI is giving companies a trusted space to safely
+                                    deploy AI in the context of everyday work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Illustration -->
+            <div class="faq-bg-illustration">
+                <img src="/salesforce-clone/assets/background-sales-cloud-pricing-3-C-919uGz.webp" alt="" aria-hidden="true">
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container sf-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <img src="/salesforce-clone/assets/salesforce-logo-DfrOb3XM.svg" alt="Salesforce" class="footer-logo">
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-square-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-square-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="footer-phone">Call us at 1800-420-7332</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>New to Salesforce?</h4>
+                    <ul>
+                        <li><a href="#">Why Salesforce</a></li>
+                        <li><a href="#">What is CRM?</a></li>
+                        <li><a href="#">Explore All Products</a></li>
+                        <li><a href="#">SaaS</a></li>
+                        <li><a href="#">Customer Success</a></li>
+                        <li><a href="#">Product Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>About Salesforce</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Blog <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Security and Performance <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce.org <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Best CRM Software</a></li>
+                        <li><a href="#">Sustainability <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Legal <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">Give us your Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Popular Links</h4>
+                    <ul>
+                        <li><a href="#">New Release Features <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce Mobile App</a></li>
+                        <li><a href="#">Business App Store <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Dreamforce <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png" alt="External Link"
+                                    class="icon-external"></a></li>
+                        <li><a href="#">CRM Software</a></li>
+                        <li><a href="#">Salesforce Plus <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                        <li><a href="#">Salesforce for startups <img src="/salesforce-clone/assets/next-page-C2cPIh2e.png"
+                                    alt="External Link" class="icon-external"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- end of footer-top container -->
+        <div class="footer-bottom">
+            <div class="container sf-container footer-bottom-content">
+                <div class="footer-bottom-links">
+                    <div class="globe-selector">
+                        <img src="data:image/png;base64,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" alt="World">
+                        <span>Worldwide</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="legal-list">
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Trust</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">
+                                <img class="footer-link-icon footer-link-icon_left"
+                                    src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2024.3.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2030%2014'%20style='enable-background:new%200%200%2030%2014;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}%20.st1{fill-rule:evenodd;clip-rule:evenodd;fill:%230066FF;}%20.st2{fill:%23FFFFFF;}%20.st3{fill:%230066FF;}%20%3c/style%3e%3cg%3e%3cg%20id='final---dec.11-2020_1_'%3e%3cg%20id='_x30_208-our-toggle_2_'%20transform='translate(-1275.000000,%20-200.000000)'%3e%3cg%20id='Final-Copy-2_2_'%20transform='translate(1275.000000,%20200.000000)'%3e%3cpath%20class='st0'%20d='M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='final---dec.11-2020'%3e%3cg%20id='_x30_208-our-toggle'%20transform='translate(-1275.000000,%20-200.000000)'%3e%3cg%20id='Final-Copy-2'%20transform='translate(1275.000000,%20200.000000)'%3e%3cpath%20class='st1'%20d='M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z%20M1.6,7c0-3.2,2.6-5.8,5.8-5.8%20h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z'/%3e%3cpath%20id='x'%20class='st2'%20d='M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0%20l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8%20c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z'/%3e%3cpath%20id='y'%20class='st3'%20d='M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0%20L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"> Your Privacy Choices
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p> Copyright 2025 Krishna, Inc. <a href="#" style="text-decoration:underline; color:inherit;">All
+                            rights reserved</a>. Various
+                        trademarks held by their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Products Offcanvas Menu -->
+    <div class="offcanvas-overlay" id="productsOffcanvasOverlay"></div>
+    <div class="offcanvas-menu" id="productsOffcanvas">
+        <div class="offcanvas-header">
+            <button class="back-to-menu-btn" id="backToMainFromProducts">
+                <i class="fa-solid fa-chevron-left"></i> Back
+            </button>
+            <h2>Products</h2>
+            <button class="offcanvas-close" id="closeProductsOffcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-content">
+                <!-- Left Side - Product Categories -->
+                <div class="products-categories">
+                    <a href="agentforce.html" class="category-item" data-category="agentforce"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23fff;%20}%20.cls-2%20{%20fill:%20%230d9dda;%20}%20.cls-3%20{%20fill:%20%23032d60;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M34.63,12.71c-12.51-1.36-23.86,6.89-25.3,18.37-.65,5.23.84,10.45,4.21,14.7,3.75,4.73,9.5,7.84,15.82,8.52,12.51,1.36,23.86-6.89,25.3-18.37.65-5.23-.84-10.45-4.21-14.7-3.75-4.73-9.51-7.84-15.82-8.52Z'/%3e%3cpath%20class='cls-1'%20d='M32,51.24c-11.04,0-20.02-7.66-20.02-17.07,0-5.42,3.05-10.57,8.18-13.77.83-.52,1.9-.34,2.51.41.02.03,2.49,3,5.29,3.89.5.16.98.27,1.43.36-1.35-2.07-2.47-4.52-1.78-6.27.36-.9,1.13-1.48,2.07-1.58.77-.08,1.55-.12,2.33-.12,11.04,0,20.02,7.66,20.02,17.07s-8.97,17.07-20.02,17.07Z'/%3e%3cpath%20class='cls-2'%20d='M42.74,24.32c.8,1.31,1.27,2.57,1.47,3.54.22,1.04-.45,2.06-1.49,2.28-.13.03-.27.04-.39.04-.89,0-1.69-.62-1.88-1.52-.07-.29-1.49-6.14-8.78-7.35.46.98,1.37,2.47,3.06,4.41.44.5.59,1.2.39,1.84-.2.64-.71,1.13-1.37,1.29-.31.08-3.14.74-6.95-.47-2.02-.65-3.81-1.95-5.09-3.09-1.04,1.04-.59,2.32-.39,2.73.44.95.04,2.1-.91,2.56-.27.13-.56.19-.84.19-.7,0-1.38-.39-1.71-1.06-.16-.33-.31-.73-.43-1.18-1.01,1.74-1.57,3.66-1.57,5.65,0,7.29,7.25,13.22,16.17,13.22s16.17-5.93,16.17-13.22c0-3.92-2.11-7.43-5.42-9.85h0Z'/%3e%3cpath%20class='cls-2'%20d='M43.98,39.17c-.23,1.24-1.06,2.09-2.31,2.21-1.71.16-3.43.25-5.15.28-1.38.03-2.36-.6-2.75-2-.37-1.29-.74-2.58-1.17-3.86-.09-.27-.38-.47-.58-.7-.19.23-.49.43-.58.7-.42,1.28-.8,2.57-1.17,3.86-.39,1.41-1.38,2.03-2.75,2-1.71-.03-3.44-.12-5.15-.28-1.25-.12-2.09-.97-2.31-2.21-.23-1.26-.38-2.53-.61-3.78-.13-.66.13-1.12.65-1.45.28-.17.57-.35.87-.47,2.45-1,4.96-.97,7.46-.3,1.19.32,2.38.56,3.57.57,1.19,0,2.38-.25,3.57-.57,2.5-.67,5.02-.7,7.46.3.31.13.6.29.87.47.53.34.77.78.65,1.45-.23,1.25-.38,2.53-.61,3.78h.04Z'/%3e%3cpath%20class='cls-3'%20d='M53.47,18.83c-.93-1.17-1.97-2.26-3.09-3.25,1.81-.8,3.08-2.61,3.08-4.72,0-2.86-2.31-5.17-5.17-5.17s-5.17,2.31-5.17,5.17c0,.05,0,.1.02.14-2.54-1.09-5.27-1.82-8.09-2.13-5.03-.55-9.89.25-14.18,2.09,0-.04,0-.07,0-.11,0-2.86-2.31-5.17-5.17-5.17s-5.17,2.31-5.17,5.17c0,2.1,1.25,3.89,3.05,4.71-4.34,3.85-7.33,9.07-8.07,15.03-.78,6.26,1,12.5,5.01,17.57,4.38,5.54,11.09,9.17,18.43,9.97,1.04.12,2.08.17,3.11.17,13.32,0,24.85-9.3,26.42-21.89.78-6.26-1-12.5-5.01-17.57v-.02Z'/%3e%3cpath%20class='cls-1'%20d='M54.66,35.93c-1.43,11.49-12.79,19.73-25.3,18.37-6.32-.68-12.09-3.79-15.82-8.52-3.37-4.26-4.86-9.49-4.21-14.7,1.43-11.49,12.79-19.73,25.3-18.37,6.32.68,12.09,3.79,15.82,8.52,3.37,4.26,4.86,9.49,4.21,14.7Z'/%3e%3cpath%20class='cls-3'%20d='M32,17.1c-.78,0-1.56.04-2.33.12-.93.1-1.71.68-2.07,1.58-.69,1.75.42,4.2,1.78,6.27-.44-.08-.92-.19-1.43-.36-2.79-.89-5.26-3.86-5.29-3.89-.62-.75-1.69-.93-2.51-.41-5.12,3.21-8.18,8.35-8.18,13.77,0,9.42,8.97,17.07,20.02,17.07s20.02-7.66,20.02-17.07-8.97-17.07-20.02-17.07Z'/%3e%3cpath%20class='cls-2'%20d='M32,47.39c-8.92,0-16.17-5.93-16.17-13.22,0-1.99.56-3.92,1.57-5.65.12.45.27.86.43,1.18.34.67,1.01,1.06,1.71,1.06.28,0,.57-.06.84-.19.95-.45,1.36-1.6.91-2.56-.18-.4-.65-1.69.39-2.73,1.28,1.14,3.07,2.45,5.09,3.09,3.81,1.21,6.64.55,6.95.47.65-.16,1.17-.65,1.37-1.29.2-.64.06-1.34-.39-1.84-1.69-1.95-2.6-3.43-3.06-4.41,7.28,1.2,8.71,7.06,8.78,7.35.19.91.99,1.52,1.88,1.52.13,0,.26,0,.39-.04,1.04-.22,1.7-1.24,1.49-2.28-.2-.97-.67-2.23-1.47-3.54,3.32,2.43,5.42,5.94,5.42,9.85,0,7.29-7.25,13.22-16.17,13.22h0Z'/%3e%3cpath%20class='cls-3'%20d='M43.88,33.93c-.28-.17-.57-.35-.87-.47-2.45-1-4.96-.97-7.46-.3-1.19.32-2.38.56-3.57.57-1.19,0-2.38-.25-3.57-.57-2.5-.67-5.02-.7-7.46.3-.31.13-.6.29-.87.47-.53.34-.77.78-.65,1.45.23,1.25.38,2.53.61,3.78.23,1.24,1.06,2.09,2.31,2.21,1.71.16,3.43.25,5.15.28,1.38.03,2.36-.6,2.75-2,.37-1.29.74-2.58,1.17-3.86.09-.27.38-.47.58-.7.19.23.49.43.58.7.42,1.28.8,2.57,1.17,3.86.39,1.41,1.38,2.03,2.75,2,1.71-.03,3.44-.12,5.15-.28,1.25-.12,2.09-.97,2.31-2.21.23-1.26.38-2.53.61-3.78.13-.66-.13-1.12-.65-1.45h-.04Z'/%3e%3c/svg%3e" alt="Agentforce" class="product-icon">
+                        <span>Agentforce</span>
+                    </a>
+                    <a href="datacloud.html" class="category-item" data-category="data-cloud"
+                        style="text-decoration: none !important;">
+                        <img src="/salesforce-clone/assets/icon-data-cloud-CqvPAV_H.svg" alt="Data Cloud" class="product-icon">
+                        <span>Data Cloud</span>
+                    </a>
+                    <a href="agentforce_ai_app.html" class="category-item" data-category="agentforce-ai"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2028.1.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='icon'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2064%2064'%20style='enable-background:new%200%200%2064%2064;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%23032D60;}%20.st1{fill:%230D9DDA;}%20.st2{fill:%23FFFFFF;}%20%3c/style%3e%3ctitle%3eadmin-day3%3c/title%3e%3cg%3e%3cg%3e%3cpath%20class='st0'%20d='M23,21.2V20c0-0.7,0.3-1,1-1h1.2c0.1,0,0.2,0,0.4,0C28,18.7,31,17,31,13c0-4.4-3.6-6-6-6H13c-1.1,0-2,0.9-2,2%20s0.9,2,2,2h12c0.9,0,2,0.4,2,2s-1.1,2-2,2h-1c-3.7,0-5,3-5,5v1.2c-5.7,1-10,5.9-10,11.8v4v8c0,6.6,5.4,12,12,12s12-5.4,12-12v-8%20v-4C33,27.1,28.7,22.1,23,21.2z'/%3e%3cpath%20class='st0'%20d='M54.4,13.6l-6-6c-0.8-0.8-2-0.8-2.8,0l-6,6C39.2,14,39,14.5,39,15v3v29v4c0,2.4,1.6,6,6,6h4c2.4,0,6-1.6,6-6%20v-4V18v-3C55,14.5,54.8,14,54.4,13.6z'/%3e%3cpath%20class='st1'%20d='M19,25.3c-3.4,0.9-6,4-6,7.7v2h6V25.3z'/%3e%3cpath%20class='st2'%20d='M23,25.3V35h2h4v-2C29,29.3,26.4,26.2,23,25.3z'/%3e%3cpath%20class='st1'%20d='M13,39v6c0,4.4,3.6,8,8,8s8-3.6,8-8v-6h-8H13z'/%3e%3crect%20x='43'%20y='20'%20class='st1'%20width='8'%20height='25'/%3e%3cpath%20class='st1'%20d='M43,51c0,0.9,0.4,2,2,2h4c0.9,0,2-0.4,2-2v-2h-8V51z'/%3e%3c/g%3e%3cpolygon%20class='st2'%20points='47,12%2051,16%2043,16%20'/%3e%3c/g%3e%3c/svg%3e" alt="App Development" class="product-icon">
+                        <span>Agentforce & AI App Development</span>
+                    </a>
+                    <a href="products.html" class="category-item" data-category="overview">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2028.1.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2064%2064'%20style='enable-background:new%200%200%2064%2064;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{display:none;fill:%2370BF75;}%20.st1{display:none;fill:%23396547;}%20.st2{display:none;fill:%23FFFFFF;}%20.st3{fill:%237F8CED;}%20.st4{fill:%2304E1CB;}%20.st5{fill:%23FF538A;}%20.st6{fill:%23FE9339;}%20.st7{fill:%2391DB8B;}%20.st8{fill:%230D9DDA;}%20.st9{fill:%23200647;}%20.st10{fill:%234A154B;}%20.st11{fill:%23FF784F;}%20.st12{fill:%23730394;}%20.st13{fill:%237526E3;}%20.st14{fill:%23032D60;}%20%3c/style%3e%3cpolygon%20class='st0'%20points='53.5,19%2017.7,19%2020.7,34%2050.3,34%20'/%3e%3cpath%20class='st1'%20d='M53.9,36.4l4.1-19c0-0.1,0-0.3,0-0.5c0-1.1-0.9-2-2-1.9H16.9L16,10.6c-0.2-1-1-1.6-2-1.6H8c-1.1,0-2,0.9-2,2%20s0.9,2,2,2h4.4l6.2,30.5c-2.1,0.9-3.6,3-3.6,5.5c0,3.3,2.7,6,6,6s6-2.7,6-6c0-0.7-0.1-1.4-0.4-2h14.7c-0.2,0.6-0.3,1.3-0.3,2%20c0,3.3,2.7,6,6,6s6-2.7,6-6c0-0.7-0.1-1.4-0.3-2H54c1.1,0,2-0.9,2-2s-0.9-2-2-2H22.6l-1-5H52C52.9,38,53.7,37.4,53.9,36.4z%20M49,49%20c0,1.1-0.9,2-2,2s-2-0.9-2-2s0.9-2,2-2S49,47.9,49,49z%20M17.7,19h35.8l-3.2,15H20.7L17.7,19z%20M23,49c0,1.1-0.9,2-2,2s-2-0.9-2-2%20s0.9-2,2-2S23,47.9,23,49z'/%3e%3ccircle%20class='st2'%20cx='21'%20cy='49'%20r='2'/%3e%3ccircle%20class='st2'%20cx='47'%20cy='49'%20r='2'/%3e%3cg%3e%3cpath%20class='st3'%20d='M32,4c-2.5,0-4.5,2-4.5,4.5s2,4.5,4.5,4.5s4.5-2,4.5-4.5S34.5,4,32,4z'/%3e%3cpath%20class='st4'%20d='M46,7.8c-2.2-1.2-4.9-0.5-6.2,1.6s-0.5,4.9,1.7,6.2s4.9,0.5,6.2-1.6S48.2,9,46,7.8z'/%3e%3cpath%20class='st5'%20d='M56.2,18c-1.2-2.1-4-2.9-6.2-1.6s-2.9,4-1.7,6.1s4,2.9,6.2,1.6S57.5,20.1,56.2,18z'/%3e%3cpath%20class='st6'%20d='M60,32c0-2.5-2-4.5-4.5-4.5S51,29.5,51,32s2,4.5,4.5,4.5S60,34.5,60,32z'/%3e%3cpath%20class='st7'%20d='M56.2,46c1.2-2.2,0.5-4.9-1.7-6.2s-4.9-0.5-6.2,1.7s-0.5,4.9,1.7,6.2S55,48.2,56.2,46z'/%3e%3cpath%20class='st8'%20d='M46,56.2c2.2-1.2,2.9-4,1.7-6.2s-4-2.9-6.2-1.7c-2.2,1.2-2.9,4-1.7,6.2S43.8,57.5,46,56.2z'/%3e%3cpath%20class='st9'%20d='M32,60c2.5,0,4.5-2,4.5-4.5S34.5,51,32,51s-4.5,2-4.5,4.5S29.5,60,32,60z'/%3e%3cpath%20class='st10'%20d='M18,56.2c2.1,1.2,4.9,0.5,6.1-1.7s0.5-4.9-1.6-6.2s-4.9-0.5-6.1,1.7S15.9,55,18,56.2z'/%3e%3cpath%20class='st11'%20d='M7.8,46c1.2,2.2,4,2.9,6.1,1.7s2.9-4,1.6-6.2s-4-2.9-6.1-1.7S6.5,43.8,7.8,46z'/%3e%3cpath%20class='st12'%20d='M4,32c0,2.5,2,4.5,4.5,4.5s4.5-2,4.5-4.5s-2-4.5-4.5-4.5S4,29.5,4,32z'/%3e%3cpath%20class='st13'%20d='M7.8,18c-1.2,2.1-0.5,4.9,1.6,6.1s4.9,0.5,6.2-1.6s0.5-4.9-1.6-6.1S9,15.9,7.8,18z'/%3e%3cpath%20class='st14'%20d='M18,7.8c-2.1,1.2-2.9,4-1.6,6.1s4,2.9,6.1,1.6s2.9-4,1.6-6.1S20.1,6.5,18,7.8z'/%3e%3c/g%3e%3c/svg%3e" alt="Overview" class="product-icon">
+                        <span>Products Overview</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="small-business.html" class="category-item" data-category="smb"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%230d9dda;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%23032d60;%20}%20.cls-3%20{%20fill:%20%23fff;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M15.92,49.93v-18.35c1.32-.38,2.65-.95,3.78-1.8,1.7,1.42,3.88,2.18,6.15,2.18s4.35-.76,6.05-2.08c1.13.85,2.46,1.42,3.88,1.8v18.25H15.92Z'/%3e%3cpath%20class='cls-3'%20d='M29.16,41.42h-6.62c-1.04,0-1.89-.85-1.89-1.89s.85-1.89,1.89-1.89h6.62c1.04,0,1.89.85,1.89,1.89s-.85,1.89-1.89,1.89Z'/%3e%3cpath%20class='cls-2'%20d='M58.29,26.57l-5.86-15.13c-.28-.66-.95-1.13-1.7-1.13H12.9c-.76-.09-1.42.38-1.7,1.13l-5.49,15.13c-.19.57-.09,1.23.28,1.7,1.51,1.89,3.78,3.12,6.15,3.4v20.15c0,1.04.85,1.89,1.89,1.89h23.64c1.04,0,1.89-.85,1.89-1.89v-20.05c1.7-.28,3.4-.95,4.73-2.08,1.13.95,2.46,1.61,3.78,1.89v20.24c0,1.04.85,1.89,1.89,1.89s1.89-.85,1.89-1.89v-20.05c2.27-.38,4.45-1.51,6.05-3.31.47-.57.57-1.23.38-1.89ZM15.92,49.93v-18.35c1.32-.38,2.65-.95,3.78-1.8,1.7,1.42,3.88,2.18,6.15,2.18s4.35-.76,6.05-2.08c1.13.85,2.46,1.42,3.88,1.8v18.25H15.92ZM50.44,28.27c-1.89,0-3.69-.85-4.92-2.27-.66-.66-1.8-.66-2.55,0-1.61,1.7-2.93,2.27-4.82,2.27s-3.97-.85-4.54-1.89c-.09-.19-.28-.38-.47-.57-.76-.57-1.89-.47-2.55.38-1.13,1.42-2.93,2.27-4.73,2.18-1.8,0-3.59-.85-4.73-2.27-.38-.38-.85-.66-1.42-.66s-1.04.19-1.42.66c-1.23,1.42-2.93,2.18-4.82,2.18-1.51,0-2.93-.47-4.07-1.42l4.73-12.96h35.37l5.01,12.86c-1.13.95-2.55,1.51-4.07,1.51Z'/%3e%3cpath%20class='cls-1'%20d='M50.44,28.27c-1.89,0-3.69-.85-4.92-2.27-.66-.66-1.8-.66-2.55,0-1.61,1.7-2.93,2.27-4.82,2.27s-3.97-.85-4.54-1.89c-.09-.19-.28-.38-.47-.57-.76-.57-1.89-.47-2.55.38-1.13,1.42-2.93,2.27-4.73,2.18-1.8,0-3.59-.85-4.73-2.27-.38-.38-.85-.66-1.42-.66s-1.04.19-1.42.66c-1.23,1.42-2.93,2.18-4.82,2.18-1.51,0-2.93-.47-4.07-1.42l4.73-12.96h35.37l5.01,12.86c-1.13.95-2.55,1.51-4.07,1.51Z'/%3e%3c/svg%3e" alt="Small Business" class="product-icon">
+                        <span>Small Business</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="artificial-intelligence.html" class="category-item" data-category="ai"
+                        style="text-decoration: none !important;">
+                        <img src="/salesforce-clone/assets/icon-ai-BHY4umIv.svg" alt="Artificial Intelligence" class="product-icon">
+                        <span>Artificial Intelligence</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="sales.html" class="category-item" data-category="sales"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cpath%20d='M11,34.18l7.59-7.59c.78-.78,2.04-.78,2.82,0l6.59,6.53,11.17-11.12h-9.17c-1.1,0-2-.9-2-2s.9-2,2-2h14c1.1,0,2,.9,2,2v14c0,1.1-.9,2-2,2s-2-.9-2-2v-9.16l-12.53,12.52c-.78,.78-2.04,.78-2.82,0l-6.65-6.54-9,9v13.18h7v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h8v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h8v-6c0-1.1,.9-2,2-2s2,.9,2,2v6h7V11H11v23.18Z'%20fill='%2304e1cb'/%3e%3cpath%20d='M26.65,37.36c.78,.78,2.04,.78,2.82,0l12.53-12.52v9.16c0,1.1,.9,2,2,2s2-.9,2-2v-14c0-1.1-.9-2-2-2h-14c-1.1,0-2,.9-2,2s.9,2,2,2h9.17l-11.17,11.12-6.59-6.53c-.78-.78-2.04-.78-2.82,0l-7.59,7.59v5.64l9-9,6.65,6.54Z'%20fill='%23fff'/%3e%3cpath%20d='M55,7H9c-1.1,0-2,.9-2,2V55c0,1.1,.9,2,2,2H55c1.1,0,2-.9,2-2V9c0-1.1-.9-2-2-2Zm-2,46h-7v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-8v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-8v-6c0-1.1-.9-2-2-2s-2,.9-2,2v6h-7V11H53V53Z'%20fill='%230b827c'/%3e%3c/svg%3e" alt="Sales" class="product-icon">
+                        <span>Sales</span>
+                    </a>
+                    <a href="service.html" class="category-item" data-category="service"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23ff538a;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%23fff;%20}%20.cls-3%20{%20fill:%20%238a033e;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M51.6,16.02c-3.83-3.64-9.76-3.64-13.5,0l-4.88,4.88c-.77.77-1.91.77-2.68,0l-4.88-4.88c-1.82-1.82-4.31-2.87-6.89-2.87-5.46,0-9.86,4.4-9.86,9.76,0,2.58,1.05,5.07,2.87,6.99l20.1,20.1,20.1-20.1c3.73-3.92,3.54-10.15-.38-13.88Z'/%3e%3cpath%20class='cls-1'%20d='M19.45,20.8c-1.63,0-2.87,1.24-2.87,2.87,0,1.05-.86,1.91-1.91,1.91s-1.91-.86-1.91-1.91c0-3.73,2.97-6.7,6.7-6.7,1.05,0,1.91.86,1.91,1.91s-.86,1.91-1.91,1.91Z'/%3e%3cpath%20class='cls-3'%20d='M54.67,13.34c-5.36-5.36-13.97-5.36-19.33,0l-3.54,3.54-3.54-3.54c-5.26-4.98-13.5-4.98-18.76,0-5.36,5.17-5.65,13.88-.38,19.33l21.44,21.44c.38.38.86.57,1.34.57s.96-.19,1.34-.57l21.44-21.44c5.36-5.36,5.36-13.97,0-19.33Z'/%3e%3cpath%20class='cls-1'%20d='M31.89,49.99L11.79,29.89c-1.82-1.82-2.87-4.31-2.87-6.99,0-5.46,4.4-9.76,9.86-9.76,2.58,0,5.07,1.05,6.89,2.87l4.88,4.88c.77.77,1.91.77,2.68,0l4.88-4.88c3.83-3.64,9.76-3.64,13.5,0,3.92,3.73,4.12,9.95.38,13.88l-20.1,20.1Z'/%3e%3cpath%20class='cls-2'%20d='M19.45,16.97c-3.73,0-6.7,2.97-6.7,6.7,0,1.05.86,1.91,1.91,1.91s1.91-.86,1.91-1.91c0-1.63,1.24-2.87,2.87-2.87,1.05,0,1.91-.86,1.91-1.91s-.86-1.91-1.91-1.91Z'/%3e%3c/svg%3e" alt="Service" class="product-icon">
+                        <span>Service</span>
+                    </a>
+                    <a href="marketing.html" class="category-item" data-category="marketing"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cpath%20d='M31,36c-4.97,0-9,4.03-9,9,0,.18-.03,.36-.08,.52,2.67,1.56,5.76,2.48,9.08,2.48s6.41-.91,9.08-2.48c-.05-.17-.08-.34-.08-.52,0-4.97-4.03-9-9-9Z'%20fill='%23fff'/%3e%3ccircle%20cx='31'%20cy='26'%20r='6'%20fill='%23fff'/%3e%3cpath%20d='M24.61,33.69c-2.2-1.83-3.61-4.6-3.61-7.69,0-5.52,4.48-10,10-10s10,4.48,10,10c0,3.09-1.4,5.85-3.61,7.69,3.3,1.87,5.69,5.13,6.39,8.98,3.23-3.25,5.22-7.73,5.22-12.67,0-9.94-8.06-18-18-18S13,20.06,13,30c0,4.94,1.99,9.42,5.22,12.67,.7-3.86,3.09-7.12,6.39-8.98Z'%20fill='%23ffba90'/%3e%3cpath%20d='M59.41,51.58l-9.82-9.82c2.16-3.4,3.41-7.43,3.41-11.76,0-12.15-9.85-22-22-22S9,17.85,9,30s9.85,22,22,22c3.81,0,7.39-.97,10.51-2.67l10.08,10.08c.37,.38,.88,.59,1.41,.59,.53,0,1.04-.21,1.41-.59l5-5h0c.78-.78,.78-2.05,0-2.83Z'%20fill='%23dd7a01'/%3e%3cpath%20d='M13,30c0-9.94,8.06-18,18-18s18,8.06,18,18c0,4.94-1.99,9.42-5.22,12.67-.7-3.86-3.09-7.12-6.39-8.98,2.2-1.83,3.61-4.6,3.61-7.69,0-5.52-4.48-10-10-10s-10,4.48-10,10c0,3.09,1.4,5.85,3.61,7.69-3.3,1.87-5.69,5.13-6.39,8.98-3.23-3.25-5.22-7.73-5.22-12.67Z'%20fill='%23ffba90'/%3e%3ccircle%20cx='31'%20cy='26'%20r='6'%20fill='%23fff'/%3e%3cpath%20d='M31,48c-3.32,0-6.41-.91-9.08-2.48,.05-.17,.08-.34,.08-.52,0-4.97,4.03-9,9-9s9,4.03,9,9c0,.18,.03,.36,.08,.52-2.67,1.56-5.76,2.48-9.08,2.48Z'%20fill='%23fff'/%3e%3cpath%20d='M53,55.17l-8.11-8.11h0c.38-.31,.75-.64,1.12-.98,.03-.03,.06-.06,.09-.09,.35-.33,.7-.68,1.03-1.03h0l8.04,8.04-2.17,2.17Z'%20fill='%23dd7a01'/%3e%3cpath%20d='M47.13,44.96c-.33,.36-.67,.7-1.03,1.03-.03,.03-.06,.06-.09,.09-.36,.34-.73,.66-1.12,.98h0l8.11,8.11,2.17-2.17-8.04-8.04h0Z'%20fill='%23fff'/%3e%3cpath%20d='M46.01,46.08c-.36,.34-.73,.66-1.12,.98'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0'/%3e%3cpath%20d='M47.13,44.96c-.33,.36-.67,.7-1.03,1.03'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0'/%3e%3c/svg%3e" alt="Marketing" class="product-icon">
+                        <span>Marketing</span>
+                    </a>
+                    <a href="commerce.html" class="category-item" data-category="commerce"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23396547;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%2391db8b;%20}%20.cls-3%20{%20fill:%20%23fff;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-2'%20d='M53.5,19H17.7l3,15h29.6l3.2-15Z'/%3e%3cpath%20class='cls-1'%20d='M53.9,36.4l4.1-19v-.5c0-1.1-.9-2-2-2H16.9l-.9-4.3c-.2-.9-1-1.6-2-1.6h-6c-1.1,0-2,.9-2,2s.9,2,2,2h4.4l6.2,30.5c-2.1.9-3.6,3-3.6,5.5,0,3.3,2.7,6,6,6s6-2.7,6-6c0-.7-.1-1.4-.3-2h14.7c-.2.6-.3,1.3-.3,2,0,3.3,2.7,6,6,6s6-2.7,6-6c0-.7-.1-1.4-.3-2h1.3c1.1,0,2-.9,2-2s-.9-2-2-2h-31.6l-1-5h30.4c1,0,1.8-.6,2-1.6Z'/%3e%3cpath%20class='cls-1'%20d='M47,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-2'%20d='M17.7,19h35.8l-3.2,15h-29.6l-3-15Z'/%3e%3cpath%20class='cls-1'%20d='M21,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-3'%20d='M21,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3cpath%20class='cls-3'%20d='M47,51c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Z'/%3e%3c/svg%3e" alt="Commerce" class="product-icon">
+                        <span>Commerce</span>
+                    </a>
+                    <a href="tableau.html" class="category-item" data-category="tableau"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%2326569a;%20}%20.cls-1,%20.cls-2,%20.cls-3,%20.cls-4,%20.cls-5,%20.cls-6%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%23fbaf3c;%20}%20.cls-3%20{%20fill:%20%2363a5b9;%20}%20.cls-4%20{%20fill:%20%23f58220;%20}%20.cls-5%20{%20fill:%20%23cd2033;%20}%20.cls-6%20{%20fill:%20%23576eb2;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-4'%20d='M40.75,33.28h-7.26v7.9h-2.88v-7.9h-7.26v-2.78h7.26v-7.9h2.88v7.9h7.26v2.78Z'/%3e%3cpath%20class='cls-5'%20d='M26.13,43.42h-6.51v-7.15h-2.46v7.15h-6.62v2.14h6.62v7.05h2.46v-7.05h6.51v-2.14Z'/%3e%3cpath%20class='cls-3'%20d='M53.46,18.01h-6.51v-7.05h-2.46v7.05h-6.51v2.24h6.51v7.05h2.46v-7.05h6.51v-2.24Z'/%3e%3cpath%20class='cls-6'%20d='M37.55,51.22h-4.38v-4.91h-2.14v4.91h-4.48v1.92h4.48v5.02h2.14v-5.02h4.38v-1.92Z'/%3e%3cpath%20class='cls-2'%20d='M26.13,18.01h-6.62v-7.05h-2.35v7.05h-6.62v2.14h6.62v7.15h2.35v-7.15h6.62v-2.14Z'/%3e%3cpath%20class='cls-6'%20d='M58.48,30.93h-4.38v-4.91h-2.14v4.91h-4.48v1.92h4.48v4.91h2.14v-4.91h4.38v-1.92Z'/%3e%3cpath%20class='cls-1'%20d='M53.46,43.42h-6.51v-7.15h-2.46v7.15h-6.51v2.14h6.51v7.05h2.46v-7.05h6.51v-2.14Z'/%3e%3cpath%20class='cls-3'%20d='M37.23,10.75h-4.38v-4.91h-1.6v4.91h-4.38v1.49h4.38v4.8h1.6v-4.8h4.38v-1.49Z'/%3e%3cpath%20class='cls-3'%20d='M15.88,31.15h-4.38v-4.8h-1.6v4.8h-4.38v1.49h4.38v4.8h1.6v-4.8h4.38v-1.49Z'/%3e%3c/svg%3e" alt="Tableau" class="product-icon">
+                        <span>Tableau</span>
+                    </a>
+                    <a href="mulesoft.html" class="category-item" data-category="mulesoft">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%230d9dda;%20}%20.cls-1,%20.cls-2,%20.cls-3%20{%20stroke-width:%200px;%20}%20.cls-2%20{%20fill:%20%2300004c;%20}%20.cls-3%20{%20fill:%20%23fff;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M32,56.22c-13.33.09-24.13-10.61-24.22-23.94-.09-13.33,10.7-24.13,24.03-24.22,13.33-.09,24.13,10.7,24.22,23.94v.09c0,13.33-10.8,24.13-24.03,24.13Z'/%3e%3cpath%20class='cls-2'%20d='M32,58.29c14.52,0,26.29-11.77,26.29-26.29S46.52,5.71,32,5.71,5.71,17.48,5.71,32s11.77,26.29,26.29,26.29Z'/%3e%3cpath%20class='cls-1'%20d='M32,56.22c-13.33.09-24.13-10.61-24.22-23.94-.09-13.33,10.7-24.13,24.03-24.22,13.33-.09,24.13,10.7,24.22,23.94v.09c0,13.33-10.8,24.13-24.03,24.13Z'/%3e%3cpath%20class='cls-3'%20d='M25.33,43.83c-4.13-2.07-6.76-6.38-6.76-10.98,0-2.44.75-4.88,2.07-6.95l8.64,12.95h5.26l8.64-12.95c1.31,2.07,2.07,4.51,2.07,6.95,0,4.32-2.25,8.36-5.91,10.61l1.69,6.38c9.67-5.07,13.52-16.99,8.45-26.75-1.69-3.29-4.22-6.01-7.42-7.89l-10.04,15.58-9.95-15.58c-9.39,5.54-12.58,17.65-6.95,27.04,2.07,3.38,5.07,6.2,8.64,7.89l1.6-6.29Z'/%3e%3c/svg%3e" alt="MuleSoft" class="product-icon">
+                        <span>MuleSoft</span>
+                    </a>
+                    <a href="slack.html" class="category-item active-category" data-category="slack"
+                        style="text-decoration: none !important;">
+                        <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='a'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3cg%3e%3cpath%20d='M16.34,39.13c0,3.12-2.55,5.68-5.68,5.68s-5.68-2.55-5.68-5.68,2.55-5.68,5.68-5.68h5.68v5.68Z'%20fill='%23e01e5a'/%3e%3cpath%20d='M19.2,39.13c0-3.12,2.55-5.68,5.68-5.68s5.68,2.55,5.68,5.68v14.21c0,3.12-2.55,5.68-5.68,5.68s-5.68-2.55-5.68-5.68v-14.21Z'%20fill='%23e01e5a'/%3e%3c/g%3e%3cg%3e%3cpath%20d='M24.87,16.34c-3.12,0-5.68-2.55-5.68-5.68s2.55-5.68,5.68-5.68,5.68,2.55,5.68,5.68v5.68h-5.68Z'%20fill='%2336c5f0'/%3e%3cpath%20d='M24.87,19.2c3.12,0,5.68,2.55,5.68,5.68s-2.55,5.68-5.68,5.68H10.66c-3.12,0-5.68-2.55-5.68-5.68s2.55-5.68,5.68-5.68h14.21Z'%20fill='%2336c5f0'/%3e%3c/g%3e%3cg%3e%3cpath%20d='M47.66,24.87c0-3.12,2.55-5.68,5.68-5.68s5.68,2.55,5.68,5.68-2.55,5.68-5.68,5.68h-5.68v-5.68Z'%20fill='%232eb67d'/%3e%3cpath%20d='M44.8,24.87c0,3.12-2.55,5.68-5.68,5.68s-5.68-2.55-5.68-5.68V10.66c0-3.12,2.55-5.68,5.68-5.68s5.68,2.55,5.68,5.68v14.21Z'%20fill='%232eb67d'/%3e%3c/g%3e%3cg%3e%3cpath%20d='M39.13,47.66c3.12,0,5.68,2.55,5.68,5.68s-2.55,5.68-5.68,5.68-5.68-2.55-5.68-5.68v-5.68h5.68Z'%20fill='%23ecb22e'/%3e%3cpath%20d='M39.13,44.8c-3.12,0-5.68-2.55-5.68-5.68s2.55-5.68,5.68-5.68h14.21c3.12,0,5.68,2.55,5.68,5.68s-2.55,5.68-5.68,5.68h-14.21Z'%20fill='%23ecb22e'/%3e%3c/g%3e%3c/svg%3e" alt="Slack" class="product-icon">
+                        <span>Slack</span>
+                    </a>
+                    <div class="category-link">
+                        <a href="#">See all product pricing</a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Featured Product -->
+                <div class="products-featured" id="featured-slack">
+                    <div class="featured-product" style="background-color: #E8F4F8;">
+                        <h3>Slack is your AI productivity platform.</h3>
+                        <p>Learn how to use AI to work smarter and faster.</p>
+                        <a href="#" class="btn-featured">See features</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+</body>
+
+</html>
