@@ -75,16 +75,6 @@ window.initSlackFAQ = function () {
                 // Toggle current item
                 const isActive = item.classList.contains('active');
 
-                // Close all other items (optional, but often cleaner)
-                // If user wants multiple open, remove this loop. 
-                // Screenshots show only one open or multiple? 
-                // "check I'm click on the question so there open the answers" - implies toggle.
-                // Standard behavior is usually one at a time or independent. 
-                // Let's allow independent toggling if not specified, 
-                // BUT often FAQs close others. The screenshot shows mixed state? No, implies expansion.
-                // I will allow multiple open for now as it's less restrictive.
-                // Actually, let's toggle.
-
                 item.classList.toggle('active');
                 question.setAttribute('aria-expanded', !isActive);
             });

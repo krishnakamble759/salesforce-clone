@@ -192,8 +192,6 @@ export function initSalesFaqTabs() {
                 dropdownToggle.classList.add('active');
             }
 
-            // Bootstrap data-bs-toggle="tab" handles the pane switch.
-            // But we may want to close the dropdown menu explicitly if it's open via JS or hover
             const dropdownMenu = dropdownContainer.querySelector('.dropdown-menu');
             if (dropdownMenu) {
                 dropdownMenu.style.opacity = '0';
@@ -224,11 +222,6 @@ export function initSalesblazerVideo() {
 
     if (playBtn && videoContainer) {
         playBtn.addEventListener('click', () => {
-            // For demo, show an alert or replace with iframe if URL exists
-            // alert('Playing Salesblazer Community Video...');
-
-            // Example: Replace image with a YouTube/Vimeo embed
-            // videoContainer.innerHTML = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="rounded-4"></iframe>';
         });
     }
 }

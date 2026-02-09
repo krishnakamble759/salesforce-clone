@@ -78,9 +78,9 @@ export function initMarketingVideoCarousel() {
     // Get cards per view based on screen size
     function getCardsPerView() {
         const width = window.innerWidth;
-        if (width >= 992) return 3; // big-tab and above
-        if (width >= 768) return 2; // small-tab
-        return 1; // mobile
+        if (width >= 992) return 3; 
+        if (width >= 768) return 2; 
+        return 1; 
     }
 
     // Calculate max index
@@ -172,9 +172,6 @@ export function initMarketingVideoCarousel() {
     updateCarousel();
 }
 
-/**
- * Initialize Marketing Success Stories Tabs
- */
 export function initMarketingSuccessStories() {
     const section = document.querySelector('.marketing-success-tabs-section');
     if (!section) return;

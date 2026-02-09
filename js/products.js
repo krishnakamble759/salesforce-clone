@@ -60,13 +60,9 @@ export function initProductsOffcanvas() {
         item.addEventListener('click', (e) => {
             const category = item.getAttribute('data-category');
             if (category === 'overview' || category === 'smb' || category === 'ai') {
-                // Keep menu open but update content
-                // If it was a real link, we would let it navigate, but if it has a sub-menu we prevent it
                 if (item.tagName === 'A' && item.getAttribute('href') !== '#' && item.getAttribute('href') !== 'javascript:void(0)') {
-                    // Let link work
                 } else {
                     e.preventDefault();
-                    // Mouseenter already handles content switch
                 }
             }
         });

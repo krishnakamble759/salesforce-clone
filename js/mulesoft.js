@@ -1,6 +1,5 @@
 /**
  * MuleSoft Page Specific JavaScript
- * Handles initialization and interactivity for the MuleSoft page.
  */
 
 // Initialize MuleSoft Sub-nav Toggle
@@ -37,17 +36,10 @@ window.initMuleSoftSubNav = function () {
         if (trigger && !trigger.getAttribute('data-bound')) {
             trigger.setAttribute('data-bound', 'true');
             trigger.addEventListener('click', (e) => {
-                // Only toggle on click if we are in mobile view where CSS hover doesn't apply nicely
-                // or if we want click-to-toggle everywhere. Tableau.js does click everywhere.
-                // Let's stick to click for consistency with Tableau.js logic for now.
-
-                // Allow click to navigate if it's a link, but here they are #
                 if (trigger.getAttribute('href') === '#') {
                     e.preventDefault();
                     e.stopPropagation();
                 }
-
-                // Close other dropdowns
                 dropdowns.forEach(d => {
                     if (d !== dropdown) d.classList.remove('active');
                 });

@@ -63,7 +63,7 @@ export function initServiceTabs() {
         // If it's a dropdown item, also activate the "More" button
         if (isDropdownItem && mainMoreBtn) {
             mainMoreBtn.classList.add('active');
-            dropdown.classList.remove('active'); // Close dropdown after selection
+            dropdown.classList.remove('active');
             const icon = mainMoreBtn.querySelector('i');
             if (icon) icon.style.transform = '';
         }
@@ -72,7 +72,7 @@ export function initServiceTabs() {
         const tabContents = document.querySelectorAll('.discover-new .tab-content');
         tabContents.forEach(content => {
             content.classList.remove('active');
-            content.style.display = ''; // Clear inline styles
+            content.style.display = '';
         });
 
         // 3. Show Target Content
