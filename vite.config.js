@@ -1,5 +1,9 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,10 +27,14 @@ export default defineConfig({
         sourcemap: false,
         minify: 'esbuild',
         rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'html/index.html'),
-                agentforce: resolve(__dirname, 'html/agentforce.html'),
-            },
+            input: Object.fromEntries(
+                fs.readdirSync(resolve(__dirname, 'html'))
+                    .filter(file => file.endsWith('.html'))
+                    .map(file => [
+                        file === 'index.html' ? 'main' : file.replace(/\.html$/, ''),
+                        resolve(__dirname, 'html', file)
+                    ])
+            ),
             output: {
                 assetFileNames: 'assets/[name]-[hash][extname]',
                 chunkFileNames: 'assets/[name]-[hash].js',
