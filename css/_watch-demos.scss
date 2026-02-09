@@ -9,12 +9,9 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    // Background Graphic (Purple curve at bottom)
     position: relative;
     background-color: $text-white;
 
-    // Use pseudo-element for reliable fixed background positioning
     &::before {
         content: "";
         position: fixed;
@@ -29,7 +26,7 @@
 
     .main-content {
         position: relative;
-        z-index: 1; // Ensure content sits above background
+        z-index: 1;
         flex: 1;
         padding: 40px 0;
 
@@ -50,7 +47,6 @@
                 gap: 40px;
             }
 
-            // Left Column
             .left-col {
                 padding-top: 20px;
 
@@ -92,10 +88,10 @@
                         line-height: 1.5;
 
                         &::before {
-                            content: '\f00c'; // FontAwesome check
+                            content: '\f00c';
                             font-family: 'Font Awesome 6 Free';
                             font-weight: 900;
-                            color: $color-027e46; // Green check color
+                            color: $color-027e46;
                             font-size: 16px;
                             margin-top: 4px;
                         }
@@ -113,7 +109,7 @@
 
                 .mascot-graphic {
                     width: 100%;
-                    max-width: 600px; // Increased size
+                    max-width: 600px;
                     margin-top: 40px;
                     position: relative;
                     z-index: 2;
@@ -122,15 +118,13 @@
                         width: 100%;
                         height: auto;
                         display: block;
-                        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)); // Add shadow to image itself rather than box
+                        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
                     }
                 }
             }
-
-            // Right Column (Form)
             .right-col {
                 background: $text-white;
-                padding: 10px; // Visual padding mainly
+                padding: 10px;
 
                 h2 {
                     font-size: 18px;
@@ -183,12 +177,6 @@
                             background-size: 1em;
                         }
 
-                        // Special styling for country/region with checkmark if needed, 
-                        // but standard select is usually fine.
-                        // The screenshot shows "India" with a green checkmark INSIDE the select box.
-                        // This is tricky with standard select. I'll just style the select.
-                        // Or if it's a selected state visual.
-
                         &.has-check {
                             position: relative;
 
@@ -198,7 +186,7 @@
                                 font-weight: 900;
                                 color: $color-027e46;
                                 position: absolute;
-                                right: 40px; // Left of the dropdown arrow
+                                right: 40px;
                                 top: 50%;
                                 transform: translateY(-50%);
                                 pointer-events: none;
@@ -245,13 +233,8 @@
         }
     }
 
-    // Background Graphic (Purple curve at bottom)
-
-    // ... (rest of main content code)
-
-    // Footer Override for Watch Demos Page
     .main-footer {
-        margin-top: 0 !important; // Remove large gap
+        margin-top: 0 !important;
         padding-top: 0 !important;
         background: transparent;
 
@@ -259,7 +242,6 @@
             background-color: $navy-blue;
             padding: 20px 0;
 
-            // Force full viewport width
             width: 100vw;
             position: relative;
             left: 50%;
@@ -268,22 +250,19 @@
             margin-right: -50vw;
 
             .bottom-container {
-                max-width: 1200px; // Match main content width
+                max-width: 1200px;
                 margin: 0 auto;
                 padding: 0 24px;
             }
-
-            // Target the flexible content container
             .footer-bottom-content {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-between; // Align left and right groups apart
-                // gap: 20px; // Optional gap if screen gets small
+                justify-content: space-between;
 
                 .footer-left-group {
                     display: flex;
-                    align-items: center; // Align globe box vertically center
+                    align-items: center;
                     gap: 32px;
                     width: 100%;
 
@@ -298,7 +277,6 @@
                     }
                 }
 
-                // Globe Selector Box Style
                 .globe-selector {
                     border: 1px solid rgba(255, 255, 255, 0.5);
                     padding: 8px 16px;
@@ -321,7 +299,7 @@
                     img {
                         width: 18px;
                         height: 18px;
-                        filter: invert(1); // Make white
+                        filter: invert(1);
                     }
 
                     .fa-angle-down {
@@ -335,7 +313,6 @@
                     }
                 }
 
-                // Links List
                 .legal-list {
                     margin: 0;
                     gap: 24px;

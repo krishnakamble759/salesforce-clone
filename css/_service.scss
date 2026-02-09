@@ -292,7 +292,7 @@
                                 margin-bottom: 12px;
 
                                 a {
-                                    display: block; // Ensure proper box model rendering
+                                    display: block;
                                     font-weight: 700;
                                     font-size: 16px;
                                     line-height: 1.4;
@@ -560,23 +560,22 @@
 
     .service-customers {
         position: relative;
-        padding: 280px 0 300px; // Adjusted for balance
+        padding: 280px 0 300px;
         background-color: transparent;
         overflow: hidden;
 
-        // SVG Curve Separator
         .curve-separator {
             position: absolute;
             bottom: -1px;
             left: 0;
             width: 100%;
-            line-height: 0; // Remove gap
+            line-height: 0;
             z-index: 1;
 
             svg {
                 display: block;
                 width: 100%;
-                height: 180px; // Adjustable height for curve depth
+                height: 180px;
 
                 @include mobile {
                     height: 60px;
@@ -590,8 +589,8 @@
 
         .g2-badge-container {
             position: absolute;
-            top: 20px; // Aligned near top
-            left: 5%; // Responsive left
+            top: 20px;
+            left: 5%;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -656,7 +655,7 @@
             .logo-track {
                 display: flex;
                 width: max-content;
-                animation: scrollLogos 30s linear infinite; // Adjusted speed
+                animation: scrollLogos 30s linear infinite;
                 gap: 30px;
 
                 &:hover {
@@ -667,7 +666,7 @@
             .logo-card {
                 background: white;
                 border-radius: 12px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); // Subtle shadow
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
                 width: 220px;
                 height: 110px;
                 display: flex;
@@ -687,8 +686,8 @@
                     max-width: 100%;
                     max-height: 100%;
                     object-fit: contain;
-                    filter: none; // Removed grayscale
-                    opacity: 1; // Full opacity
+                    filter: none;
+                    opacity: 1;
                     transition: all 0.3s ease;
                 }
 
@@ -700,7 +699,7 @@
 
         .customer-bg-layer {
             position: absolute;
-            bottom: -5px; // Ensure no gap
+            bottom: -5px;
             left: 0;
             width: 100%;
             z-index: 0;
@@ -722,13 +721,11 @@
             transform: translateX(0);
         }
 
-        // 220px card + 30px gap = 250px per item. 6 original items. 250 * 6 = 1500px.
         100% {
             transform: translateX(-1500px);
         }
     }
 
-    // About Agentforce Section
     .about-agentforce {
         padding: 120px 0 80px;
         background-color: $text-white;
@@ -785,7 +782,7 @@
         .about-buttons {
             display: flex;
             gap: 20px;
-            margin-bottom: 150px; // Large spacing before the next heading
+            margin-bottom: 150px;
 
             @include mobile {
                 flex-direction: column;
@@ -877,7 +874,6 @@
                 display: flex;
                 flex-direction: column;
 
-                // Reduced width and increased height adjustment
                 max-width: 320px;
                 margin: 0 auto;
                 width: 85%;
@@ -896,7 +892,7 @@
             .card-thumb {
                 position: relative;
                 overflow: hidden;
-                padding-top: 56.25%; // 16:9 Aspect Ratio
+                padding-top: 56.25%;
 
                 img {
                     position: absolute;
@@ -926,7 +922,7 @@
                     i {
                         color: white;
                         font-size: 20px;
-                        margin-left: 4px; // Optical center correction for play icon
+                        margin-left: 4px;
                     }
 
                     &:hover {
@@ -1031,13 +1027,13 @@
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
-            z-index: 99; // Base z-index for section layers
+            z-index: 99;
 
             @include mobile {
                 position: sticky;
-                top: 0px; // Aligns to the top of the viewport/parent
+                top: 0px;
                 background: $text-white;
-                z-index: 9999; // Extremely high to stay 'frontside' of all images and cards
+                z-index: 9999;
                 padding: 15px 0;
                 margin-top: 0;
                 margin-bottom: 40px;
@@ -1045,17 +1041,15 @@
                 width: 100%;
                 justify-content: center;
                 border-bottom: 2px solid $color-f2f2f2;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); // Subtle shadow when sticky
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
-                // CRITICAL: Overflow must be visible so the 'More' dropdown isn't cut off (backside issue)
                 overflow: visible !important;
             }
 
-            // More Dropdown specific for very small screens
             .more-tabs-container {
                 display: none;
                 position: relative;
-                z-index: 10000; // Above the sticky tabs bar
+                z-index: 10000;
 
                 @include small-mobile {
                     display: block;
@@ -1103,7 +1097,7 @@
                 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
                 border-radius: 8px;
                 padding: 10px 0;
-                z-index: 10001; // Frontside of everything
+                z-index: 10001;
                 display: none;
                 min-width: 150px;
 
@@ -1125,7 +1119,7 @@
                         color: $sky-blue;
 
                         &::after {
-                            display: none; // No underline in dropdown
+                            display: none;
                         }
                     }
 
@@ -1148,7 +1142,7 @@
 
                 &.desktop-tab {
                     @include small-mobile {
-                        display: none; // Hide on small mobile
+                        display: none;
                     }
                 }
 
@@ -1158,7 +1152,7 @@
                     &::after {
                         content: '';
                         position: absolute;
-                        bottom: -1px; // On top of the border-bottom
+                        bottom: -1px;
                         left: 0;
                         width: 100%;
                         height: 3px;
@@ -1231,7 +1225,7 @@
                         padding: 4px 12px;
                         border-radius: 12px;
                         margin-bottom: 16px;
-                        text-transform: none; // Allow character case control in HTML
+                        text-transform: none;
                         letter-spacing: 0.2px;
                         width: fit-content;
                     }
@@ -1304,7 +1298,7 @@
             display: none !important;
 
             &.active {
-                display: grid !important; // Restore grid display when active
+                display: grid !important;
                 animation: fadeIn 0.5s ease;
             }
         }
@@ -1321,7 +1315,6 @@
             }
         }
 
-        // Contents Grid Helper (Overrides default 3-col grid)
         .contents-grid {
             grid-template-columns: repeat(4, 1fr) !important;
 
@@ -1367,16 +1360,11 @@
                             -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,60 700,60 1000,0 V100 H0 Z' fill='black'/%3E");
                             mask-size: 100% 100%;
                             -webkit-mask-size: 100% 100%;
-                            // Or simple white curve overlay
                             mask: none;
                             -webkit-mask: none;
                             background: transparent;
                             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L1440,32L1440,320L0,320Z'%3E%3C/path%3E");
-                            // Actually, simpler approach for "white curve":
-                            // Just a standard white SVG overlay
                         }
-
-                        // Use a clearer curve SVG as background image on pseudo element
                         &::before {
                             content: '';
                             position: absolute;
@@ -1402,7 +1390,6 @@
             }
         }
 
-        // Reports Grid Helper (Overrides default 3-col grid)
         .reports-grid {
             grid-template-columns: repeat(2, 1fr) !important;
 
@@ -1412,9 +1399,6 @@
         }
     }
 
-    // CLOSING .discover-new correctly here
-
-    // Potential of Humans + AI Section
     .potential-section {
         padding: 80px 0;
         background-color: $text-white;
@@ -1623,7 +1607,7 @@
 
             .card-accent {
                 height: 6px;
-                background-color: $color-f75d81; // Using the pink/coral accent from the screen
+                background-color: $color-f75d81;
                 width: 100%;
             }
 
@@ -1796,8 +1780,8 @@
             .card-image {
                 position: relative;
                 width: 100%;
-                padding-top: 56.25%; // 16:9 Aspect Ratio
-                background-color: $color-fce4ec; // Soft pink background
+                padding-top: 56.25%;
+                background-color: $color-fce4ec;
                 overflow: hidden;
 
                 img {
@@ -2750,12 +2734,11 @@
 
 
 
-    // Trailhead Learning Section
     .trailhead-learning {
         padding: 80px 0 330px;
         background-color: $text-white;
         position: relative;
-        overflow-x: hidden; // Prevent horizontal scroll from background image
+        overflow-x: hidden;
 
         @include small-tab {
             padding: 60px 0 180px;
@@ -2897,8 +2880,8 @@
                     width: 100%;
 
                     .module-tag {
-                        background-color: $color-e3f0fa; // Light blue background
-                        color: $color-014486; // Dark blue text
+                        background-color: $color-e3f0fa;
+                        color: $color-014486;
                         font-size: 12px;
                         font-weight: 700;
                         text-transform: uppercase;
@@ -2924,7 +2907,7 @@
                         font-size: 16px;
                         line-height: 1.5;
                         margin: 0;
-                        flex-grow: 1; // Pushes button to bottom
+                        flex-grow: 1;
 
                         @include small-mobile {
                             font-size: 15px;
@@ -3123,9 +3106,8 @@
     }
 }
 
-// Next Step CTA Section
 .next-step-cta {
-    padding: 80px 0 350px; // Padding bottom accommodates for background graphic height
+    padding: 80px 0 350px;
     position: relative;
     overflow: hidden;
 
@@ -3371,7 +3353,7 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    bottom: -1px; // On top of border
+                    bottom: -1px;
                     left: 0;
                     width: 100%;
                     height: 3px;
@@ -3402,7 +3384,7 @@
                 padding: 30px 0;
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start; // Align top in case of wrapping
+                align-items: flex-start;
                 cursor: pointer;
                 gap: 20px;
 
@@ -3452,7 +3434,7 @@
 
                 .answer-content {
                     padding-bottom: 30px;
-                    padding-right: 50px; // Leave space so it doesn't run full width abruptly
+                    padding-right: 50px;
 
                     @include mobile {
                         padding-right: 0;
@@ -3494,7 +3476,6 @@
 
                 .faq-answer {
                     max-height: 1000px;
-                    /* Fallback */
                 }
             }
         }

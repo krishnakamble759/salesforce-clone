@@ -1,8 +1,8 @@
 /* Specific styles for Sales page */
 .sales-page-hero {
     padding-top: 60px;
-    padding-bottom: 240px; // Larger bottom padding for the curve
-    background-color: $color-f8fcfe; // Fallback
+    padding-bottom: 240px;
+    background-color: $color-f8fcfe;
     position: relative;
     overflow: hidden;
 
@@ -33,10 +33,9 @@
         }
     }
 
-    // Bottom shape/logo background
     .hero-bg-bottom {
         position: absolute;
-        bottom: -2px; // Hide any pixel gap
+        bottom: -2px;
         left: 0;
         width: 100%;
         z-index: 1;
@@ -51,7 +50,7 @@
 
     .hero-container {
         position: relative;
-        z-index: 2; // Above backgrounds
+        z-index: 2;
     }
 
     .hero-content {
@@ -73,11 +72,11 @@
             }
 
             .hero-title-highlight {
-                color: $color-00a180; // The Teal color from screenshot
+                color: $color-00a180;
             }
 
             .hero-title-main {
-                color: $secondary-color; // Dark Blue
+                color: $secondary-color;
             }
         }
 
@@ -95,7 +94,7 @@
 
             strong {
                 font-weight: 700;
-                color: $secondary-color; // Make emphasis darker
+                color: $secondary-color;
             }
         }
     }
@@ -118,19 +117,19 @@
 
     .hero-bottom-curve {
         position: absolute;
-        bottom: -1px; // overlapping slightly to avoid gaps
+        bottom: -1px;
         left: 0;
         width: 100%;
         line-height: 0;
-        z-index: 3; // Above everything in hero
+        z-index: 3;
 
         svg {
             width: 100%;
-            height: 80px; // Default for larger screens
+            height: 80px;
             display: block;
 
             @include big-tab {
-                height: 60px; // Reduced height for tablets and mobile
+                height: 60px;
             }
         }
     }
@@ -656,7 +655,7 @@
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    margin-top: 70px; // Increased to ensure clearance of fixed sub-nav and header
+    margin-top: 70px;
 
     @include desktop {
         margin-top: 75px;
@@ -924,7 +923,7 @@
             padding: 24px;
             min-width: 240px;
             z-index: 10;
-            transform: translate(0, -60%); // Position it like in screenshot
+            transform: translate(0, -60%);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 
             &::before {
@@ -1324,7 +1323,7 @@
     .slider-wrapper-outer {
         overflow: hidden;
         margin: 0 -15px;
-        padding: 20px 0; // Padding to prevent card shadows from being clipped
+        padding: 20px 0;
     }
 
     .slider-track {
@@ -1354,7 +1353,7 @@
             padding: 40px 30px;
             height: 100%;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border-top: 6px solid $color-00f0d1; // Teal top border
+            border-top: 6px solid $color-00f0d1;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1450,8 +1449,7 @@
             left: 0;
             height: 100%;
             background: $color-adadad;
-            width: 25%; // Matches 1/4 cards if showing 3 at a time? 
-            // Actually, we'll animate this with JS
+            width: 25%;
             border-radius: 2px;
             transition: transform 0.4s ease-out, width 0.4s ease-out;
         }
@@ -1527,26 +1525,23 @@
 
 /* Chatbot Modal Refinement */
 .chatbot-modal {
-    display: none; // Hidden by default
+    display: none;
 
     &.active {
         display: flex;
     }
 
-    // ... basic layout is already there from sales.html inline styles or skeleton
 }
 
 /* Integrated Growth Section */
 .integrated-growth-section {
     position: relative;
     overflow: hidden;
-    padding: 100px 60px 60px; // Added horizontal padding for side space
-    height: 800px; // Explicit height as requested
+    padding: 100px 60px 60px;
+    height: 800px;
     display: flex;
     align-items: flex-start;
     background-color: $text-white;
-
-    // Background Image via HTML Tag
     .growth-bg {
         position: absolute;
         bottom: 20%;
@@ -1586,7 +1581,7 @@
 
     .growth-heading {
         font-family: 'ITC Avant Garde', sans-serif;
-        font-size: 2.25rem; // Reduced from 2.8rem to match screenshot proportion
+        font-size: 2.25rem;
         font-weight: 700;
         color: $secondary-color;
         line-height: 1.1;
@@ -1612,7 +1607,7 @@
         display: flex;
         flex-direction: column;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-        max-width: 420px; // Adjusted for better balance as seen in screenshot
+        max-width: 420px;
         margin: 0 auto;
         height: 100%;
 
@@ -1622,7 +1617,7 @@
         }
 
         .card-inner {
-            padding: 45px 30px; // Increased padding for more spacious look
+            padding: 45px 30px;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -2078,13 +2073,13 @@
         border-radius: 18px;
         overflow: hidden;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        max-width: 550px; // Reduce width
-        margin: 10px auto; // Center it
+        max-width: 550px;
+        margin: 10px auto;
 
         img {
             width: 100%;
-            height: 300px; // Increase height
-            object-fit: cover; // Ensure image fits the new aspect ratio
+            height: 300px;
+            object-fit: cover;
             display: block;
         }
 
@@ -2124,7 +2119,7 @@
                 i {
                     color: $sky-blue;
                     font-size: 1.75rem;
-                    margin-left: 4px; // Optical alignment for play icon
+                    margin-left: 4px;
                 }
 
                 &:hover {
@@ -2139,9 +2134,9 @@
 .trailhead-learning-section {
     background-color: $text-white;
     overflow: hidden;
-    padding: 100px 0 0; // Top padding only
+    padding: 100px 0 0;
     position: relative;
-    min-height: 900px; // Use min-height to increase page height
+    min-height: 900px;
     display: flex;
     flex-direction: column;
 
@@ -2330,10 +2325,10 @@
 /* Ready to take the next step Section */
 .next-step-section {
     background-color: $text-white;
-    min-height: 1000px !important; // Increased height significantly
+    min-height: 1000px !important;
     display: flex;
     align-items: flex-start;
-    padding-top: 120px !important; // Slightly more top padding
+    padding-top: 120px !important;
 
     .next-step-container {
         position: relative;
@@ -2514,7 +2509,7 @@
 
             .dropdown-toggle {
                 &::after {
-                    display: none !important; // Hide default Bootstrap caret
+                    display: none !important;
                 }
 
                 i {
@@ -2538,7 +2533,7 @@
                 border-radius: 8px;
                 padding: 8px 0;
                 margin-top: 10px;
-                display: block; // Always block but controlled by opacity/visibility for hover
+                display: block;
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(10px);

@@ -139,10 +139,9 @@
                         display: flex;
                         align-items: center;
                         gap: 0.25rem;
-                        padding: 0; // Padding handled by parent or different generic style
+                        padding: 0;
                         height: 100%;
                         border-bottom: 2px solid transparent;
-                        /* Desktop active state */
 
                         @include desktop {
                             width: 100%;
@@ -167,7 +166,6 @@
                         }
                     }
 
-                    // Dropdown Styling
                     &.has-dropdown {
                         position: relative;
 
@@ -190,7 +188,7 @@
                     }
 
                     .sub-nav-dropdown {
-                        display: none; // Hidden by default, toggled via JS class 'active' on parent
+                        display: none;
                         position: absolute;
                         top: 100%;
                         left: 0;
@@ -231,7 +229,7 @@
 
                             &:hover {
                                 background-color: $background-light;
-                                color: $secondary-color; // Keep text color on hover
+                                color: $secondary-color;
 
                                 @include desktop {
                                     background-color: transparent;
@@ -261,16 +259,14 @@
             margin-right: -145px;
 
             @include desktop {
-                display: none; // Hidden initially on mobile
+                display: none;
                 width: 100%;
                 padding: 1rem 0 1.5rem 0;
                 margin-right: 0;
-
-                // Show when menu is active (controlled by JS sibling check or adding class to wrapper)
             }
 
             &.active {
-                display: block; // Or flex
+                display: block;
             }
 
             .try-free-btn {
@@ -546,7 +542,6 @@
 
                 @include small-tab {
                     max-width: 600px;
-                    /* Limit image width on tablet */
                     margin: 0 auto;
                 }
             }

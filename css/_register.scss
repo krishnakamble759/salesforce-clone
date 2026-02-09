@@ -8,19 +8,18 @@ body.register-page {
 }
 
 .register-header {
-    display: none; // Hidden as per layout requirement
+    display: none;
     background-color: $text-white;
     padding: 20px 40px;
-    // Override inherited styles from .header
     border-bottom: none !important;
     box-shadow: none !important;
+    padding-bottom: 0;
 
     @include mobile {
         padding: 15px 20px;
     }
 
-    // Set padding-bottom to 0 to remove gap between header and form
-    padding-bottom: 0;
+
 
     .header-content {
         max-width: 1200px;
@@ -71,7 +70,7 @@ body.register-page {
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
         gap: 60px;
-        align-items: start; // Prevent form column from stretching to match left column height
+        align-items: start;
         max-width: 1100px;
         margin: 0 auto;
         padding-top: 0;
@@ -103,7 +102,7 @@ body.register-page {
 
                 h2 {
                     font-size: 32px;
-                    font-weight: 300; // Light/Thin typical of headers
+                    font-weight: 300;
                     color: $secondary-color;
                     margin-bottom: 10px;
                     line-height: 1.2;
@@ -132,14 +131,14 @@ body.register-page {
 
         .form-col {
             background: $color-f4f6f9;
-            padding: 0 30px 20px 30px; // Removed top padding, reduced bottom padding
+            padding: 0 30px 20px 30px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
             h3 {
                 font-size: 20px;
                 color: $text-dark;
-                margin-top: 0; // Remove default top margin
+                margin-top: 0;
                 padding-top: 20px;
                 margin-bottom: 8px;
                 font-weight: 400;
@@ -153,7 +152,7 @@ body.register-page {
 
             .form-control,
             .form-select {
-                border: 1px solid $color-949494; // Darker border
+                border: 1px solid $color-949494;
                 border-radius: 4px;
                 padding: 10px 12px;
                 font-size: 14px;
@@ -170,7 +169,6 @@ body.register-page {
                 }
             }
 
-            // Specific style for country select
             #country {
                 padding-top: 20px;
             }
@@ -196,7 +194,7 @@ body.register-page {
             }
 
             .select-wrapper {
-                position: relative; // Ensure relative positioning for absolute child
+                position: relative;
 
                 .floating-label {
                     font-size: 11px;
@@ -296,7 +294,7 @@ body.register-page {
     }
 
     @include mobile {
-        right: 90px; // Adjust for mobile if needed, or hide
+        right: 90px;
         bottom: 15px;
     }
 }

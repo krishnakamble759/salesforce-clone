@@ -97,7 +97,7 @@
 
                 .mobile-toggle-arrow {
                     display: none;
-                    color: $SECONDARY-COLOR;
+                    color: $secondary-color;
                     font-size: 1rem;
                     transition: transform 0.3s ease;
 
@@ -329,8 +329,6 @@
 
 /* --- MuleSoft Hero Section --- */
 .mulesoft-hero {
-    // Top padding to clear fixed headers (header + sub-nav)
-    // Header ~60px-130px, Subnav ~80px. total ~140px on desktop
     padding-top: 180px;
     padding-bottom: 80px;
     background: url('../assets/MuleSoft/mulesoft-products-brand-background.webp') no-repeat center center;
@@ -340,13 +338,13 @@
     align-items: center;
 
     @include desktop {
-        padding-top: 240px; // More space for stacked mobile header
+        padding-top: 240px;
         text-align: center;
         background-position: top center;
     }
 
     .hero-content {
-        color: $secondary-color; // Dark blue text
+        color: $secondary-color;
         padding-right: 2rem;
 
         @include desktop {
@@ -355,7 +353,7 @@
         }
 
         .hero-title {
-            font-size: 3.5rem; // ~56px
+            font-size: 3.5rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1.5rem;
@@ -371,7 +369,7 @@
         }
 
         .hero-desc {
-            font-size: 1.125rem; // 18px
+            font-size: 1.125rem;
             line-height: 1.6;
             margin-bottom: 2rem;
             color: $text-color;
@@ -470,7 +468,7 @@
                     i {
                         color: $text-white;
                         font-size: 30px;
-                        margin-left: 5px; // Balance play triangle
+                        margin-left: 5px;
                     }
                 }
             }

@@ -2,10 +2,9 @@
 
 .slack-page {
 
-    /* --- Sub Navigation --- */
     .slack-sub-nav {
         position: fixed;
-        top: 65px; // Matches main header top
+        top: 65px;
         z-index: 990;
         background-color: $text-white;
         border-bottom: 1px solid $color-e5e5e5;
@@ -185,7 +184,7 @@
                                 transform: none;
                                 box-shadow: none;
                                 display: none;
-                                padding: 0 0 20px 24px; // Indented on mobile
+                                padding: 0 0 20px 24px;
                                 width: 100%;
                             }
 
@@ -231,7 +230,7 @@
                 display: none;
                 width: 100%;
                 padding: 15px 0;
-                flex-direction: column; // Stack buttons vertically
+                flex-direction: column;
                 gap: 12px;
 
                 &.active {
@@ -246,7 +245,7 @@
                 width: auto;
 
                 @include desktop {
-                    width: 100%; // Full width on mobile
+                    width: 100%;
                     text-align: center;
                 }
             }
@@ -274,7 +273,7 @@
     }
 
     .slack-hero {
-        margin-top: 80px; // Matches header + sub-nav height
+        margin-top: 80px;
         padding: 60px 0 100px;
         background: url('../assets/slack/marquee-BG.webp') no-repeat center center;
         background-size: cover;
@@ -508,7 +507,7 @@
             width: 100%;
             height: 80px;
             line-height: 0;
-            z-index: 3; // On top of everything
+            z-index: 3;
 
             svg {
                 display: block;
@@ -518,7 +517,6 @@
         }
     }
 
-    // Transition Header Section
     .slack-transition-header {
         padding: 100px 0 60px;
         text-align: center;
@@ -677,7 +675,6 @@
                 height: auto;
                 object-fit: contain;
                 border-radius: 12px;
-                // box-shadow: 0 20px 40px rgba(0,0,0,0.06);
             }
         }
 
@@ -692,10 +689,8 @@
         }
     }
 
-    // Spotlight Section (The wide card)
     .slack-spotlight-section {
         padding: 60px 0 100px;
-        // background-color: $color-f9f9f9;
 
         .spotlight-card {
             background: white;
@@ -1052,8 +1047,7 @@
 
             @include big-tab {
                 flex-direction: column;
-                text-align: flex-start; // Keep text left aligned as per design often, or center if requested. Screenshot shows left text.
-                // Actually screenshot looks like wide card.
+                text-align: flex-start;
                 align-items: flex-start;
                 padding: 40px;
             }
@@ -1105,26 +1099,23 @@
 
                 @include big-tab {
                     width: 100%;
-                    justify-content: center; // Center image on mobile/tablet
+                    justify-content: center;
                     margin-top: 20px;
                 }
 
                 img {
                     max-width: 100%;
                     height: auto;
-                    border-radius: 8px; // Optional, image in screenshot has rounded corners? Hard to see, usually vectors don't but the graphic might.
-                    // The graphic is a card itself inside. 
-                    // Let's keep it clean.
+                    border-radius: 8px;
                 }
             }
         }
     }
 
-    // Customer Success Section
     .slack-customer-section {
         padding: 80px 0 200px;
         position: relative;
-        background-color: $color-f8f9fa; // Light background for contrast if needed, or white if seamless
+        background-color: $color-f8f9fa;
         background: linear-gradient(180deg, $text-white 0%, $color-f4f6f9 100%);
         overflow: hidden;
 
@@ -1196,7 +1187,7 @@
                     color: $secondary-color;
                     line-height: 1.3;
                     margin-bottom: 30px;
-                    font-family: 'ITC Avant Garde', 'Salesforce Sans', sans-serif; // Ensure distinct font
+                    font-family: 'ITC Avant Garde', 'Salesforce Sans', sans-serif;
 
                     @include desktop {
                         font-size: 24px;
@@ -1379,7 +1370,7 @@
                 color: $secondary-color;
                 line-height: 1.3;
                 margin-bottom: 12px;
-                min-height: 52px; // Align titles
+                min-height: 52px;
             }
 
             .card-desc {
@@ -1491,7 +1482,7 @@
 
                 .trend-tag {
                     background-color: $color-ebf8fe;
-                    color: $sky-blue; // $sky-blue
+                    color: $sky-blue;
                     font-size: 11px;
                     font-weight: 700;
                     text-transform: uppercase;
@@ -1507,14 +1498,12 @@
                     color: $secondary-color;
                     line-height: 1.3;
                     margin-bottom: 24px;
-                    flex: 1; // Pushes link to bottom
+                    flex: 1;
                 }
 
                 .btn-link {
                     font-size: 16px;
                     font-weight: 700;
-                    color: $text-color; // Often links are dark, turning blue on hover, or strictly blue. 
-                    // Screenshot shows "Read more" underlined in dark/blue. Let's use blue.
                     color: $secondary-color;
                     text-decoration: underline;
                     display: inline-flex;
@@ -1573,8 +1562,7 @@
             border: 1px solid $color-eeeeee;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; // Screenshot shows left align content inside card? 
-            // Screenshot 2: "Start your trial" text is left aligned.
+            align-items: flex-start;
             text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -1599,7 +1587,7 @@
             .step-title {
                 font-size: 22px;
                 font-weight: 700;
-                color: $secondary-color; // $SECONDARY-COLOR
+                color: $secondary-color;
                 margin-bottom: 12px;
             }
 
@@ -1627,11 +1615,10 @@
         }
     }
 
-    // FAQ Section
     .slack-faq-section {
-        padding: 80px 0 350px; // Padding bottom to accommodate the landscape image
+        padding: 80px 0 350px;
         position: relative;
-        background-color: $color-fcfcfc; // Slightly off-white or white, screenshot looks very clean.
+        background-color: $color-fcfcfc;
 
         @include mobile {
             padding: 60px 0 200px;
@@ -1640,7 +1627,7 @@
         .sf-container {
             position: relative;
             z-index: 5;
-            max-width: 1000px; // Limit width for readability
+            max-width: 1000px;
         }
 
         .faq-title {
@@ -1679,7 +1666,7 @@
                     }
 
                     .faq-answer {
-                        max-height: 500px; // Arbitrary large height for expansion
+                        max-height: 500px;
                         opacity: 1;
                         padding-bottom: 24px;
                         margin-top: 0;
@@ -1710,7 +1697,7 @@
                 }
 
                 .icon-toggle {
-                    color: $sky-blue; // $sky-blue
+                    color: $sky-blue;
                     font-size: 18px;
 
                     .fa-minus {
@@ -1720,7 +1707,7 @@
 
                 &:hover {
                     .question-text {
-                        color: $primary-color; // Hover color
+                        color: $primary-color;
                     }
                 }
             }
@@ -1761,7 +1748,6 @@
                 width: 100%;
                 height: auto;
                 object-fit: cover;
-                // Ensure it covers bottom area
             }
         }
     }

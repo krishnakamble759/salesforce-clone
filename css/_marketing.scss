@@ -1803,7 +1803,7 @@
     .marketing-customer-story-section {
         position: relative;
         padding: 50px 0 250px;
-        background-color: $color-f0f7fd; // Matches the top sky color of the asset for seamless blend
+        background-color: $color-f0f7fd;
         background-image: url('../assets/marketing/n-up-sales-cloud-background-customer.webp');
         background-repeat: no-repeat;
         background-position: bottom center;
@@ -1812,11 +1812,11 @@
 
         @include small-tab {
             padding: 40px 0 150px;
-            background-size: cover; // Better for narrow screens
+            background-size: cover;
         }
 
         .story-background-wrapper {
-            display: none; // Removing legacy img tag approach
+            display: none;
         }
 
         .customer-story-container {
@@ -2706,7 +2706,6 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 12px;
-                // box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             }
         }
     }
@@ -2739,7 +2738,7 @@
             max-width: 600px;
 
             img {
-                border-radius: 0; // The asset is a composition
+                border-radius: 0;
                 box-shadow: none;
             }
         }
@@ -2993,7 +2992,7 @@
                     color: $sky-blue;
 
                     i {
-                        transform: rotate(180deg); // Handled by icon switch
+                        transform: rotate(180deg);
                     }
                 }
 

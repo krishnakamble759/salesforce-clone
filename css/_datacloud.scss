@@ -157,8 +157,8 @@
                 display: none;
                 margin-left: 10px;
                 transition: transform 0.3s;
-                font-size: 18px; // Matching screenshot depth
-                pointer-events: none; // Ensure it doesn't block clicks on the toggle
+                font-size: 18px;
+                pointer-events: none;
 
                 @include desktop {
                     display: inline-block;
@@ -186,12 +186,10 @@
             width: 100%;
             gap: 0;
             margin-left: 0;
-            display: none; // Hidden by default
-            flex: none; // Don't use flex-grow in column mode
+            display: none;
+            flex: none;
             background: $text-white;
             padding: 0;
-
-            // Show when parent nav is active
             .data360-nav.active & {
                 display: flex !important;
             }
@@ -320,8 +318,8 @@
 
             @include desktop {
                 font-size: 14px;
-                padding: 12px 0; // Better tap target for mobile
-                width: 100%; // Ensure it takes full width for clicking
+                padding: 12px 0;
+                width: 100%;
             }
 
             &.active {
@@ -332,7 +330,7 @@
                 font-size: 10px;
                 margin-top: 1px;
                 transition: transform 0.3s ease;
-                pointer-events: none; // Ensure clicks pass to the link
+                pointer-events: none;
             }
         }
 
@@ -352,10 +350,10 @@
             z-index: 1001;
 
             @include desktop {
-                position: absolute; // Default closed
+                position: absolute;
                 opacity: 0;
                 visibility: hidden;
-                display: none; // Hide from flow
+                display: none;
                 width: 100%;
                 min-width: 0;
                 left: 0;
@@ -1578,7 +1576,7 @@
 
         .discover-scrollbar-container {
             margin-top: 40px;
-            padding: 0 125px; // Approximate padding to align with where cards might visually end or just centered
+            padding: 0 125px;
 
             @include mobile {
                 padding: 0 20px;
@@ -1595,12 +1593,12 @@
 
             .discover-scrollbar-thumb {
                 height: 100%;
-                background-color: $secondary-color; // Dark blue
+                background-color: $secondary-color;
                 border-radius: 2px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 0; // Will be set by JS
+                width: 0;
                 cursor: pointer;
                 transition: left 0.3s ease, width 0.3s ease, background-color 0.2s;
 
@@ -1614,7 +1612,7 @@
 
 // Contact Us Section
 .data360-contact-section {
-    background-color: $color-d1e0ff; // darker periwinkle
+    background-color: $color-d1e0ff;
     padding: 60px 0 100px;
     font-family: 'Salesforce Sans', system-ui, sans-serif;
     position: relative;
@@ -1694,7 +1692,7 @@
                     gap: 12px;
 
                     i {
-                        color: $color-1b9d48; // Green check
+                        color: $color-1b9d48;
                         font-size: 20px;
                     }
                 }
@@ -1705,7 +1703,6 @@
             }
 
             .contact-image {
-                // Style for the dashboard image under text
                 max-width: 600px;
                 margin: 40px 0 0;
 

@@ -47,7 +47,7 @@ body {
     line-height: 1.6;
     width: 100%;
     margin: 0;
-    padding: 65px 0 0; // Default padding to account for fixed header on large screens
+    padding: 65px 0 0;
     overflow-x: hidden;
 
     @include desktop {
@@ -71,7 +71,7 @@ body {
     }
 
     @include mid-mobile {
-        padding-top: 115px; // Header wraps
+        padding-top: 115px;
     }
 
     @include small-mobile {
@@ -139,7 +139,7 @@ body {
     &::after {
         content: '';
         position: fixed;
-        top: 115px; // Start below header to keep header clear
+        top: 115px;
         left: 0;
         width: 100vw;
         height: calc(100vh - 115px);
@@ -166,14 +166,14 @@ body {
         margin: 0 auto;
 
         @include mid-desktop {
-            padding: 5px 10px; // Further reduced from 15px
-            gap: 8px; // Further reduced from 10px
+            padding: 5px 10px;
+            gap: 8px;
             flex-wrap: nowrap !important;
         }
 
         @include desktop {
             display: flex !important;
-            flex-wrap: nowrap !important; // Reverted to nowrap for screens above 1023px
+            flex-wrap: nowrap !important;
             padding: 4px 15px !important;
             align-items: center;
             justify-content: space-between;
@@ -182,12 +182,9 @@ body {
             gap: 15px !important;
         }
 
-        // Search box placement for mobile and tablet (using project breakpoint)
         @include small-desktop {
             flex-wrap: wrap !important;
         }
-
-        // Ensure wrap at big-tab (992px) for 4+1 layout
         @include big-tab {
             flex-wrap: wrap;
             gap: 6px;
@@ -235,7 +232,7 @@ body {
         .logo {
             display: flex;
             align-items: center;
-            z-index: 3005; // Ensure visible above overlay
+            z-index: 3005;
             position: relative;
 
             @include desktop {
@@ -246,16 +243,16 @@ body {
                 position: relative !important;
                 transform: none !important;
                 margin: 0 !important;
-                margin-left: 12px !important; // Keep logo close to menu icon
+                margin-left: 12px !important;
             }
 
             @include mid-desktop {
-                margin-left: 5px; // Reduced from default to save space
+                margin-left: 5px;
             }
 
             @include small-desktop {
                 order: 2;
-                margin-left: 12px; // Consistent spacing from menu icon
+                margin-left: 12px;
             }
 
             @include big-tab {
@@ -315,13 +312,13 @@ body {
             list-style: none;
 
             @include mid-desktop {
-                gap: 10px; // Further reduced from 15px
+                gap: 10px;
             }
 
             @include desktop {
-                display: none; // Default hidden for mobile/tablet unless active
+                display: none;
                 position: fixed;
-                top: 115px; // Matches header height
+                top: 115px;
                 left: -320px;
                 width: 320px;
                 max-width: 100%;
@@ -330,8 +327,8 @@ body {
                 background-color: white;
                 flex-direction: column;
                 gap: 0;
-                padding: 10px 20px 40px; // Added left padding for items gap
-                z-index: 2800; // Increased to be above agentforce-nav (2500) but below header (3000)
+                padding: 10px 20px 40px;
+                z-index: 2800;
                 box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
                 transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 overflow-y: auto;
@@ -348,21 +345,18 @@ body {
             }
 
             @include too-small-mobile {
-                padding-top: 20px !important; // Adjusted for smaller gap
+                padding-top: 20px !important;
             }
 
-            // Remove previous narrow tablet styles to avoid conflict
             @include big-tab {
                 display: none;
                 gap: 20px;
             }
 
-            // Mobile Search Menu Item
             .search-menu-item {
                 display: none !important;
             }
 
-            // View Containers - Desktop Structure (> 1200px)
             @include min-desktop {
                 .menu-main-view {
                     display: flex !important;
@@ -375,7 +369,6 @@ body {
                 }
             }
 
-            // View Containers - Mobile Offcanvas Structure (<= 1200px)
             @include desktop {
 
                 .menu-main-view,
@@ -386,7 +379,6 @@ body {
                 }
             }
 
-            // Login Sub-Menu Specific Styles
             .menu-login-view {
                 padding-bottom: 40px;
 
@@ -428,7 +420,7 @@ body {
                     padding: 12px 28px;
                     font-size: 19px;
                     font-weight: 600;
-                    color: $dark-blue; // Salesforce blue
+                    color: $dark-blue;
                     text-decoration: none;
                     display: flex;
                     align-items: center;
@@ -531,13 +523,12 @@ body {
                     }
                 }
 
-                // Standard icons (direct child or inside span)
                 i:first-child:not(.fa-angle-down),
                 span>i:first-child {
                     margin-right: 20px;
                     width: 25px;
                     text-align: center;
-                    color: $secondary-color; // Secondary color
+                    color: $secondary-color;
                     display: none;
 
                     @include big-tab {
@@ -545,7 +536,6 @@ body {
                     }
                 }
 
-                // Dropdown Arrow
                 .fa-angle-down {
                     display: inline-block;
                     margin-left: 6px;
@@ -557,7 +547,6 @@ body {
                     transform: rotate(180deg);
                 }
 
-                // Specific styling for mobile action links (Login, Contact, Change Region)
                 &.mobile-action-link {
                     @include big-tab {
                         padding: 18px 28px;
@@ -569,7 +558,7 @@ body {
                             color: $secondary-color;
 
                             i {
-                                font-size: 24px; // Larger as in screenshot
+                                font-size: 24px;
                                 margin-right: 20px;
                                 width: 30px;
                             }
@@ -654,12 +643,10 @@ body {
                     opacity: 1;
                     visibility: visible;
                     transform: none;
-                    display: none; // Hidden by default on mobile
+                    display: none;
                     padding: 0;
                     background-color: $color-f9f9f9;
                     border-top: 1px solid $color-eeeeee;
-
-                    // When .show is toggled by JS
                     &.show {
                         display: block !important;
                     }
@@ -675,7 +662,7 @@ body {
                     transition: background-color 0.15s ease;
 
                     @include small-desktop {
-                        padding: 12px 40px; // Indent for hierarchy
+                        padding: 12px 40px;
                         font-size: 15px;
                     }
 
@@ -699,9 +686,8 @@ body {
     }
 }
 
-// Mobile Only Items (Display logic)
 .mobile-only-item {
-    display: none; // Default hidden on desktop
+    display: none;
 }
 
 @include desktop {
@@ -731,9 +717,9 @@ body {
     margin: 0 15px;
 
     @include mid-desktop {
-        margin: 0 5px; // Further reduced from 10px
-        padding: 4px 8px; // More compact
-        min-width: 140px; // Further reduced from 180px to allow more shrinking
+        margin: 0 5px;
+        padding: 4px 8px;
+        min-width: 140px;
         flex: 1;
     }
 
@@ -780,7 +766,7 @@ body {
         flex: 0 0 calc(100% - 30px) !important;
         order: 10 !important;
         margin: 12px 15px !important;
-        border: 2px solid $dark-blue !important; // Use the blue border as per previous requirements
+        border: 2px solid $dark-blue !important;
         border-radius: 8px;
         padding: 10px 15px;
         background: white;
@@ -805,7 +791,6 @@ body {
         }
     }
 
-    // Explicit styling for big-tab (992px) to ensure 4+1 layout
     @include big-tab {
         display: flex;
         width: calc(100% - 30px);
@@ -836,7 +821,6 @@ body {
         }
     }
 
-    // Explicit styling for small-tab (768px) to ensure 4+1 layout
     @include small-tab {
         display: flex;
         width: calc(100% - 30px);
@@ -867,7 +851,6 @@ body {
         }
     }
 
-    // Explicit styling for mobile (576px) to ensure 4+1 layout
     @include mobile {
         display: flex;
         width: calc(100% - 24px);
@@ -898,7 +881,6 @@ body {
         }
     }
 
-    // Explicit styling for mid-mobile (500px) to ensure 4+1 layout
     @include mid-mobile {
         display: flex;
         width: calc(100% - 24px);
@@ -1026,7 +1008,7 @@ body {
     gap: 25px;
 
     @include mid-desktop {
-        gap: 8px; // Further reduced from 12px
+        gap: 8px;
     }
 
     @include desktop {
@@ -1040,35 +1022,35 @@ body {
     @include small-desktop {
         order: 3;
         gap: 15px;
-        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+        margin-left: auto !important;
     }
 
     @include big-tab {
         order: 3;
         gap: 15px;
-        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+        margin-left: auto !important;
     }
 
     @include small-tab {
         order: 3;
         gap: 14px;
-        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+        margin-left: auto !important;
     }
 
     @include mobile {
         order: 3;
         gap: 12px;
-        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+        margin-left: auto !important;
     }
 
     @include mid-mobile {
         order: 3;
         gap: 12px;
-        margin-left: auto !important; // Push to the right, keeping logo next to menu icon
+        margin-left: auto !important;
     }
 
     @include too-small-mobile {
-        gap: 8px; // Tighten gap between login and contact
+        gap: 8px;
     }
 
     @include big-tab {
@@ -1139,7 +1121,7 @@ body {
         height: 100%;
         cursor: pointer;
         padding-bottom: 0;
-        z-index: 3005; // Ensure visible above overlay
+        z-index: 3005;
 
         &:hover {
             .login-dropdown {
@@ -1165,7 +1147,7 @@ body {
             }
 
             @include small-desktop {
-                display: flex; // Force show
+                display: flex;
                 text-decoration: none;
                 margin-right: 0;
 
@@ -1207,7 +1189,7 @@ body {
             visibility: hidden;
             position: absolute;
             top: 100%;
-            right: -50px; // Center roughly relative to button
+            right: -50px;
             transform: translateY(10px);
             background-color: white;
             border-radius: 8px;
@@ -1234,7 +1216,7 @@ body {
                 content: '';
                 position: absolute;
                 top: -8px;
-                right: 65px; // Approximate point to login button
+                right: 65px;
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
                 border-bottom: 8px solid white;
@@ -1267,7 +1249,7 @@ body {
                     display: flex;
                     align-items: center;
                     font-size: 16px;
-                    color: $dark-blue; // Primary blue
+                    color: $dark-blue;
                     text-decoration: none;
                     margin-bottom: 12px;
                     font-weight: 400;
@@ -1370,8 +1352,6 @@ body {
     }
 }
 
-// End of .nav-actions
-
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -1404,12 +1384,10 @@ body {
     }
 
     @include too-small-mobile {
-        font-size: 20px; // Slightly smaller hamburger
-        margin-right: 8px; // Reduced margin
+        font-size: 20px;
+        margin-right: 8px;
     }
 }
-
-// Mobile Search Row - Moved OUT of .mobile-menu-toggle
 .mobile-search-row {
     @include small-desktop {
         order: 4;
@@ -1568,11 +1546,11 @@ body {
                 }
 
                 @include mid-mobile {
-                    font-size: 15px; // Use mid-mobile
+                    font-size: 15px;
                 }
 
                 p {
-                    font-size: inherit; // Inherit to scale
+                    font-size: inherit;
                     margin-bottom: 16px;
                 }
 
@@ -1597,7 +1575,6 @@ body {
                     width: 100%;
                 }
 
-                // Buttons are handled by global .btn styles now to ensure consistency "same to same"
             }
         }
 
@@ -1640,20 +1617,18 @@ body {
         cursor: pointer;
         display: block;
         transition: transform 0.3s ease;
-        // box-shadow: 0 4px 12px rgba(1, 118, 211, 0.3); // Optional: add shadow to image if it doesn't have one
         border-radius: 50px;
 
         .chat-img {
             display: block;
-            height: 65px; // Reduced size as requested (was 50px)
+            height: 65px;
             width: 230px;
-            border-radius: 50px; // Curved shape corners
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Add shadow to image
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         &:hover {
             transform: translateY(-2px);
-            // box-shadow: 0 6px 16px rgba(1, 118, 211, 0.4);
         }
 
         @include mobile {
@@ -1671,7 +1646,6 @@ body {
     text-align: center;
 }
 
-// Starter Suite Section
 .starter-suite {
     padding: 80px 0;
     overflow: hidden;
@@ -1792,16 +1766,13 @@ body {
                 align-items: center;
 
                 @include small-tab {
-                    // ensure consistent alignment
                 }
 
                 @include mobile {
                     flex-direction: column;
-                    align-items: center; // Full width buttons
+                    align-items: center;
                     width: 100%;
                 }
-
-                // Uses global .btn
             }
         }
     }
@@ -1973,14 +1944,12 @@ body {
     margin-bottom: 40px;
 }
 
-// Industries Section
 .industries-section {
     background-color: $text-white;
 
-    // Use wider container as requested to reduce side gaps
     .sf-container {
         max-width: 1400px;
-        width: 95%; // Ensure it takes up most space on smaller wide screens too
+        width: 95%;
     }
 
     .section-header {
@@ -2008,7 +1977,7 @@ body {
     .industries-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px; // Reduced gap further 
+        gap: 20px;
         max-width: 100%;
 
         @include mid-desktop {
@@ -2039,7 +2008,7 @@ body {
             transition: all 0.3s;
             background: $text-white;
             min-height: 340px;
-            position: relative; // Needed for absolute positioning of visual
+            position: relative;
 
             &:hover {
                 box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
@@ -2051,7 +2020,7 @@ body {
                 padding: 24px;
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1; // Make content fill space to push link down
+                flex-grow: 1;
                 z-index: 2;
 
                 h3 {
@@ -2074,11 +2043,11 @@ body {
                     text-decoration: underline;
                     font-size: 15px;
                     text-decoration-thickness: 1px;
-                    margin-top: auto; // Push to bottom
-                    align-self: flex-start; // Align left
-                    z-index: 10; // Ensure clickable
+                    margin-top: auto;
+                    align-self: flex-start;
+                    z-index: 10;
                     position: relative;
-                    max-width: 65%; // Prevent overlap with the icon area
+                    max-width: 65%;
 
                     &:hover {
                         color: $primary-color;
@@ -2092,20 +2061,19 @@ body {
                 bottom: 0;
                 right: 0;
                 width: 100%;
-                height: 150px; // Ensure height covers the area
-                pointer-events: none; // Let clicks pass through if needed (though link is separate)
+                height: 150px;
+                pointer-events: none;
 
-                // The wave background container
                 .wave-bg {
-                    display: none; // Hiding the old div based wave if we are using the pseudo element or image
+                    display: none;
                 }
 
                 // Cloud shape background using Salesforce logo mask
                 &::after {
                     content: '';
                     position: absolute;
-                    bottom: -30%; // Push down to hide bottom part of cloud if needed, adj for look
-                    right: -20%; // Push right
+                    bottom: -30%;
+                    right: -20%;
                     width: 200px;
                     height: 200px;
 
@@ -2121,14 +2089,12 @@ body {
                     opacity: 1;
                 }
 
-                // Removed the ::before gradient overlay as we use solid/masked shape now
-
                 .ind-icon {
                     position: absolute;
                     bottom: 25px;
                     right: 25px;
-                    width: 64px; // Increased size
-                    height: 64px; // Increased size
+                    width: 64px;
+                    height: 64px;
                     background: $text-white;
                     border-radius: 50%;
                     display: flex;
@@ -2138,7 +2104,7 @@ body {
                     z-index: 3;
 
                     img {
-                        width: 36px; // Increased icon size
+                        width: 36px;
                         height: 36px;
                         object-fit: contain;
                     }
@@ -2230,9 +2196,8 @@ body {
     }
 }
 
-// Trailhead Section (preceded by shared button styles)
 .btn {
-    padding: 10px 24px; // Matched looking padding
+    padding: 10px 24px;
     border-radius: 4px;
     font-weight: 700;
     font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
@@ -2241,14 +2206,14 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; // Space between text and icon
+    gap: 8px;
     cursor: pointer;
     font-size: 16px;
     line-height: 1.5;
-    border: 1px solid transparent; // Base border
+    border: 1px solid transparent;
 
     @include mid-mobile {
-        width: fit-content; // Set to fit-content to avoid overly large buttons on small screens
+        width: fit-content;
         justify-content: center;
     }
 
@@ -2258,7 +2223,6 @@ body {
         height: 20px;
         transition: transform 0.2s ease;
         vertical-align: middle;
-        // Icon is naturally white. Turn it to $PRIMARY-COLOR (Salesforce Blue)
         filter: brightness(0) invert(53%) sepia(65%) saturate(2641%) hue-rotate(167deg) brightness(96%) contrast(101%);
     }
 
@@ -2274,7 +2238,7 @@ body {
         border-color: $dark-blue;
 
         .icon-right {
-            filter: none; // Keep it white on blue background
+            filter: none;
         }
 
         &:hover {
@@ -2349,8 +2313,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center; // Centered content as per design usually for Trailhead items inside, wait users image shows left aligned content?
-            // Image 3 shows: Left aligned title/text/link. Centered/Top image.
+            text-align: center;
 
             align-items: flex-start;
             text-align: left;
@@ -2365,7 +2328,7 @@ body {
                 margin-bottom: 24px;
                 width: 100%;
                 display: flex;
-                justify-content: center; // Icon centered
+                justify-content: center;
 
                 .badge-img {
                     width: 120px;
@@ -2437,18 +2400,17 @@ body {
 // Customers Section
 .customers-section {
     padding: 80px 0 200px;
-    background-color: $color-ebf5fa; // Light blue background often used with this forest image
+    background-color: $color-ebf5fa;
     background-image: url('../assets/backgrounds/pb-hp-logos-bg-2.webp');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
     border-radius: 0 0 461px 461px / 0 0 120px 120px;
-    /* Irregular/Asymmetric curve */
     position: relative;
     overflow: hidden;
 
     .container-fluid {
-        max-width: 1400px; // Increased width for 6 items
+        max-width: 1400px;
     }
 
     h2 {
@@ -2482,26 +2444,24 @@ body {
             height: 100px;
             transition: all 0.3s;
 
-            // Flex widths for grid behavior
-            width: calc((100% - 120px) / 6); // 6 items: 5 gaps of 24px -> 120px
+            width: calc((100% - 120px) / 6);
 
             @include small-desktop {
-                width: calc((100% - 72px) / 4); // 4 items: 3 gaps of 24px -> 72px
+                width: calc((100% - 72px) / 4);
             }
 
             @include small-tab {
-                width: calc((100% - 48px) / 3); // 3 items: 2 gaps of 24px -> 48px
+                width: calc((100% - 48px) / 3);
             }
 
             @include mobile {
-                width: calc((100% - 24px) / 2); // 2 items: 1 gap of 24px -> 24px
+                width: calc((100% - 24px) / 2);
             }
 
             img {
                 max-width: 100%;
                 max-height: 60px;
                 object-fit: contain;
-                // Gray scale is common but let's leave it colored if images are colored
             }
 
             &:hover {
@@ -2553,9 +2513,6 @@ body {
         }
 
         @include small-desktop {
-            // Keep 4 columns but tighter? Or switch to 2 if too tight
-            // Let's check image size. Images are likely wide.
-            // Switching to 2 columns for better readability on small desktop/tablets
             grid-template-columns: repeat(2, 1fr);
             gap: 48px;
             max-width: 100%;
@@ -2574,20 +2531,10 @@ body {
         .grow-item {
             display: flex;
             flex-direction: column;
-            align-items: center; // Centered
-            text-align: center; // Centered text unless specified otherwise, image implies centered
+            align-items: center;
+            text-align: center;
 
-            // If the user wants left align for links, we can adjust, but image shows centered
-            // Actually the image shows the link is left aligned relative to the text?
-            // "I'm move cursor on sell faster option so there invisible line bottom and change color."
-
-            // Looking at the image uploaded by user:
-            // The text "Sell faster" is underlined and seems left aligned or centered under the image.
-            // In the image provided (Step 31), the text is Left Aligned relative to the image block?
-            // Actually they look centered under the illustrations.
-            // Let's stick to left align as per standard Salesforce grids, oop wait, image shows LEFT aligned text below the image.
-
-            align-items: flex-start; // Align everything left
+            align-items: flex-start;
             text-align: left;
 
             .grow-visual {
@@ -2598,7 +2545,6 @@ body {
                     width: 100%;
                     height: auto;
                     display: block;
-                    // Images in the user upload have a specific shape/blob background built-in
                     transition: transform 0.3s ease;
                 }
             }
@@ -2636,7 +2582,7 @@ body {
 
 .free-trial-section {
     position: relative;
-    z-index: 2; // Ensure it sits above any backgrounds if necessary
+    z-index: 2;
 
     .sf-container {
         max-width: 1200px;
@@ -2651,7 +2597,7 @@ body {
         justify-content: space-between;
         overflow: hidden;
         min-height: 400px;
-        padding: 0 0 0 80px; // Padding left only, image goes to edge
+        padding: 0 0 0 80px;
 
         @include small-desktop {
             padding: 0 0 0 48px;
@@ -2746,7 +2692,7 @@ body {
         padding: 40px 0 0;
         position: relative;
         overflow: hidden;
-        background-color: $color-ebf5fa; // Fallback
+        background-color: $color-ebf5fa;
 
         .promo-container {
             display: flex;
@@ -2783,7 +2729,7 @@ body {
 
             .promo-image {
                 align-self: flex-end;
-                margin-bottom: -10px; // Slight adjustment to sit on bottom
+                margin-bottom: -10px;
                 z-index: 1;
 
                 img {
@@ -2947,13 +2893,11 @@ body {
 
 // Values Section
 .values-section {
-    // background-image: url('../assets/backgrounds/pb-hp-products-bg-2.webp') no-repeat center/cover; 
-    // Image is now explicit in HTML
     background-color: $text-white;
     padding-bottom: 0;
     height: 100%;
-    position: relative; // Context for image if needed
-    padding-bottom: 0; // Bottom visual touches footer or bottom
+    position: relative;
+    padding-bottom: 0;
 
     .section-title {
         font-size: 38px;
@@ -2994,19 +2938,19 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 320px; // Fixed width for consistent card sizes
+            width: 320px;
             max-width: 100%;
 
             .value-card {
                 background: $text-white;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); // Soft shadow
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
                 border-radius: 16px;
                 width: 280px;
                 height: 280px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative; // For decorations
+                position: relative;
                 margin-bottom: 32px;
                 transition: transform 0.3s ease;
 
@@ -3014,7 +2958,6 @@ body {
                     transform: translateY(-5px);
                 }
 
-                // Inner Stats/Text
                 h3.stat-text {
                     font-size: 64px;
                     color: $navy-blue;
@@ -3029,11 +2972,10 @@ body {
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    font-family: 'serif'; // Approximation for Fortune logo
+                    font-family: 'serif';
                     z-index: 2;
                 }
 
-                // Decorations
                 .decoration {
                     position: absolute;
                     top: 0;
@@ -3068,7 +3010,7 @@ body {
 
     .curved-visual {
         width: 100%;
-        margin-bottom: 7%; // Reduced overlap so card sits lower
+        margin-bottom: 7%;
         position: relative;
         z-index: 1;
 
@@ -3076,10 +3018,6 @@ body {
             width: 100%;
             height: auto;
             display: block;
-            // Create irregular curved bottom
-            // Salesforce style often: border-radius: 0 0 50% 50% / 0 0 100px 100px;
-            // Trying a more specific irregular loop if requested, usually requires SVG clip-path.
-            // Using a strong asymmetric border radius for "irregular" look:
             border-radius: 0 0 70% 30% / 0 0 10% 10%;
         }
     }
@@ -3112,8 +3050,8 @@ body {
         @include mid-mobile {
             max-width: 95%;
             padding: 40px 16px;
-            background-position: 92% bottom; // Focus on the man on the right
-            background-size: 160% auto; // Zoom in more for smaller screens
+            background-position: 92% bottom;
+            background-size: 160% auto;
         }
 
         .q-content {
@@ -3137,7 +3075,7 @@ body {
 
                 @include small-tab {
                     font-size: 30px;
-                    margin-top: -60px; // Pull up slightly into the sky area
+                    margin-top: -60px;
                 }
 
                 @include mobile {
@@ -3235,7 +3173,7 @@ body {
         max-width: 100%;
         gap: 40px;
         justify-content: space-between;
-        padding: 0 120px; // Matching hero padding
+        padding: 0 120px;
 
         @include desktop {
             padding: 0 40px;
@@ -3284,10 +3222,10 @@ body {
                 a {
                     color: $text-dark;
                     transition: color 0.2s;
-                    text-decoration: none; // Remove underline from icon links
+                    text-decoration: none;
 
                     i {
-                        font-size: 28px; // FontAwesome uses font-size
+                        font-size: 28px;
                         color: $color-4b4b4b;
                         transition: color 0.2s;
 
@@ -3318,7 +3256,7 @@ body {
                 font-weight: 700;
                 color: black;
                 font-size: 16px;
-                text-decoration: underline; // Add underline
+                text-decoration: underline;
 
                 @include mid-desktop {
                     font-size: 22px;
@@ -3396,7 +3334,7 @@ body {
     .footer-bottom {
         background-color: $navy-blue;
         color: $text-white;
-        padding: 10px 0 20px; // Reduced height
+        padding: 10px 0 20px;
         width: 100%;
         position: relative;
 
@@ -3410,9 +3348,9 @@ body {
         .footer-bottom-content {
             display: flex;
             flex-direction: column;
-            gap: 8px; // Reduced gap between rows
-            line-height: 1.2; // Tighter line height
-            max-width: 100%; // Full width
+            gap: 8px;
+            line-height: 1.2;
+            max-width: 100%;
             padding: 0 120px;
 
             @include desktop {
@@ -3450,7 +3388,7 @@ body {
                 }
 
                 img {
-                    filter: invert(90%); // Change black to bright white
+                    filter: invert(90%);
                     width: 24px;
                     height: 24px;
 
@@ -3554,7 +3492,7 @@ body {
 
         .copyright {
             text-align: left;
-            margin-left: 185px; // Default for screens > 1500px
+            margin-left: 185px;
 
             @include large-desktop {
                 text-align: left;
@@ -3870,9 +3808,7 @@ body {
     }
 }
 
-// Floating Chat Button
 
-// Global Footer Alignment Fixes for Privacy Icon
 .contact-footer-bar .footer-legal-links a,
 .news-footer .legal-links li a,
 .legal-links a {
@@ -3891,7 +3827,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: $color-2313d4; // Salesforce Blue
+    background-color: $color-2313d4;
     color: white;
     border: none;
     border-radius: 10px;
@@ -3935,12 +3871,10 @@ body {
 // Contact Page Styles (New)
 // =========================================
 .contact-main-section {
-    background-color: $color-d8f0ff; // Sky blue background
+    background-color: $color-d8f0ff;
     padding: 80px 0;
     position: relative;
     font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, -apple-system, sans-serif;
-
-    // Optional cloud background
     background-image: url('../assets/backgrounds/sky.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -3970,14 +3904,13 @@ body {
         margin-bottom: 0;
 
         &.form-card {
-            // Form specific styles
             position: relative;
         }
 
         &.info-card {
-            height: auto; // Stacked nature
+            height: auto;
             padding: 32px;
-            margin-bottom: 24px; // Spacing between stacked cards
+            margin-bottom: 24px;
         }
 
         .card-title {
@@ -4142,8 +4075,6 @@ body {
     }
 }
 
-// Adjust footer for Contact Page to be full width/normal
-// Mobile Footer Visibility - As requested for breakpoints 320px to 992px
 @include big-tab {
     .main-footer {
         padding-top: 0 !important;
@@ -4166,7 +4097,7 @@ body {
         border-top: none;
 
         .footer-top {
-            display: flex !important; // Ensure flex for standard footer
+            display: flex !important;
         }
     }
 }
