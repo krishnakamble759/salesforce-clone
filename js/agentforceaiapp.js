@@ -1,8 +1,3 @@
-/**
- * Agentforce & AI App Development Page Functionality
- */
-
-// Agentforce & AI App Development Page View Handler
 export function initAgentforceAiApp() {
     const mainView = document.getElementById('main-view');
     const guideView = document.getElementById('guide-view');
@@ -144,8 +139,6 @@ export function initAgentforceAiAppSubNav() {
         }
     });
 
-    // Scroll handling for sticky/fixed header interaction if needed
-    // (Already handled by CSS position: fixed)
 }
 
 // Initialize Agentforce AI App FAQ Accordion
@@ -215,17 +208,15 @@ export function initAgentforceAppToolsCarousel() {
 
         const maxIndex = totalCards - visibleCards;
 
-        // Safety check
         if (currentIndex > maxIndex) currentIndex = maxIndex;
         if (currentIndex < 0) currentIndex = 0;
 
-        const gap = 24; // matches SCSS
+        const gap = 24;
         const cardWidth = cards[0].offsetWidth;
         const offset = currentIndex * (cardWidth + gap);
 
         track.style.transform = `translateX(-${offset}px)`;
 
-        // Update Button Visiblity / Opacity
         if (currentIndex === 0) {
             prevBtn.style.opacity = '0';
             prevBtn.style.pointerEvents = 'none';
@@ -242,7 +233,6 @@ export function initAgentforceAppToolsCarousel() {
             nextBtn.style.pointerEvents = 'auto';
         }
 
-        // Update Scrollbar
         if (scrollbarThumb) {
             const thumbWidthPercent = (visibleCards / totalCards) * 100;
             scrollbarThumb.style.width = `${thumbWidthPercent}%`;
@@ -267,7 +257,6 @@ export function initAgentforceAppToolsCarousel() {
         updateCarousel();
     });
 
-    // Scrollbar Dragging & Clicking
     if (scrollbarThumb) {
         const scrollbarContainer = scrollbarThumb.parentElement;
         let isDragging = false;
@@ -291,14 +280,10 @@ export function initAgentforceAppToolsCarousel() {
             const thumbWidth = scrollbarThumb.offsetWidth;
             const maxThumbLeftPercent = 100 - (thumbWidth / containerWidth) * 100;
 
-            // Calculate new left percentage
             let newLeftPercent = startLeft + (deltaX / containerWidth) * 100;
 
-            // Constrain
             if (newLeftPercent < 0) newLeftPercent = 0;
             if (newLeftPercent > maxThumbLeftPercent) newLeftPercent = maxThumbLeftPercent;
-
-            // Map percent to currentIndex
             let visibleCards = 3;
             if (window.innerWidth <= 768) visibleCards = 1;
             else if (window.innerWidth <= 1024) visibleCards = 2;
@@ -306,7 +291,6 @@ export function initAgentforceAppToolsCarousel() {
 
             if (maxIndex > 0) {
                 currentIndex = Math.round((newLeftPercent / maxThumbLeftPercent) * maxIndex);
-                // Update visually immediately
                 scrollbarThumb.style.left = `${newLeftPercent}%`;
 
                 const gap = 24;
@@ -322,11 +306,10 @@ export function initAgentforceAppToolsCarousel() {
                 scrollbarThumb.style.cursor = 'pointer';
                 scrollbarThumb.style.transition = '';
                 document.body.style.userSelect = '';
-                updateCarousel(); // Final snap
+                updateCarousel();
             }
         });
 
-        // Click on scrollbar container to jump
         scrollbarContainer.addEventListener('click', (e) => {
             if (e.target === scrollbarThumb) return;
 

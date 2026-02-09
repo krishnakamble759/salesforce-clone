@@ -11,13 +11,6 @@ import { initSmallBusinessPage, initSbSpecifics, initSmbTabs, initFaqTabs, initF
 console.log('Salesforce Website: main.js is loading...');
 console.error('DEBUG: main.js execution started');
 
-// --- FAQ LOGIC (Consolidated & Delegated) ---
-// Note: Specific FAQ logic is now handled in initMarketingFaq() to avoid conflicts.
-
-// --- SERVICE PAGE TABS LOGIC MOVED TO service.js ---
-// initServiceTabs() is called in init()
-// ------------------------------------------
-
 // DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Content Loaded');
@@ -39,11 +32,6 @@ async function loadSharedHeader() {
     const hasOffcanvas = !!document.getElementById('productsOffcanvas');
     const hasOverlay = !!document.getElementById('productsOffcanvasOverlay');
 
-    // If both header and offcanvas are present, we probably don't need to load from index.html
-    // We should proceed to checks even if some parts exist, to ensure Chatbot is injected.
-    // if (hasHeader && hasOffcanvas && hasOverlay) return;
-
-    // Do not load header on Get Free CRM page (landing page style)
     if (document.body.classList.contains('get-free-crm-page')) return;
 
     try {
@@ -202,18 +190,9 @@ async function init() {
 function initLoginDropdown() {
     const loginWrapper = document.querySelector('.login-wrapper');
     if (loginWrapper) {
-        // Simple log for verification or future mobile click-toggle logic
         console.log('Login dropdown initialized');
     }
 }
-
-// Agentforce App Tools Carousel logic moved to agentforceaiapp.js
-
-
-
-
-
-// SALES CLOUD SLIDER LOGIC MOVED TO sales.js
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -262,7 +241,7 @@ function initMobileMenu() {
         if (mobileLoginTrigger && mainMenuView && loginMenuView) {
             mobileLoginTrigger.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation(); // Prevent closing menu
+                e.stopPropagation();
                 mainMenuView.style.display = 'none';
                 loginMenuView.style.display = 'block';
             });
@@ -271,7 +250,7 @@ function initMobileMenu() {
         if (backToMainMenu && mainMenuView && loginMenuView) {
             backToMainMenu.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation(); // Prevent closing menu
+                e.stopPropagation();
                 loginMenuView.style.display = 'none';
                 mainMenuView.style.display = 'block';
             });
@@ -280,7 +259,6 @@ function initMobileMenu() {
         // Close menu when a link is clicked
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // Don't close if it's a sub-menu trigger (like Products), login trigger, or back button
                 const isProductsTrigger = link.id === 'productsMenuTrigger' || link.closest('#productsMenuTrigger');
                 const isLoginTrigger = link.id === 'mobileLoginTrigger' || link.closest('#mobileLoginTrigger');
                 const isBackBtn = link.id === 'backToMainMenu' || link.classList.contains('back-to-main');
@@ -297,7 +275,6 @@ function initMobileMenu() {
                 }
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
 
-                // Reset to main view for next time
                 if (mainMenuView && loginMenuView) {
                     mainMenuView.style.display = 'block';
                     loginMenuView.style.display = 'none';
@@ -306,15 +283,6 @@ function initMobileMenu() {
         });
     }
 }
-
-// Marketing Discover Tabs moved to marketing.js
-
-// Marketing FAQ logic moved to marketing.js
-
-/**
- * Initialize Tableau FAQ Accordion
- */
-
 
 // Video Player
 function initVideoPlayer() {
@@ -413,7 +381,6 @@ function initSmoothScroll() {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
-            // Skip if href is just "#"
             if (href === '#') {
                 e.preventDefault();
                 return;
@@ -453,7 +420,6 @@ function initHeaderScroll() {
 
 // Dropdown Menu
 function initDropdownMenu() {
-    // Only target custom dropdowns that don't have Bootstrap attributes
     const dropdownToggles = document.querySelectorAll('.nav-item.has-dropdown > .nav-link');
 
     dropdownToggles.forEach(toggle => {
@@ -486,14 +452,12 @@ function initSearchBox() {
     const searchClose = document.querySelector('.search-close');
 
     if (searchBox && searchInput && searchDropdown) {
-        // Show dropdown when clicking on search box
         searchInput.addEventListener('click', () => {
             searchBox.classList.add('active');
             searchDropdown.classList.add('show');
             if (searchClose) searchClose.style.display = 'block';
         });
 
-        // Show dropdown when typing
         searchInput.addEventListener('input', (e) => {
             if (e.target.value.trim().length > 0) {
                 searchDropdown.classList.remove('show');
@@ -502,7 +466,6 @@ function initSearchBox() {
             }
         });
 
-        // Handle Enter key
         searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 const message = searchInput.value.trim();
@@ -512,7 +475,6 @@ function initSearchBox() {
             }
         });
 
-        // Close button
         if (searchClose) {
             searchClose.addEventListener('click', () => {
                 searchBox.classList.remove('active');
@@ -522,7 +484,6 @@ function initSearchBox() {
             });
         }
 
-        // Handle option selection
         searchOptions.forEach(option => {
             option.addEventListener('click', () => {
                 const message = option.getAttribute('data-message');
@@ -592,11 +553,6 @@ function sendToChatbot(message, searchBox, searchDropdown, searchInput, searchCl
     }
 }
 
-// Products Offcanvas Menu
-// Products Offcanvas Menu logic moved to products.js
-
-// Discover Carousel logic moved to datacloud.js
-
 // Export functions if needed
 export {
     initDiscoverCarousel,
@@ -613,7 +569,6 @@ export {
     initAiSubNav
 };
 
-// Agentforce related functionality moved to agentforce.js
 // Call globals init
 initAgentforceGlobals();
 
@@ -631,14 +586,6 @@ function initNewsScrollProgress() {
 }
 initNewsScrollProgress();
 
-
-// Toggle FAQ logic moved to agentforce.js
-
-// Loading overlay logic moved to agentforce.js
-
-// Explore Carousel and Unlock logic moved to agentforce.js
-
-// legacy initFaqAccordion removed
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     initExploreCarousel();
@@ -692,11 +639,6 @@ window.initAiSubNav = initAiSubNav;
 
 window.initSalesSubNav = initSalesSubNav;
 
-// Initialize Commerce Sub-nav Toggle (Global for debugging/external access)
-
-
-// Initialize Marketing Sub-nav Toggle
-// Marketing sub-nav logic moved to marketing.js
 window.initMarketingSubNav = initMarketingSubNav;
 
 // Initialized service logic moved to service.js

@@ -252,24 +252,6 @@ export function initDataCloudFaq() {
                 e.preventDefault();
                 const isActive = item.classList.contains('active');
 
-                // Optional: Close other open items (uncomment if single-open behavior is desired)
-                /*
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
-                        const otherBtn = otherItem.querySelector('.faq-question');
-                        if (otherBtn) {
-                            otherBtn.setAttribute('aria-expanded', 'false');
-                            const otherIcon = otherBtn.querySelector('i');
-                            if (otherIcon) {
-                                otherIcon.classList.replace('fa-minus', 'fa-plus');
-                            }
-                        }
-                    }
-                });
-                */
-
-                // Toggle current item
                 item.classList.toggle('active');
                 const nowActive = item.classList.contains('active');
                 questionBtn.setAttribute('aria-expanded', nowActive);

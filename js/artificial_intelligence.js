@@ -3,15 +3,10 @@
  */
 export function initArtificialIntelligencePage() {
     console.log('Initializing Artificial Intelligence Page...');
-    // init() and initChatWidget() are usually handled by main.js globally
-    // But we ensure local components are ready
     initAiSubNav();
     initAiFaq();
 }
 
-/**
- * Initialize AI Sub-nav Toggle
- */
 export function initAiSubNav() {
     console.log('Initializing AI Sub-nav...');
     const subNavTitleWrapper = document.querySelector('.ai-sub-nav .sub-nav-title');

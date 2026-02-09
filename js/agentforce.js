@@ -1,7 +1,3 @@
-/**
- * Agentforce Page Functionality
- */
-
 // Initialize all Agentforce functionality
 export function initAgentforceGlobals() {
     window.switchTab = switchTab;
@@ -12,10 +8,8 @@ export function initAgentforceGlobals() {
     window.switchUnlockTab = switchUnlockTab;
     window.showStory = (id) => switchTab(id);
 
-    // Add scroll listener for progress
     window.addEventListener('scroll', updateStoryProgress);
 
-    // Initialize Navigation
     initAgentforceNavigation();
 }
 
@@ -116,8 +110,6 @@ export function initAgentforceNavigation() {
     document.querySelectorAll('.accordion-nav').forEach(nav => {
         const firstItem = nav.querySelector('.accordion-item');
         if (firstItem) {
-            // Manually activate to avoid scroll or just click it and hack the scroll prevention?
-            // Let's just manually set classes to mimic click success without scrolling
             firstItem.classList.add('active');
             const targetId = firstItem.getAttribute('data-target');
             if (targetId) {
@@ -256,7 +248,7 @@ export function closeStory() {
 
 // Check for hash on load
 export function checkAgentforceHash() {
-    const hash = window.location.hash.substring(1); // Remove '#'
+    const hash = window.location.hash.substring(1);
     if (hash) {
         if (window.switchTab) {
             window.switchTab(hash);
@@ -340,11 +332,6 @@ function initStickyNav(navId, toggleId, dropdownId, sections) {
         }
 
         function handleStickyNavVisibility() {
-            // Determine relevant accordion nav (assumed previous sibling or close)
-            // In our HTML, sticky nav is after accordion-nav
-            // Simplified: Show if we are scrolled past the Hero/Intro.
-
-            // Check visibility of the parent view wrapper
             const parentView = stickySectionNav.closest('#view-story-detail') || stickySectionNav.closest('#view-story-lennar');
             if (parentView && window.getComputedStyle(parentView).display === 'none') {
                 // Not in this view, do nothing
@@ -425,18 +412,15 @@ export function showLoadingAndNavigate(targetTab) {
     const loadingOverlay = document.getElementById('loadingOverlay');
 
     if (loadingOverlay) {
-        // Show loading overlay
         loadingOverlay.classList.add('active');
 
-        // After 5 seconds, hide loading and navigate to target tab
         setTimeout(() => {
             loadingOverlay.classList.remove('active');
 
-            // Navigate to the target tab after loading completes
             if (window.switchTab) {
                 window.switchTab(targetTab);
             }
-        }, 5000); // 5 seconds
+        }, 5000);
     }
 }
 
@@ -578,7 +562,6 @@ export function initAgentforceSubNav() {
     document.addEventListener('click', (e) => {
         const toggle = e.target.closest('#agentforceAiAppNavToggle');
         if (toggle) {
-            // For large screens (>= 1440px), clicking the title should refresh/act as a link
             if (window.innerWidth >= 1440) {
                 window.location.reload();
                 return;
