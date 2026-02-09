@@ -26,6 +26,7 @@ export default defineConfig({
         assetsDir: 'assets',
         sourcemap: false,
         minify: 'esbuild',
+        assetsInlineLimit: 0,
         rollupOptions: {
             input: Object.fromEntries(
                 fs.readdirSync(resolve(__dirname, 'html'))
