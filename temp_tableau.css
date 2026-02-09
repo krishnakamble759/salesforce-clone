@@ -1,0 +1,1411 @@
+/* --- Sub Navigation --- */
+.tableau-sub-nav {
+  position: fixed;
+  top: 60px;
+  z-index: 990;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  width: 100%;
+  transition: top 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .tableau-sub-nav {
+    top: 130px;
+  }
+}
+@media (max-width: 340px) {
+  .tableau-sub-nav {
+    top: 125px;
+  }
+}
+@media (max-width: 320px) {
+  .tableau-sub-nav {
+    top: 125px;
+  }
+}
+.tableau-sub-nav .sub-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    min-height: 60px;
+    justify-content: flex-start;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .product-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: -150px;
+  height: 65px;
+  color: #032D60;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .product-name {
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 0;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .product-name .tableau-title-link {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #032D60;
+  text-decoration: none;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .product-name .tableau-title-link:hover {
+  text-decoration: underline;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .product-name .mobile-toggle-arrow {
+  display: none;
+  color: #032D60;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .product-name .mobile-toggle-arrow {
+    display: block;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .product-name.active .mobile-toggle-arrow {
+  transform: rotate(180deg);
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    height: auto;
+    border-top: 1px solid #eeeeee;
+    padding-bottom: 1rem;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+  }
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu.active {
+    display: flex;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f2f2f2;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a {
+  text-decoration: none;
+  color: #032D60;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: none;
+    justify-content: space-between;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a:hover, .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a.active {
+  color: #00A1E0;
+  border-bottom-color: #00A1E0;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a:hover, .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a.active {
+    border-bottom-color: transparent;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li a i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li.has-dropdown {
+  position: relative;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li.has-dropdown.active > a {
+  color: #00A1E0;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li.has-dropdown.active > a i {
+  transform: rotate(180deg);
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li.has-dropdown.active .sub-nav-dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FFFFFF;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown {
+    position: static;
+    box-shadow: none;
+    padding: 0 0 0 1rem;
+    border-radius: 0;
+    min-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #032D60;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a {
+    padding: 0.75rem 0;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a:hover {
+  background-color: #F3F3F3;
+  color: #032D60;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a:hover {
+    background-color: transparent;
+    color: #00A1E0;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a.view-all-link {
+  text-decoration: underline;
+  color: #032D60;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-left .sub-nav-menu li .sub-nav-dropdown a.view-all-link:hover {
+  color: #00A1E0;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-right {
+  display: flex;
+  align-items: center;
+  margin-right: -145px;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-right {
+    display: none;
+    width: 100%;
+    padding: 1rem 0 1.5rem 0;
+    margin-right: 0;
+  }
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-right.active {
+  display: block;
+}
+.tableau-sub-nav .sub-nav-content .sub-nav-right .try-free-btn {
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .tableau-sub-nav .sub-nav-content .sub-nav-right .try-free-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #0070d2;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 4px;
+  }
+  .tableau-sub-nav .sub-nav-content .sub-nav-right .try-free-btn:hover {
+    background-color: #005fb2;
+    text-decoration: none;
+  }
+}
+
+/* --- Banner --- */
+.tableau-banner {
+  background-color: #032D60;
+  /* Dark blue background */
+  color: #FFFFFF;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+@media (max-width: 500px) {
+  .tableau-banner {
+    margin-top: 80px;
+  }
+}
+.tableau-banner p {
+  margin: 0;
+}
+.tableau-banner p a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+}
+.tableau-banner p a:hover {
+  text-decoration: none;
+}
+
+/* --- Hero Section --- */
+.tableau-hero {
+  position: relative;
+  padding: 4rem 0 6rem;
+  overflow: hidden;
+  background-image: url("../assets/Tableau/sfdc-analytics-overview-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tableau-hero .hero-bg-gradient {
+  display: none;
+}
+.tableau-hero .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .tableau-hero .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+.tableau-hero .hero-grid .hero-content {
+  z-index: 1;
+}
+.tableau-hero .hero-grid .hero-content .hero-eyebrow {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tableau-hero .hero-grid .hero-content .hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #032D60;
+  margin-bottom: 1.5rem;
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+}
+@media (max-width: 1200px) {
+  .tableau-hero .hero-grid .hero-content .hero-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .tableau-hero .hero-grid .hero-content .hero-title {
+    font-size: 2.5rem;
+  }
+}
+.tableau-hero .hero-grid .hero-content .hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+@media (max-width: 576px) {
+  .tableau-hero .hero-grid .hero-content .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.tableau-hero .hero-grid .hero-content .hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .tableau-hero .hero-grid .hero-content .hero-actions {
+    justify-content: center;
+  }
+}
+.tableau-hero .hero-grid .hero-content .hero-actions .btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+.tableau-hero .hero-grid .hero-content .hero-actions .btn-primary {
+  background-color: #00A1E0;
+  border: 1px solid #00A1E0;
+  color: white;
+}
+.tableau-hero .hero-grid .hero-content .hero-actions .btn-primary:hover {
+  background-color: rgb(0, 124.34375, 173);
+  border-color: rgb(0, 124.34375, 173);
+  text-decoration: none;
+}
+.tableau-hero .hero-grid .hero-content .hero-actions .btn-outline {
+  background-color: transparent;
+  border: 1px solid #00A1E0;
+  color: #00A1E0;
+}
+.tableau-hero .hero-grid .hero-content .hero-actions .btn-outline:hover {
+  background-color: #E8F4F8;
+  text-decoration: none;
+}
+.tableau-hero .hero-grid .hero-visual {
+  position: relative;
+  z-index: 1;
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper {
+  position: relative;
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .video-preview-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .video-preview-card .hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .video-preview-card .play-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .video-preview-card .play-button-wrapper:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: rgba(0, 0, 0, 0.7);
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .video-preview-card .play-button-wrapper .play-icon {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  padding-left: 5px;
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .floating-badge {
+  position: absolute;
+  bottom: 40px;
+  right: -20px;
+  background: transparent;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 576px) {
+  .tableau-hero .hero-grid .hero-visual .hero-image-wrapper .floating-badge {
+    right: 0;
+    bottom: 0px;
+  }
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .floating-badge .badge-text {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tableau-hero .hero-grid .hero-visual .hero-image-wrapper .floating-badge {
+  /* Creating the starburst/sparkle effect if possible with CSS or SVG background, 
+     for now just text placement as per screenshot roughly */
+}
+
+/* --- Dreamforce Promo Section --- */
+.tableau-dreamforce-promo {
+  background-color: #032D60;
+  /* Dark Blue */
+  padding: 0;
+  color: #FFFFFF;
+  width: 100%;
+}
+.tableau-dreamforce-promo .dreamforce-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .tableau-dreamforce-promo .dreamforce-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .tableau-dreamforce-promo .dreamforce-grid .promo-image img {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-content {
+  padding: 3rem 0;
+  padding-right: 2rem;
+}
+@media (max-width: 768px) {
+  .tableau-dreamforce-promo .dreamforce-grid .promo-content {
+    padding: 0 1rem;
+  }
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-content .promo-title {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+@media (max-width: 576px) {
+  .tableau-dreamforce-promo .dreamforce-grid .promo-content .promo-title {
+    font-size: 1.75rem;
+  }
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-content .promo-desc {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+@media (max-width: 768px) {
+  .tableau-dreamforce-promo .dreamforce-grid .promo-content .promo-desc {
+    max-width: 100%;
+  }
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-content .btn-light-custom {
+  background-color: #FFFFFF;
+  color: #0176d3;
+  /* Salesforce Blue */
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #FFFFFF;
+  transition: all 0.3s ease;
+}
+.tableau-dreamforce-promo .dreamforce-grid .promo-content .btn-light-custom:hover {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+/* --- Analytics Stats Section --- */
+.tableau-stats {
+  padding: 5rem 0;
+  background-color: #FFFFFF;
+}
+.tableau-stats .stats-header {
+  margin-bottom: 4rem;
+}
+.tableau-stats .stats-header .stats-icon {
+  margin-bottom: 24px;
+  /* If using SVG image directly */
+}
+.tableau-stats .stats-header .stats-icon img {
+  display: inline-block;
+}
+.tableau-stats .stats-header .section-title {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #032D60;
+}
+@media (max-width: 576px) {
+  .tableau-stats .stats-header .section-title {
+    font-size: 2rem;
+  }
+}
+.tableau-stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .tableau-stats .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+}
+.tableau-stats .stats-grid .stat-card {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  height: 300px;
+  /* Fixed height for cards */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-color: #fcece6;
+  /* Fallback color matching gradient */
+}
+.tableau-stats .stats-grid .stat-card.stat-card-1 {
+  background-image: url("../assets/Tableau/Stat_top_1.webp");
+}
+.tableau-stats .stats-grid .stat-card.stat-card-2 {
+  background-image: url("../assets/Tableau/Stat_top_2.webp");
+}
+.tableau-stats .stats-grid .stat-card.stat-card-3 {
+  background-image: url("../assets/Tableau/Stat_top_3.webp");
+}
+.tableau-stats .stats-grid .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.tableau-stats .stats-grid .stat-card .stat-content .stat-number {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #032D60;
+  /* Dark Blue */
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.tableau-stats .stats-grid .stat-card .stat-content .stat-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #032D60;
+  line-height: 1.3;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* --- Ask Agentforce Floating Button --- */
+.ask-agentforce-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.ask-agentforce-floating .btn-primary {
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 112, 210, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+.ask-agentforce-floating .btn-primary i {
+  font-size: 1.25rem;
+}
+
+.tableau-stats .source-text {
+  margin-top: 3rem;
+}
+.tableau-stats .source-text p {
+  font-size: 0.75rem;
+  color: #444444;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- Tableau Solutions Section --- */
+.tableau-solutions {
+  padding: 6rem 0 12rem;
+  /* Extra padding at bottom for background image visibility */
+  position: relative;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  /* Prevent horizontal scroll if background image is wide */
+}
+.tableau-solutions .section-title {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 5rem;
+}
+@media (max-width: 576px) {
+  .tableau-solutions .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+.tableau-solutions .solutions-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  /* Above background */
+}
+@media (max-width: 768px) {
+  .tableau-solutions .solutions-row {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+}
+.tableau-solutions .solutions-row .row-header {
+  width: 25%;
+  padding-right: 2rem;
+}
+@media (max-width: 768px) {
+  .tableau-solutions .solutions-row .row-header {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+.tableau-solutions .solutions-row .row-header h3 {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #032D60;
+  /* Dark Blue */
+  line-height: 1.2;
+}
+@media (max-width: 576px) {
+  .tableau-solutions .solutions-row .row-header h3 {
+    font-size: 1.5rem;
+  }
+}
+.tableau-solutions .solutions-row .cards-wrapper {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .tableau-solutions .solutions-row .cards-wrapper {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .tableau-solutions .solutions-row .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.tableau-solutions .solution-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border-top: 6px solid #ff774a;
+  /* Orange border */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px;
+}
+.tableau-solutions .solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.tableau-solutions .solution-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 1rem;
+}
+.tableau-solutions .solution-card p {
+  font-size: 0.95rem;
+  color: #333333;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  /* Pushes button down */
+}
+.tableau-solutions .solution-card .card-link {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #032D60;
+  text-decoration: underline;
+}
+.tableau-solutions .solution-card .card-link:hover {
+  color: #00A1E0;
+  text-decoration: none;
+}
+.tableau-solutions .solutions-bg-layer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  /* Adjust height as needed */
+  background-image: url("../assets/Tableau/product-portfolio-analytics-category-alt-background_09227b.webp");
+  background-size: 100% 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 576px) {
+  .tableau-solutions .solutions-bg-layer {
+    height: 30%;
+    /* Smaller on mobile */
+    background-size: 200%;
+    /* Zoom in if needed */
+  }
+}
+
+/* --- Common Utilities for New Sections --- */
+.section-padding {
+  padding: 6rem 0;
+}
+@media (max-width: 576px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+}
+.two-col-grid.align-center {
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .two-col-grid.reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.two-col-grid .col-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.two-col-grid .section-heading {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #032D60;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 576px) {
+  .two-col-grid .section-heading {
+    font-size: 1.75rem;
+  }
+}
+.two-col-grid .section-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.two-col-grid .btn-outline-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 24px;
+  border: 1px solid #032D60;
+  color: #032D60;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.two-col-grid .btn-outline-custom:hover {
+  background-color: #032D60;
+  color: #FFFFFF;
+}
+.two-col-grid .btn-primary-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 24px;
+  background-color: #032D60;
+  border: 1px solid #032D60;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.two-col-grid .btn-primary-custom:hover {
+  background-color: rgb(1.4545454545, 21.8181818182, 46.5454545455);
+}
+
+/* --- Gartner Section --- */
+.tableau-gartner {
+  background-color: #FFFFFF;
+}
+
+/* --- Customer Story Section --- */
+.tableau-customer-story .story-card {
+  background-color: #fff1ed;
+  /* Light peach/reddish */
+  border-radius: 16px;
+  padding: 4rem;
+}
+@media (max-width: 576px) {
+  .tableau-customer-story .story-card {
+    padding: 2rem;
+  }
+}
+.tableau-customer-story .story-card .quote-icon {
+  font-size: 3rem;
+  color: #00A1E0;
+  margin-bottom: 1.5rem;
+}
+.tableau-customer-story .story-card .quote-text {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #032D60;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .tableau-customer-story .story-card .quote-text {
+    font-size: 1.25rem;
+  }
+}
+.tableau-customer-story .story-card .author-info {
+  margin-bottom: 2rem;
+  color: #032D60;
+}
+.tableau-customer-story .story-card .author-info strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+.tableau-customer-story .story-card .author-info p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.tableau-customer-story .story-card .rounded-circle-custom {
+  border-radius: 50%;
+  max-width: 350px;
+}
+
+/* --- CTO Section --- */
+.tableau-cto {
+  background-color: #FFFFFF;
+}
+
+/* --- Data Culture Playbook Section --- */
+.tableau-playbook {
+  background-color: #FFFFFF;
+}
+.tableau-playbook .playbook-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 0 4rem;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .tableau-playbook .playbook-card {
+    padding: 2rem;
+  }
+}
+.tableau-playbook .playbook-card .two-col-grid {
+  gap: 0;
+}
+@media (max-width: 768px) {
+  .tableau-playbook .playbook-card .two-col-grid {
+    gap: 2rem;
+  }
+}
+.tableau-playbook .playbook-card .col-image img {
+  width: 100%;
+}
+
+/* --- Tableau Trailhead Section --- */
+.tableau-trailhead {
+  position: relative;
+  padding: 6rem 0 12rem;
+  /* Extra bottom padding for background */
+  background-color: #f8faff;
+  /* Very light blue/white */
+  overflow: hidden;
+}
+.tableau-trailhead .trailhead-title {
+  font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+}
+@media (max-width: 576px) {
+  .tableau-trailhead .trailhead-title {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+}
+.tableau-trailhead .trailhead-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .tableau-trailhead .trailhead-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .tableau-trailhead .trailhead-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.tableau-trailhead .trailhead-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.tableau-trailhead .trailhead-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.tableau-trailhead .trailhead-card .card-badge-wrapper {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+.tableau-trailhead .trailhead-card .card-badge-wrapper .card-badge {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  /* Just in case */
+}
+.tableau-trailhead .trailhead-card .badge-pill {
+  background-color: #eef4ff;
+  color: #032D60;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.tableau-trailhead .trailhead-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 1rem;
+}
+@media (max-width: 576px) {
+  .tableau-trailhead .trailhead-card h3 {
+    font-size: 1.25rem;
+  }
+}
+.tableau-trailhead .trailhead-card p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+.tableau-trailhead .trailhead-card .trailhead-link {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #032D60;
+  text-decoration: underline;
+}
+.tableau-trailhead .trailhead-card .trailhead-link:hover {
+  color: #00A1E0;
+  text-decoration: none;
+}
+.tableau-trailhead .trailhead-bg-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  /* Approximate height of illustration */
+  background-image: url("../assets/Tableau/trailhead-mfe-background.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 576px) {
+  .tableau-trailhead .trailhead-bg-layer {
+    height: 200px;
+  }
+}
+
+/* --- Tableau Resources Section --- */
+.tableau-resources {
+  background-color: #FFFFFF;
+}
+.tableau-resources .resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .tableau-resources .resources-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.tableau-resources .resource-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Soft shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tableau-resources .resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.tableau-resources .resource-card .card-image {
+  height: 200px;
+  /* Fixed height for consistency */
+  overflow: hidden;
+}
+.tableau-resources .resource-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.tableau-resources .resource-card:hover .card-image img {
+  transform: scale(1.05);
+}
+.tableau-resources .resource-card .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.tableau-resources .resource-card .card-body .badge-pill {
+  background-color: #eef4ff;
+  color: #032D60;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+.tableau-resources .resource-card .card-body h3 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+.tableau-resources .resource-card .card-body .resource-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #032D60;
+  text-decoration: underline;
+}
+.tableau-resources .resource-card .card-body .resource-link:hover {
+  color: #00A1E0;
+  text-decoration: none;
+}
+
+/* --- Tableau Next Step Section --- */
+.tableau-next-step {
+  background-color: #FFFFFF;
+  padding-bottom: 250px;
+  /* Space for the bottom image */
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .tableau-next-step {
+    padding-bottom: 150px;
+  }
+}
+.tableau-next-step .next-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .tableau-next-step .next-step-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.tableau-next-step .step-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tableau-next-step .step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.tableau-next-step .step-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: #eef4ff;
+  /* Light blue circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.tableau-next-step .step-card .icon-wrapper i {
+  font-size: 1.5rem;
+  color: #00A1E0;
+  /* Salesforce Blue */
+}
+.tableau-next-step .step-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #032D60;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.tableau-next-step .step-card p {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 32px;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+.tableau-next-step .step-card .step-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #032D60;
+  text-decoration: underline;
+}
+.tableau-next-step .step-card .step-link:hover {
+  color: #00A1E0;
+  text-decoration: none;
+}
+.tableau-next-step .step-card .step-link i {
+  margin-left: 0.25rem;
+  font-size: 0.8em;
+}
+.tableau-next-step .next-step-bg-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  /* Adjust based on image aspect ratio and desired visible amount */
+  background-image: url("../assets/Tableau/contact-us-footer-service.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 576px) {
+  .tableau-next-step .next-step-bg-layer {
+    height: 200px;
+  }
+}
+
+/* --- Tableau FAQ Section --- */
+.tableau-faq {
+  background-color: #FFFFFF;
+}
+.tableau-faq .faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-top: 1px solid #e5e5e5;
+}
+.faq-item:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+.faq-item.active .icon-wrapper {
+  background-color: #032D60;
+}
+.faq-item.active .icon-wrapper i {
+  color: #FFFFFF;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.faq-question h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #032D60;
+  margin: 0;
+  padding-right: 1.5rem;
+  flex-grow: 1;
+}
+.faq-question .icon-wrapper {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background-color: #eef4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.faq-question .icon-wrapper i {
+  font-size: 0.875rem;
+  color: #00A1E0;
+  transition: transform 0.3s ease;
+}
+.faq-question:hover h3 {
+  color: #00A1E0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.faq-answer .answer-content {
+  padding-bottom: 1.5rem;
+}
+.faq-answer .answer-content p {
+  margin-bottom: 1rem;
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.faq-answer .answer-content p:last-child {
+  margin-bottom: 0;
+}
+.faq-answer .answer-content p a {
+  color: #00A1E0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.faq-answer .answer-content p a:hover {
+  color: rgb(0, 124.34375, 173);
+  text-decoration: none;
+}
+
+/* Active State Handling via JS classes */
+.faq-item.active .faq-answer {
+  max-height: 1000px;
+  /* Sufficient height */
+  transition: max-height 0.6s ease-in;
+}
+
+/*# sourceMappingURL=temp_tableau.css.map */

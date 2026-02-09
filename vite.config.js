@@ -13,12 +13,15 @@ export default defineConfig({
         host: true,
     },
 
+    root: 'html',
+    publicDir: '../public',
     // Build configuration
     build: {
-        outDir: 'dist',
+        outDir: '../dist',
+        emptyOutDir: true,
         assetsDir: 'assets',
         sourcemap: false,
-        minify: 'terser',
+        minify: 'esbuild',
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'html/index.html'),

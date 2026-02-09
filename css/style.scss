@@ -1564,7 +1564,6 @@ body {
                 display: flex;
                 gap: 16px;
                 margin-top: 32px;
-                /* Button Box styling */
 
                 @include small-tab {
                     justify-content: flex-start;
@@ -1875,7 +1874,7 @@ body {
                 h3 {
                     font-size: 20px;
                     font-weight: 700;
-                    color: $SECONDARY-COLOR;
+                    color: $secondary-color;
                     margin-bottom: 16px;
                     font-family: 'ITC Avant Garde', 'Salesforce Sans', system-ui, sans-serif;
                 }
@@ -1887,7 +1886,7 @@ body {
                 }
 
                 .card-link {
-                    color: $SECONDARY-COLOR;
+                    color: $secondary-color;
                     text-decoration: underline;
                     font-weight: 700;
                     font-size: 16px;

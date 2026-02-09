@@ -1,0 +1,33 @@
+
+> salesforce@1.0.0 build
+> vite build
+
+[36mvite v7.2.6 [32mbuilding client environment for production...[36m[39m
+[33m
+Unable to parse HTML; parse5 error code unexpected-character-in-attribute-name
+ at C:/Users/HP/Ideamagix_copy/salesforce/html/agentforce.html:2369:57
+2404 |                                      <div class="accordion-header">
+2405 |                                          <span>The Salesforce Difference</span>
+2406 |                                          <i class="fa-solid fa-arrow-down"></i>
+     |                                                                       ^
+2407 |                                      </div>
+2408 |                                  </div>[39m
+[33m
+Unable to parse HTML; parse5 error code control-character-in-input-stream
+ at C:/Users/HP/Ideamagix_copy/salesforce/html/agentforce.html:3189:46
+3237 |  
+3238 |                                      <div class="sidebar-footer-img">
+3239 |                                          <img src="../assets/news/justforyou-bushes.png" alt="Garden">
+     |                                                         ^
+3240 |                                          <img src="../assets/news/justforyou-butterfly-alt.png" alt="Butterfly">
+3241 |  [39m
+transforming...
+[32m✓[39m 14 modules transformed.
+[31m✗[39m Build failed in 1.64s
+[31merror during build:
+[31m[vite:terser] terser not found. Since Vite v3, terser has become an optional dependency. You need to install it.[31m
+    at loadTerserPath (file:///C:/Users/HP/Ideamagix_copy/salesforce/node_modules/vite/dist/node/chunks/config.js:32967:8)
+    at Object.renderChunk (file:///C:/Users/HP/Ideamagix_copy/salesforce/node_modules/vite/dist/node/chunks/config.js:32996:39)
+    at Object.handler (file:///C:/Users/HP/Ideamagix_copy/salesforce/node_modules/vite/dist/node/chunks/config.js:33736:13)
+    at file:///C:/Users/HP/Ideamagix_copy/salesforce/node_modules/rollup/dist/es/shared/node-entry.js:22451:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)[39m

@@ -80,7 +80,7 @@
 
                 .mobile-toggle-arrow {
                     display: none;
-                    color: $SECONDARY-COLOR;
+                    color: $secondary-color;
                     font-size: 1rem;
                     transition: transform 0.3s ease;
 
@@ -295,8 +295,7 @@
 
 /* --- Banner --- */
 .tableau-banner {
-    background-color: $SECONDARY-COLOR;
-    /* Dark blue background */
+    background-color: $secondary-color;
     color: $text-white;
     padding: 1rem 0;
     font-size: 0.9rem;
@@ -503,9 +502,6 @@
                         color: $text-white;
                         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     }
-
-                    /* Creating the starburst/sparkle effect if possible with CSS or SVG background, 
-                       for now just text placement as per screenshot roughly */
                 }
             }
         }
@@ -515,7 +511,6 @@
 /* --- Dreamforce Promo Section --- */
 .tableau-dreamforce-promo {
     background-color: $secondary-color;
-    /* Dark Blue */
     padding: 0;
     color: $text-white;
     width: 100%;
@@ -582,7 +577,6 @@
             .btn-light-custom {
                 background-color: $text-white;
                 color: $sky-blue;
-                /* Salesforce Blue */
                 padding: 12px 24px;
                 font-weight: 600;
                 border-radius: 4px;
@@ -611,7 +605,6 @@
         .stats-icon {
             margin-bottom: 24px;
 
-            /* If using SVG image directly */
             img {
                 display: inline-block;
             }
@@ -648,7 +641,6 @@
             border-radius: 16px;
             padding: 2.5rem 2rem;
             height: 300px;
-            /* Fixed height for cards */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -658,7 +650,6 @@
             position: relative;
             background-color: $color-fcece6;
 
-            /* Fallback color matching gradient */
             &.stat-card-1 {
                 background-image: url('../assets/Tableau/Stat_top_1.webp');
             }
@@ -682,7 +673,6 @@
                     font-size: 4rem;
                     font-weight: 700;
                     color: $secondary-color;
-                    /* Dark Blue */
                     line-height: 1;
                     margin-bottom: 1rem;
                 }
@@ -735,14 +725,11 @@
     }
 }
 
-/* --- Tableau Solutions Section --- */
 .tableau-solutions {
     padding: 6rem 0 12rem;
-    /* Extra padding at bottom for background image visibility */
     position: relative;
     background-color: $text-white;
     overflow: hidden;
-    /* Prevent horizontal scroll if background image is wide */
 
     .section-title {
         font-family: "ITC Avant Garde", system-ui, -apple-system, sans-serif;
@@ -763,7 +750,6 @@
         margin-bottom: 4rem;
         position: relative;
         z-index: 2;
-        /* Above background */
 
         @include small-tab {
             flex-direction: column;
@@ -786,7 +772,6 @@
                 font-size: 1.75rem;
                 font-weight: 700;
                 color: $secondary-color;
-                /* Dark Blue */
                 line-height: 1.2;
 
                 @include mobile {
@@ -818,7 +803,6 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         padding: 2rem;
         border-top: 6px solid $color-ff774a;
-        /* Orange border */
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -843,7 +827,6 @@
             line-height: 1.5;
             margin-bottom: 2rem;
             flex-grow: 1;
-            /* Pushes button down */
         }
 
         .card-link {
@@ -865,7 +848,6 @@
         left: 0;
         width: 100%;
         height: 50%;
-        /* Adjust height as needed */
         background-image: url('../assets/Tableau/product-portfolio-analytics-category-alt-background_09227b.webp');
         background-size: 100% 100%;
         background-position: center bottom;
@@ -875,14 +857,11 @@
 
         @include mobile {
             height: 30%;
-            /* Smaller on mobile */
             background-size: 200%;
-            /* Zoom in if needed */
         }
     }
 }
 
-/* --- Common Utilities for New Sections --- */
 .section-padding {
     padding: 6rem 0;
 
@@ -980,16 +959,13 @@
     }
 }
 
-/* --- Gartner Section --- */
 .tableau-gartner {
     background-color: $text-white;
 }
 
-/* --- Customer Story Section --- */
 .tableau-customer-story {
     .story-card {
         background-color: $color-fff1ed;
-        /* Light peach/reddish */
         border-radius: 16px;
         padding: 4rem;
 
@@ -1039,12 +1015,9 @@
     }
 }
 
-/* --- CTO Section --- */
 .tableau-cto {
     background-color: $text-white;
 }
-
-/* --- Data Culture Playbook Section --- */
 .tableau-playbook {
     background-color: $text-white;
 
@@ -1075,13 +1048,10 @@
     }
 }
 
-/* --- Tableau Trailhead Section --- */
 .tableau-trailhead {
     position: relative;
     padding: 6rem 0 12rem;
-    /* Extra bottom padding for background */
     background-color: $color-f8faff;
-    /* Very light blue/white */
     overflow: hidden;
 
     .trailhead-title {
@@ -1141,7 +1111,6 @@
                 height: 100%;
                 object-fit: contain;
                 border-radius: 50%;
-                /* Just in case */
             }
         }
 
@@ -1194,7 +1163,6 @@
         left: 0;
         width: 100%;
         height: 300px;
-        /* Approximate height of illustration */
         background-image: url('../assets/Tableau/trailhead-mfe-background.webp');
         background-size: cover;
         background-position: bottom center;
@@ -1208,7 +1176,6 @@
     }
 }
 
-/* --- Tableau Resources Section --- */
 .tableau-resources {
     background-color: $text-white;
 
@@ -1228,7 +1195,6 @@
         background: $text-white;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        /* Soft shadow */
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: flex;
@@ -1242,7 +1208,6 @@
 
         .card-image {
             height: 200px;
-            /* Fixed height for consistency */
             overflow: hidden;
 
             img {
@@ -1298,11 +1263,9 @@
     }
 }
 
-/* --- Tableau Next Step Section --- */
 .tableau-next-step {
     background-color: $text-white;
     padding-bottom: 250px;
-    /* Space for the bottom image */
     position: relative;
     overflow: hidden;
 
@@ -1344,7 +1307,6 @@
             width: 60px;
             height: 60px;
             background-color: $color-eef4ff;
-            /* Light blue circle */
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1354,7 +1316,6 @@
             i {
                 font-size: 1.5rem;
                 color: $primary-color;
-                /* Salesforce Blue */
             }
         }
 
@@ -1398,7 +1359,6 @@
         left: 0;
         width: 100%;
         height: 350px;
-        /* Adjust based on image aspect ratio and desired visible amount */
         background-image: url('../assets/Tableau/contact-us-footer-service.webp');
         background-size: cover;
         background-position: bottom center;
@@ -1517,9 +1477,7 @@
     }
 }
 
-/* Active State Handling via JS classes */
 .faq-item.active .faq-answer {
     max-height: 1000px;
-    /* Sufficient height */
     transition: max-height 0.6s ease-in;
 }

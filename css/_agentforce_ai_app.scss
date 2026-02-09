@@ -408,7 +408,7 @@
                 flex-wrap: wrap;
 
                 .btn-blue-solid {
-                    background-color: $SKY-BLUE;
+                    background-color: $sky-blue;
                     color: white;
                     padding: 14px 28px;
                     border-radius: 4px;
@@ -424,8 +424,8 @@
 
                 .btn-blue-outline {
                     background-color: transparent;
-                    color: $SKY-BLUE;
-                    border: 2px solid $SKY-BLUE;
+                    color: $sky-blue;
+                    border: 2px solid $sky-blue;
                     padding: 12px 28px;
                     border-radius: 4px;
                     font-weight: 700;
@@ -468,7 +468,7 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background-color: $SKY-BLUE;
+    background-color: $sky-blue;
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -1237,7 +1237,7 @@
         }
 
         .ask-agentforce-btn-inline {
-            background-color: $SKY-BLUE;
+            background-color: $sky-blue;
             color: white;
             padding: 12px 24px;
             border-radius: 8px;
@@ -1263,7 +1263,7 @@
 }
 
 .guide-dark-footer {
-    background-color: $DARK-BLUE;
+    background-color: $dark-blue;
     color: white;
     padding: 40px 0;
 
@@ -1649,7 +1649,7 @@
 
             .btn-read-reviews {
                 display: inline-block;
-                background-color: $SKY-BLUE;
+                background-color: $sky-blue;
                 color: white !important;
                 padding: 14px 28px;
                 border-radius: 4px;

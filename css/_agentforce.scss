@@ -1168,14 +1168,12 @@ body.agentforce-body {
                         border-radius: 16px;
                         overflow: hidden;
                         background: transparent;
-                        /* Optional: add a subtle shadow or specific background if the images themselves don't have it */
 
                         img {
                             width: 100%;
                             height: auto;
                             display: block;
                             border-radius: 16px;
-                            /* Ensuring the image matches the rounded card look */
                         }
                     }
 
@@ -2804,7 +2802,7 @@ body.agentforce-body {
     background: $color-f4f6f9;
     // &::before { content: ""; position: absolute; ... }
 
-    color: $SECONDARY-COLOR;
+    color: $secondary-color;
     padding: 0 0 80px;
     position: relative;
     overflow: hidden;
@@ -2862,7 +2860,7 @@ body.agentforce-body {
             line-height: 1.1;
             font-weight: 800;
             margin-bottom: 24px;
-            color: $SECONDARY-COLOR;
+            color: $secondary-color;
 
             @include mobile {
                 font-size: 40px;
@@ -3005,15 +3003,15 @@ body.agentforce-body {
 
         h4 {
             font-size: 18px;
-            color: $SECONDARY-COLOR;
+            color: $secondary-color;
             margin-bottom: 0;
             font-weight: 800;
         }
 
         .marquee-pause-btn {
             background: none;
-            border: 2px solid $SECONDARY-COLOR;
-            color: $SECONDARY-COLOR;
+            border: 2px solid $secondary-color;
+            color: $secondary-color;
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -3025,7 +3023,7 @@ body.agentforce-body {
             font-size: 14px;
 
             &:hover {
-                background: $SECONDARY-COLOR;
+                background: $secondary-color;
                 color: white;
             }
         }
@@ -6243,7 +6241,6 @@ body.agentforce-body {
                     width: 40px;
                     height: 40px;
                     border-radius: 8px;
-                    /* Squared with border radius */
                     background-color: $text-white;
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                     display: flex;
@@ -6289,7 +6286,6 @@ body.agentforce-body {
                 display: inline-block;
                 padding: 12px 24px;
                 border: 2px solid $color-e5eff9;
-                /* Light blue border */
                 border-radius: 50px;
                 background-color: $text-white;
                 color: $sky-blue;
@@ -6346,7 +6342,6 @@ body.agentforce-body {
     }
 
     .share-col {
-        /* grid item */
         justify-self: end;
     }
 
@@ -6487,7 +6482,6 @@ body.agentforce-body {
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            /* Soft shadow */
             transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             display: flex;
             flex-direction: column;
